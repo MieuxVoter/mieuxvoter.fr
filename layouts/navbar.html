@@ -1,0 +1,35 @@
+<style>
+.logo_header {
+    width: 77px;
+    height: 100px;
+}
+@media (max-width: 767.98px) {
+    .logo_header {
+        display: none;
+    }
+}
+</style>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="main_navbararea navbar navbar-expand-md navbar-light">
+                  <a class="navbar-brand logomieuxvoter" href="/"><div class="logo_header">&nbsp;<% if false %><img src="/img/mieuxvoter.svg" class="img-fluid"><% end %></div></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="main_collpasarea collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                      <li class="nav-item d-sm-none<% if @item[:accueil] %> active<% end %>"><a class="nav-link" href="/">Accueil</a></li>
+                      <li class="nav-item<% if @item[:manifeste] %> active<% end %>"><a class="nav-link" href="/manifeste/">Manifeste</a></li>
+                      <li class="nav-item<% if @item[:decouvrir] %> active<% end %>"><a class="nav-link" href="/decouvrir/">Découvrir</a></li>
+                      <li class="nav-item<% if @item[:participer] %> active<% end %>"><a class="nav-link" href="/participer/">Participer</a> </li>
+                      <li class="nav-item<% if @item[:apropos] %> active<% end %>"><a class="nav-link" href="/apropos/">L'Association</a> </li>
+                      <li class="nav-item getthenewsbutton"><a class="nav-link" href="#" data-toggle="modal" data-target="#NewsletterModal">S'inscrire</a></li>
+                    </ul>
+                  </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

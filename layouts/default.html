@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= render '/head.html' %>
+</head>
+<body>
+    <%= render '/navbar.html' %>
+<main class="homesectionarea">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="mieuxvoterlogosmall d-block d-sm-none">
+                    <a href="/"><img src="/img/mieuxvoter.svg" class="img-fluid"></a>
+                </div>
+                <div class="mieuxvoterlogobig"><br/>
+                    <a href="/"><img src="/img/mieuxvoter.svg" class="img-fluid"></a><br/><br/>
+                    <div class="text-center">
+                        <a href="https://twitter.com/mieux_voter" target="_blank"><i class="fab fa-twitter fa-lg" style="color:#2943a0;"></i></a>&nbsp;&nbsp;
+                        <a href="https://github.com/mieuxvoter" target="_blank"><i class="fab fa-github fa-lg" style="color:#2943a0;"></i></a>&nbsp;&nbsp;
+                        <a href="https://medium.com/mieux-voter" target="_blank"><i class="fab fa-medium fa-lg" style="color:#2943a0;"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+</main>
+      
+<%= render '/footer.html' %>
+<%= render '/scripts.html' %>
+
+</body>
+</html>
