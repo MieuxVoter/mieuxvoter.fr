@@ -314,13 +314,6 @@ CONNECT PAGE CSS STYLING HERE
 .mieuxvoterTextarea button.red, .connectemailsubscriptions a.red {
     background: #F1455B !important;
 }
-.connectmeetuparea{
-	padding:50px 0px;
-}
-.connectmeetupbox h3,
-.iotameetupbox h3{
-	text-transform:capitalize;
-}
 
 .connectemailsubs{
 	position: relative;
