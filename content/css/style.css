@@ -87,7 +87,7 @@ ul{
 }
 
 h1{
-	font-size:40px;
+	font-size:36px;
     font-weight: 700;
 }
 
@@ -388,6 +388,9 @@ ABOUT PAGE CSS STYLING HERE
 
 
 @media (max-width: 575px) { 
+    h1, h2, h3, h4, h5 {
+        text-align: center;
+    }
 .homesectionarea {
     padding: 0px 0px;
 }
