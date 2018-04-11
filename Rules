@@ -6,7 +6,7 @@ compile '/index.html' do
 end
 
 compile '/**/*.html' do
-  layout '/default.*'
+  layout '/side.*'
   write item.identifier.without_ext + '/index.html'
 end
 
