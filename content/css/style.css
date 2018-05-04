@@ -25,6 +25,14 @@ html{
     background-color: #2943a0;
 }
 
+.bg_mvred {
+    background-color: #F1455B;
+    border-color: #F1455B;
+}
+.bg_mvred:hover {
+    background-color: #F1455B;
+    border-color: #F1455B;
+}
 .bg_mvblue {
     background-color: #2943a0;
     border-color: #2943a0;
