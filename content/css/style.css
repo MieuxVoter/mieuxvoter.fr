@@ -219,7 +219,7 @@ p{
 }
 .mieuxvoterlogobig{
     position:fixed;
-    width:16%;
+    width:13%;
     margin:0 auto;
     
 }
@@ -488,4 +488,10 @@ ABOUT PAGE CSS STYLING HERE
 }
 
 
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) {...}
+
+@media (min-width: 1400px) {
+    .mieuxvoterlogobig {
+        width:10%;
+    }
+}
