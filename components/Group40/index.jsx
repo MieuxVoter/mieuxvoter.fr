@@ -8,7 +8,9 @@ function Group40(props) {
     <div className={`group-40 ${className || ""}`}>
       <div className="bouton-20">
         <img className="icon-arrow-19" src="/img/icon---arrow-2@2x.svg" />
-        <p className="text-16 valign-text-middle dmsans-medium-white-16px-2">Poser la question de votre vote ici</p>
+        <p className="text-16 valign-text-middle dmsans-medium-white-16px-2">
+          Posez la question de votre vote ici
+        </p>
       </div>
       <SizeLgColorMain
         cestQuoiLeJugeme={sizeLgColorMain3Props.cestQuoiLeJugeme}

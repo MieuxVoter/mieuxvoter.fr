@@ -29,12 +29,10 @@ import "@components/Property1off/Property1off.sass";
 import "@components/Property1on/Property1on.sass";
 import "@components/Quest02/Quest02.sass";
 import "@components/QuiSommesNous/X30QuiSommesNous.sass";
-import "@components/QuiSommesNous2/X30QuiSommesNous2.sass";
+import "@components/FAQ/FAQ.sass";
 import "@components/QuiSommesNous3/X30QuiSommesNous3.sass";
-import "@components/QuiSommesNous4/X30QuiSommesNous4.sass";
 import "@components/SizeLgColorMain/SizeLgColorMain.sass";
-import "@components/SizeLgColorMain2/SizeLgColorMain2.sass";
-import "@components/SizeLgColorMain22/SizeLgColorMain22.sass";
+import "@components/Button/Button.sass";
 import "@components/SizeLgColorMain3/SizeLgColorMain3.sass";
 import "@components/SizeLgColorPrimary/SizeLgColorPrimary.sass";
 import "@components/SizeLgColorPrimary2/SizeLgColorPrimary2.sass";
@@ -76,34 +74,34 @@ function Application({ Component, pageProps }) {
       </Head>
       <div className="container-center-horizontal">
         <div className="screen">
-          <div className="overlap-group2-8">
-            <Header {...tOP2Data} />
-          </div>
           <main className="d-flex flex-column justify-content-center">
+            <div className="overlap-group2-8">
+              <Header {...tOP2Data} />
+            </div>
             <Component {...pageProps} />
           </main>
-          <DON sizeLgColorMainProps={dONData.sizeLgColorMainProps} />
-          <Footer
-            className={fOOTER32Data.className}
-            sizebigColorbleuProps={fOOTER32Data.sizebigColorbleuProps}
-            sizebigColorbleuProps2={fOOTER32Data.sizebigColorbleuProps2}
-          />
         </div>
       </div>
+      <Footer
+        className="footer-4"
+        sizebigColorbleuProps="logo-6"
+        sizebigColorbleuProps2="bouton-13"
+      />
     </AppProvider>
   );
 }
+// <DON sizeLgColorMainProps={dONData.sizeLgColorMainProps} />
 
 export default appWithTranslation(Application);
 
 const tOP2Data = {
-  surname: "Lang : En",
-  text26: "S’inscrire à la newsletter",
+  lang: "Langue : Fr",
+  newsletter: "S’inscrire à la newsletter",
   nousSoutenir: "Nous soutenir",
   surname2: "Le jugement majoritaire",
   quiSommesNous: "Qui sommes-nous ?",
   presse: "Presse",
-  nousContactez: "Nous contactez",
+  nousContactez: "Nous contacter",
 };
 const sizeLgColorMain6Data = {
   cestQuoiLeJugeme: "Adhérez",

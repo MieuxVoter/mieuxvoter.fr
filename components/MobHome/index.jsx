@@ -1,12 +1,10 @@
 import React from "react";
-import SizeLgColorMain22 from "../SizeLgColorMain22";
-import TOP from "../TOP";
+import Button from "../Button";
 import DarkTrue from "../DarkTrue";
 import SizeLgColorMain3 from "../SizeLgColorMain3";
 import SizeLgColorMain from "../SizeLgColorMain";
 import Group42 from "../Group42";
 import SizeLgColorPrimary2 from "../SizeLgColorPrimary2";
-import FOOTER from "../FOOTER";
 
 function X10MobHome(props) {
   const {
@@ -62,12 +60,14 @@ function X10MobHome(props) {
         <div className="overlap-group7-1">
           <div className="header-1">
             <div className="overlap-group1-10">
-              <div className="text-104 valign-text-middle dmserifdisplay-normal-tolopea-52px">{text104}</div>
+              <div className="text-104 valign-text-middle dmserifdisplay-normal-tolopea-52px">
+                {text104}
+              </div>
               <div className="text-105 dmsans-medium-white-18px">
                 <span className="dmsans-medium-tolopea-18px">{spanText}</span>
                 <span className="dmsans-bold-red-orange-18px">{spanText2}</span>
               </div>
-              <SizeLgColorMain22 cestQuoiLeJugeme={sizeLgColorMain22Props.cestQuoiLeJugeme} />
+              <Button text={sizeLgColorMain22Props.cestQuoiLeJugeme} />
               <img className="subtract-46" src="/img/subtract-47@1x.svg" />
             </div>
           </div>
@@ -76,8 +76,10 @@ function X10MobHome(props) {
         </div>
         <div className="le-jugement-1">
           <div className="overlap-group4-4">
-            <div className="text-107 valign-text-middle dmserifdisplay-normal-tolopea-44px">{text107}</div>
-            <SizeLgColorMain22
+            <div className="text-107 valign-text-middle dmserifdisplay-normal-tolopea-44px">
+              {text107}
+            </div>
+            <Button2
               cestQuoiLeJugeme={sizeLgColorMain222Props.cestQuoiLeJugeme}
               className={sizeLgColorMain222Props.className}
             />
@@ -101,7 +103,9 @@ function X10MobHome(props) {
           </div>
         </div>
         <div className="web-app-3">
-          <div className="text-108 valign-text-middle dmserifdisplay-normal-white-44px">{text108}</div>
+          <div className="text-108 valign-text-middle dmserifdisplay-normal-white-44px">
+            {text108}
+          </div>
           <div className="text-109 dmsans-medium-white-17px-2">{text109}</div>
           <div className="overlap-group5-1">
             <div className="overlap-group-20">
@@ -131,13 +135,17 @@ function X10MobHome(props) {
         <div className="lassociation-1">
           <div className="overlap-group-21">
             <div className="group-39">
-              <div className="text-102 valign-text-middle dmserifdisplay-normal-tolopea-44px">{text102}</div>
+              <div className="text-102 valign-text-middle dmserifdisplay-normal-tolopea-44px">
+                {text102}
+              </div>
               <div className="text-103 dmsans-medium-white-18px">
                 <span className="dmsans-medium-tolopea-18px">{spanText16}</span>
-                <span className="dmsans-bold-red-orange-18px">{spanText17}</span>
+                <span className="dmsans-bold-red-orange-18px">
+                  {spanText17}
+                </span>
                 <span className="dmsans-medium-tolopea-18px">{spanText18}</span>
               </div>
-              <SizeLgColorMain22
+              <Button2
                 cestQuoiLeJugeme={sizeLgColorMain223Props.cestQuoiLeJugeme}
                 className={sizeLgColorMain223Props.className}
               />
@@ -149,7 +157,9 @@ function X10MobHome(props) {
         <div className="don-7">
           <div className="overlap-group6-1">
             <Group42 className={group42Props.className} />
-            <div className="text-110 valign-text-middle dmserifdisplay-normal-white-44px">{text110}</div>
+            <div className="text-110 valign-text-middle dmserifdisplay-normal-white-44px">
+              {text110}
+            </div>
             <SizeLgColorMain
               cestQuoiLeJugeme={sizeLgColorMain2Props.cestQuoiLeJugeme}
               className={sizeLgColorMain2Props.className}
@@ -157,29 +167,46 @@ function X10MobHome(props) {
           </div>
         </div>
         <div className="nous-contacter-1">
-          <div className="nous-contactez-16 valign-text-middle dmserifdisplay-normal-tolopea-44px">{nousContactez}</div>
+          <div className="nous-contactez-16 valign-text-middle dmserifdisplay-normal-tolopea-44px">
+            {nousContactez}
+          </div>
           <div className="text-106 dmsans-bold-tolopea-17px">
             <span className="dmsans-bold-tolopea-17px">{spanText19}</span>
             <span className="dmsans-medium-tolopea-17px">{spanText20}</span>
-            <span className="span2-2 dmsans-medium-tolopea-16px">{spanText21}</span>
+            <span className="span2-2 dmsans-medium-tolopea-16px">
+              {spanText21}
+            </span>
           </div>
           <div className="form-1">
             <div className="overlap-group-22">
-              <div className="votre-prnom-1 valign-text-middle dmsans-medium-tolopea-16px-2">{votrePrnom}</div>
+              <div className="votre-prnom-1 valign-text-middle dmsans-medium-tolopea-16px-2">
+                {votrePrnom}
+              </div>
             </div>
             <div className="overlap-group1-11">
-              <div className="votre-nom-1 valign-text-middle dmsans-medium-tolopea-16px-2">{votreNom}</div>
+              <div className="votre-nom-1 valign-text-middle dmsans-medium-tolopea-16px-2">
+                {votreNom}
+              </div>
             </div>
             <div className="overlap-group2-7">
-              <div className="votre-email-10 valign-text-middle dmsans-medium-tolopea-16px-2">{votreEmail}</div>
+              <div className="votre-email-10 valign-text-middle dmsans-medium-tolopea-16px-2">
+                {votreEmail}
+              </div>
             </div>
             <div className="overlap-group3-4">
-              <div className="votre-message-1 valign-text-middle dmsans-medium-tolopea-16px-2">{votreMessage}</div>
+              <div className="votre-message-1 valign-text-middle dmsans-medium-tolopea-16px-2">
+                {votreMessage}
+              </div>
             </div>
-            <SizeLgColorPrimary2 className={sizeLgColorPrimary2Props.className} />
+            <SizeLgColorPrimary2
+              className={sizeLgColorPrimary2Props.className}
+            />
           </div>
         </div>
-        <FOOTER className={fOOTERProps.className} sizebigColorbleuProps={fOOTERProps.sizebigColorbleuProps} />
+        <FOOTER
+          className={fOOTERProps.className}
+          sizebigColorbleuProps={fOOTERProps.sizebigColorbleuProps}
+        />
       </div>
     </div>
   );

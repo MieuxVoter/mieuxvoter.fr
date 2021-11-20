@@ -9,7 +9,6 @@ function X30QuiSommesNous2(props) {
     text90,
     text80,
     text81,
-    tOP3Props,
     quest02Props,
     quest022Props,
     quest023Props,
@@ -21,16 +20,11 @@ function X30QuiSommesNous2(props) {
     quest029Props,
     quest0210Props,
     quest0211Props,
-    dONProps,
-    fOOTER3Props,
   } = props;
 
   return (
     <div className="container-center-horizontal">
       <div className="x30-qui-sommes-nous screen">
-        <div className="overlap-group2-5">
-          <TOP3 className={tOP3Props.className} />
-        </div>
         <div className="text-90 valign-text-middle dmserifdisplay-normal-tolopea-72px">{text90}</div>
         <div className="frame-69-2">
           <div className="quest-01">
@@ -52,12 +46,6 @@ function X30QuiSommesNous2(props) {
           <Quest02 text82={quest0210Props.text82} />
           <Quest02 text82={quest0211Props.text82} />
         </div>
-        <DON className={dONProps.className} sizeLgColorMainProps={dONProps.sizeLgColorMainProps} />
-        <FOOTER3
-          className={fOOTER3Props.className}
-          sizebigColorbleuProps={fOOTER3Props.sizebigColorbleuProps}
-          sizebigColorbleuProps2={fOOTER3Props.sizebigColorbleuProps2}
-        />
       </div>
     </div>
   );

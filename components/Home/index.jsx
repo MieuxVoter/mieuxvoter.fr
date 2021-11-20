@@ -1,16 +1,17 @@
 import React from "react";
-import SizeLgColorMain2 from "../SizeLgColorMain2";
+import Link from "next/link";
+import Button from "../Button";
 import VoteDesk from "../VoteDesk";
 import VoteDesk2 from "../VoteDesk2";
-import SizeLgColorMain3 from "../SizeLgColorMain3";
-import TOP2 from "../TOP2";
 import Group40 from "../Group40";
 import SizeLgColorWhite from "../SizeLgColorWhite";
 import SizeLgColorPrimary2 from "../SizeLgColorPrimary2";
-import FOOTER3 from "../FOOTER3";
+import Button2 from "../SizeLgColorMain22";
 
 function X10Home(props) {
   const {
+    quiSommesNous,
+    cestQuoiLeJugeme,
     text11,
     spanText,
     spanText2,
@@ -43,14 +44,11 @@ function X10Home(props) {
     votreNom,
     votreEmail,
     votreMessage,
-    sizeLgColorMain2Props,
     voteDeskProps,
     voteDesk2Props,
-    tOP2Props,
     group40Props,
     sizeLgColorMain22Props,
-    sizeLgColorWhiteProps,
-    fOOTER3Props,
+    onEnParleIci,
   } = props;
 
   return (
@@ -58,17 +56,26 @@ function X10Home(props) {
       <div className="x10-home screen">
         <div className="overlap-group6">
           <div className="overlap-group1-1">
-            <h1 className="text-11 valign-text-middle dmserifdisplay-normal-tolopea-72px">{text11}</h1>
+            <img
+              className="rectangle-71-stroke"
+              src="/img/rectangle-71--stroke-@1x.svg"
+            />
+            <h1 className="text-11 valign-text-middle dmserifdisplay-normal-tolopea-72px">
+              {text11}
+            </h1>
             <div className="text-12 dmsans-medium-white-18px">
               <span className="dmsans-medium-tolopea-18px">{spanText}</span>
               <span className="dmsans-bold-red-orange-18px">{spanText2}</span>
             </div>
-            <SizeLgColorMain2 text13={sizeLgColorMain2Props.text13} />
-            <img className="rectangle-71-stroke" src="/img/rectangle-71--stroke-@1x.svg" />
+            <Link href="/jugement-majoritaire">
+              <Button>{cestQuoiLeJugeme}</Button>
+            </Link>
             <img className="subtract-6" src="/img/subtract-2@1x.svg" />
           </div>
           <div className="le-jugement">
-            <div className="text-20 valign-text-middle dmserifdisplay-normal-tolopea-56px">{text20}</div>
+            <div className="text-20 valign-text-middle dmserifdisplay-normal-tolopea-56px">
+              {text20}
+            </div>
             <div className="surname-3">
               <span className="dmsans-bold-tolopea-17px">{spanText3}</span>
               <span className="dmsans-bold-red-orange-17px">{spanText4}</span>
@@ -105,19 +112,25 @@ function X10Home(props) {
             </div>
             <p className="surname-4 dmsans-medium-tolopea-16px">{surname}</p>
             <div className="overlap-group4-1">
-              <SizeLgColorMain3 />
+              <Button>{onEnParleIci}</Button>
               <img className="cand-1" src="/img/cand-1@1x.svg" />
             </div>
           </div>
-          <TOP2 {...tOP2Props} />
         </div>
         <div className="web-app">
           <div className="flex-col">
-            <img className="illus-creation" src="/img/illus---creation@2x.svg" />
+            <img
+              className="illus-creation"
+              src="/img/illus---creation@2x.svg"
+            />
             <div className="content">
-              <div className="text-14 valign-text-middle dmserifdisplay-normal-white-56px">{text14}</div>
+              <div className="text-14 valign-text-middle dmserifdisplay-normal-white-56px">
+                {text14}
+              </div>
               <div className="text-15 dmsans-medium-white-17px">{text15}</div>
-              <Group40 sizeLgColorMain3Props={group40Props.sizeLgColorMain3Props} />
+              <Group40
+                sizeLgColorMain3Props={group40Props.sizeLgColorMain3Props}
+              />
             </div>
           </div>
           <div className="overlap-group-10">
@@ -135,13 +148,17 @@ function X10Home(props) {
         <div className="lassociation">
           <img className="union-2" src="/img/union-2@2x.svg" />
           <div className="flex-col-1">
-            <div className="text-17 valign-text-middle dmserifdisplay-normal-tolopea-56px">{text17}</div>
+            <div className="text-17 valign-text-middle dmserifdisplay-normal-tolopea-56px">
+              {text17}
+              <Link href="/qui-sommes-nous">
+                <Button2>{quiSommesNous}</Button2>
+              </Link>
+            </div>
             <div className="text-18 dmsans-medium-white-18px">
               <span className="dmsans-medium-tolopea-18px">{spanText13}</span>
               <span className="dmsans-bold-red-orange-18px">{spanText14}</span>
               <span className="dmsans-medium-tolopea-18px">{spanText15}</span>
             </div>
-            <SizeLgColorMain2 text13={sizeLgColorMain22Props.text13} className={sizeLgColorMain22Props.className} />
           </div>
           <img className="image-8" src={image8} />
           <img className="union-3" src="/img/union-1@2x.svg" />
@@ -149,10 +166,16 @@ function X10Home(props) {
         <div className="don-1">
           <div className="overlap-group5">
             <div className="flex-col-2">
-              <div className="text-24 valign-text-middle dmserifdisplay-normal-white-40px">{text24}</div>
+              <div className="text-24 valign-text-middle dmserifdisplay-normal-white-40px">
+                {text24}
+              </div>
               <div className="text-25 dmsans-medium-white-18px-2">{text25}</div>
             </div>
-            <SizeLgColorWhite cestQuoiLeJugeme={sizeLgColorWhiteProps.cestQuoiLeJugeme} />
+            <Link href="/jugement-majoritaire">
+              <Button className={sizeLgColorMain22Props.className}>
+                {cestQuoiLeJugeme}
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="nous-contacter">
@@ -164,33 +187,39 @@ function X10Home(props) {
               <div className="text-19 dmsans-bold-tolopea-17px">
                 <span className="dmsans-bold-tolopea-17px">{spanText16}</span>
                 <span className="dmsans-medium-tolopea-17px">{spanText17}</span>
-                <span className="span2 dmsans-medium-tolopea-16px">{spanText18}</span>
+                <span className="span2 dmsans-medium-tolopea-16px">
+                  {spanText18}
+                </span>
               </div>
             </div>
             <div className="form">
               <div className="flex-row-3">
                 <div className="overlap-group-11">
-                  <div className="votre-prnom valign-text-middle dmsans-medium-tolopea-16px-2">{votrePrnom}</div>
+                  <div className="votre-prnom valign-text-middle dmsans-medium-tolopea-16px-2">
+                    {votrePrnom}
+                  </div>
                 </div>
                 <div className="overlap-group1-2">
-                  <div className="votre-nom valign-text-middle dmsans-medium-tolopea-16px-2">{votreNom}</div>
+                  <div className="votre-nom valign-text-middle dmsans-medium-tolopea-16px-2">
+                    {votreNom}
+                  </div>
                 </div>
               </div>
               <div className="overlap-group2">
-                <div className="votre-email-3 valign-text-middle dmsans-medium-tolopea-16px-2">{votreEmail}</div>
+                <div className="votre-email-3 valign-text-middle dmsans-medium-tolopea-16px-2">
+                  {votreEmail}
+                </div>
               </div>
               <div className="overlap-group3-1">
-                <div className="votre-message valign-text-middle dmsans-medium-tolopea-16px-2">{votreMessage}</div>
+                <div className="votre-message valign-text-middle dmsans-medium-tolopea-16px-2">
+                  {votreMessage}
+                </div>
               </div>
               <SizeLgColorPrimary2 />
             </div>
           </div>
           <img className="union-4" src="/img/union-3@2x.svg" />
         </div>
-        <FOOTER3
-          sizebigColorbleuProps={fOOTER3Props.sizebigColorbleuProps}
-          sizebigColorbleuProps2={fOOTER3Props.sizebigColorbleuProps2}
-        />
       </div>
     </div>
   );

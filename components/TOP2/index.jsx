@@ -6,8 +6,8 @@ import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 function TOP2(props) {
   const {
-    surname,
-    text26,
+    lang,
+    newsletter,
     nousSoutenir,
     surname2,
     quiSommesNous,
@@ -22,9 +22,13 @@ function TOP2(props) {
       </Link>
       <div className="flex-col-4">
         <div className="frame-44 dmsans-medium-blue-14px">
-          <div className="surname-5 valign-text-middle">{surname}</div>
-          <div className="text-26 valign-text-middle">{text26}</div>
-          <div className="nous-soutenir valign-text-middle">{nousSoutenir}</div>
+          <div className="top-lang valign-text-middle">{lang}</div>
+          <div className="top-newsletter valign-text-middle">{newsletter}</div>
+          <Link href="https://www.paypal.com/donate?token=CV1OPJsV_eo2YNVK14Mg3_-Ft76Pcsct-fYxv7WsozyvS50O5Ye5BDerAn3rLYekYuqSAsmPxrAqfcJ-">
+            <div className="nous-soutenir valign-text-middle">
+              {nousSoutenir}
+            </div>
+          </Link>
           <Link href="https://www.facebook.com/mieuxvoter.fr">
             <FontAwesomeIcon
               icon={faFacebook}

@@ -223,9 +223,9 @@ const MobJugementData = {
   surname3: "Le jugement majoritaire en 1 minutes",
   surname4: "Le jugement majoritaire en 1 minutes",
   image10: "/img/image-10-1@2x.png",
-  text19: "Crééz votre propre vote majoritaire",
+  text19: "Utilisez vous aussi le Jugement Majoritaire",
   text20:
-    "Nous avons créé pour vous une application simple et gratuite afin d’organisez un vote avec le Jugement Majoritaire.",
-  cestQuoiLeJugeme: "Poser la question de votre vote ici",
+    "Nous avons créé pour vous une application simple et gratuite afin d'organiser un vote avec le Jugement Majoritaire.",
+  cestQuoiLeJugeme: "Posez la question de votre vote ici",
   sizeLgColorMainProps: sizeLgColorMain5Data,
 };
