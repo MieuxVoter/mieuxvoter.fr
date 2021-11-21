@@ -1,10 +1,8 @@
 import React from "react";
-import TOP from "../TOP";
 import DarkTrue from "../DarkTrue";
 import Group51 from "../Group51";
 import Group42 from "../Group42";
 import SizeLgColorMain from "../SizeLgColorMain";
-import FOOTER from "../FOOTER";
 
 function X30MobQuiSommesNous(props) {
   const {
@@ -26,21 +24,20 @@ function X30MobQuiSommesNous(props) {
     group512Props,
     group513Props,
     sizeLgColorMainProps,
-    fOOTERProps,
   } = props;
 
   return (
     <div className="container-center-horizontal">
       <div className="x30-mob-qui-sommes-nous screen">
-        <div className="overlap-group8">
-          <TOP />
-          <DarkTrue />
-        </div>
         <div className="qui-sommes-nous valign-text-middle dmsans-medium-tolopea-52px">
           <span>
             <span className="span dmsans-medium-tolopea-52px">{spanText}</span>
-            <span className="span-1 dmserifdisplay-normal-tolopea-52px">{spanText2}</span>
-            <span className="span-1 dmserifdisplay-normal-tolopea-52px">{spanText3}</span>
+            <span className="span-1 dmserifdisplay-normal-tolopea-52px">
+              {spanText2}
+            </span>
+            <span className="span-1 dmserifdisplay-normal-tolopea-52px">
+              {spanText3}
+            </span>
             <span className="span dmsans-medium-tolopea-52px">{spanText4}</span>
           </span>
         </div>
@@ -60,8 +57,12 @@ function X30MobQuiSommesNous(props) {
             </div>
             <div className="loc-blondiaux valign-text-middle dmsans-medium-tolopea-32px">
               <span>
-                <span className="span-2 dmsans-medium-tolopea-32px">{spanText5}</span>
-                <span className="span-2 dmseriftext-normal-tolopea-32px">{spanText6}</span>
+                <span className="span-2 dmsans-medium-tolopea-32px">
+                  {spanText5}
+                </span>
+                <span className="span-2 dmseriftext-normal-tolopea-32px">
+                  {spanText6}
+                </span>
               </span>
             </div>
             <div className="text-5 dmsans-normal-tolopea-18px">{text5}</div>
@@ -72,8 +73,12 @@ function X30MobQuiSommesNous(props) {
               <img className="line-5" src="/img/line-6@2x.svg" />
             </div>
             <div className="name dmsans-medium-tolopea-32px">
-              <span className="span-2 dmsans-medium-tolopea-32px">{spanText7}</span>
-              <span className="span-2 dmseriftext-normal-tolopea-32px">{spanText8}</span>
+              <span className="span-2 dmsans-medium-tolopea-32px">
+                {spanText7}
+              </span>
+              <span className="span-2 dmseriftext-normal-tolopea-32px">
+                {spanText8}
+              </span>
             </div>
             <div className="text-6 dmsans-normal-tolopea-18px">{text6}</div>
           </div>
@@ -99,11 +104,14 @@ function X30MobQuiSommesNous(props) {
               <img className="subtract-1" src="/img/subtract-86@1x.svg" />
             </div>
             <Group42 />
-            <div className="text-3 valign-text-middle dmserifdisplay-normal-white-44px">{text3}</div>
-            <SizeLgColorMain cestQuoiLeJugeme={sizeLgColorMainProps.cestQuoiLeJugeme} />
+            <div className="text-3 valign-text-middle dmserifdisplay-normal-white-44px">
+              {text3}
+            </div>
+            <SizeLgColorMain
+              cestQuoiLeJugeme={sizeLgColorMainProps.cestQuoiLeJugeme}
+            />
           </div>
         </div>
-        <FOOTER sizebigColorbleuProps={fOOTERProps.sizebigColorbleuProps} />
       </div>
     </div>
   );

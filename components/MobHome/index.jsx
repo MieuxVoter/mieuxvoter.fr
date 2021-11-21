@@ -5,6 +5,7 @@ import SizeLgColorMain3 from "../SizeLgColorMain3";
 import SizeLgColorMain from "../SizeLgColorMain";
 import Group42 from "../Group42";
 import SizeLgColorPrimary2 from "../SizeLgColorPrimary2";
+import SizeLgColorMain22 from "../SizeLgColorMain22";
 
 function X10MobHome(props) {
   const {
@@ -42,7 +43,6 @@ function X10MobHome(props) {
     votreEmail,
     votreMessage,
     sizeLgColorMain22Props,
-    tOPProps,
     darkTrueProps,
     sizeLgColorMain222Props,
     sizeLgColorMain3Props,
@@ -51,7 +51,6 @@ function X10MobHome(props) {
     group42Props,
     sizeLgColorMain2Props,
     sizeLgColorPrimary2Props,
-    fOOTERProps,
   } = props;
 
   return (
@@ -71,7 +70,6 @@ function X10MobHome(props) {
               <img className="subtract-46" src="/img/subtract-47@1x.svg" />
             </div>
           </div>
-          <TOP className={tOPProps.className} />
           <DarkTrue className={darkTrueProps.className} />
         </div>
         <div className="le-jugement-1">
@@ -79,7 +77,7 @@ function X10MobHome(props) {
             <div className="text-107 valign-text-middle dmserifdisplay-normal-tolopea-44px">
               {text107}
             </div>
-            <Button2
+            <SizeLgColorMain22
               cestQuoiLeJugeme={sizeLgColorMain222Props.cestQuoiLeJugeme}
               className={sizeLgColorMain222Props.className}
             />
@@ -145,7 +143,7 @@ function X10MobHome(props) {
                 </span>
                 <span className="dmsans-medium-tolopea-18px">{spanText18}</span>
               </div>
-              <Button2
+              <SizeLgColorMain22
                 cestQuoiLeJugeme={sizeLgColorMain223Props.cestQuoiLeJugeme}
                 className={sizeLgColorMain223Props.className}
               />
@@ -203,10 +201,6 @@ function X10MobHome(props) {
             />
           </div>
         </div>
-        <FOOTER
-          className={fOOTERProps.className}
-          sizebigColorbleuProps={fOOTERProps.sizebigColorbleuProps}
-        />
       </div>
     </div>
   );

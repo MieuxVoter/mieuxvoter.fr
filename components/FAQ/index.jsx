@@ -1,8 +1,6 @@
 import React from "react";
-import TOP3 from "../TOP3";
 import Quest02 from "../Quest02";
 import DON from "../DON";
-import FOOTER3 from "../FOOTER3";
 
 function X30QuiSommesNous2(props) {
   const {
@@ -24,8 +22,10 @@ function X30QuiSommesNous2(props) {
 
   return (
     <div className="container-center-horizontal">
-      <div className="x30-qui-sommes-nous screen">
-        <div className="text-90 valign-text-middle dmserifdisplay-normal-tolopea-72px">{text90}</div>
+      <div className="faq screen">
+        <div className="text-90 valign-text-middle dmserifdisplay-normal-tolopea-72px">
+          {text90}
+        </div>
         <div className="frame-69-2">
           <div className="quest-01">
             <div className="frame-69-3">

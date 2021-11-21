@@ -2,12 +2,12 @@ import React from "react";
 import SizebigColorbleu from "../SizebigColorbleu";
 import SizeLgColorPrimary from "../SizeLgColorPrimary";
 
-function FOOTER(props) {
-  const { className, sizebigColorbleuProps } = props;
+function MobFooter(props) {
+  const { className } = props;
 
   return (
     <div className={`footer ${className || ""}`}>
-      <SizebigColorbleu className={sizebigColorbleuProps.className} />
+      <SizebigColorbleu className="logo-2" />
       <div className="group-43">
         <div className="text-2 valign-text-middle dmsans-bold-blue-20px">
           Tenez-vous au courant des derniers actus de Mieux Voter
@@ -52,4 +52,4 @@ function FOOTER(props) {
   );
 }
 
-export default FOOTER;
+export default MobFooter;

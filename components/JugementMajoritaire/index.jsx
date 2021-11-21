@@ -97,8 +97,8 @@ function X20JugementMajoritaire(props) {
           <div className="overlap-group2-3">
             <img className="subtract-33" src="/img/subtract-27@1x.svg" />
             <img className="subtract-34" src="/img/subtract-28@1x.svg" />
-            <Video />
-            <Video className={videoProps.className} />
+            <Video videoId="YC1xDJsi_Hk" />
+            <Video className={videoProps.className} videoId="ZoGH7d51bvc" />
             <div className="surname-31 valign-text-middle dmsans-bold-white-18px">
               {surname3}
             </div>

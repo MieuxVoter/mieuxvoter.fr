@@ -4,16 +4,16 @@ import DesktopHome from "@components/Home";
 import MobMenu from "@components/MobMenu";
 import MobHome from "@components/MobHome";
 import config from "../next-i18next.config.js";
-import { isMobile } from "@services/responsive.js";
+import { useMediaQuery } from "react-responsive";
 
 export const getStaticProps = async ({ locale, req }) => ({
   props: {
     ...(await serverSideTranslations(locale, [], config)),
-    isMobile: isMobile(req),
   },
 });
 
-function Home({ isMobile }) {
+function Home() {
+  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
   if (isMobile) return <MobHome {...MobHomeData} />;
   else return <DesktopHome {...HomeData} />;
 }
@@ -46,14 +46,6 @@ const group513Data = {
 
 const sizeLgColorMainData = {
   cestQuoiLeJugeme: "Adhérez",
-};
-
-const sizebigColorbleu2Data = {
-  className: "logo-1",
-};
-
-const fOOTERData = {
-  sizebigColorbleuProps: sizebigColorbleu2Data,
 };
 
 const MobQuiSommesNousData = {
@@ -279,7 +271,7 @@ const MobMenuData = {
   presse: "Presse",
   nousContactez: "Nous contacter",
   surname2: "Lang :",
-  en: "En",
+  en: "Fr",
   mentionsLgales: "Mentions légales",
   copyright: "2021 © Mieux Voter",
 };

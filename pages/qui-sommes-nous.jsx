@@ -3,16 +3,16 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import MobQuiSommesNous from "@components/MobQuiSommesNous";
 import DesktopQuiSommesNous from "@components/QuiSommesNous";
 import config from "../next-i18next.config.js";
-import { isMobile } from "@services/responsive.js";
+import { useMediaQuery } from "react-responsive";
 
 export const getStaticProps = async ({ locale, req }) => ({
   props: {
     ...(await serverSideTranslations(locale, [], config)),
-    isMobile: isMobile(req),
   },
 });
 
-function QuiSommesNous({ isMobile }) {
+function QuiSommesNous() {
+  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
   if (isMobile) {
     return <MobQuiSommesNous {...MobQuiSommesNousData} />;
   } else {

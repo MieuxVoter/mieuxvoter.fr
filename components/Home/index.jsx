@@ -4,7 +4,6 @@ import Button from "../Button";
 import VoteDesk from "../VoteDesk";
 import VoteDesk2 from "../VoteDesk2";
 import Group40 from "../Group40";
-import SizeLgColorWhite from "../SizeLgColorWhite";
 import SizeLgColorPrimary2 from "../SizeLgColorPrimary2";
 import Button2 from "../SizeLgColorMain22";
 

@@ -10,5 +10,6 @@ export function isMobile(req) {
     userAgent = new Parser().getResult();
   }
 
+  console.log(userAgent);
   return userAgent?.device?.type === "mobile";
 }

@@ -13,13 +13,11 @@ function X30Actualits(props) {
     horizonsPublics2,
     text73,
     text74,
-    tOP3Props,
     frame47Props,
     frame472Props,
     frame473Props,
     frame474Props,
     dONProps,
-    fOOTER3Props,
   } = props;
 
   return (

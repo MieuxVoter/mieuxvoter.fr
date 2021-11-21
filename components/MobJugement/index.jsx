@@ -1,8 +1,6 @@
 import React from "react";
-import TOP from "../TOP";
 import DarkTrue from "../DarkTrue";
 import SizeLgColorMain from "../SizeLgColorMain";
-import FOOTER from "../FOOTER";
 
 function X20MobJugement(props) {
   const {
@@ -21,21 +19,20 @@ function X20MobJugement(props) {
     text20,
     cestQuoiLeJugeme,
     sizeLgColorMainProps,
-    fOOTERProps,
   } = props;
 
   return (
     <div className="container-center-horizontal">
       <div className="x20-mob-jugement screen">
-        <div className="overlap-group4-2">
-          <TOP />
-          <DarkTrue />
-        </div>
         <div className="surname-13 valign-text-middle dmsans-medium-tolopea-52px">
           <span>
             <span className="span0 dmsans-medium-tolopea-52px">{spanText}</span>
-            <span className="span-15 dmserifdisplay-normal-tolopea-52px">{spanText2}</span>
-            <span className="span-15 dmserifdisplay-normal-tolopea-52px">{spanText3}</span>
+            <span className="span-15 dmserifdisplay-normal-tolopea-52px">
+              {spanText2}
+            </span>
+            <span className="span-15 dmserifdisplay-normal-tolopea-52px">
+              {spanText3}
+            </span>
           </span>
         </div>
         <div className="surname-14 dmsans-medium-tolopea-18px">{surname}</div>
@@ -65,7 +62,9 @@ function X20MobJugement(props) {
         </div>
         <img className="image-10" src={image10} />
         <div className="web-app-1">
-          <div className="text-27 valign-text-middle dmserifdisplay-normal-white-44px">{text19}</div>
+          <div className="text-27 valign-text-middle dmserifdisplay-normal-white-44px">
+            {text19}
+          </div>
           <div className="text-28 dmsans-medium-white-17px-2">{text20}</div>
           <div className="overlap-group1-4">
             <div className="overlap-group-14">
@@ -92,7 +91,6 @@ function X20MobJugement(props) {
             </div>
           </div>
         </div>
-        <FOOTER sizebigColorbleuProps={fOOTERProps.sizebigColorbleuProps} />
       </div>
     </div>
   );

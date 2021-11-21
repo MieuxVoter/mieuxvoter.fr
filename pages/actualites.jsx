@@ -2,16 +2,16 @@ import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import DesktopActualites from "@components/Actualites";
 import config from "../next-i18next.config.js";
-import { isMobile } from "@services/responsive.js";
+import { useMediaQuery } from "react-responsive";
 
 export const getStaticProps = async ({ locale, req }) => ({
   props: {
     ...(await serverSideTranslations(locale, [], config)),
-    isMobile: isMobile(req),
   },
 });
 
-function Actualites({ isMobile }) {
+function Actualites() {
+  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
   return <DesktopActualites {...ActualitesData} />;
 }
 

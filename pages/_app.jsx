@@ -7,8 +7,8 @@ import "@components/Actualites/X30Actualits.sass";
 import "@components/QuiSommesNous/QuiSommesNous.sass";
 import "@components/DON/DON.sass";
 import "@components/DarkTrue/DarkTrue.sass";
-import "@components/FOOTER/FOOTER.sass";
-import "@components/FOOTER3/FOOTER3.sass";
+import "@components/MobFooter/FOOTER.sass";
+import "@components/DeskFooter/FOOTER3.sass";
 import "@components/Frame47/Frame47.sass";
 import "@components/Frame68/Frame68.sass";
 import "@components/Frame682/Frame682.sass";
@@ -28,7 +28,7 @@ import "@components/Property1big/Property1big.sass";
 import "@components/Property1off/Property1off.sass";
 import "@components/Property1on/Property1on.sass";
 import "@components/Quest02/Quest02.sass";
-import "@components/QuiSommesNous/X30QuiSommesNous.sass";
+import "@components/QuiSommesNous/QuiSommesNous.sass";
 import "@components/FAQ/FAQ.sass";
 import "@components/QuiSommesNous3/X30QuiSommesNous3.sass";
 import "@components/SizeLgColorMain/SizeLgColorMain.sass";
@@ -40,18 +40,16 @@ import "@components/SizeLgColorWhite/SizeLgColorWhite.sass";
 import "@components/SizebigColorbleu/SizebigColorbleu.sass";
 import "@components/SizebigColorbleu2/SizebigColorbleu2.sass";
 import "@components/SizebigColorbleu3/SizebigColorbleu3.sass";
-import "@components/TOP/TOP.sass";
-import "@components/TOP2/TOP2.sass";
+import "@components/MobHeader/TOP.sass";
+import "@components/DeskHeader/TOP2.sass";
 import "@components/TOP4/TOP4.sass";
 import "@components/Team1/Team1.sass";
 import "@components/Video/Video.sass";
 import "@components/VoteDesk/VoteDesk.sass";
 import "@components/VoteDesk2/VoteDesk2.sass";
 import { appWithTranslation } from "next-i18next";
-// import Header from "@components/layouts/Header";
-// import Footer from "@components/layouts/Footer";
-import Header from "@components/TOP2";
-import Footer from "@components/FOOTER3";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 import DON from "@components/DON";
 import { AppProvider } from "@services/context";
 
@@ -76,7 +74,7 @@ function Application({ Component, pageProps }) {
         <div className="screen">
           <main className="d-flex flex-column justify-content-center">
             <div className="overlap-group2-8">
-              <Header {...tOP2Data} />
+              <Header />
             </div>
             <Component {...pageProps} />
           </main>
@@ -94,15 +92,6 @@ function Application({ Component, pageProps }) {
 
 export default appWithTranslation(Application);
 
-const tOP2Data = {
-  lang: "Langue : Fr",
-  newsletter: "S’inscrire à la newsletter",
-  nousSoutenir: "Nous soutenir",
-  surname2: "Le jugement majoritaire",
-  quiSommesNous: "Qui sommes-nous ?",
-  presse: "Presse",
-  nousContactez: "Nous contacter",
-};
 const sizeLgColorMain6Data = {
   cestQuoiLeJugeme: "Adhérez",
   className: "bouton-3",

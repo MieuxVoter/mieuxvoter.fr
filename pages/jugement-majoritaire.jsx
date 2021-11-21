@@ -3,16 +3,16 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import MobJugementMajoritaire from "@components/MobJugement";
 import DesktopJugementMajoritaire from "@components/JugementMajoritaire";
 import config from "../next-i18next.config.js";
-import { isMobile } from "@services/responsive.js";
+import { useMediaQuery } from "react-responsive";
 
 export const getStaticProps = async ({ locale, req }) => ({
   props: {
     ...(await serverSideTranslations(locale, [], config)),
-    isMobile: isMobile(req),
   },
 });
 
-function JugementMajoritaire({ isMobile }) {
+function JugementMajoritaire() {
+  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
   if (isMobile) {
     return <MobJugementMajoritaire {...MobJugementData} />;
   } else {

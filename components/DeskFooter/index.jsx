@@ -5,14 +5,14 @@ import SizeLgColorPrimary from "../SizeLgColorPrimary";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-function FOOTER3(props) {
+function DeskFooter(props) {
   const { className, sizebigColorbleuProps, sizebigColorbleuProps2 } = props;
 
   return (
     <div className={`footer-3 ${className || ""}`}>
       <div className="flex-row-4">
         <div className="flex-col-5">
-          <SizebigColorbleu className={sizebigColorbleuProps.className} />
+          <SizebigColorbleu className="logo-9" />
           <div className="text-10 dmsans-medium-tolopea-18px">
             Rendez les élections
             <br />
@@ -29,7 +29,7 @@ function FOOTER3(props) {
                 Votre email
               </div>
             </div>
-            <SizeLgColorPrimary className={sizebigColorbleuProps2.className} />
+            <SizeLgColorPrimary className="logo-9" />
           </div>
         </div>
       </div>
@@ -93,4 +93,4 @@ function FOOTER3(props) {
   );
 }
 
-export default FOOTER3;
+export default DeskFooter;
