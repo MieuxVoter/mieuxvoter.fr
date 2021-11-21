@@ -1,11 +1,11 @@
 # Website for Mieux Voter
 
 [![aGPLV3](https://img.shields.io/github/license/MieuxVoter/mieux-voter)](./LICENSE.md)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/021c39c6-1018-4e3f-98e2-f808b4ea8f6d/deploy-status)](https://app.netlify.com/sites/epic-nightingale-99f910/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/10e21963-4d3d-493c-afc9-c168986f55f0/deploy-status)](https://app.netlify.com/sites/mieuxvoter/deploys)
 [![Join the Discord chat at https://discord.gg/rAAQG9S](https://img.shields.io/discord/705322981102190593.svg)](https://discord.gg/rAAQG9S)
 
 
-:ballot_box: This repository is UNDER DEVELOPMENT for the next version of [our website](https://app.mieuxvoter.fr).
+:ballot_box: This repository is UNDER DEVELOPMENT for the next version of [our website](https://mieuxvoter.fr). It is currently visible on [netlify](https://mieuxvoter.netlify.app).
 
 
 
