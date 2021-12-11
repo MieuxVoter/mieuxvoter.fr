@@ -372,5 +372,6 @@ const styles = {
     display: ['none', 'none', 'block'],
     top: '0',
     left: '0',
+    width: '100%',
   },
 }
