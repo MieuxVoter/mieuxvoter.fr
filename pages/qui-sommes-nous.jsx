@@ -1,140 +1,376 @@
-import React from "react";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from 'theme-ui';
+import React from 'react';
+import { Box, Text, Flex, Image } from 'theme-ui';
+import Adherez from '../components/adherez'
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import MobQuiSommesNous from "@components/MobQuiSommesNous";
-import DesktopQuiSommesNous from "@components/QuiSommesNous";
-import config from "../next-i18next.config.js";
-import { useMediaQuery } from "react-responsive";
+import { useTranslation } from "next-i18next";
 
-export const getStaticProps = async ({ locale, req }) => ({
+export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, [], config)),
+    ...(await serverSideTranslations(locale, ["qui-sommes-nous", "common"])),
   },
 });
 
-function QuiSommesNous() {
-  const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
-  if (isMobile) {
-    return <MobQuiSommesNous {...MobQuiSommesNousData} />;
-  } else {
-    return (
-      <DesktopQuiSommesNous
-        team1Props={team1Data}
-        team12Props={team12Data}
-        team13Props={team13Data}
-        team14Props={team14Data}
-        team15Props={team15Data}
-      />
-    );
-  }
+export default function QuiSommeNous() {
+  const { t } = useTranslation('qui-sommes-nous');
+
+  return (
+
+    <section sx={styles.QuiSommeNous}>
+
+      <Flex sx={styles.containerQuiSommeNous}>
+
+        <Text sx={styles.titleQuiSommeNous} as="h2">
+          {t("titre qui sommes nous")}
+        </Text>
+
+        <Box sx={styles.box1QuiSommeNous}>
+          <Text as="p">
+            {t("texte1 qui sommes nous")}
+          </Text>
+
+          <Text as="p">
+            {t("texte2 qui sommes nous")}
+          </Text>
+
+          <Text as="p">
+            {t("texte3 qui sommes nous")}
+          </Text>
+
+        </Box>
+      </Flex>
+
+      <Text sx={styles.subtitle} as="h2">
+        {t("bureau qui sommes nous")}
+      </Text>
+
+      <Flex sx={styles.box2QuiSommeNous}>
+
+        <Flex sx={styles.teamCardColumnLeft}>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-1.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Chloé Ridel</Text>
+            <Text as="p">
+              {t("member1 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-4.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">David Chavalarias</Text>
+            <Text as="p">
+              {t("member4 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+        </Flex>
+
+        <Flex sx={styles.teamCardColumnMiddle}>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-2.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Rida Laraki</Text>
+            <Text as="p">
+              {t("member2 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-5.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Paloma Moritz</Text>
+            <Text as="p">
+              {t("member5 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+        </Flex>
+
+        <Box sx={styles.teamCard} >
+
+          <Box sx={styles.imgOverlayWrap}>
+            <Image sx={styles.imgOverlayWrapImg} src="img/member-3.png" alt="" />
+            <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+          </Box>
+
+          <Text as="h3">Pierre-Louis Guhur</Text>
+          <Text as="p">
+            {t("member3 qui sommes nous")}
+          </Text>
+
+        </Box>
+
+      </Flex>
+
+      <Text sx={styles.subtitle} as="h2">
+        {t("conseil qui sommes nous")}
+      </Text>
+
+      <Flex sx={styles.box2QuiSommeNous}>
+
+        <Flex sx={styles.teamCardColumnLeft}>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-1.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Maria Balinska</Text>
+            <Text as="p">
+              {t("member6 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-4.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">David Chavalarias</Text>
+            <Text as="p">
+              {t("member4 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-4.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Rida Laraki</Text>
+            <Text as="p">
+              {t("member2 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+        </Flex>
+
+        <Flex sx={styles.teamCardColumnMiddle}>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-2.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Loïc Blondiaux</Text>
+            <Text as="p">
+              {t("member7 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-5.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Thibault Favre</Text>
+            <Text as="p">
+              {t("member8 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-5.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Paloma Moritz</Text>
+            <Text as="p">
+              {t("member5 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+        </Flex>
+
+        <Flex sx={styles.teamCardColumnRight}>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-2.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Eric Brousseau</Text>
+            <Text as="p">
+              {t("member9 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-3.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Pierre-Louis Guhur</Text>
+            <Text as="p">
+              {t("member3 qui sommes nous")}
+            </Text>
+
+          </Box>
+
+          <Box sx={styles.teamCardColumn1}>
+
+            <Box sx={styles.imgOverlayWrap}>
+              <Image sx={styles.imgOverlayWrapImg} src="img/member-5.png" alt="" />
+              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+            </Box>
+
+            <Text as="h3">Chloé Ridel</Text>
+            <Text as="p">
+              {t("member1 qui sommes nous")}
+            </Text>
+          </Box>
+        </Flex>
+      </Flex>
+
+      <Adherez />
+
+    </section>
+
+  );
 }
 
-export default QuiSommesNous;
-
-const group51Data = {
-  rectangle81: "/img/rectangle-81@2x.png",
-  spanText: "Maria ",
-  spanText2: "Balinska",
-  text4:
-    "Future Directrice exécutive de la Commission Fulbright Etats-Unis – Royaume Uni",
-};
-
-const group512Data = {
-  rectangle81: "/img/rectangle-85@2x.png",
-  spanText: "David ",
-  spanText2: "Chavalarias",
-  text4:
-    "Directeur de Recherche CNRS (CAMS/EHESS) et Directeur de l’Institut des Systèmes Complexes de Paris Ile-de-France.",
-  className: "group-48",
-};
-
-const group513Data = {
-  rectangle81: "/img/rectangle-84@2x.png",
-  spanText: "David ",
-  spanText2: "Guez",
-  text4: "Avocat au barreau de Paris et Co-fondateur de LaPrimaire.org.",
-  className: "group-47",
-};
-
-const sizeLgColorMainData = {
-  cestQuoiLeJugeme: "Adhérez",
-};
-
-const MobQuiSommesNousData = {
-  spanText: "Qui",
-  spanText2: " ",
-  spanText3: "sommes-nous ",
-  spanText4: "?",
-  text1: (
-    <>
-      Mieux Voter est une association créée en janvier 2018 voir les statuts de
-      l’association pour promouvoir une nouvelle méthode de vote, le Jugement
-      majoritaire.
-      <br />
-      <br />
-      Mieux Voter agit pour faire connaître le Jugement Majoritaire au plus
-      grand nombre et accompagne les collectivités publiques, les entreprises,
-      les associations et les particuliers dans son utilisation.
-    </>
-  ),
-  rectangle82: "/img/rectangle-82@2x.png",
-  spanText5: "Loïc ",
-  spanText6: "Blondiaux",
-  text5: "Professeur des universités, Université Paris-1 Panthéon Sorbonne.",
-  rectangle83: "/img/rectangle-83@2x.png",
-  spanText7: "Eric ",
-  spanText8: "Brousseau",
-  text6: "Professeur d’économie et de management.",
-  text3: "Adhérez à Mieux Voter",
-  group51Props: group51Data,
-  group512Props: group512Data,
-  group513Props: group513Data,
-  sizeLgColorMainProps: sizeLgColorMainData,
-};
-
-const team12Data = {
-  photo: "/img/rectangle-85@2x.png",
-  name: "David Chavalarias",
-  text51:
-    "Directeur de Recherche CNRS (CAMS/EHESS) et Directeur de l’Institut des Systèmes Complexes de Paris Ile-de-France.",
-  className: "team-4",
-};
-
-const team13Data = {
-  photo: "/img/rectangle-82@2x.png",
-  name: "Loïc Blondiaux",
-  text51: "Professeur des universités, Université Paris-1 Panthéon Sorbonne.",
-  className: "team-2",
-};
-
-const team14Data = {
-  photo: "/img/rectangle-84@2x.png",
-  name: "David Guez",
-  text51: "Avocat au barreau de Paris et Co-fondateur de LaPrimaire.org.",
-  className: "team-5",
-};
-
-const team15Data = {
-  photo: "/img/rectangle-83@2x.png",
-  name: "Eric Brousseau",
-  text51: "Professeur d’économie et de management.",
-  className: "team-3",
-};
-
-const team1Data = {
-  photo: "/img/rectangle-81@2x.png",
-  name: "Maria Balinska",
-  text51:
-    "Future Directrice exécutive de la Commission Fulbright Etats-Unis – Royaume Uni",
-};
-
-const contentData = {
-  team1Props: team1Data,
-  team12Props: team12Data,
-  team13Props: team13Data,
-  team14Props: team14Data,
-  team15Props: team15Data,
-};
-
-const QuiSommesNousData = {
-  contentProps: contentData,
-};
+const styles = {
+  QuiSommeNous: {
+    pb: 10,
+    h2: {
+      fontSize: ['2em', '2em', '3em', '2.5em', 12],
+      lineHeight: '1',
+      textAlign: ['center', 'center', 'center', 'left']
+    },
+    p: {
+      my: [2, '30px'],
+      fontSize: ['1em', '1em', '1em', '1.5vw'],
+    },
+  },
+  containerQuiSommeNous: {
+    flexDirection: 'column',
+    margin: '30px',
+    mb: 0,
+    width: [null, null, null, '80%', '60%'],
+    ml: [null, null, null, '10%', '12%'],
+  },
+  titleQuiSommeNous: {
+    width: ['100%', '100%', '50%', '45%', '50%'],
+  },
+  box1QuiSommeNous: {
+    width: ['100%', '100%', '50%', '60%'],
+    mt: 6,
+    alignSelf: 'end',
+  },
+  subtitle: {
+    width: '80%',
+    mx: 'auto',
+    mt: 7,
+  },
+  box2QuiSommeNous: {
+    justifyContent: 'space-evenly',
+    backgroundImage: ['url("img/background-qui-sommes-nous-left.svg")', 'url("img/background-qui-sommes-nous-left.svg")', 'none'],
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100%',
+    flexDirection: ['column', 'column', 'row'],
+    py: 7,
+  },
+  teamCard: {
+    width: ['85%', '85%', '20%'],
+    mx: ['auto', 'auto', 0],
+    ':nth-of-type(3)': {
+      mt: [9, 9, '30%'],
+    },
+  },
+  teamCardColumnLeft: {
+    flexDirection: 'column',
+    width: ['85%', '85%', '20%'],
+    mx: ['auto', 'auto', 0],
+    teamCard: {
+      width: '100%',
+    },
+  },
+  teamCardColumn1: {
+    ':nth-of-type(1n)': {
+      mt: 9,
+    },
+  },
+  teamCardColumnMiddle: {
+    flexDirection: 'column',
+    mt: [9, 9, '15%'],
+    width: ['85%', '85%', '20%'],
+    mx: ['auto', 'auto', 0],
+    teamCard: {
+      width: '100%',
+    },
+  },
+  teamCardColumnRight: {
+    flexDirection: 'column',
+    mt: [9, 9, '30%'],
+    width: ['85%', '85%', '20%'],
+    mx: ['auto', 'auto', 0],
+    teamCard: {
+      width: '100%',
+    },
+  },
+  imgOverlayWrap: {
+    position: 'relative',
+    display: 'inline-block',
+  },
+  imgOverlayWrapImg: {
+    display: 'block',
+    maxWidth: '100%',
+    height: 'auto',
+    borderBottom: ['solid 8px #2400FD', 'solid 8px #2400FD', 'none'],
+  },
+  imgOverlayWrapSvg: {
+    position: 'absolute',
+    display: ['none', 'none', 'block'],
+    top: '0',
+    left: '0',
+  },
+}
