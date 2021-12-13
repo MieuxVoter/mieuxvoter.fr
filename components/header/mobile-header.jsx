@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, Button } from "reactstrap";
 import Link from "next/link";
+import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import socialItems from "./social.data";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,13 +26,13 @@ const MobHeader = () => {
             <a className="navbar-brand">
               <div className="d-flex flex-row">
                 <div className="align-self-center">
-                  <img src="img/logo.svg" alt="logo" height="50" />
+                  <Image src="img/logo.svg" alt="logo" height="50" />
                 </div>
               </div>
             </a>
           </Link>
 
-          <Button onClick={toggle} className="navbar-toggle"><img src="img/menu-icon.svg" alt="logo" height="50" />
+          <Button onClick={toggle} className="navbar-toggle"><Image src="img/menu-icon.svg" alt="logo" height="50" />
           </Button>
 
         </div>
@@ -44,12 +45,12 @@ const MobHeader = () => {
 
               <Link href="/">
                 <a className="navbar-brand navbar-brand-mobile">
-                  <img src="img/logo-mobile.svg" alt="logo" height="50" />
+                  <Image src="img/logo-mobile.svg" alt="logo" height="50" />
                 </a>
               </Link>
 
               <Button onClick={toggle} className="navbar-toggle">
-                <img height="20" src="img/close-button.svg" alt="logo"  />
+                <Image height="20" src="img/close-button.svg" alt="logo"  />
           </Button>
 
             </div>
