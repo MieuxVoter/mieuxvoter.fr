@@ -13,7 +13,13 @@ a {
 * {
   box-sizing: border-box;
 }
-
+.react-multi-carousel-item {
+  margin: 20px;
+  width: 800px!important; 
+}
+.react-multi-carousel-list {
+  overflow: overlay;
+}
 @media (max-width: 640px) {
   .react-multi-carousel-track, .react-multi-carousel-list {
     flex-direction: column!important;
@@ -31,17 +37,23 @@ a {
 
 .accordion-button:not(.collapsed) {
   box-shadow: none!important;
+  font-size: 18px;
+}
+.accordion-button {
+  font-size: 18px!important;
 }
 .accordion-button, .accordion-body {
-  padding: 2% 10%!important;
+  padding: 40px 2% 40px 10%!important;
 }
 .accordion-body {
   background-color: #e7f1ff;
+  font-size: 15px!important;
+  padding: 2% 10%!important;
 }
 
-      .ReactFlagsSelect-module_selectFlag__2q5gC {
+    /*  .ReactFlagsSelect-module_selectFlag__2q5gC {
         display: none!important;
-      }
+      }   */
       .ReactFlagsSelect-module_label__27pw9 {
         font-size: 1em!important;
         color: #2400FD;
@@ -52,8 +64,17 @@ a {
         border: none!important;
       }
       .ReactFlagsSelect-module_selectBtn__19wW7::after {
-        border-top: 5px solid #2400FD!important;        
+        border-top: 5px solid #2400FD!important;  
+          
     }
+    .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+      border-bottom: 5px solid #2400FD!important;  
+      border-top: 5px solid transparent!important;          
+  }
+  .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+    padding-bottom: 0px!important;
+}
+
       @media screen and (max-width: 500px) { 
         .ReactFlagsSelect-module_selectOptions__3LNBJ {
           background: #2400FD!important;
@@ -82,9 +103,20 @@ a {
         .ReactFlagsSelect-module_selectOptionValue__vS99- > .ReactFlagsSelect-module_label__27pw9 {
         font-size: 0.7em!important;
        }
-       .ReactFlagsSelect-module_selectValue__152eS, .ReactFlagsSelect-module_selectOption__3pcgW, .ReactFlagsSelect-module_selectOptions__3LNBJ {
-         padding: 0!important;
+       .footer-flags-mobile {
+         width: 100px;
+         margin: auto;
        }
+      .footer-flags-mobile  .ReactFlagsSelect-module_label__27pw9 {
+        color: #8F88BA;
+      }
+      .footer-flags {
+       margin-top: 10px;
+      }
+      .footer-flags  .ReactFlagsSelect-module_label__27pw9 {
+        color: #8F88BA;
+      }
+    
        .container-fluid {
          padding: 0!important;
        }
@@ -123,7 +155,7 @@ color: white!important;
     }
     .navbar-my-link {
       color: white!important;
-      font-size: 1.5em!important;
+      font-size: 24px!important;
       line-height: 31,25px;
       text-align: left!important;
     }
@@ -147,7 +179,7 @@ color: white!important;
     }
     .navbar-jimmy-link {
       color: white!important;
-      font-size: 10px;
+      font-size: 18px;
       line-height: 25px;
       margin-left: 5px;
       text-decoration: none;

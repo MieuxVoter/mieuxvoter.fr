@@ -33,7 +33,7 @@ const styles = {
         alignItems: ['center', 'flex-start'],
         flexDirection: 'column',
         mb: -1,
-        textAlign: ['center', null, 'left'],
+        textAlign: 'left',
         px: [4, null, 0],
     },
     wrapper: {
@@ -47,22 +47,26 @@ const styles = {
         source: {
             my: 2,
             fontWeight: 'bold',
+            fontSize: '13px',
         },
         title: {
             fontSize: 3,
-            textAlign: ['center', 'center', 'left'],
+            textAlign: 'left',
             color: 'black',
             fontWeight: 700,
             mb: [2, null, 3],
+            fontSize: '18px',
         },
         author: {
             fontSize: 2,
             color: 'grey',
             fontStyle: 'italic',
+            fontSize: '13px',
         },
         date: {
             fontSize: 2,
             color: 'grey',
+            fontSize: '13px',
         },
         lien: {
             fontSize: 1,

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import ReactFlagsSelect from 'react-flags-select';
 
-const LanguageSelector = () => {
+const LanguageSelectorMobile = () => {
 
   const router = useRouter();
   let localeShort = router.locale.substring(0, 2).toUpperCase();
@@ -26,10 +26,11 @@ const LanguageSelector = () => {
       optionsSize={22}
       showSelectedLabel={true}
       showSecondaryOptionLabel={false}
-      customLabels={{ "GB": "EN", "FR": "FR" }}
+      customLabels={{ "GB": "Lang: EN", "FR": "Lang: FR" }}
       fullWidth={false}
+      className="footer-flags-mobile"
     />
   );
 };
 
-export default LanguageSelector;
+export default LanguageSelectorMobile;

@@ -34,19 +34,21 @@ export default function SectionOne() {
 const styles = {
   sectionOne: {
     backgroundImage: 'url("img/background-chevron-big-blue.svg")',
-    backgroundSize: ['1000px', '1000px', '1000px', '140%', '130%', '160%', '150%'],
-    backgroundPosition: ['-300px 100px', '-250px 150px', '-100px 150px', '-12em 0em', '-15em -3em', '-23em -20em', '-22em -20em'],
+    backgroundSize: ['2495px'],
+    backgroundPosition: ['41.5% 65%', '42% 60%', '40% 80%', '45% 100%', '50% 100%', '55% 100%', '-497px -434px'],
     backgroundRepeat: 'no-repeat',
-    pb: '32em',
+    pb: ['200px', '200px', '550px', '600px', '650px', '800px', '700px'],
+    pt: [ '50px', '100px'],
     h2: {
-      fontSize: ['2em', '3em', '3em', '3em', '4vw'],
+      fontSize: ['52px', '72px'],
       lineHeight: '1',
-      textAlign: ['center', 'center', 'center', 'left']
+      textAlign: 'left',
     },
     p: {
-      margin: [null, '50px'],
+      margin: [null, '50px 50px 50px 80px'],
       my: ['30px'],
-      fontSize: ['1em', '1em', '1em', '1.5vw'],
+      ml: [null, '50px', 8],
+      fontSize: ['18px'],
     },
     button: {
       boxShadow: '0px 5px 0px 0px #7A64F9',
@@ -54,10 +56,10 @@ const styles = {
     },
   },
   containerSectionOne: {
-    height: '100vh',
-    width: [null, null, null, '60%', '40%'],
-    ml: [null, null, null, '10%', '20%'],
-    margin: ['30px'],
+
+    width: [null, null, null, '60%', '48%'],
+    ml: [0, null, null, '10%', '12%'],
+    mx: ['30px'],
   },
   boxButton: {
     marginRight: [null, '50px'],

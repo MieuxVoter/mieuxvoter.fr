@@ -282,24 +282,27 @@ const styles = {
   QuiSommeNous: {
     pb: 10,
     h2: {
-      fontSize: ['2em', '2em', '3em', '2.5em', 12],
+      fontSize: ['52px', '72px'],
       lineHeight: '1',
-      textAlign: ['center', 'center', 'center', 'left']
+      textAlign: 'left',
     },
     p: {
       my: [2, '30px'],
-      fontSize: ['1em', '1em', '1em', '1.5vw'],
+      fontSize: ['18px'],
+    },
+    h3: {
+    fontSize: '32px',
     },
   },
   containerQuiSommeNous: {
     flexDirection: 'column',
     margin: '30px',
     mb: 0,
-    width: [null, null, null, '80%', '60%'],
-    ml: [null, null, null, '10%', '12%'],
+    width: [null, null, null, '80%'],
+    mx: 'auto',
   },
   titleQuiSommeNous: {
-    width: ['100%', '100%', '50%', '45%', '50%'],
+    width: ['100%', '100%', '50%', '45%', '63%'],
   },
   box1QuiSommeNous: {
     width: ['100%', '100%', '50%', '60%'],
@@ -372,5 +375,6 @@ const styles = {
     display: ['none', 'none', 'block'],
     top: '0',
     left: '0',
+    width: '100%',
   },
 }

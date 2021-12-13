@@ -201,7 +201,7 @@ const styles = {
   grid: {
     width: ['100%', '80%', '100%'],
     title: {
-      textAlign: 'center',
+      textAlign: 'left',
     },
     mx: 'auto',
     gridGap: [
@@ -226,13 +226,13 @@ const styles = {
     mr: [0, 10, 5],
     mx: ['auto', null],
     h3: {
-      textAlign: ['left', 'center', 'center', 'left'],
+      textAlign: 'left',
       color: 'text',
-      fontSize: 6,
+      fontSize: '18px',
       pt: 5,
     },
     p: {
-      textAlign: ['left', 'center', 'center', 'left'],
+      textAlign: 'left',
       color: '#8F88BA',
       fontSize: 1,
     },

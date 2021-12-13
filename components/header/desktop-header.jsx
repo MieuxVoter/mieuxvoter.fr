@@ -113,7 +113,6 @@ const styles = {
         justifyContent: 'space-between',
         flexDirection: ['column', 'column', 'column', 'row'],
         width: '90%',
-        height: [null, null, null, '150px', '200px'],
         mx: 'auto',
     },
     leftHeader: {
@@ -138,7 +137,8 @@ const styles = {
         a: {
             ml: 3,
             textDecoration: 'none',
-            mt: 2,
+            mt: 3,
+            fontSize: '14px',
         },
     },
     menuNav: {
@@ -150,7 +150,7 @@ const styles = {
         fontWeight: 'bold',
         a: {
             ml: 3,
-            fontSize: ['1em', '1em', '0.5em', '0.8em', '1em'],
+            fontSize: '16px',
             color: 'text',
             textDecoration: 'none',
         },

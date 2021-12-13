@@ -84,26 +84,32 @@ export default function Footer() {
 const styles = {
     footer: {
         backgroundColor: '#F8F8FF',
-        px: ['30px', '30px', '30px', '30px', 8],
         pt: 8,
         pb: 6,
     },
     topFooter: {
         justifyContent: 'space-between',
         flexDirection: ['column', 'column', 'row'],
+        px: ['30px', '30px', '30px', '30px', 8],
     },
     leftTopFooter: {
         width: ['100%', '100%', '40%', '25%', '20%'],
-        textAlign: 'center',
         cursor: 'pointer',
+        mb: 7,
         p: {
             color: 'text',
+            width: '80%',
+            fontSize: '18px',
+            lineHeight: '20px',
+            mt: 5,
+            display: ['none', 'none', 'none', 'block'],
         },
     },
     rightTopFooter: {
         width: ['100%', '100%', '55%', '65%', '60%'],
         h3: {
             width: ['100%', '100%', '100%', '60%'],
+            fontSize: ['20px', '20px', '24px'],
             color: 'primary',
         },
         input: {
@@ -114,7 +120,7 @@ const styles = {
             '&::placeholder': {
                 textOverflow: 'ellipsis !important',
                 color: 'primary',
-                fontSize: '1em',
+                fontSize: '16px',
                 fontStyle: 'italic',
             },
         },
@@ -140,9 +146,9 @@ const styles = {
         ml: 5,
     },
     middleFooter: {
-
+        px: ['30px', '30px', '30px', '30px', 8],
         justifyContent: 'space-between',
-        flexDirection: ['column', 'column', 'row'],
+        flexDirection: ['column', 'column', 'column', 'row'],
     },
     menuNav: {
         color: 'text',
@@ -151,22 +157,22 @@ const styles = {
         textAlign: ['center', 'center', 'left'],
         a: {
             mr: [null, 5],
-            my: [3, 2, 0],
-            fontSize: ['1em', '1em', '0.5em', '0.8em', '1em'],
+            my: 4,
+            fontSize: ['16px'],
             textDecoration: 'none',
             color: 'text',
         },
     },
     socialNav: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
-        mt: [5, 5, 0],
+        justifyContent: 'center',
+        my: [7, 7, 0],
         svg: {
             ml: [null, null, 3],
             fill: '#2400FD',
             cursor: 'pointer',
-            width: ['1.5em', '1.5em', '1em'],
-            height: ['1.5em', '1.5em', '1em'],
+            width: ['30px', '30px', '30px', '20px', '30px'],
+            height: ['30px', '30px', '30px', '20px', '30px'],
         },
     },
     divider: {

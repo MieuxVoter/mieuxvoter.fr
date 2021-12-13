@@ -29,7 +29,7 @@ const styles = {
         alignItems: ['center', 'flex-start'],
         flexDirection: 'column',
         mb: -1,
-        textAlign: ['center', null, 'left'],
+        textAlign: 'left',
         px: [4, null, 0],
     },
     wrapper: {
@@ -41,23 +41,23 @@ const styles = {
             backgroundColor: '#F2F0FF',
         },
         title: {
-            fontSize: 3,
-            textAlign: ['center', 'center', 'left'],
+            fontSize: '18px',
+            textAlign: 'left',
             color: 'black',
             fontWeight: 700,
             mb: [2, null, 3],
         },
         author: {
-            fontSize: 2,
+            fontSize: '16px',
             color: 'black',
             fontStyle: 'italic',
         },
         support: {
-            fontSize: 2,
+            fontSize: '16px',
             color: 'grey',
         },
         lien: {
-            fontSize: 1,
+            fontSize: '15px',
             color: 'primary',
             mt: 5,
             fontWeight: 'bold',

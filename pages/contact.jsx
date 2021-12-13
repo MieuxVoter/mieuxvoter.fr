@@ -30,11 +30,7 @@ const styles = {
         backgroundRepeat: 'no-repeat',
         px: '30px',
         h2: {
-            color: 'text',
-            fontSize: ['2em', '2em', '3em', '2.5em', '2.5em'],
-            lineHeight: '1',
-            textAlign: ['center', 'center', 'center', 'left'],
-            width: '100%',
+
         },
         p: {
             color: 'text',

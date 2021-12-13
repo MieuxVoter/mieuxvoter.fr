@@ -50,9 +50,10 @@ const styles = {
   sectionThree: {
     py: 9,
     h2: {
-      fontSize: ['2em', '3em', '3em', '3em', '4vw'],
+      fontSize: ['52px', '72px'],
       lineHeight: '1',
-      textAlign: ['center', 'center', 'center', 'left']
+      textAlign: 'left',
+      ml: ['10%', '15%', '5%'],
     },
   },
   sectionTitle: {

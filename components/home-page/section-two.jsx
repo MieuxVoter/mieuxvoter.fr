@@ -49,16 +49,16 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: ['bottom', 'bottom'],
     backgroundSize: ['170%', '170%', '190%', '190%', 'cover'],
-    mt: ['-30em', '-30em', '-30em', '-30em'],
+    mt: [0, 0, 0, '-250px'],
     pb: 10,
     h2: {
-      fontSize: ['2em', '2em', '3em', '2.5em', '2.5em'],
+      fontSize: ['52px', '72px'],
       lineHeight: '1',
-      textAlign: ['center', 'center', 'center', 'left']
+      textAlign:  'left',
     },
     p: {
       my: ['30px'],
-      fontSize: ['1em', '1em', '1em', '1.5vw'],
+      fontSize: ['16px'],
     },
     button: {
       backgroundColor: 'transparent',
@@ -76,7 +76,7 @@ const styles = {
     ml: [null, null, null, '10%', '12%'],
   },
   titleSectionTwo: {
-    width: ['100%', '100%', '50%', '45%', '30%'],
+    width: ['100%', '100%', '60%', '65%', '45%'],
   },
   box1SectionTwo: {
     width: ['100%', '100%', '50%', '45%'],

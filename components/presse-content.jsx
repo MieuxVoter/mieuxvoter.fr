@@ -9,7 +9,7 @@ const data = [
   {
     id: 1,
     thumb: 'img/press-thumb-1.svg',
-    source: '{t("titre article1")}',
+    source: 'Libération',
     altText: 'Le déclic de la politique par et pour tous ?',
     title: 'Le déclic de la politique par et pour tous ?',
     author: 'Par Nicolas Massol',
@@ -110,7 +110,7 @@ const styles = {
   grid: {
     width: ['100%', '80%', '100%'],
     title: {
-      textAlign: 'center',
+      textAlign: 'left',
     },
     mx: 'auto',
     gridGap: [

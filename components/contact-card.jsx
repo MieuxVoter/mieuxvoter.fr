@@ -65,13 +65,7 @@ const styles = {
         backgroundPosition: 'right top',
         backgroundSize: '14%',
         px: '30px',
-        h2: {
-            color: 'text',
-            fontSize: ['2em', '2em', '3em', '2.5em', '2.5em'],
-            lineHeight: '1',
-            textAlign: ['center', 'center', 'center', 'left'],
-            width: '100%',
-        },
+
         p: {
             color: 'text',
             my: ['30px'],
@@ -84,16 +78,17 @@ const styles = {
         width: ['100%', '100%', '100%', '35%'],
         h2: {
             color: 'text',
-            fontSize: ['2em', '2em', '3em', '2.5em', '2.5em'],
+            fontSize: ['44px', '56px'],
             lineHeight: '1',
-            textAlign: ['center', 'center', 'center', 'left'],
+           textAlign: ['center', 'center', 'left'],
             width: '100%',
         },
         p: {
             color: 'text',
             my: ['30px'],
-            fontSize: ['1em', '1em', '1em', '1.5vw'],
+            fontSize: '16px',
             width: '100%',
+            textAlign: ['center', 'center', 'left'],
         },
     },
     containerRight: {

@@ -107,34 +107,36 @@ const styles = {
     p: 9,
     py: 9,
     h2: {
-      fontSize: [12, '3em', '3em', '3em', '4vw'],
+      fontSize:  ['52px', '72px'],
       lineHeight: '1',
-      textAlign: ['center', 'center', 'center', 'left'],
+      textAlign: 'left',
       color: 'text',
     },
     p: {
       my: 5,
-      fontSize: ['1em', '1em', '1em', '1.5vw'],
+      fontSize: '18px',
       lineHeight: ['1.5', '1'],
       color: 'text',
     },
   },
   containerOne: {
-    width: ['100%', '100%', null, '90%', '70%'],
+    width: ['100%', '100%', null, '90%', '85%'],
     mx: 'auto',
     flexDirection: ['column', 'column', 'row'],
   },
   leftContainerOne: {
-    width: ['100%', '100%', '60%', '90%'],
+    width: ['100%', '100%', '60%', '80%', '45%'],
     mx: [null, null, 5],
   },
   rightContainerOne: {
     width: ['100%', '100%', '40%', '75%'],
     display: ['none', 'none', 'inline-block'],
+    alignSelf: 'center',
   },
   screenshot: {
     width: '100%',
-    my: 'auto',
+    // mt: [null, null, '200px', '10rem', '700px' ],
+    ml: '30px',
   },
   sectionTwo: {
     backgroundImage: 'url("img/background-chevron-big-blue-contour.svg")',
@@ -142,12 +144,12 @@ const styles = {
     backgroundPosition: ['-300px 100px', '50% 700%', '-100px -390px', '-12em -550px', '-15em -48em', '-23em -67em', '62% 124%'],
     backgroundRepeat: 'repeat',
     backgroundColor: 'text',
-    height: '600px',
-    p: [2, 2, 9],
+
+    py: [2, 2, 9],
   },
   containerTwo: {
-    width: ['90%', null, null, '90%', '90%'],
-    mx: 'auto',
+    width: '100%',
+    pl: '10%',
   },
   containerThree: {
     width: [null, null, null, '90%', '80%'],
@@ -156,9 +158,9 @@ const styles = {
   sectionThree: {
     py: 9,
     h2: {
-      fontSize: ['2em', '3em', '3em', '3em', '4vw'],
+      fontSize: ['44px', '56px'],
       lineHeight: '1',
-      textAlign: ['center', 'center', 'center', 'left']
+      textAlign:  'left',
     },
   },
   sectionTitle: {
@@ -179,7 +181,8 @@ const styles = {
     mx: ['auto', 'auto', 'auto', 0],
     mr: [null, null, null, 5],
     h2: {
-      textAlign: ['center', 'center', 'center', 'left', 'left'],
+      textAlign: 'left',
+      fontSize: '18px',
     },
   },
   bookThumb: {

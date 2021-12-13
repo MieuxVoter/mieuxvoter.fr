@@ -56,14 +56,14 @@ const styles = {
         backgroundColor: 'primary',
         h2: {
             color: 'text_secondary',
-            fontSize: ['2em', '2em', '3em', '2.5em', '2.5em'],
+            fontSize: ['44px', '56px'],
             lineHeight: '1',
             textAlign: ['center', 'center', 'center', 'left']
         },
         p: {
             color: 'text_secondary',
             my: ['30px'],
-            fontSize: ['1em', '1em', '1em', '1.5vw'],
+            fontSize: ['17px'],
         },
         button: {
             backgroundColor: 'transparent',

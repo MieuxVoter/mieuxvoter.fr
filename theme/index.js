@@ -31,7 +31,7 @@ export default {
     '768px',
     '1024px',
     '1220px',
-    '1366px',
+    '1440px',
     '1620px',
   ],
   fonts: {
@@ -184,7 +184,7 @@ export default {
     },
     lead: {
       fontSize: 40,
-      fontFamily: 'DM Sans',
+      fontFamily: 'DM Serif Display!important',
       fontWeight: '500',
       lineHeight: '60px',
       letterSpacing: '-1.5px',
