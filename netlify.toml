@@ -4,7 +4,7 @@
   functions = "functions"
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+package = "@netlify/plugin-nextjs@4.0.0-beta.2"
 
 [dev]
   command = "npm run dev"
