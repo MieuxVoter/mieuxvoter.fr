@@ -22,14 +22,14 @@ export default function DeskCredits() {
 
                 <Text as="p">
                     {t("credits développé par")}
-                    <Link sx={styles.jimmy} href="https://jimmys-box.com/" target="_blank">
+                    <Link sx={styles.jimmy} href="https://jimmys-box.com/">
                         JIMMY
                      </Link>
                 </Text>
 
             </Flex>
 
-            <Link href="" target="_blank">
+            <Link href="">
                 {t("credits mentions")}
             </Link>
 

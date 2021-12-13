@@ -97,7 +97,7 @@ const MobHeader = () => {
 
             <NavItem className="social-nav">
               {socialItems.map((socialItem, i) => (
-                <Link href={socialItem.path} key={i} target="_blank">
+                <Link href={socialItem.path} key={i}>
                   <a onClick={toggle} className="navbar-my-link nav-link navbar-social-icon">
                     {socialItem.icon}
                   </a>
@@ -125,7 +125,7 @@ const MobHeader = () => {
                   {t("credits développé par")}
                 </p>
 
-                <Link href="https://jimmys-box.com/" target="_blank">
+                <Link href="https://jimmys-box.com/">
                   <a onClick={toggle} className="navbar-jimmy-link">
                     JIMMY
                   </a>

@@ -42,7 +42,7 @@ export default function DeskHeader() {
 
                         <Flex as="nav" sx={styles.socialNav}>
                             {socialItems.map((socialItem, i) => (
-                                <Link href={socialItem.path} key={i} target="_blank">{socialItem.icon}</Link>
+                                <Link href={socialItem.path} key={i}>{socialItem.icon}</Link>
                             ))}
                         </Flex>
 
