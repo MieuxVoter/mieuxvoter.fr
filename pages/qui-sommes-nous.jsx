@@ -53,7 +53,7 @@ export default function QuiSommeNous() {
           <Box sx={styles.teamCardColumn1}>
 
             <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/member-1.png" alt="" />
+              <Image sx={styles.imgOverlayWrapImg} src="img/chloe-ridel.png" alt="" />
               <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
             </Box>
 
@@ -67,7 +67,7 @@ export default function QuiSommeNous() {
           <Box sx={styles.teamCardColumn1}>
 
             <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/member-4.png" alt="" />
+              <Image sx={styles.imgOverlayWrapImg} src="img/david-chavalarias.png" alt="" />
               <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
             </Box>
 
@@ -85,7 +85,7 @@ export default function QuiSommeNous() {
           <Box sx={styles.teamCardColumn1}>
 
             <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/member-2.png" alt="" />
+              <Image sx={styles.imgOverlayWrapImg} src="img/rida-laraki.png" alt="" />
               <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
             </Box>
 
@@ -99,7 +99,7 @@ export default function QuiSommeNous() {
           <Box sx={styles.teamCardColumn1}>
 
             <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/member-5.png" alt="" />
+              <Image sx={styles.imgOverlayWrapImg} src="img/paloma-moritz.jpg" alt="" />
               <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
             </Box>
 
@@ -115,7 +115,7 @@ export default function QuiSommeNous() {
         <Box sx={styles.teamCard} >
 
           <Box sx={styles.imgOverlayWrap}>
-            <Image sx={styles.imgOverlayWrapImg} src="img/member-3.png" alt="" />
+            <Image sx={styles.imgOverlayWrapImg} src="img/pierrelouis-guhur.jpg" alt="" />
             <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
           </Box>
 
