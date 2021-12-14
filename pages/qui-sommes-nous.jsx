@@ -42,7 +42,7 @@ export default function QuiSommeNous() {
         </Box>
       </Flex>
 
-      <Text sx={styles.subtitle} as="h2">
+      <Text sx={styles.subtitle} as="h4">
         {t("bureau qui sommes nous")}
       </Text>
 
@@ -128,7 +128,7 @@ export default function QuiSommeNous() {
 
       </Flex>
 
-      <Text sx={styles.subtitle} as="h2">
+      <Text sx={styles.subtitle} as="h4">
         {t("conseil qui sommes nous")}
       </Text>
 
@@ -293,6 +293,9 @@ const styles = {
     h3: {
     fontSize: '32px',
     },
+    h4: {
+      fontSize: '32px',
+    },
   },
   containerQuiSommeNous: {
     flexDirection: 'column',
@@ -378,3 +381,4 @@ const styles = {
     width: '100%',
   },
 }
+

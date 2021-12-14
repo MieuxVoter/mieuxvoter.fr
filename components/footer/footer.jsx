@@ -169,10 +169,11 @@ const styles = {
         my: [7, 7, 0],
         svg: {
             ml: [null, null, 3],
+            mx: 3,
             fill: '#2400FD',
             cursor: 'pointer',
-            width: ['30px', '30px', '30px', '20px', '30px'],
-            height: ['30px', '30px', '30px', '20px', '30px'],
+            width: ['20px', '30px', '30px', '20px', '30px'],
+            height: ['20px', '30px', '30px', '20px', '30px'],
         },
     },
     divider: {

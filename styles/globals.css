@@ -190,3 +190,6 @@ color: white!important;
       text-decoration: none;
       opacity: 0.5;
     }
+    .paypal-button.paypal-button-color-gold, .paypal-button-row.paypal-button-color-gold .menu-button {
+      background: red!important;
+  }

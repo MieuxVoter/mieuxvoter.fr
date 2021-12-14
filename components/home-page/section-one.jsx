@@ -34,9 +34,12 @@ export default function SectionOne() {
 const styles = {
   sectionOne: {
     backgroundImage: 'url("img/background-chevron-big-blue.svg")',
-    backgroundSize: ['2495px'],
-    backgroundPosition: ['41.5% 65%', '42% 60%', '40% 80%', '45% 100%', '50% 100%', '55% 100%', '-497px -434px'],
+    backgroundSize: ['2495px', '2495px', '2495px', '2495px', '2495px', '2495px', '2495px', '200%'],
+    backgroundPosition: ['41.5% 65%', '42% 60%', '40% 80%', '45% 100%', '50% 100%', '55% 100%', '-497px -434px', '50% 80%'],
     backgroundRepeat: 'no-repeat',
+    '@media screen and (min-width: 2150px)': {
+      background: 'white',
+    },
     pb: ['200px', '200px', '550px', '600px', '650px', '800px', '700px'],
     pt: [ '50px', '100px'],
     h2: {

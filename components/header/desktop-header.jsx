@@ -108,7 +108,7 @@ const styles = {
     header: {
         backgroundImage: ['none', 'none', 'none', 'url("img/triangle-blue-up.svg")'],
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: [null, null, null, '-2em 0em', '-5.5em 0em', '-1.5em 0em'],
+        backgroundPosition: [null, null, null, '-2em 0em', '-5.5em 0em', '-1.5em 0em', '-1.5em 0em', '4em 0em'],
         backgroundSize: 'contain',
         justifyContent: 'space-between',
         flexDirection: ['column', 'column', 'column', 'row'],
