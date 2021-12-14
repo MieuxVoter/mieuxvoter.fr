@@ -1,7 +1,9 @@
 @font-face {
   font-family: "DM serif";
   src: url("/font/DMSerifDisplay-Italic.ttf") format("ttf"),
-         url("/font/DMSerifDisplay-Regular.ttf") format("ttf");
+         url("/font/DMSerifDisplay-Regular.ttf") format("ttf"),
+         url("/font/DMSerifDisplay-Italic.woff") format("woff"),
+         url("/font/DMSerifDisplay-Regular.woff") format("woff");
  }
 html,
 body {

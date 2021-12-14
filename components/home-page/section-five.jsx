@@ -6,7 +6,6 @@ import { Box, Text, Button, Input, Image, Flex } from 'theme-ui';
 import { BsArrowRight } from "react-icons/bs";
 import Link from 'next/link'
 import { useTranslation } from "next-i18next";
-import PaypalButton from '../paypal-button';
 
 export default function SectionFive() {
     const { t } = useTranslation('homepage');
@@ -32,7 +31,6 @@ export default function SectionFive() {
                 <Box sx={styles.containerRight}>
 
                     <Box sx={styles.boxButton2}>
-{/* <PaypalButton /> */}
                         <Link href="https://www.helloasso.com/associations/mieux-voter" passHref>
                             <Button>{t("bouton cinquième section")}<BsArrowRight sx={styles.arrow} /></Button>
                         </Link> 
