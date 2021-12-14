@@ -53,7 +53,7 @@ const styles = {
         backgroundRepeat: 'no-repeat',
         backgroundPosition: ['center 30em', 'center 35em', 'right'],
         backgroundSize: ['100%', '100%', '50%', '35%'],
-        backgroundColor: 'primary',
+        backgroundColor: '#2400FD',
         h2: {
             color: '#FFFFFF',
             fontSize: ['44px', '56px'],

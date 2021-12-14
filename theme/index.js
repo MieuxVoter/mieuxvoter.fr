@@ -263,7 +263,7 @@ export default {
     primary: {
       variant: 'buttons.defaultBtn',
       color: 'white',
-      bg: 'primary',
+      bg: '#2400FD',
 
     },
     whiteButton: {
@@ -277,13 +277,13 @@ export default {
     secondary: {
       variant: 'buttons.defaultBtn',
       border: '2px solid',
-      borderColor: 'primary',
+      borderColor: '#2400FD',
      color: '#2400FD',
       bg: 'transparent',
       padding: ['10px 15px', null, '15px 30px'],
       '&:hover': {
         color: 'white',
-        bg: 'primary',
+        bg: '#2400FD',
       },
     },
     textButton: {
@@ -331,8 +331,8 @@ export default {
       borderColor: 'border_color',
       height: 60,
       '&:focus': {
-        borderColor: 'primary',
-        boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
+        borderColor: '#2400FD',
+        boxShadow: (t) => `0 0 0 2px #2400FD`,
         outline: 'none',
       },
     },
