@@ -35,8 +35,8 @@ export default {
     '1620px',
   ],
   fonts: {
-    body: "'DM Serif Display!important', serif!important",
-    heading: "'DM Serif Display!important', serif!important",
+    body: '"DM Serif", serif',
+    heading: '"DM Serif", serif',
   },
   fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 64],
   fontWeights: {
@@ -130,7 +130,7 @@ export default {
 
     subTitle: {
       fontSize: [0, '13px', null, '14px'],
-      color: 'primary',
+     color: '#2400FD',
       textAlign: 'center',
       letterSpacing: ['1.5px', null, '2px'],
       textTransform: 'uppercase',
@@ -220,7 +220,7 @@ export default {
       fontSize: 'inherit',
       transition: 'color 0.25s',
       '&:hover': {
-        color: 'primary',
+       color: '#2400FD',
       },
     },
     footer: {
@@ -278,7 +278,7 @@ export default {
       variant: 'buttons.defaultBtn',
       border: '2px solid',
       borderColor: 'primary',
-      color: 'primary',
+     color: '#2400FD',
       bg: 'transparent',
       padding: ['10px 15px', null, '15px 30px'],
       '&:hover': {
@@ -348,7 +348,7 @@ export default {
       letterSpacing: '-0.5px',
     },
     outline: {
-      color: 'primary',
+     color: '#2400FD',
       bg: 'transparent',
       boxShadow: 'inset 0 0 0 1px',
     },

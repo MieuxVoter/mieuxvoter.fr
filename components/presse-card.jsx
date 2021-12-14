@@ -70,7 +70,7 @@ const styles = {
         },
         lien: {
             fontSize: 1,
-            color: 'primary',
+           color: '#2400FD',
             mt: 5,
             fontWeight: 'bold',
         },

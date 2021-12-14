@@ -110,13 +110,13 @@ const styles = {
       fontSize:  ['52px', '72px'],
       lineHeight: '1',
       textAlign: 'left',
-      color: 'text',
+      color: '#0A004C',
     },
     p: {
       my: 5,
       fontSize: '18px',
       lineHeight: ['1.5', '1'],
-      color: 'text',
+      color: '#0A004C',
     },
   },
   containerOne: {
@@ -143,7 +143,7 @@ const styles = {
     backgroundSize: ['1000px', '1000px', '1000px', '140%', '130%', '160%', '145%'],
     backgroundPosition: ['-300px 100px', '50% 700%', '-100px -390px', '-12em -550px', '-15em -48em', '-23em -67em', '62% 124%'],
     backgroundRepeat: 'repeat',
-    backgroundColor: 'text',
+    backgroundColor: '#0A004C',
 
     py: [2, 2, 9],
   },
@@ -196,13 +196,13 @@ const styles = {
     width: [null, null, null, '80%', '40%'],
     mx: '30px',
     p: {
-      color: 'text',
+      color: '#0A004C',
       fontSize: 3,
       mb: 5,
     },
     a: {
       fontSize: 1,
-      color: 'primary',
+     color: '#2400FD',
       mt: 5,
       fontWeight: 'bold',
     },

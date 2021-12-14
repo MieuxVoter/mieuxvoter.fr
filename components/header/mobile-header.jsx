@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, Button } from "reactstrap";
 import Link from "next/link";
-import Image from 'next/image'
+import { Image } from 'theme-ui';
 import { useTranslation } from 'next-i18next'
 import socialItems from "./social.data";
 import 'bootstrap/dist/css/bootstrap.min.css';

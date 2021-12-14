@@ -58,7 +58,7 @@ const styles = {
         },
         lien: {
             fontSize: '15px',
-            color: 'primary',
+           color: '#2400FD',
             mt: 5,
             fontWeight: 'bold',
         },

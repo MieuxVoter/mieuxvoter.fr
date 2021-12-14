@@ -227,7 +227,7 @@ const styles = {
     mx: ['auto', null],
     h3: {
       textAlign: 'left',
-      color: 'text',
+      color: '#0A004C',
       fontSize: '18px',
       pt: 5,
     },

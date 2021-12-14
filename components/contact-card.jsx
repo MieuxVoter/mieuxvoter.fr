@@ -67,7 +67,7 @@ const styles = {
         px: '30px',
 
         p: {
-            color: 'text',
+            color: '#0A004C',
             my: ['30px'],
             fontSize: ['1em', '1em', '1em', '1.5vw'],
             width: '100%',
@@ -77,14 +77,14 @@ const styles = {
         flexDirection: 'column',
         width: ['100%', '100%', '100%', '35%'],
         h2: {
-            color: 'text',
+            color: '#0A004C',
             fontSize: ['44px', '56px'],
             lineHeight: '1',
            textAlign: ['center', 'center', 'left'],
             width: '100%',
         },
         p: {
-            color: 'text',
+            color: '#0A004C',
             my: ['30px'],
             fontSize: '16px',
             width: '100%',
@@ -106,7 +106,7 @@ const styles = {
             boxShadow: '0px 2px 0px 0px #0A004C',
             '&::placeholder': {
                 textOverflow: 'ellipsis !important',
-                color: 'text',
+                color: '#0A004C',
                 fontSize: '1em',
                 fontStyle: 'italic',
             },
@@ -117,7 +117,7 @@ const styles = {
             boxShadow: '0px 2px 0px 0px #0A004C',
             '&::placeholder': {
                 textOverflow: 'ellipsis !important',
-                color: 'text',
+                color: '#0A004C',
                 fontSize: '1.1em',
                 fontStyle: 'italic',
             },
@@ -145,7 +145,7 @@ const styles = {
         textAlign: ['center', 'center', 'center', 'right'],
         button: {
             backgroundColor: 'transparent',
-            color: 'text',
+            color: '#0A004C',
             border: 'solid 2px #0A004C',
             boxShadow: '0px 3px 0px 0px #0A004C',
             mr: 0,
@@ -154,7 +154,7 @@ const styles = {
     arrow: {
         verticalAlign: 'middle',
         fontSize: '2em',
-        color: 'text',
+        color: '#0A004C',
         ml: 5,
     },
 }

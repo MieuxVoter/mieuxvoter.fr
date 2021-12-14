@@ -32,7 +32,7 @@ export default function SectionFive() {
 
                     <Box sx={styles.boxButton2}>
 
-                        <Link href="https://fr.tipeee.com/mieux-voter" passHref>
+                        <Link href="https://www.helloasso.com/associations/mieux-voter" passHref>
                             <Button>{t("bouton cinquième section")}<BsArrowRight sx={styles.arrow} /></Button>
                         </Link>
                     </Box>
@@ -54,14 +54,14 @@ const styles = {
         px: ['30px', null],
         py: [8, 8, 8, 0],
         h2: {
-            color: 'text_secondary',
+            color: '#FFFFFF',
             fontSize: ['44px', '40px'],
             lineHeight: '1',
             textAlign: ['center', 'center', 'center', 'left'],
             width: '100%',
         },
         p: {
-            color: 'text_secondary',
+            color: '#FFFFFF',
             my: ['30px'],
             fontSize: ['18px'],
             width: '100%',
@@ -69,7 +69,7 @@ const styles = {
         },
         button: {
             backgroundColor: ['transparent', 'primary'],
-            color: 'text_secondary',
+            color: '#FFFFFF',
             border: 'solid 2px white',
             boxShadow: '0px 3px 0px 0px white',
             mr: 0,
@@ -105,7 +105,7 @@ const styles = {
     arrow: {
         verticalAlign: 'middle',
         fontSize: '2em',
-        color: 'text_secondary',
+        color: '#FFFFFF',
         ml: 5,
     },
 }

@@ -97,7 +97,7 @@ const styles = {
         cursor: 'pointer',
         mb: 7,
         p: {
-            color: 'text',
+            color: '#0A004C',
             width: '80%',
             fontSize: '18px',
             lineHeight: '20px',
@@ -110,7 +110,7 @@ const styles = {
         h3: {
             width: ['100%', '100%', '100%', '60%'],
             fontSize: ['20px', '20px', '24px'],
-            color: 'primary',
+           color: '#2400FD',
         },
         input: {
             width: ['100%', '100%', '100%', '60%'],
@@ -119,7 +119,7 @@ const styles = {
             boxShadow: '0px 2px 0px 0px #2400FD',
             '&::placeholder': {
                 textOverflow: 'ellipsis !important',
-                color: 'primary',
+               color: '#2400FD',
                 fontSize: '16px',
                 fontStyle: 'italic',
             },
@@ -129,8 +129,8 @@ const styles = {
         width: ['100%', '100%', '100%', '40%'],
         textAlign: ['center'],
         button: {
-            backgroundColor: 'text_secondary',
-            color: 'primary',
+            backgroundColor: '#FFFFFF',
+           color: '#2400FD',
             border: 'solid 2px #2400FD',
             boxShadow: '0px 3px 0px 0px #2400FD',
         },
@@ -142,7 +142,7 @@ const styles = {
     arrow: {
         verticalAlign: 'middle',
         fontSize: '1.5em',
-        color: 'primary',
+       color: '#2400FD',
         ml: 5,
     },
     middleFooter: {
@@ -151,7 +151,7 @@ const styles = {
         flexDirection: ['column', 'column', 'column', 'row'],
     },
     menuNav: {
-        color: 'text',
+        color: '#0A004C',
         fontWeight: 'bold',
         flexDirection: ['column', 'column', 'row'],
         textAlign: ['center', 'center', 'left'],
@@ -160,7 +160,7 @@ const styles = {
             my: 4,
             fontSize: ['16px'],
             textDecoration: 'none',
-            color: 'text',
+            color: '#0A004C',
         },
     },
     socialNav: {

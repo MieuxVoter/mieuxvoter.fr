@@ -55,19 +55,19 @@ const styles = {
         backgroundSize: ['100%', '100%', '50%', '35%'],
         backgroundColor: 'primary',
         h2: {
-            color: 'text_secondary',
+            color: '#FFFFFF',
             fontSize: ['44px', '56px'],
             lineHeight: '1',
             textAlign: ['center', 'center', 'center', 'left']
         },
         p: {
-            color: 'text_secondary',
+            color: '#FFFFFF',
             my: ['30px'],
             fontSize: ['17px'],
         },
         button: {
             backgroundColor: 'transparent',
-            color: 'text_secondary',
+            color: '#FFFFFF',
             border: 'solid 2px white',
             boxShadow: '0px 3px 0px 0px white',
             mr: 0,
@@ -104,7 +104,7 @@ const styles = {
         input: {
             border: 'none',
             '::placeholder': {
-                color: 'text_secondary',
+                color: '#FFFFFF',
             },
         },
     },
@@ -115,12 +115,12 @@ const styles = {
     arrow: {
         verticalAlign: 'middle',
         fontSize: '2em',
-        color: 'text_secondary',
+        color: '#FFFFFF',
     },
     arrowInput: {
         verticalAlign: 'middle',
         fontSize: '2em',
         height: '60px',
-        color: 'text_secondary',
+        color: '#FFFFFF',
     }
 }

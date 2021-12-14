@@ -33,14 +33,14 @@ const styles = {
 
         },
         p: {
-            color: 'text',
+            color: '#0A004C',
             my: ['30px'],
             fontSize: ['1em', '1em', '1em', '1.5vw'],
             width: '100%',
         },
         button: {
             backgroundColor: 'transparent',
-            color: 'text',
+            color: '#0A004C',
             border: 'solid 2px #0A004C',
             boxShadow: '0px 3px 0px 0px #0A004C',
             mr: 0,

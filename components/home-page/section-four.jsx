@@ -46,21 +46,21 @@ const styles = {
         backgroundSize: ['23%', '14%'],
         px: '30px',
         h2: {
-            color: 'text',
+            color: '#0A004C',
             fontSize: ['44px', '56px'],
             lineHeight: '1',
             textAlign: ['center', 'center', 'center', 'left'],
             width: '100%',
         },
         p: {
-            color: 'text',
+            color: '#0A004C',
             my: ['30px'],
             fontSize: ['18px'],
             width: '100%',
         },
         button: {
             backgroundColor: 'secondary',
-            color: 'text_secondary',
+            color: '#FFFFFF',
             border: 'solid 2px white',
             boxShadow: '0px 3px 0px 0px white',
             mr: 0,
@@ -96,7 +96,7 @@ const styles = {
     arrow: {
         verticalAlign: 'middle',
         fontSize: '2em',
-        color: 'text_secondary',
+        color: '#FFFFFF',
         ml: 5,
     },
 }

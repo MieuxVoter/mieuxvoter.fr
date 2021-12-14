@@ -62,7 +62,7 @@ const styles = {
     },
     button: {
       backgroundColor: 'transparent',
-      color: 'primary',
+     color: '#2400FD',
       border: 'solid 2px #2400FD',
       boxShadow: '0px 3px 0px 0px #2400FD',
       mr: 0,
