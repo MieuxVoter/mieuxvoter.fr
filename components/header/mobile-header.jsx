@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Image } from 'theme-ui';
 import { useTranslation } from 'next-i18next'
 import socialItems from "./social.data";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import LanguageSelector from "./language-selector";
 
 const MobHeader = () => {
@@ -19,7 +19,7 @@ const MobHeader = () => {
 
     <header>
 
-      <Navbar light expand="md">
+      <Navbar light className="nav-mobile" expand="md">
         <div className="navbar-header">
 
           <Link href="/">

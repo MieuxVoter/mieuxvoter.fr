@@ -11,7 +11,9 @@ body {
   margin: 0;
   font-family: "DM Serif", serif!important;
 }
-
+h1, h2, h3, h4, p, a {
+  font-family: "DM Serif", serif!important;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -151,6 +153,9 @@ z-index: 9999;
     .navbar-brand-mobile {
       margin-bottom: 50px;
     }
+    .navbar-brand-mobile img {
+    width: 150px;
+    }
     .navbar-toggle {
       height: 40px;
       margin-top: 15px;
@@ -192,6 +197,6 @@ color: white!important;
       text-decoration: none;
       opacity: 0.5;
     }
-    .paypal-button.paypal-button-color-gold, .paypal-button-row.paypal-button-color-gold .menu-button {
-      background: red!important;
+  .nav-mobile {
+    width: 100%;
   }

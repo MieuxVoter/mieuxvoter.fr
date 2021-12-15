@@ -4,7 +4,7 @@ import theme from '../theme';
 import Head from "next/head";
 import Layout from "../components/layout"
 import { appWithTranslation } from 'next-i18next'
-
+import '../styles/bootstrap.css';
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>

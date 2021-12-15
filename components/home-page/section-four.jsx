@@ -59,7 +59,7 @@ const styles = {
             width: '100%',
         },
         button: {
-            backgroundColor: 'secondary',
+            backgroundColor: '#FF3E37',
             color: '#FFFFFF',
             border: 'solid 2px white',
             boxShadow: '0px 3px 0px 0px white',
