@@ -67,7 +67,7 @@ const styles = {
             lineHeight: '1.2',
         },
         button: {
-            backgroundColor: ['transparent', 'primary'],
+            backgroundColor: ['transparent', '#2400FD'],
             color: '#FFFFFF',
             border: 'solid 2px white',
             boxShadow: '0px 3px 0px 0px white',
