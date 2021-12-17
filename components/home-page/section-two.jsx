@@ -49,7 +49,7 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: ['bottom', 'bottom'],
     backgroundSize: ['170%', '170%', '190%', '190%', 'cover'],
-    mt: [0, 0, 0, '-250px'],
+    mt: [0, 0, 0, '-150px'],
     pb: 10,
     h2: {
       fontSize: ['52px', '72px'],
@@ -105,5 +105,6 @@ const styles = {
   arrow: {
     verticalAlign: 'middle',
     fontSize: '2em',
-  }
+    ml: 5,
+},
 }

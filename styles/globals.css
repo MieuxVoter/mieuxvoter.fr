@@ -1,10 +1,9 @@
 @font-face {
   font-family: "DM serif";
-  src: url("/font/DMSerifDisplay-Italic.ttf") format("ttf"),
-         url("/font/DMSerifDisplay-Regular.ttf") format("ttf"),
-         url("/font/DMSerifDisplay-Italic.woff") format("woff"),
+  src:  url("/font/DMSerifDisplay-Regular.ttf") format("ttf"),
          url("/font/DMSerifDisplay-Regular.woff") format("woff");
  }
+ @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 html,
 body {
   padding: 0;
@@ -18,7 +17,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+a, p {
+  font-weight: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -28,18 +29,6 @@ a {
 }
 .react-multi-carousel-list {
   overflow: overlay;
-}
-@media (max-width: 640px) {
-  .react-multi-carousel-track, .react-multi-carousel-list {
-    flex-direction: column!important;
-  }
-  .react-multi-carousel-item {
-    margin: 20px;
-    width: 100vw!important; 
-  }
-  .react-multiple-carousel__arrow {
-    display: none;
-  }
 }
 
 
@@ -84,31 +73,6 @@ a {
     padding-bottom: 0px!important;
 }
 
-      @media screen and (max-width: 500px) { 
-        .ReactFlagsSelect-module_selectOptions__3LNBJ {
-          background: #2400FD!important;
-           
-        }
-        .ReactFlagsSelect-module_label__27pw9 {
-          font-size: 1em!important;
-          color: white;  
-          padding: 5px 10px!important;
-        }
-        #rfs-btn {
-          padding: 0;
-          height: 30px!important;
-        }
-        .ReactFlagsSelect-module_selectValue__152eS {
-          padding: 0!important;
-          margin: 0!important;
-        }
-        .ReactFlagsSelect-module_label__27pw9 {
-          padding: 0;
-        }
-        .ReactFlagsSelect-module_selectBtn__19wW7::after {
-          border-top: 5px solid white!important;        
-      }
-       }
         .ReactFlagsSelect-module_selectOptionValue__vS99- > .ReactFlagsSelect-module_label__27pw9 {
         font-size: 0.7em!important;
        }
@@ -144,7 +108,7 @@ a {
     .navbar-collapse {
       background: #2400FD;
       padding: 10px 20px;
-      height: 100vh;
+      height: 100%;
       position: fixed;
 top: 0;
 width: 100%;
@@ -154,7 +118,7 @@ z-index: 9999;
       margin-bottom: 50px;
     }
     .navbar-brand-mobile img {
-    width: 150px;
+    width: 200px;
     }
     .navbar-toggle {
       height: 40px;
@@ -167,6 +131,7 @@ color: white!important;
     }
     .navbar-my-link {
       color: white!important;
+      margin-left: 15px!important;
       font-size: 24px!important;
       line-height: 31,25px;
       text-align: left!important;
@@ -179,8 +144,8 @@ color: white!important;
   margin: 0 10px;
 }
     .navbar-credits-container {
-      position: absolute;
-      bottom: 5%;
+      margin-top: 50%;
+      text-align: left;
     }
     .navbar-credits-link, .navbar-credits {
       color: white!important;
@@ -197,6 +162,80 @@ color: white!important;
       text-decoration: none;
       opacity: 0.5;
     }
+    .navbar-nav-scroll {
+      max-height: 100vh!important;
+  }
   .nav-mobile {
     width: 100%;
   }
+  #dropdown-basic-button {
+  margin: 20px;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #0A004C;
+    background-color: transparent;
+    font-family: DM serif;
+    }
+    #dropdown-basic-button:active:focus {
+      box-shadow: none;
+    }
+    .mobile-header {
+      width: 100%;
+    }
+
+
+    
+@media (max-width: 640px) {
+  .react-multi-carousel-track, .react-multi-carousel-list {
+    flex-direction: column!important;
+  }
+  .react-multi-carousel-item {
+    margin: 20px;
+    width: 100vw!important; 
+  }
+  .react-multiple-carousel__arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  header nav {
+    width: 100%!important;
+  }
+  .ReactFlagsSelect-module_selectOptions__3LNBJ {
+    background: #2400FD!important;
+     
+  }
+  .ReactFlagsSelect-module_label__27pw9 {
+    font-size: 1em!important;
+    color: white;  
+    padding: 5px 10px!important;
+  }
+  #rfs-btn {
+    padding: 0;
+    height: 30px!important;
+  }
+  .ReactFlagsSelect-module_selectValue__152eS {
+    padding: 0!important;
+    margin: 0!important;
+  }
+  .ReactFlagsSelect-module_label__27pw9 {
+    padding: 0;
+  }
+  .ReactFlagsSelect-module_selectBtn__19wW7::after {
+    border-top: 5px solid white!important;        
+}
+#dropdown-basic-button-menu {
+  margin-left: 15px;
+    border: none;
+    padding: 0;
+    font-size: 24px!important;
+    color: white;
+    background-color: transparent;
+    font-family: DM serif;
+    }
+    .dropdown {
+      text-align: left;
+    }
+ }

@@ -67,6 +67,8 @@ const styles = {
   },
   arrow: {
     verticalAlign: 'middle',
-    fontSize: '1.5em',
-  },
+    fontSize: '2em',
+    color: '#FFFFFF',
+    ml: 5,
+},
 }

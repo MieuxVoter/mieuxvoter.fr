@@ -116,6 +116,7 @@ const styles = {
         verticalAlign: 'middle',
         fontSize: '2em',
         color: '#FFFFFF',
+        ml: 5,
     },
     arrowInput: {
         verticalAlign: 'middle',

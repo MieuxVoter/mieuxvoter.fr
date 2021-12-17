@@ -68,4 +68,10 @@ const styles = {
     marginRight: [null, '50px'],
     textAlign: ['center', 'center', 'right'],
   },
+  arrow: {
+    verticalAlign: 'middle',
+    fontSize: '2em',
+    color: '#FFFFFF',
+    ml: 5,
+},
 }

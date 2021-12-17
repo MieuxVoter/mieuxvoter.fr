@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Image } from 'theme-ui';
 import { useTranslation } from 'next-i18next'
 import socialItems from "./social.data";
-
+import { DropdownButton, Dropdown } from "react-bootstrap";
 import LanguageSelector from "./language-selector";
 
 const MobHeader = () => {
@@ -17,7 +17,7 @@ const MobHeader = () => {
 
   return (
 
-    <header>
+    <header className="mobile-header">
 
       <Navbar light className="nav-mobile" expand="md">
         <div className="navbar-header">
@@ -26,26 +26,26 @@ const MobHeader = () => {
             <a className="navbar-brand">
               <div className="d-flex flex-row">
                 <div className="align-self-center">
-                  <Image src="img/logo.svg" alt="logo" height="50" />
+                  <Image src="img/logo.svg" alt="" height="50" />
                 </div>
               </div>
             </a>
           </Link>
 
-          <Button onClick={toggle} className="navbar-toggle"><Image src="img/menu-icon.svg" alt="logo" height="50" />
+          <Button onClick={toggle} className="navbar-toggle"><Image src="img/menu-icon.svg" alt="" height="50" />
           </Button>
 
         </div>
 
         <Collapse isOpen={isOpen} navbar>
 
-          <Nav className="ml-auto" navbar>
+          <Nav   className="ml-auto navbar-nav-scroll" navbar>
 
             <div className="d-flex flex-row justify-content-between">
 
               <Link href="/">
                 <a className="navbar-brand navbar-brand-mobile">
-                  <Image src="img/logo-mobile.svg" alt="logo" height="50" />
+                  <Image src="img/logo-mobile.svg" alt="logo" height="80" />
                 </a>
               </Link>
 
@@ -54,27 +54,22 @@ const MobHeader = () => {
           </Button>
 
             </div>
-
+<div>
             <NavItem>
-              <Link href="/le-jugement-majoritaire">
-                <a onClick={toggle} className="navbar-my-link nav-link">
-                  {t("menu lien 1")}
-                </a>
-              </Link>
+              
+            <DropdownButton id="dropdown-basic-button-menu" title={t("menu lien 1")}>
+
+              <Dropdown.Item  onClick={toggle} href="le-jugement-majoritaire">{t("menu sous lien 1")}</Dropdown.Item>
+
+              <Dropdown.Item  onClick={toggle} href="faq">{t("menu sous lien 2")}</Dropdown.Item>
+
+            </DropdownButton>
             </NavItem>
 
             <NavItem>
               <Link href="/qui-sommes-nous">
                 <a onClick={toggle} className="navbar-my-link nav-link">
                   {t("menu lien 2")}
-                </a>
-              </Link>
-            </NavItem>
-
-            <NavItem>
-              <Link href="/faq">
-                <a onClick={toggle} className="navbar-my-link nav-link">
-                  {t("menu lien 3")}
                 </a>
               </Link>
             </NavItem>
@@ -104,7 +99,7 @@ const MobHeader = () => {
                 </Link>
               ))}
             </NavItem>
-
+            </div>
             <NavItem className="navbar-credits-container">
 
               <LanguageSelector style={{ width: "80px" }} />
