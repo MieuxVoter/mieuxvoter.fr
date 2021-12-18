@@ -1,22 +1,22 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text } from 'theme-ui';
+import {Box, Text} from 'theme-ui';
 import Adherez from '../components/adherez';
 import Accordion from 'react-bootstrap/Accordion';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale, ["faq", "common"])),
   },
 });
 
 export default function Faq() {
-  const { t } = useTranslation('faq');
+  const {t} = useTranslation('faq');
 
   return (
 
@@ -46,7 +46,26 @@ export default function Faq() {
               {t("question 2")}
             </Accordion.Header>
             <Accordion.Body>
-              {t("reponse 2")}
+              {t("reponse 2.1")}
+              <br />
+              {t("reponse 2.2")}
+              <br />
+              {t("reponse 2.3")}
+              <ul>
+                <li>
+                  {t("reponse 2.3.1")}
+                  <ul>
+                    <li>{t("reponse 2.3.1.1")} </li>
+                    <li>{t("reponse 2.3.1.2")} </li>
+                  </ul>
+                </li>
+                <li>{t("reponse 2.3.2")}</li>
+                <li>{t("reponse 2.3.3")}</li>
+                <li>{t("reponse 2.3.4")}</li>
+                <li>{t("reponse 2.3.5")}</li>
+              </ul>
+              <br />
+              {t("reponse 2.4")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -56,7 +75,16 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 3")}
+              {t("reponse 3.1")}
+              <br />
+              {t("reponse 3.2")}
+              <ul>
+                <li>{t("reponse 3.2.1")}</li>
+                <li>{t("reponse 3.2.2")}</li>
+                <li>{t("reponse 3.2.3")}</li>
+                <li>{t("reponse 3.2.4")}</li>
+                <li>{t("reponse 3.2.5")}</li>
+              </ul>
             </Accordion.Body>
           </Accordion.Item>
 
@@ -66,7 +94,11 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 4")}
+              {t("reponse 4.1")}
+              <br />
+              {t("reponse 4.2")}
+              <br />
+              {t("reponse 4.3")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -86,7 +118,15 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 6")}
+              {t("reponse 6.1")}
+              <br />
+              {t("reponse 6.2")}
+              <br />
+              {t("reponse 6.3")}
+              <br />
+              {t("reponse 6.4")}
+              <br />
+              {t("reponse 6.5")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -96,7 +136,15 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 7")}
+              {t("reponse 7.1")}
+              <br />
+              {t("reponse 7.2")}
+              <br />
+              {t("reponse 7.3")}
+              <br />
+              {t("reponse 7.4")}
+              <br />
+              {t("reponse 7.4")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -106,7 +154,21 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 8")}
+              {t("reponse 8.1")}
+              <br />
+              {t("reponse 8.2")}
+              <br />
+              {t("reponse 8.3")}
+              <br />
+              {t("reponse 8.4")}
+              <br />
+              <ul>
+                <li>{t("reponse 8.4.1")} </li>
+                <li>{t("reponse 8.4.2")} </li>
+              </ul>
+              {t("reponse 8.5")}
+              <br />
+              {t("reponse 8.6")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -116,7 +178,11 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 9")}
+              {t("reponse 9.1")}
+              <br />
+              {t("reponse 9.2")}
+              <br />
+              {t("reponse 9.3")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -126,7 +192,21 @@ export default function Faq() {
             </Accordion.Header>
 
             <Accordion.Body>
-              {t("reponse 10")}
+              {t("reponse 10.1")}
+              <br />
+              {t("reponse 10.2")}
+              <br />
+              {t("reponse 10.3")}
+              <br />
+              {t("reponse 10.4")}
+              <br />
+              {t("reponse 10.5")}
+              <br />
+              {t("reponse 10.6")}
+              <br />
+              {t("reponse 10.7")}
+              <br />
+              {t("reponse 10.8")}
             </Accordion.Body>
           </Accordion.Item>
 
@@ -164,7 +244,7 @@ const styles = {
       fontSize: ['52px', '72px'],
       lineHeight: '1',
       textAlign: 'left',
-     
+
     },
   },
   containerFaq: {
