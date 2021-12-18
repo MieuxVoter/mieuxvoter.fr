@@ -22,7 +22,7 @@ export default function DeskCredits() {
           </Link>
         </Text>
 
-        <Link href="">{t("credits mentions")}</Link>
+        <Link href="/">{t("credits mentions")}</Link>
       </Flex>
 
       <LanguageSelector />

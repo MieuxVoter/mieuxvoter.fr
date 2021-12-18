@@ -48,31 +48,31 @@ export default function DeskHeader() {
 
             <DropdownButton id="dropdown-basic-button" title={t("menu lien 1")}>
 
-              <Dropdown.Item href="le-jugement-majoritaire">{t("menu sous lien 1")}</Dropdown.Item>
+              <Dropdown.Item href="/le-jugement-majoritaire">{t("menu sous lien 1")}</Dropdown.Item>
 
-              <Dropdown.Item href="faq">{t("menu sous lien 2")}</Dropdown.Item>
+              <Dropdown.Item href="/faq">{t("menu sous lien 2")}</Dropdown.Item>
 
             </DropdownButton>
 
-            <Link href="qui-sommes-nous">{t("menu lien 2")}</Link>
+            <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
-            <Link href="presse">{t("menu lien 4")}</Link>
+            <Link href="/presse">{t("menu lien 4")}</Link>
 
-            <Link href="contact">{t("menu lien 5")}</Link>
+            <Link href="/contact">{t("menu lien 5")}</Link>
           </Flex>
         </Box>
       </Flex>
 
       <Flex as="nav" sx={styles.menuNavTab}>
-        <Link href="le-jugement-majoritaire">{t("menu lien 1")}</Link>
+        <Link href="/le-jugement-majoritaire">{t("menu lien 1")}</Link>
 
-        <Link href="qui-sommes-nous">{t("menu lien 2")}</Link>
+        <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
-        <Link href="faq">{t("menu lien 3")}</Link>
+        <Link href="/faq">{t("menu lien 3")}</Link>
 
-        <Link href="presse">{t("menu lien 4")}</Link>
+        <Link href="/presse">{t("menu lien 4")}</Link>
 
-        <Link href="contact">{t("menu lien 5")}</Link>
+        <Link href="/contact">{t("menu lien 5")}</Link>
       </Flex>
     </header>
   );

@@ -33,7 +33,7 @@ export default function SectionThree() {
 
                             <BsArrowRight sx={styles.arrowInput} />
 
-                            <Input placeholder={t("placeholder troisième section")} />
+                            <Input sx={styles.input} placeholder={t("placeholder troisième section")} />
 
                         </Flex>
 
@@ -105,9 +105,18 @@ const styles = {
             border: 'none',
             '::placeholder': {
                 color: '#FFFFFF',
+                opacity: '1',
             },
+            
         },
+        
     },
+    input: {
+        '&:focus': {
+        color: '#FFFFFF',
+        border: 'none',
+boxShadow: 'none',
+    },},
     boxButton2: {
         width: ['100%', '100%', '40%', '42%'],
 

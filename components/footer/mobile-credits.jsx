@@ -31,7 +31,7 @@ export default function MobCredits() {
 
             </Flex>
 
-            <Link href="">
+            <Link href="/">
                 {t("credits mentions")}
             </Link>
 
@@ -50,13 +50,13 @@ const styles = {
         flexDirection: ['column', 'column', 'row'],
         textAlign: ['center', 'center', 'left'],
         p: {
-            color: '#8F88BA',
+            color: '#0A004C',
             my: 5,
             fontSize: '14px',
         },
         a: {
             fontWeight: 'bold',
-            color: '#8F88BA',
+            color: '#0A004C',
             my: 5,
             fontSize: '14px',
         },

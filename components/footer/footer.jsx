@@ -8,7 +8,7 @@ import Link from "next/link";
 import socialItems from "../header/social.data";
 import Credits from "./credits";
 import { useTranslation } from "next-i18next";
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 
 export default function Footer() {
   const { t } = useTranslation("common");
@@ -47,19 +47,34 @@ export default function Footer() {
 
       <Flex sx={styles.middleFooter}>
         <Flex as="nav" sx={styles.menuNav}>
-          <DropdownButton id="dropdown-basic-button" title={t("menu lien 1")}>
-            <Dropdown.Item href="le-jugement-majoritaire">
-              {t("menu sous lien 1")}
-            </Dropdown.Item>
+        <Accordion  className="footer-accordion">
+                  <Accordion.Item
+                    eventKey="0"
+                    className="footer-accordion-item"
+                  >
+                    <Accordion.Header className="footer-accordion-header">
+                      {t("menu lien 1")}
+                    </Accordion.Header>
+                    <Accordion.Body className="footer-accordion-body">
+                      <Link href="/le-jugement-majoritaire">
+                        <a className="">
+                          {t("menu sous lien 1")}
+                        </a>
+                      </Link>
+                      <Link href="/faq">
+                        <a className="">
+                          {t("menu sous lien 2")}
+                        </a>
+                      </Link>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
 
-            <Dropdown.Item href="faq">{t("menu sous lien 2")}</Dropdown.Item>
-          </DropdownButton>
+          <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
-          <Link href="qui-sommes-nous">{t("menu lien 2")}</Link>
+          <Link href="/presse">{t("menu lien 4")}</Link>
 
-          <Link href="presse">{t("menu lien 4")}</Link>
-
-          <Link href="contact">{t("menu lien 5")}</Link>
+          <Link href="/contact">{t("menu lien 5")}</Link>
         </Flex>
 
         <Flex as="nav" sx={styles.socialNav}>
@@ -153,7 +168,7 @@ const styles = {
     flexDirection: ["column", "column", "row"],
     textAlign: ["center", "center", "left"],
     a: {
-      mr: [null, 5],
+      mx: [null, 2],
       my: 4,
       fontSize: ["16px"],
       textDecoration: "none",

@@ -20,13 +20,13 @@ export const getStaticProps = async ({ locale }) => ({
 export default function Home() {
 
   return (
-    <Box>
+    <main>
       <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
       <SectionFive />
       <SectionSix />
-    </Box>
+    </main>
   );
 }

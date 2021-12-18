@@ -149,7 +149,8 @@ const styles = {
   },
   containerTwo: {
     width: '100%',
-    pl: '10%',
+    pr: ['5%', '5%', '5%', 0, 0],
+    pl: ['5%', '5%', '5%', '5%','10%'],
   },
   containerThree: {
     width: [null, null, null, '90%', '80%'],
@@ -157,6 +158,7 @@ const styles = {
   },
   sectionThree: {
     py: 9,
+    px: ['30px', '30px', 'auto'],
     h2: {
       fontSize: ['44px', '56px'],
       lineHeight: '1',

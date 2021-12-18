@@ -10,7 +10,7 @@ body {
   margin: 0;
   font-family: "DM Serif", serif!important;
 }
-h1, h2, h3, h4, p, a {
+h1, h2, h3, h4, p, a, button {
   font-family: "DM Serif", serif!important;
 }
 a {
@@ -31,8 +31,67 @@ a, p {
   overflow: overlay;
 }
 
-
-
+.navbar-accordion-item, .navbar-accordion-body  {
+  background-color: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+.navbar-accordion button {
+  background-color: transparent!important;
+  color: white!important;
+  margin-left: 15px!important;
+  font-size: 24px!important;
+  line-height: 31,25px;
+  text-align: left!important;
+  padding: 0px!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+.navbar-accordion button:after {
+  display: inline-block;
+  width: 0.25rem;
+    height: 0.25rem;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+.footer-accordion {
+  margin: auto;
+}
+.footer-accordion-item, .footer-accordion-body  {
+  background-color: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+  display: flex;
+flex-direction: column;
+text-align: left;
+}
+.footer-accordion-header button {
+  background-color: transparent!important;
+  color: #0A004C!important;
+  font-size: 16px!important;
+  line-height: 31,25px;
+  text-align: center!important;
+  padding: 0px!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+.footer-accordion-header button:after {
+  display: inline-block;
+  width: 0.25rem;
+    height: 0.25rem;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid #0A004C;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
 .accordion-button:not(.collapsed) {
   box-shadow: none!important;
   font-size: 18px;
@@ -77,7 +136,7 @@ a, p {
         font-size: 0.7em!important;
        }
        .footer-flags-mobile {
-         width: 100px;
+         
          margin: auto;
        }
       .footer-flags-mobile  .ReactFlagsSelect-module_label__27pw9 {
@@ -96,15 +155,17 @@ a, p {
        .navbar-header {
         width: 100%;
         display: flex;
-        padding: 25px 25px 15px;
+        padding: 25px 20px 15px 32px;
         justify-content: space-between;
         border-bottom: 1px solid #2400FD16;
     }
     .btn-secondary {
       color: #fff;
+      padding: 0px!important;
       background-color: transparent!important;
       border-color: transparent!important;
   }
+
     .navbar-collapse {
       background: #2400FD;
       padding: 10px 20px;
@@ -120,6 +181,9 @@ z-index: 9999;
     .navbar-brand-mobile img {
     width: 200px;
     }
+    .navbar-brand img {
+      width: 112px;
+      }
     .navbar-toggle {
       height: 40px;
       margin-top: 15px;
@@ -237,5 +301,8 @@ color: white!important;
     }
     .dropdown {
       text-align: left;
+    }
+    .nav-item {
+      margin-top: 32px;
     }
  }
