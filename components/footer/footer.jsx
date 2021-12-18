@@ -1,17 +1,17 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import {jsx} from "theme-ui";
 import React from "react";
-import { Box, Text, Flex, Image, Button, Input } from "theme-ui";
-import { BsArrowRight } from "react-icons/bs";
+import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
+import {BsArrowRight} from "react-icons/bs";
 import Link from "next/link";
 import socialItems from "../header/social.data";
 import Credits from "./credits";
-import { useTranslation } from "next-i18next";
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import {useTranslation} from "next-i18next";
+import {DropdownButton, Dropdown} from "react-bootstrap";
 
 export default function Footer() {
-  const { t } = useTranslation("common");
+  const {t} = useTranslation("common");
 
   return (
     <footer sx={styles.footer}>
@@ -24,22 +24,24 @@ export default function Footer() {
         </Box>
 
         <Box sx={styles.rightTopFooter}>
-          <Text as="h3">{t("footer newsletter")}</Text>
-          <Flex id="newsletter" sx={styles.newsletterForm}>
-            <Input
-              type="email"
-              name="email"
-              id="email"
-              mb={3}
-              placeholder={t("footer placeholder newsletter")}
-            />
-            <Box sx={styles.boxButton}>
-              <Button>
-                {t("footer bouton newsletter")}
-                <BsArrowRight sx={styles.arrow} />
-              </Button>
-            </Box>
-          </Flex>
+          <form method='post' action='/newsletter' name='newsletter' data-netlify="true">
+            <Text as="h3">{t("footer newsletter")}</Text>
+            <Flex id="newsletter" sx={styles.newsletterForm}>
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                mb={3}
+                placeholder={t("footer placeholder newsletter")}
+              />
+              <Box sx={styles.boxButton}>
+                <Button>
+                  {t("footer bouton newsletter")}
+                  <BsArrowRight sx={styles.arrow} />
+                </Button>
+              </Box>
+            </Flex>
+          </form>
         </Box>
       </Flex>
 
