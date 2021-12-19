@@ -1,7 +1,7 @@
 {
     "titre adherez": "Adhérez",
     "bouton adherez": "Adhérez ",
-    "footer logo subtitle": "Rendez les éléctions aux électeurs",
+    "footer logo subtitle": "Rendez les élections aux électeurs",
     "footer newsletter": "Tenez-vous au courant des derniers actus de Mieux Voter",
     "footer placeholder newsletter": "Votre email",
     "footer bouton newsletter": "Envoyer",
@@ -16,12 +16,12 @@
     "menu lien 5": "Nous contacter",
     "header inscription newsletter": "S’inscrire à la newsletter",
     "header soutien": "Nous soutenir",
-    "titre formulaire de contact": "Nous contactez",
+    "titre formulaire de contact": "Nous contacter",
     "texte1 formulaire de contact": "Vous souhaitez vous investir, vous tenir au courant, ou juste dire bonjour ?",
     "texte2 formulaire de contact": "N’hésitez pas à remplir le formulaire ci-contre",
     "placeholder prénom formulaire de contact": "Votre prénom",
     "placeholder nom formulaire de contact": "Votre nom",
     "placeholder email formulaire de contact": "Votre email",
     "placeholder message formulaire de contact": "Votre message",
-    "bouton formulaire de contact": "Send"
+    "bouton formulaire de contact": "Envoyer"
 }
