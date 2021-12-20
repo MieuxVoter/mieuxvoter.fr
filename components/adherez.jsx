@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text, Button, Flex, Link } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
-import { useTranslation } from "next-i18next";
+import {Box, Text, Button, Flex, Link} from 'theme-ui';
+import {BsArrowRight} from "react-icons/bs";
+import {useTranslation} from "next-i18next";
 
 export default function Adherez() {
-  const { t } = useTranslation('common');
+  const {t} = useTranslation('common');
 
   return (
 
@@ -15,7 +15,7 @@ export default function Adherez() {
       <Flex sx={styles.boxAdherez}>
 
         <Text as="h3" >
-          {t("titre adherez")}
+          {t("titre adherez mieux voter")}
         </Text>
 
         <Button>
@@ -70,5 +70,5 @@ const styles = {
     fontSize: '2em',
     color: '#FFFFFF',
     ml: 5,
-},
+  },
 }
