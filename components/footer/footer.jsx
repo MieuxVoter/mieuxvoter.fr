@@ -175,6 +175,9 @@ const styles = {
       fontSize: ["16px"],
       textDecoration: "none",
       color: "#0A004C",
+      '@media screen and (max-width: 640px)': {
+        mx: 'auto!important',
+      },
     },
   },
   socialNav: {

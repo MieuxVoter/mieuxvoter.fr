@@ -185,6 +185,7 @@ const styles = {
     h2: {
       textAlign: 'left',
       fontSize: '18px',
+      fontFamily: 'DM sans serif!important',
     },
   },
   bookThumb: {

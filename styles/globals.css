@@ -4,14 +4,24 @@
          url("/font/DMSerifDisplay-Regular.woff") format("woff");
  }
  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+ @font-face {
+  font-family: "DM sans serif";
+  src:  url("/font/DMSans-Bold.ttf") format("ttf"),
+         url("/font/DMSans-Regular.ttf") format("ttf"),
+         url("/font/DMSans-Medium.ttf") format("ttf");
+ }
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "DM Serif", serif!important;
 }
-h1, h2, h3, h4, p, a, button {
+h1, h2, h4 {
   font-family: "DM Serif", serif!important;
+}
+p, button, span, a, h3 {
+  font-family: "DM sans Serif", sans-serif!important;
 }
 a {
   color: inherit;
@@ -35,6 +45,7 @@ a, p {
   background-color: transparent!important;
   border: none!important;
   box-shadow: none!important;
+  font-family: "DM sans Serif", sans-serif!important;
 }
 .navbar-accordion button {
   background-color: transparent!important;
@@ -60,7 +71,7 @@ a, p {
     border-left: 0.3em solid transparent;
 }
 .footer-accordion {
-  margin: auto;
+  margin: 20px 10px;
 }
 .footer-accordion-item, .footer-accordion-body  {
   background-color: transparent!important;
@@ -101,6 +112,7 @@ text-align: left;
 }
 .accordion-button, .accordion-body {
   padding: 40px 2% 40px 10%!important;
+  font-family: "DM sans Serif", sans-serif!important;
 }
 .accordion-body {
   background-color: #e7f1ff;
@@ -200,6 +212,9 @@ color: white!important;
       line-height: 31,25px;
       text-align: left!important;
     }
+    .lien-menu-jugement a {
+      margin: 0px!important;
+    }
     .social-nav {
       display: flex;
       margin-top: 30px!important;
@@ -244,6 +259,13 @@ color: white!important;
     #dropdown-basic-button:active:focus {
       box-shadow: none;
     }
+    .dropdown-item {
+      margin: 0px!important;
+    }
+    .dropdownTab button {
+      margin: 0px 15px!important;
+      font-size: 16px!important;
+    }
     .mobile-header {
       width: 100%;
     }
@@ -260,6 +282,9 @@ color: white!important;
   }
   .react-multiple-carousel__arrow {
     display: none;
+  }
+  .footer-accordion {
+    margin: 20px auto;
   }
 }
 

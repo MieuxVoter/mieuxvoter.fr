@@ -45,13 +45,16 @@ export default function DeskHeader() {
           <hr sx={styles.divider} />
 
           <Flex as="nav" sx={styles.menuNav}>
-
             <DropdownButton id="dropdown-basic-button" title={t("menu lien 1")}>
+              <Dropdown.Item className="lien-menu-jugement">
+                <Link href="/le-jugement-majoritaire">
+                  {t("menu sous lien 1")}
+                </Link>
+              </Dropdown.Item>
 
-              <Dropdown.Item href="/le-jugement-majoritaire">{t("menu sous lien 1")}</Dropdown.Item>
-
-              <Dropdown.Item href="/faq">{t("menu sous lien 2")}</Dropdown.Item>
-
+              <Dropdown.Item className="lien-menu-jugement">
+                <Link href="/faq">{t("menu sous lien 2")}</Link>
+              </Dropdown.Item>
             </DropdownButton>
 
             <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
@@ -64,11 +67,21 @@ export default function DeskHeader() {
       </Flex>
 
       <Flex as="nav" sx={styles.menuNavTab}>
-        <Link href="/le-jugement-majoritaire">{t("menu lien 1")}</Link>
+        <DropdownButton
+          className="dropdownTab"
+          id="dropdown-basic-button"
+          title={t("menu lien 1")}
+        >
+          <Dropdown.Item className="lien-menu-jugement">
+            <Link href="/le-jugement-majoritaire">{t("menu sous lien 1")}</Link>
+          </Dropdown.Item>
+
+          <Dropdown.Item className="lien-menu-jugement">
+            <Link href="/faq">{t("menu sous lien 2")}</Link>
+          </Dropdown.Item>
+        </DropdownButton>
 
         <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
-
-        <Link href="/faq">{t("menu lien 3")}</Link>
 
         <Link href="/presse">{t("menu lien 4")}</Link>
 
@@ -80,7 +93,7 @@ export default function DeskHeader() {
 
 const styles = {
   header: {
-      pt: '2%',
+    pt: "2%",
     backgroundImage: [
       "none",
       "none",
@@ -103,7 +116,6 @@ const styles = {
     flexDirection: ["column", "column", "column", "row"],
     width: "90%",
     mx: "auto",
-    
   },
   leftHeader: {
     width: ["100%", "100%", "100%", "25%", "20%"],
@@ -153,9 +165,10 @@ const styles = {
     textAlign: "center",
     justifyContent: "end",
     fontWeight: "bold",
+    mx: "auto",
     a: {
-      ml: 6,
-      fontSize: ["1em", "1em", "0.8em", "1em"],
+      mx: "15px",
+      fontSize: "16px",
       color: "#0A004C",
       textDecoration: "none",
     },
