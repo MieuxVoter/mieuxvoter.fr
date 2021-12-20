@@ -42,26 +42,31 @@ export default function DeskHeader() {
             </Flex>
           </Flex>
 
-          <hr sx={styles.divider} />
+          <Flex sx={styles.flexDivider}>
+            <hr sx={styles.divider} />
 
-          <Flex as="nav" sx={styles.menuNav}>
-            <DropdownButton id="dropdown-basic-button" title={t("menu lien 1")}>
-              <Dropdown.Item className="lien-menu-jugement">
-                <Link href="/le-jugement-majoritaire">
-                  {t("menu sous lien 1")}
-                </Link>
-              </Dropdown.Item>
+            <Flex as="nav" sx={styles.menuNav}>
+              <DropdownButton
+                id="dropdown-basic-button"
+                title={t("menu lien 1")}
+              >
+                <Dropdown.Item className="lien-menu-jugement">
+                  <Link href="/le-jugement-majoritaire">
+                    {t("menu sous lien 1")}
+                  </Link>
+                </Dropdown.Item>
 
-              <Dropdown.Item className="lien-menu-jugement">
-                <Link href="/faq">{t("menu sous lien 2")}</Link>
-              </Dropdown.Item>
-            </DropdownButton>
+                <Dropdown.Item className="lien-menu-jugement">
+                  <Link href="/faq">{t("menu sous lien 2")}</Link>
+                </Dropdown.Item>
+              </DropdownButton>
 
-            <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
+              <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
-            <Link href="/presse">{t("menu lien 4")}</Link>
+              <Link href="/presse">{t("menu lien 4")}</Link>
 
-            <Link href="/contact">{t("menu lien 5")}</Link>
+              <Link href="/contact">{t("menu lien 5")}</Link>
+            </Flex>
           </Flex>
         </Box>
       </Flex>
@@ -186,7 +191,13 @@ const styles = {
       alignSelf: "center",
     },
   },
+  flexDivider: {
+    flexDirection: 'column', 
+    justifyContent: 'flex-end',
+  },
   divider: {
     my: 4,
+    alignSelf: 'end',
+    width: ['100%', '100%', '100%', '90%', '80%', '80%', '70%'],
   },
 };

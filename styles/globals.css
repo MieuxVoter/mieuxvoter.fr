@@ -23,6 +23,14 @@ h1, h2, h4 {
 p, button, span, a, h3 {
   font-family: "DM sans Serif", sans-serif!important;
 }
+input::placeholder {
+  font-family: "DM sans Serif", sans-serif!important;
+  font-size: 16px;
+}
+textarea::placeholder {
+  font-family: "DM sans Serif", sans-serif!important;
+  font-size: 16px;
+}
 a {
   color: inherit;
   text-decoration: none;

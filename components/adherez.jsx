@@ -48,6 +48,7 @@ const styles = {
       mx: ['auto'],
       textAlign: ['center', 'center', 'left'],
       lineHeight: '1',
+      fontFamily: 'DM Serif!important',
     },
     button: {
       width: ['50%', '50%', '30%', '25%'],

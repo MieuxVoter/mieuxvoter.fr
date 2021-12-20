@@ -115,7 +115,7 @@ const styles = {
     p: {
       my: 5,
       fontSize: '18px',
-      lineHeight: ['1.5', '1'],
+      lineHeight: '30.6px',
       color: '#0A004C',
     },
   },

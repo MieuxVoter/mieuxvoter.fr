@@ -64,7 +64,7 @@ const styles = {
             my: ['30px'],
             fontSize: ['18px'],
             width: '100%',
-            lineHeight: '1.2',
+            lineHeight: '30.6px',
         },
         button: {
             backgroundColor: ['transparent', '#2400FD'],
