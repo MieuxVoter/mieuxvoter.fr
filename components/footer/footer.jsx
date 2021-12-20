@@ -100,6 +100,9 @@ const styles = {
     backgroundColor: "#F8F8FF",
     pt: 8,
     pb: 6,
+    a: {
+      lineHeight: '20.83px!important',
+    },
   },
   topFooter: {
     justifyContent: "space-between",
@@ -175,6 +178,7 @@ const styles = {
       fontSize: ["16px"],
       textDecoration: "none",
       color: "#0A004C",
+      lineHeight: '20.83px!important',
       '@media screen and (max-width: 640px)': {
         mx: 'auto!important',
       },
