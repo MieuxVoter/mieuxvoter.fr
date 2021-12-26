@@ -55,7 +55,7 @@ export default function ContactCard() {
             <Textarea name="message" id="message" rows={6} mb={3} placeholder={t("placeholder message formulaire de contact")} />
 
             <Box sx={styles.boxButton2}>
-              <Button>{t("bouton formulaire de contact")}<BsArrowRight sx={styles.arrow} /></Button>
+              <Button type="submit">{t("bouton formulaire de contact")}<BsArrowRight sx={styles.arrow} /></Button>
             </Box>
           </Box>
         </Box>

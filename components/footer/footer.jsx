@@ -24,7 +24,7 @@ export default function Footer() {
         </Box>
 
         <Box sx={styles.rightTopFooter}>
-          <form method='post' action='/newsletter' name='newsletter' data-netlify="true" netlify-honeypot-"age">
+          <form method='post' action='/newsletter' name='newsletter' data-netlify="true" netlify-honeypot="age">
             <Text as="h3">{t("footer newsletter")}</Text>
             <Flex id="newsletter" sx={styles.newsletterForm}>
               <Input
