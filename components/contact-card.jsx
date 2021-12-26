@@ -44,7 +44,7 @@ export default function ContactCard() {
 
             </Flex>
 
-            <div class="hidden">
+            <div className="hidden">
               <label>Don’t fill this out if you’re human: <input name="age" /></label>
             </div>
 
