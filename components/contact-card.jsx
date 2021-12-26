@@ -31,9 +31,10 @@ export default function ContactCard() {
 
         <Box sx={styles.containerRight}>
 
-          <Box as="form" onSubmit={(e) => e.preventDefault()} name='contact' action='/contact-success/' method='post' data-netlify="true">
+          <Box as="form" onSubmit={(e) => e.preventDefault()} name='contact' action='/contact-success/' method='post' data-netlify="true" netlify-honeypot="age">
 
             <Flex sx={styles.nameForm}>
+
 
               <Label htmlFor="prenom" />
               <Input name="prenom" id="prenom" mb={3} placeholder={t("placeholder prénom formulaire de contact")} />
@@ -42,6 +43,10 @@ export default function ContactCard() {
               <Input name="nom" id="nom" mb={3} placeholder={t("placeholder nom formulaire de contact")} />
 
             </Flex>
+
+            <div class="hidden">
+              <label>Don’t fill this out if you’re human: <input name="age" /></label>
+            </div>
 
             <Label htmlFor="email" />
             <Input type="email" name="email" id="email" mb={3} placeholder={t("placeholder email formulaire de contact")} />
