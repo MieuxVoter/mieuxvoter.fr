@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import { appWithTranslation } from 'next-i18next'
 import '../styles/bootstrap.css';
 import {SSRProvider} from '@react-aria/ssr';
+
 function MyApp({ Component, pageProps }) {
   return (
     <SSRProvider>

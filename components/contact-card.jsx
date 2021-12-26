@@ -11,7 +11,6 @@ export default function ContactCard() {
 
   return (
 
-    <form name='contact' action='/contact-success/' method='post' data-netlify="true">
       <Flex sx={styles.containerContact}>
 
         <Flex sx={styles.containerLeft}>
@@ -32,7 +31,7 @@ export default function ContactCard() {
 
         <Box sx={styles.containerRight}>
 
-          <Box as="form" onSubmit={(e) => e.preventDefault()}>
+          <Box as="form" onSubmit={(e) => e.preventDefault()} name='contact' action='/contact-success/' method='post' data-netlify="true">
 
             <Flex sx={styles.nameForm}>
 
@@ -56,7 +55,6 @@ export default function ContactCard() {
           </Box>
         </Box>
       </Flex>
-    </form>
   );
 }
 
