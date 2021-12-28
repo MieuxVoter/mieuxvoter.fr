@@ -31,7 +31,7 @@ export default function SectionFour() {
                 </Flex>
 
                 <Box sx={styles.containerRight}>
-                    <Image src="img/image-8.png" alt="" />
+                    <Image src="img/vote.jpg" alt="" />
                 </Box>
             </Flex>
         </section>

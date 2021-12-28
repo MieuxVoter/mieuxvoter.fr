@@ -1,20 +1,83 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text, Flex, Image } from 'theme-ui';
+import {Box, Text, Flex, Image} from 'theme-ui';
 import Adherez from '../components/adherez'
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale, ["qui-sommes-nous", "common"])),
   },
 });
 
+const displayMember = (member) => {
+  return (
+    <Box sx={styles.teamCardColumn1}>
+
+      <Box sx={styles.imgOverlayWrap}>
+        <Image sx={styles.imgOverlayWrapImg} src={`img/${member.image}`} alt="" />
+        <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+      </Box>
+
+      <Text as="h3">{member.name}</Text>
+      { /* <Text as="p">{member.desc} </Text> */}
+    </Box>
+  )
+}
+
 export default function QuiSommeNous() {
-  const { t } = useTranslation('qui-sommes-nous');
+  const {t} = useTranslation('qui-sommes-nous');
+
+  const members = [
+    {
+      name: "Chloé Ridel",
+      desc: t("member1 qui sommes nous"),
+      image: "chloe-ridel.jpeg",
+    },
+    {
+      name: "David Chavalarias",
+      desc: t("member4 qui sommes nous"),
+      image: "david-chavalarias.jpeg",
+    },
+    {
+      name: "Rida Laraki",
+      desc: t("member2 qui sommes nous"),
+      image: "rida-laraki.jpeg",
+    },
+    {
+      name: "Paloma Moritz",
+      desc: t("member5 qui sommes nous"),
+      image: "paloma-moritz.jpeg",
+    },
+    {
+      name: "Pierre-Louis Guhur",
+      desc: t("member3 qui sommes nous"),
+      image: "pierrelouis-guhur.jpeg",
+    },
+    {
+      name: "Marta Balinska",
+      desc: t("member6 qui sommes nous"),
+      image: "maria-balinska.jpeg",
+    },
+    {
+      name: "Eric Brousseau",
+      desc: t("member6 qui sommes nous"),
+      image: "eric-brousseau.jpeg",
+    },
+    {
+      name: "Thibauld Favre",
+      desc: t("member6 qui sommes nous"),
+      image: "thibauld-favre.jpeg",
+    },
+    {
+      name: "Loic Blondiaux",
+      desc: t("member6 qui sommes nous"),
+      image: "loic-blondiaux.jpeg",
+    },
+  ]
 
   return (
 
@@ -23,7 +86,7 @@ export default function QuiSommeNous() {
       <Flex sx={styles.containerQuiSommeNous}>
 
         <Text sx={styles.titleQuiSommeNous} as="h2">
-          {t("titre qui sommes nous")}
+          {}
         </Text>
 
         <Box sx={styles.box1QuiSommeNous}>
@@ -49,82 +112,19 @@ export default function QuiSommeNous() {
       <Flex sx={styles.box2QuiSommeNous}>
 
         <Flex sx={styles.teamCardColumnLeft}>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/chloe-ridel.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Chloé Ridel</Text>
-            <Text as="p">
-              {t("member1 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/david-chavalarias.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">David Chavalarias</Text>
-            <Text as="p">
-              {t("member4 qui sommes nous")}
-            </Text>
-
-          </Box>
-
+          {displayMember(members[0])}
+          {displayMember(members[1])}
         </Flex>
 
         <Flex sx={styles.teamCardColumnMiddle}>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/rida-laraki.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Rida Laraki</Text>
-            <Text as="p">
-              {t("member2 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/paloma-moritz.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Paloma Moritz</Text>
-            <Text as="p">
-              {t("member5 qui sommes nous")}
-            </Text>
-
-          </Box>
-
+          {displayMember(members[2])}
+          {displayMember(members[3])}
         </Flex>
 
-        <Box sx={styles.teamCard} >
+        <Flex sx={styles.teamCardColumnRight}>
+          {displayMember(members[4])}
+        </Flex>
 
-          <Box sx={styles.imgOverlayWrap}>
-            <Image sx={styles.imgOverlayWrapImg} src="img/pierrelouis-guhur.png" alt="" />
-            <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-          </Box>
-
-          <Text as="h3">Pierre-Louis Guhur</Text>
-          <Text as="p">
-            {t("member3 qui sommes nous")}
-          </Text>
-
-        </Box>
 
       </Flex>
 
@@ -135,145 +135,27 @@ export default function QuiSommeNous() {
       <Flex sx={styles.box2QuiSommeNous}>
 
         <Flex sx={styles.teamCardColumnLeft}>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/marta-balinska.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Maria Balinska</Text>
-            <Text as="p">
-              {t("member6 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/david-chavalarias.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">David Chavalarias</Text>
-            <Text as="p">
-              {t("member4 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/rida-laraki.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Rida Laraki</Text>
-            <Text as="p">
-              {t("member2 qui sommes nous")}
-            </Text>
-
-          </Box>
-
+          {displayMember(members[5])}
+          {displayMember(members[1])}
+          {displayMember(members[2])}
         </Flex>
 
         <Flex sx={styles.teamCardColumnMiddle}>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/loic-blondiaux.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Loïc Blondiaux</Text>
-            <Text as="p">
-              {t("member7 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/thibault-favre.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Thibault Favre</Text>
-            <Text as="p">
-              {t("member8 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/paloma-moritz.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Paloma Moritz</Text>
-            <Text as="p">
-              {t("member5 qui sommes nous")}
-            </Text>
-
-          </Box>
-
+          {displayMember(members[6])}
+          {displayMember(members[7])}
+          {displayMember(members[8])}
         </Flex>
 
         <Flex sx={styles.teamCardColumnRight}>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/eric-brousseau.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Eric Brousseau</Text>
-            <Text as="p">
-              {t("member9 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/pierrelouis-guhur.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Pierre-Louis Guhur</Text>
-            <Text as="p">
-              {t("member3 qui sommes nous")}
-            </Text>
-
-          </Box>
-
-          <Box sx={styles.teamCardColumn1}>
-
-            <Box sx={styles.imgOverlayWrap}>
-              <Image sx={styles.imgOverlayWrapImg} src="img/chloe-ridel.png" alt="" />
-              <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
-            </Box>
-
-            <Text as="h3">Chloé Ridel</Text>
-            <Text as="p">
-              {t("member1 qui sommes nous")}
-            </Text>
-          </Box>
+          {displayMember(members[0])}
+          {displayMember(members[3])}
+          {displayMember(members[4])}
         </Flex>
       </Flex>
 
       <Adherez />
 
-    </section>
+    </section >
 
   );
 }
@@ -291,7 +173,7 @@ const styles = {
       fontSize: ['18px'],
     },
     h3: {
-    fontSize: '32px',
+      fontSize: '32px',
     },
     h4: {
       fontSize: '32px',
