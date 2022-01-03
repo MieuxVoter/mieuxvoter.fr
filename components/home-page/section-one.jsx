@@ -5,7 +5,7 @@ import React from 'react';
 import { Box, Text, Button } from 'theme-ui';
 import { BsArrowRight } from "react-icons/bs";
 import { useTranslation } from "next-i18next";
-
+import Arrow from '../arrow';
 export default function SectionOne() {
   const { t } = useTranslation('homepage');
 
@@ -24,7 +24,7 @@ export default function SectionOne() {
         </Text>
 
         <Box sx={styles.boxButton}>
-          <Button>{t("bouton première section")}<BsArrowRight sx={styles.arrow} /></Button>
+          <Button>{t("bouton première section")}<Arrow /></Button>
         </Box>
       </Box>
     </section>
@@ -35,12 +35,12 @@ const styles = {
   sectionOne: {
     backgroundImage: 'url("img/background-chevron-big-blue.svg")',
     backgroundSize: ['2495px', '2495px', '2495px', '2495px', '2495px', '2495px', '2495px', '120%'],
-    backgroundPosition: ['41.5% 65%', '42% 60%', '40% 80%', '45% 100%', '50% 100%', '55% 100%', '-497px -434px', '50% bottom'],
+    backgroundPosition: ['41.5% 65%', '42% 60%', '36% bottom', '35% 100%', '40% 100%', '55% 100%', '-350px -434px', '20% bottom'],
     backgroundRepeat: 'no-repeat',
     '@media screen and (min-width: 2150px)': {
       background: 'white',
     },
-    pb: ['200px', '200px', '550px', '600px', '650px', '800px', '700px'],
+    pb: ['200px', '200px', '600px', '600px', '650px', '800px', '700px'],
     pt: [ '50px', '100px'],
     h2: {
       fontSize: ['52px', '72px'],
@@ -61,17 +61,11 @@ const styles = {
   containerSectionOne: {
 
     width: [null, null, null, '60%', '48%'],
-    ml: [0, null, null, '10%', '12%'],
+    ml: [0, null, null, '25%', '22%'],
     mx: ['30px'],
   },
   boxButton: {
     marginRight: [null, '50px'],
     textAlign: ['center', 'center', 'right'],
   },
-  arrow: {
-    verticalAlign: 'middle',
-    fontSize: '2em',
-    color: '#FFFFFF',
-    ml: 5,
-},
 }

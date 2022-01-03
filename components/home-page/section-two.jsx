@@ -5,14 +5,25 @@ import React from 'react';
 import { Box, Text, Button, Flex, Image } from 'theme-ui';
 import { BsArrowRight } from "react-icons/bs";
 import { useTranslation } from "next-i18next";
+import ArrowBlue from '../arrowBlue';
+import {
+  useViewportScroll,
+  motion,
+  useTransform 
+} from 'framer-motion';
 
 export default function SectionTwo() {
   const { t } = useTranslation('homepage');
-
+  const { scrollY } = useViewportScroll();
+  const y = useTransform(scrollY, [0, 1500], [-300, 200]);
+  const y2 = useTransform(scrollY, [1500, 2500], [200, -200]);
   return (
 
     <section sx={styles.sectionTwo}>
-
+<motion.div
+          
+            style={{ y }}
+          >
       <Flex sx={styles.containerSectionTwo}>
 
         <Text sx={styles.titleSectionTwo} as="h2">
@@ -36,9 +47,10 @@ export default function SectionTwo() {
         <Image sx={styles.box5SectionTwo} src="img/graph2.svg" alt="" />
 
         <Box sx={styles.boxButton2}>
-          <Button>{t("bouton deuxième section")}<BsArrowRight sx={styles.arrow} /></Button>
+          <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>
         </Box>
       </Flex>
+      </motion.div>
     </section>
   );
 }
@@ -49,8 +61,8 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: ['bottom', 'bottom'],
     backgroundSize: ['170%', '170%', '190%', '190%', 'cover'],
-    mt: [0, 0, 0, '-150px'],
-    pb: 10,
+    mt: ['200px', 10, 0, '-150px'],
+    pb: '300px',
     h2: {
       fontSize: ['52px', '72px'],
       lineHeight: '1',
@@ -101,6 +113,7 @@ const styles = {
   boxButton2: {
     width: ['80%'],
     ml: [null, null, '5%'],
+    mt: '65px',
   },
   arrow: {
     verticalAlign: 'middle',

@@ -3,7 +3,7 @@
 import {jsx} from 'theme-ui';
 import React from 'react';
 import {Box, Text, Flex, Button, Input, Label, Textarea} from 'theme-ui';
-import {BsArrowRight} from "react-icons/bs";
+import ArrowDarkBlue from './arrowDarkBlue';
 import {useTranslation} from "next-i18next";
 
 export default function ContactCard() {
@@ -55,7 +55,7 @@ export default function ContactCard() {
             <Textarea name="message" id="message" rows={6} mb={3} placeholder={t("placeholder message formulaire de contact")} />
 
             <Box sx={styles.boxButton2}>
-              <Button type="submit">{t("bouton formulaire de contact")}<BsArrowRight sx={styles.arrow} /></Button>
+              <Button type="submit">{t("bouton formulaire de contact")}<ArrowDarkBlue /></Button>
             </Box>
           </Box>
         </Box>

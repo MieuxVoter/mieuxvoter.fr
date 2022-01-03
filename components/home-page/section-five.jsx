@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import React from 'react';
 import { Box, Text, Button, Input, Image, Flex } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
+import Arrow from '../arrow';
 import Link from 'next/link'
 import { useTranslation } from "next-i18next";
 
@@ -32,7 +32,7 @@ export default function SectionFive() {
 
                     <Box sx={styles.boxButton2}>
                         <Link href="https://www.helloasso.com/associations/mieux-voter" passHref>
-                            <Button>{t("bouton cinquième section")}<BsArrowRight sx={styles.arrow} /></Button>
+                            <Button>{t("bouton cinquième section")}<Arrow /></Button>
                         </Link> 
                     </Box>
                 </Box>

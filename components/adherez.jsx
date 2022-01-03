@@ -3,7 +3,7 @@
 import {jsx} from 'theme-ui';
 import React from 'react';
 import {Box, Text, Button, Flex, Link} from 'theme-ui';
-import {BsArrowRight} from "react-icons/bs";
+import Arrow from './arrow'
 import {useTranslation} from "next-i18next";
 
 export default function Adherez() {
@@ -21,7 +21,7 @@ export default function Adherez() {
         <Button>
           <Link href="/" >
             {t("titre adherez")}
-            <BsArrowRight sx={styles.arrow} />
+            <Arrow />
           </Link>
         </Button>
       </Flex>

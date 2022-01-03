@@ -15,7 +15,7 @@ export const getStaticProps = async ({locale}) => ({
 
 const displayMember = (member) => {
   return (
-    <Box sx={styles.teamCardColumn1}>
+    <Box sx={styles.teamCardTemplate}>
 
       <Box sx={styles.imgOverlayWrap}>
         <Image sx={styles.imgOverlayWrapImg} src={`img/${member.image}`} alt="" />
@@ -108,50 +108,32 @@ export default function QuiSommeNous() {
       <Text sx={styles.subtitle} as="h4">
         {t("bureau qui sommes nous")}
       </Text>
-
-      <Flex sx={styles.box2QuiSommeNous}>
-
-        <Flex sx={styles.teamCardColumnLeft}>
+<Box sx={styles.box2QuiSommeNous}>
+        <Flex sx={styles.teamCard}>
           {displayMember(members[0])}
-          {displayMember(members[1])}
-        </Flex>
-
-        <Flex sx={styles.teamCardColumnMiddle}>
+          {displayMember(members[1])}       
           {displayMember(members[2])}
           {displayMember(members[3])}
-        </Flex>
-
-        <Flex sx={styles.teamCardColumnRight}>
           {displayMember(members[4])}
         </Flex>
-
-
-      </Flex>
 
       <Text sx={styles.subtitle} as="h4">
         {t("conseil qui sommes nous")}
       </Text>
 
-      <Flex sx={styles.box2QuiSommeNous}>
 
-        <Flex sx={styles.teamCardColumnLeft}>
+        <Flex sx={styles.teamCard}>
           {displayMember(members[5])}
           {displayMember(members[1])}
           {displayMember(members[2])}
-        </Flex>
-
-        <Flex sx={styles.teamCardColumnMiddle}>
           {displayMember(members[6])}
           {displayMember(members[7])}
           {displayMember(members[8])}
-        </Flex>
-
-        <Flex sx={styles.teamCardColumnRight}>
           {displayMember(members[0])}
           {displayMember(members[3])}
           {displayMember(members[4])}
         </Flex>
-      </Flex>
+        </Box>
 
       <Adherez />
 
@@ -200,64 +182,38 @@ const styles = {
     mt: 7,
   },
   box2QuiSommeNous: {
-    justifyContent: 'space-evenly',
     backgroundImage: ['url("img/background-qui-sommes-nous-left.svg")', 'url("img/background-qui-sommes-nous-left.svg")', 'none'],
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
-    flexDirection: ['column', 'column', 'row'],
     py: 7,
+   
   },
   teamCard: {
-    width: ['85%', '85%', '20%'],
-    mx: ['auto', 'auto', 0],
-    ':nth-of-type(3)': {
-      mt: [9, 9, '30%'],
-    },
+    width: ['85%', '98%', '87%'],
+    mx: 'auto',
+    flexWrap: 'wrap',
   },
-  teamCardColumnLeft: {
-    flexDirection: 'column',
-    width: ['85%', '85%', '20%'],
-    mx: ['auto', 'auto', 0],
-    teamCard: {
-      width: '100%',
-    },
-  },
-  teamCardColumn1: {
-    ':nth-of-type(1n)': {
-      mt: 9,
-    },
-  },
-  teamCardColumnMiddle: {
-    flexDirection: 'column',
-    mt: [9, 9, '15%'],
-    width: ['85%', '85%', '20%'],
-    mx: ['auto', 'auto', 0],
-    teamCard: {
-      width: '100%',
-    },
-  },
-  teamCardColumnRight: {
-    flexDirection: 'column',
-    mt: [9, 9, '30%'],
-    width: ['85%', '85%', '20%'],
-    mx: ['auto', 'auto', 0],
-    teamCard: {
-      width: '100%',
-    },
+  teamCardTemplate: {
+    width: ['100%', '45%', '25%', '25%', '17%'],
+    mx: ['auto', '2.5%', '4%'],
+    my: ['4%', '4%', null]
   },
   imgOverlayWrap: {
     position: 'relative',
     display: 'inline-block',
+    width: '100%',
+    height: '80%',
   },
   imgOverlayWrapImg: {
     display: 'block',
-    maxWidth: '100%',
-    height: 'auto',
-    borderBottom: ['solid 8px #2400FD', 'solid 8px #2400FD', 'none'],
+    width: '100%',
+    height: '100%',
+    borderBottom: ['solid 8px #2400FD', 'none'],
+    objectFit: 'cover'
   },
   imgOverlayWrapSvg: {
     position: 'absolute',
-    display: ['none', 'none', 'block'],
+    display: ['none', 'block'],
     bottom: '0',
     left: '0',
     width: '100%',

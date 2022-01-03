@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import React from 'react';
 import { Box, Text, Button, Input, Image, Flex } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
+import Arrow from '../arrow';
 import { useTranslation } from "next-i18next";
 
 export default function SectionFour() {
@@ -26,7 +26,7 @@ export default function SectionFour() {
                     </Text>
 
                     <Box sx={styles.boxButton2}>
-                        <Button>{t("bouton quatrième section")}<BsArrowRight sx={styles.arrow} /></Button>
+                        <Button>{t("bouton quatrième section")}<Arrow /></Button>
                     </Box>
                 </Flex>
 

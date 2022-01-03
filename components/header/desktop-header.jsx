@@ -97,6 +97,9 @@ export default function DeskHeader() {
 }
 
 const styles = {
+  'header': {
+    position: 'absolute',
+  },
   header: {
     pt: "2%",
     backgroundImage: [

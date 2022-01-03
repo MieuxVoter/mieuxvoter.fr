@@ -3,7 +3,7 @@
 import { jsx } from 'theme-ui';
 import React from 'react';
 import { Box, Text, Button, Input, Image, Flex } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
+import Arrow from '../arrow';
 import { useTranslation } from "next-i18next";
 
 export default function SectionThree() {
@@ -31,14 +31,14 @@ export default function SectionThree() {
 
                         <Flex sx={styles.inputFormWebapp}>
 
-                            <BsArrowRight sx={styles.arrowInput} />
+                            <Arrow />
 
                             <Input sx={styles.input} placeholder={t("placeholder troisième section")} />
 
                         </Flex>
 
                         <Box sx={styles.boxButton2}>
-                            <Button>{t("bouton troisième section")}<BsArrowRight sx={styles.arrow} /></Button>
+                            <Button>{t("bouton troisième section")}<Arrow /></Button>
                         </Box>
                     </Flex>
                 </Flex>
@@ -109,6 +109,11 @@ const styles = {
             },
             
         },
+        'img': {
+            display: 'flex',
+alignSelf: 'center',
+
+        },
         
     },
     input: {
@@ -120,12 +125,6 @@ boxShadow: 'none',
     boxButton2: {
         width: ['100%', '100%', '40%', '42%'],
 
-    },
-    arrow: {
-        verticalAlign: 'middle',
-        fontSize: '2em',
-        color: '#FFFFFF',
-        ml: 5,
     },
     arrowInput: {
         verticalAlign: 'middle',

@@ -3,7 +3,7 @@
 import {jsx} from "theme-ui";
 import React from "react";
 import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
-import {BsArrowRight} from "react-icons/bs";
+import ArrowBlue from '../arrowBlue';
 import Link from "next/link";
 import socialItems from "../header/social.data";
 import Credits from "./credits";
@@ -37,7 +37,7 @@ export default function Footer() {
               <Box sx={styles.boxButton}>
                 <Button>
                   {t("footer bouton newsletter")}
-                  <BsArrowRight sx={styles.arrow} />
+                  <ArrowBlue />
                 </Button>
               </Box>
             </Flex>
