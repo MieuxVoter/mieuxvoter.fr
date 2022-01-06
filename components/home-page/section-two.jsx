@@ -61,7 +61,7 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: ['bottom', 'bottom'],
     backgroundSize: ['170%', '170%', '190%', '190%', 'cover'],
-    mt: ['200px', 10, 0, '-150px'],
+    mt: [null, '200px', '-100px'],
     pb: '300px',
     h2: {
       fontSize: ['52px', '72px'],

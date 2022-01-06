@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui';
 export default function Arrow() {
     return (
   
-        <img src="img/arrow.png" sx={styles.arrow}/>
+        <img src="img/arrow-white.svg" sx={styles.arrow}/>
    
     )
 }
