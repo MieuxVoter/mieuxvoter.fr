@@ -18,8 +18,8 @@ const displayMember = (member) => {
     <Box sx={styles.teamCardTemplate}>
 
       <Box sx={styles.imgOverlayWrap}>
-        <Image sx={styles.imgOverlayWrapImg} src={`img/${member.image}`} alt="" />
-        <Image sx={styles.imgOverlayWrapSvg} src="img/overlay-shapes-picture.svg" alt="" />
+        <Image sx={styles.imgOverlayWrapImg} src={`/img/${member.image}`} alt="" />
+        <Image sx={styles.imgOverlayWrapSvg} src="/img/overlay-shapes-picture.svg" alt="" />
       </Box>
 
       <Text as="h3">{member.name}</Text>
@@ -108,18 +108,18 @@ export default function QuiSommeNous() {
       <Text sx={styles.subtitle} as="h4">
         {t("bureau qui sommes nous")}
       </Text>
-<Box sx={styles.box2QuiSommeNous}>
+      <Box sx={styles.box2QuiSommeNous}>
         <Flex sx={styles.teamCard}>
           {displayMember(members[0])}
-          {displayMember(members[1])}       
+          {displayMember(members[1])}
           {displayMember(members[2])}
           {displayMember(members[3])}
           {displayMember(members[4])}
         </Flex>
 
-      <Text sx={styles.subtitle} as="h4">
-        {t("conseil qui sommes nous")}
-      </Text>
+        <Text sx={styles.subtitle} as="h4">
+          {t("conseil qui sommes nous")}
+        </Text>
 
 
         <Flex sx={styles.teamCard}>
@@ -133,7 +133,7 @@ export default function QuiSommeNous() {
           {displayMember(members[3])}
           {displayMember(members[4])}
         </Flex>
-        </Box>
+      </Box>
 
       <Adherez />
 
@@ -187,7 +187,7 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
     py: 7,
-   
+
   },
   teamCard: {
     width: ['85%', '98%', '87%'],
