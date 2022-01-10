@@ -41,6 +41,7 @@ const styles = {
       my: 5,
       fontSize: '14px',
       lineHeight: '18.23px',
+      fontWeight: "bold",
     },
     a: {
       fontWeight: "bold",
@@ -48,6 +49,7 @@ const styles = {
       my: 5,
       fontSize: '14px',
       lineHeight: '18.23px',
+      textDecoration: 'none',
     },
   },
   leftCredits: {

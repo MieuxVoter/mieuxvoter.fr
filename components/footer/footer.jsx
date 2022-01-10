@@ -178,6 +178,7 @@ const styles = {
     textAlign: ["center", "center", "left"],
     a: {
       mx: [null, 2],
+      fontWeight: 'bold',
       my: '12px',
       fontSize: ["16px"],
       textDecoration: "none",

@@ -91,6 +91,9 @@ button {
 .footer-accordion {
   margin: 12px 10px;
 }
+.footer-accordion a {
+  font-weight: bold;
+}
 .footer-accordion-item, .footer-accordion-body  {
   background-color: transparent!important;
   border: none!important;
@@ -108,7 +111,7 @@ text-align: left;
   padding: 0px!important;
   border: none!important;
   box-shadow: none!important;
-  font-weight: normal!important;
+  font-weight: bold!important;
 }
 .footer-accordion-header button:after {
   display: inline-block;
