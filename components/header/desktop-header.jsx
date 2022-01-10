@@ -163,6 +163,7 @@ const styles = {
       fontSize: "16px",
       color: "#0A004C",
       textDecoration: "none",
+      fontWeight: 'bold',
     },
   },
   menuNavTab: {
