@@ -39,11 +39,15 @@ const styles = {
     p: {
       color: "#8F88BA",
       my: 5,
+      fontSize: '14px',
+      lineHeight: '18.23px',
     },
     a: {
       fontWeight: "bold",
       color: "#8F88BA",
       my: 5,
+      fontSize: '14px',
+      lineHeight: '18.23px',
     },
   },
   leftCredits: {

@@ -153,6 +153,7 @@ const styles = {
     p: {
       my: [2, '30px'],
       fontSize: ['18px'],
+      lineHeight: '30.6px'
     },
     h3: {
       fontSize: '32px',
@@ -196,7 +197,10 @@ const styles = {
   teamCardTemplate: {
     width: ['100%', '45%', '25%', '25%', '17%'],
     mx: ['auto', '2.5%', '4%'],
-    my: ['4%', '4%', null]
+    my: ['4%', '4%', null],
+    h3: {
+      lineHeight: ['20px', '15.6px'],
+    }
   },
   imgOverlayWrap: {
     position: 'relative',

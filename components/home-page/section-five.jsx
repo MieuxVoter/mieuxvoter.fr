@@ -55,7 +55,7 @@ const styles = {
         h2: {
             color: '#FFFFFF',
             fontSize: ['44px', '40px'],
-            lineHeight: '1',
+            lineHeight: ['44px', '40px'],
             textAlign: ['center', 'center', 'center', 'left'],
             width: '100%',
         },

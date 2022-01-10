@@ -42,7 +42,7 @@ const styles = {
     pt: [ '50px', '100px'],
     h2: {
       fontSize: ['52px', '72px'],
-      lineHeight: '1',
+      lineHeight: ['52px', '72px'],
       textAlign: 'left',
     },
     p: {
@@ -50,6 +50,7 @@ const styles = {
       my: ['30px'],
       ml: [null, '50px', 8],
       fontSize: ['18px'],
+      lineHeight: '30.6px'
     },
     button: {
       boxShadow: '0px 5px 0px 0px #7A64F9',

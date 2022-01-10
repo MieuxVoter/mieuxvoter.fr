@@ -194,6 +194,9 @@ const styles = {
     px: '0!important',
     mx: 0,
     mt: 5,
+    h3: {
+      lineHeight: '24px',
+    },
   },
   flexBlog: {
     flexDirection: ['column', 'column', 'column', 'row'],
@@ -235,6 +238,7 @@ const styles = {
       textAlign: 'left',
       color: '#8F88BA',
       fontSize: 1,
+      lineHeight: '16px',
     },
   },
 };

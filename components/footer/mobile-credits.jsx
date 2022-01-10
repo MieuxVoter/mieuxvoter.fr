@@ -53,12 +53,14 @@ const styles = {
             color: '#0A004C',
             my: 5,
             fontSize: '14px',
+            lineHeight: '18.23px',
         },
         a: {
             fontWeight: 'bold',
             color: '#0A004C',
             my: 5,
             fontSize: '14px',
+            lineHeight: '18.23px!important',
         },
     },
     leftCredits: {

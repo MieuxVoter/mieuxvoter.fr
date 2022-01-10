@@ -51,19 +51,21 @@ const styles = {
     sectionThree: {
         backgroundImage: 'url("img/background-chevron-white.svg")',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: ['center 30em', 'center 35em', 'right'],
+        backgroundPosition: ['center 40em', 'center 35em', 'right'],
         backgroundSize: ['100%', '100%', '50%', '35%'],
         backgroundColor: '#2400FD',
         h2: {
             color: '#FFFFFF',
             fontSize: ['44px', '56px'],
-            lineHeight: '1',
-            textAlign: ['center', 'center', 'center', 'left']
+            lineHeight: ['44px', '56px'],
+            textAlign: ['center', 'center', 'center', 'left'],
         },
         p: {
             color: '#FFFFFF',
             my: ['30px'],
             fontSize: ['17px'],
+            lineHeight: '28.9px',
+            textAlign: ['center', 'center', 'center', 'left'],
         },
         button: {
             backgroundColor: 'transparent',
@@ -71,11 +73,12 @@ const styles = {
             border: 'solid 2px white',
             boxShadow: '0px 3px 0px 0px white',
             mr: 0,
+            width: ['100%', 'auto'],
         },
     },
     containerSectionThree: {
         flexDirection: 'column',
-        margin: '30px',
+        margin: '24px',
         width: [null, null, null, '80%', '76%'],
         ml: [null, null, null, '10%', '12%'],
         my: [10, 8, 8, 11],
@@ -103,25 +106,32 @@ const styles = {
         boxShadow: '0px 2px 0px 0px white',
         input: {
             border: 'none',
+            ml: ['31.5px', 0],
             '::placeholder': {
                 color: '#FFFFFF',
                 opacity: '1',
             },
-            
+            '::placeholder': {
+                fontSize: '16px',
+                lineHeight: '24px',
+                color: 'white',
+                fontStyle: 'italic',
+            }
+    
         },
         'img': {
-            display: 'flex',
-alignSelf: 'center',
-
+            display: ['none', 'flex'],
+            alignSelf: 'center',
         },
-        
+       
     },
     input: {
         '&:focus': {
-        color: '#FFFFFF',
-        border: 'none',
-boxShadow: 'none',
-    },},
+            color: '#FFFFFF',
+            border: 'none',
+            boxShadow: 'none',
+        },
+    },
     boxButton2: {
         width: ['100%', '100%', '40%', '42%'],
 

@@ -112,6 +112,7 @@ const styles = {
       textAlign: 'left',
       color: '#0A004C',
     },
+
     p: {
       my: 5,
       fontSize: '18px',
@@ -167,9 +168,13 @@ const styles = {
   },
   sectionTitle: {
     width: ['100%', '100%', '100%', '20%'],
+    lineHeight: '24px',
   },
   sectionFour: {
     py: 9,
+    h3: {
+      lineHeight: '24px',
+    },
   },
   containerFour: {
     width: [null, null, null, '90%', '80%'],
@@ -177,6 +182,7 @@ const styles = {
   },
   flexFour: {
     flexDirection: ['column', 'column', 'column', 'row'],
+    lineHeight: '24px',
   },
   titleOuvrage: {
     width: ['95%', '100%', '100%', '25%'],
@@ -186,6 +192,7 @@ const styles = {
       textAlign: 'left',
       fontSize: '18px',
       fontFamily: 'DM sans serif!important',
+      lineHeight: '24px',
     },
   },
   bookThumb: {
@@ -200,8 +207,9 @@ const styles = {
     mx: '30px',
     p: {
       color: '#0A004C',
-      fontSize: 3,
+      fontSize: '17px',
       mb: 5,
+        lineHeight: '28.9px',
     },
     a: {
       fontSize: 1,

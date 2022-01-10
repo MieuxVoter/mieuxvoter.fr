@@ -48,7 +48,7 @@ const styles = {
         h2: {
             color: '#0A004C',
             fontSize: ['44px', '56px'],
-            lineHeight: '1',
+            lineHeight: ['44px', '56px'],
             textAlign: ['center', 'center', 'center', 'left'],
             width: '100%',
         },
@@ -57,6 +57,8 @@ const styles = {
             my: ['30px'],
             fontSize: ['18px'],
             width: '100%',
+            lineHeight: '30.6px',
+            textAlign: ['center', 'center', 'center', 'left']
         },
         button: {
             backgroundColor: '#FF3E37',

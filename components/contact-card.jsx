@@ -76,6 +76,7 @@ const styles = {
       my: ['30px'],
       fontSize: ['1em', '1em', '1em', '1.5vw'],
       width: '100%',
+      lineHeight: '27.2px',
     },
   },
   containerLeft: {
@@ -84,7 +85,7 @@ const styles = {
     h2: {
       color: '#0A004C',
       fontSize: ['44px', '56px'],
-      lineHeight: '1',
+      lineHeight: ['44px', '56px'],
       textAlign: ['center', 'center', 'left'],
       width: '100%',
     },
@@ -94,6 +95,7 @@ const styles = {
       fontSize: '16px',
       width: '100%',
       textAlign: ['center', 'center', 'left'],
+      lineHeight: '27.2px',
     },
   },
   containerRight: {

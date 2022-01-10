@@ -31,6 +31,7 @@ const styles = {
         mb: -1,
         textAlign: 'left',
         px: [4, null, 0],
+        lineHeight: '24px',
     },
     wrapper: {
         width: '100%',

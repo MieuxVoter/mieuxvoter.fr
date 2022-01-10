@@ -3,10 +3,14 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "DM Serif", serif!important;
+  font-family: 'DM Serif Display', serif!important;
 }
 h1, h2, h4 {
-  font-family: "DM Serif", serif!important;
+  font-family: "DM Serif Display", serif!important;
+}
+h2 {
+  line-height: 72px;
+  font-weight: 400,;
 }
 p, button, span, a, h3 {
   font-family: "DM Sans", sans-serif!important;
@@ -35,6 +39,9 @@ a, p {
 }
 button {
   font-weight: bold!important;
+}
+::placeholder {
+  font-weight: 500;
 }
 * {
   box-sizing: border-box;
@@ -78,7 +85,7 @@ button {
     border-left: 0.3em solid transparent;
 }
 .footer-accordion {
-  margin: 20px 10px;
+  margin: 12px 10px;
 }
 .footer-accordion-item, .footer-accordion-body  {
   background-color: transparent!important;
@@ -97,6 +104,7 @@ text-align: left;
   padding: 0px!important;
   border: none!important;
   box-shadow: none!important;
+  font-weight: normal!important;
 }
 .footer-accordion-header button:after {
   display: inline-block;
@@ -120,6 +128,7 @@ text-align: left;
 .accordion-button, .accordion-body {
   padding: 40px 2% 40px 10%!important;
   font-family: "DM Sans", sans-serif!important;
+  line-height: 25.5px!important;
 }
 .accordion-body {
   background-color: #e7f1ff;
@@ -261,7 +270,7 @@ color: white!important;
     font-size: 16px;
     color: #0A004C;
     background-color: transparent;
-    font-family: DM serif;
+    font-family: 'DM Serif Display', serif;
     }
     #dropdown-basic-button:active:focus {
       box-shadow: none;
@@ -329,7 +338,7 @@ color: white!important;
     font-size: 24px!important;
     color: white;
     background-color: transparent;
-    font-family: DM serif;
+    font-family: 'DM Serif Display', serif;
     }
     .dropdown {
       text-align: left;

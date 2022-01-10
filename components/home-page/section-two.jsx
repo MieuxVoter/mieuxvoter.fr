@@ -40,6 +40,10 @@ export default function SectionTwo() {
 
         <Image sx={styles.box3SectionTwo} src="img/graph1.svg" alt="" />
 
+        <Text sx={styles.box6SectionTwo} as="p">
+          {t("texte mobile deuxième section")}
+        </Text>
+
         <Text sx={styles.box4SectionTwo} as="p">
           {t("texte3 deuxième section")}
         </Text>
@@ -65,7 +69,7 @@ const styles = {
     pb: '300px',
     h2: {
       fontSize: ['52px', '72px'],
-      lineHeight: '1',
+      lineHeight: ['52px', '72px'],
       textAlign:  'left',
     },
     p: {
@@ -93,22 +97,33 @@ const styles = {
   box1SectionTwo: {
     width: ['100%', '100%', '50%', '45%'],
     alignSelf: 'end',
+    lineHeight: '28.9px',
   },
   box2SectionTwo: {
     width: ['100%', '100%', '50%', '45%'],
     ml: [null, null, '5%'],
+    lineHeight: ['28.9px', '27.2px'],
   },
   box3SectionTwo: {
     width: ['100%', '100%', '70%', '65%'],
     alignSelf: 'end',
+    display: ['none', 'none', 'inline-block'],
   },
   box4SectionTwo: {
     width: ['100%', '100%', '50%', '45%'],
     ml: [null, null, '5%'],
+    lineHeight: ['28.9px', '27.2px'],
   },
   box5SectionTwo: {
     width: ['100%', '100%', '70%', '65%'],
     alignSelf: 'end',
+    display: ['none', 'none', 'inline-block'],
+  },
+  box6SectionTwo: {
+    width: '100%',
+    display: ['inline-block', 'inline-block', 'none'],
+    opacity: '0.6',
+    fontStyle: 'italic',
   },
   boxButton2: {
     width: ['80%'],

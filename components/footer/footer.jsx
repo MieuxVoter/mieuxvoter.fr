@@ -131,6 +131,7 @@ const styles = {
       width: ["100%", "100%", "100%", "60%"],
       fontSize: ["20px", "20px", "24px"],
       color: "#2400FD",
+      lineHeight: ['25px', '32px'],
     },
     input: {
       width: ["100%", "100%", "100%", "60%"],
@@ -177,7 +178,7 @@ const styles = {
     textAlign: ["center", "center", "left"],
     a: {
       mx: [null, 2],
-      my: 4,
+      my: '12px',
       fontSize: ["16px"],
       textDecoration: "none",
       color: "#0A004C",
