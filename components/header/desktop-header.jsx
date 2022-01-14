@@ -28,7 +28,7 @@ export default function DeskHeader() {
 
               <Link href="#email">{t("header inscription newsletter")}</Link>
 
-              <Link href="https://fr.tipeee.com/mieux-voter">
+              <Link href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
               </Link>
             </Flex>
