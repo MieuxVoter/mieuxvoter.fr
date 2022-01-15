@@ -1,23 +1,23 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text, Image, Flex, Link } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
+import {Box, Text, Image, Flex, Link} from 'theme-ui';
+import {BsArrowRight} from "react-icons/bs";
 import VideoCarousel from '../components/video-carousel';
 import Blog from '../components/blog';
 import SectionFive from "../components/home-page/section-three";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale, ["le-jugement-majoritaire", "homepage", "common"])),
   },
 });
 
 export default function LeJugementMajoritaire() {
-  const { t } = useTranslation('le-jugement-majoritaire');
+  const {t} = useTranslation('le-jugement-majoritaire');
 
   return (
 
@@ -48,7 +48,7 @@ export default function LeJugementMajoritaire() {
           </Box>
 
           <Box sx={styles.rightContainerOne}>
-            <Image sx={styles.screenshot} src="img/jugement-screenshot.png" alt="screenshot" />
+            <Image sx={styles.screenshot} src="img/jugement-screen.png" alt="screenshot" />
           </Box>
         </Flex>
       </Box>
@@ -107,7 +107,7 @@ const styles = {
     p: 9,
     py: 9,
     h2: {
-      fontSize:  ['52px', '72px'],
+      fontSize: ['52px', '72px'],
       lineHeight: '1',
       textAlign: 'left',
       color: '#0A004C',
@@ -135,7 +135,7 @@ const styles = {
     alignSelf: 'center',
   },
   screenshot: {
-    width: '100%',
+    width: '400px',
     // mt: [null, null, '200px', '10rem', '700px' ],
     ml: '30px',
   },
@@ -151,7 +151,7 @@ const styles = {
   containerTwo: {
     width: '100%',
     pr: ['5%', '5%', '5%', 0, 0],
-    pl: ['5%', '5%', '5%', '5%','10%'],
+    pl: ['5%', '5%', '5%', '5%', '10%'],
   },
   containerThree: {
     width: [null, null, null, '90%', '80%'],
@@ -163,7 +163,7 @@ const styles = {
     h2: {
       fontSize: ['44px', '56px'],
       lineHeight: '1',
-      textAlign:  'left',
+      textAlign: 'left',
     },
   },
   sectionTitle: {
@@ -209,11 +209,11 @@ const styles = {
       color: '#0A004C',
       fontSize: '17px',
       mb: 5,
-        lineHeight: '28.9px',
+      lineHeight: '28.9px',
     },
     a: {
       fontSize: 1,
-     color: '#2400FD',
+      color: '#2400FD',
       mt: 5,
       fontWeight: 'bold',
     },
