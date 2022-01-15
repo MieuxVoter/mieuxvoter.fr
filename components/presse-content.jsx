@@ -66,6 +66,16 @@ const data = [
     date: '—  04 juillet 2020 ',
     lien: '',
   },
+  {
+    id: 7,
+    thumb: 'img/press-thumb-3.svg',
+    source: 'Science et Avenir',
+    altText: 'Présidentielle: ce sondage qui place Eric Zemmour dernier et Arnaud Montebourg troisième ',
+    title: 'Présidentielle: ce sondage qui place Eric Zemmour dernier et Arnaud Montebourg troisième ',
+    author: 'L\'Opinion',
+    date: '—  04 juillet 2020 ',
+    lien: '',
+  },
 ];
 
 export default function PresseContent() {

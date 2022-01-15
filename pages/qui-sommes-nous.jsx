@@ -90,7 +90,7 @@ export default function QuiSommeNous() {
         </Text>
 
         <Box sx={styles.box1QuiSommeNous}>
-          <Text as="p">
+          <Text as="a" href="https://drive.google.com/file/d/16sTkssx3QnYNA4eyQOFmHoy3EgqUg8-n/view?usp=sharing">
             {t("texte1 qui sommes nous")}
           </Text>
 
