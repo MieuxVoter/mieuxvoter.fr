@@ -31,13 +31,11 @@ export default function DeskHeader() {
               <Text as="a" target="blank" href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
               </Text>
-            </Flex>
-
-            <Flex as="nav" sx={styles.socialNav}>
+            
               {socialItems.map((socialItem, i) => (
-                <Link href={socialItem.path} key={i}>
+                <Text as="a" href={socialItem.path} target="blank" key={i}>
                   {socialItem.icon}
-                </Link>
+                </Text>
               ))}
             </Flex>
           </Flex>
@@ -150,6 +148,13 @@ const styles = {
       textDecoration: "none",
       mt: 3,
       fontSize: "14px",
+      ':nth-of-type(3)': {
+        ml: 5,
+      },
+    },
+    svg: {
+      color: '#2400FD',
+      
     },
   },
   menuNav: {
@@ -165,6 +170,9 @@ const styles = {
       color: "#0A004C",
       textDecoration: "none",
       fontWeight: 'bold',
+      ':nth-of-type(3)': {
+        mr: '0px!important',
+      },
     },
   },
   menuNavTab: {
