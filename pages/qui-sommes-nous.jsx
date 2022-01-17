@@ -90,7 +90,7 @@ export default function QuiSommeNous() {
         </Text>
 
         <Box sx={styles.box1QuiSommeNous}>
-          <Text as="a" href="https://drive.google.com/file/d/16sTkssx3QnYNA4eyQOFmHoy3EgqUg8-n/view?usp=sharing">
+          <Text as="a" target="blank" href="https://drive.google.com/file/d/16sTkssx3QnYNA4eyQOFmHoy3EgqUg8-n/view?usp=sharing">
             {t("texte1 qui sommes nous")}
           </Text>
 
@@ -164,6 +164,10 @@ const styles = {
   },
   containerQuiSommeNous: {
     flexDirection: 'column',
+    backgroundImage: 'url("img/background-woman-left.svg")',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'left bottom',
+    backgroundSize: 'contain',
     margin: '30px',
     mb: 0,
     width: [null, null, null, '80%'],
@@ -199,7 +203,7 @@ const styles = {
     mx: ['auto', '2.5%', '4%'],
     my: ['4%', '4%', null],
     h3: {
-      lineHeight: ['20px', '15.6px'],
+      lineHeight: ['20px', '25px'],
     }
   },
   imgOverlayWrap: {

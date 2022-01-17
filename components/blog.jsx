@@ -115,7 +115,7 @@ export default function Blog() {
         </Grid>
 
       </Flex>
-
+      <hr />
       <Flex sx={styles.flexBlog}>
 
         <Box sx={styles.rowBlog}>
@@ -140,7 +140,7 @@ export default function Blog() {
         </Grid>
 
       </Flex>
-
+      <hr />
       <Flex sx={styles.flexBlog}>
 
         <Box sx={styles.rowBlog}>
@@ -168,6 +168,7 @@ export default function Blog() {
           ))}
         </Grid>
       </Flex>
+      <hr />
     </Container>
   );
 }
@@ -180,10 +181,19 @@ const styles = {
     mt: 5,
     h3: {
       lineHeight: '24px',
+      fontVariant: 'small-caps',
     },
+    hr: {
+      marginLeft: '-30px',
+      width: '100vw',
+      mt: 7,
+      mb: 11,
+    }
   },
   flexBlog: {
     flexDirection: ['column', 'column', 'column', 'row'],
+    width: [null, null, null, '90%', '80%'],
+    mx: 'auto',
   },
   grid: {
     width: ['100%', '80%', '100%'],

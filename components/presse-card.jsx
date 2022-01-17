@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Image, Text } from 'theme-ui';
+import { jsx, Box, Image, Text, Link } from 'theme-ui';
 
 
 export default function PresseCard({
@@ -16,13 +16,15 @@ export default function PresseCard({
     return (
 
         <Box sx={styles.card}>
-            <Box sx={styles.wrapper}>
+            <Link href={lien} target="blank">
+            <Box sx={styles.wrapper}>                
                 <Image src={thumb} alt="" />
                 <Text sx={styles.wrapper.source}>{source}</Text>
                 <Text sx={styles.wrapper.title}>{title}</Text>
                 <Text sx={styles.wrapper.author}>{author}</Text>
-                <Text sx={styles.wrapper.date}>{date}</Text>
+                <Text sx={styles.wrapper.date}>{date}</Text>              
             </Box>
+            </Link>
         </Box>
     );
 }
@@ -35,6 +37,10 @@ const styles = {
         mb: -1,
         textAlign: 'left',
         px: [4, null, 0],
+        a: {
+            textDecoration: 'none',
+            color: 'black',
+        }
     },
     wrapper: {
         width: '100%',
@@ -74,5 +80,10 @@ const styles = {
             mt: 5,
             fontWeight: 'bold',
         },
+        img: {
+            width: '300px',
+            height: '180px',
+            objectFit: 'cover',
+        }
     },
 };

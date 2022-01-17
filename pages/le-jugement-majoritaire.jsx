@@ -154,11 +154,11 @@ const styles = {
     pl: ['5%', '5%', '5%', '5%', '10%'],
   },
   containerThree: {
-    width: [null, null, null, '90%', '80%'],
+    
     mx: 'auto',
   },
   sectionThree: {
-    py: 9,
+    pt: 9,
     px: ['30px', '30px', 'auto'],
     h2: {
       fontSize: ['44px', '56px'],
@@ -168,10 +168,11 @@ const styles = {
   },
   sectionTitle: {
     width: ['100%', '100%', '100%', '20%'],
+    ml: [null, null, null, '5%', '10%'],
     lineHeight: '24px',
   },
   sectionFour: {
-    py: 9,
+    pb: 9,
     h3: {
       lineHeight: '24px',
     },

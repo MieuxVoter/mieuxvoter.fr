@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import React from 'react';
-import { Box, Text } from 'theme-ui';
+import { Box, Text, Link } from 'theme-ui';
 import Adherez from '../components/adherez';
 import PresseContent from '../components/presse-content';
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -33,10 +33,13 @@ export default function Presse() {
           </Box>
 
           <PresseContent />
-
+          
         </Box>
+        
       </Box>
-
+      <Box sx={styles.containerThree}>
+      <p>Vous êtes journaliste ? Nous vous répondons par mail : <Link href="mailto:contact@mieuxvoter.fr">contact@mieuxvoter.fr</Link></p>
+      </Box>
       <Adherez />
     </section>
   );

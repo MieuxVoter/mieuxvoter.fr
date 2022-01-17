@@ -19,7 +19,7 @@ export default function Adherez() {
         </Text>
 
         <Button>
-          <Link href="/" >
+          <Link href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter" target="blank" >
             {t("titre adherez")}
             <Arrow />
           </Link>
@@ -48,7 +48,7 @@ const styles = {
       mx: ['auto'],
       textAlign: ['center', 'center', 'left'],
       lineHeight: '1',
-      fontFamily: 'DM Serif!important',
+      fontFamily: '"DM Serif Display", serif!important',
     },
     button: {
       width: ['50%', '50%', '30%', '25%'],

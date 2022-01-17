@@ -28,9 +28,9 @@ export default function DeskHeader() {
 
               <Link href="#email">{t("header inscription newsletter")}</Link>
 
-              <Link href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
+              <Text as="a" target="blank" href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
-              </Link>
+              </Text>
             </Flex>
 
             <Flex as="nav" sx={styles.socialNav}>
