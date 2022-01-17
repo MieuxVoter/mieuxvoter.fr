@@ -132,8 +132,7 @@ const styles = {
     width: ["100%", "100%", "100%", "65%", "70%"],
   },
   rightTopHeader: {
-    justifyContent: ["space-around", "end"],
-    webKitJustifyContent: ["space-around", "end"],
+    justifyContent: ["space-around", null],
     flexDirection: ["column", "column", "column", "column", "row"],
     a: {
       color: "#2400FD",
@@ -141,7 +140,7 @@ const styles = {
     },
   },
   rightTopHeaderMenu: {
-    justifyContent: ["space-around", "space-around", "space-around", "end"],
+    justifyContent: ["space-around", "space-around", "space-around", null],
     alignContent: "middle",
     a: {
       ml: 3,
