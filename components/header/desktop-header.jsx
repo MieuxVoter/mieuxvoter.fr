@@ -135,6 +135,7 @@ const styles = {
   },
   rightTopHeader: {
     justifyContent: ["space-around", "end"],
+    webKitJustifyContent: ["space-around", "end"],
     flexDirection: ["column", "column", "column", "column", "row"],
     a: {
       color: "#2400FD",
