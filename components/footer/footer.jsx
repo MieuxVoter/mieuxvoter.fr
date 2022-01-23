@@ -24,7 +24,7 @@ export default function Footer() {
         </Box>
 
         <Box sx={styles.rightTopFooter}>
-          <form method='post' action='/newsletter' name='newsletter' data-netlify="true" netlify-honeypot="age">
+          <form method='POST' name='newsletter' data-netlify="true" netlify-honeypot="piege">
             <Text as="h3">{t("footer newsletter")}</Text>
             <Flex id="newsletter" sx={styles.newsletterForm}>
               <Input
@@ -42,7 +42,7 @@ export default function Footer() {
               </Box>
             </Flex>
             <div className="hidden">
-              <label>Don’t fill this out if you’re human: <input name="age" /></label>
+              <label>Don’t fill this out if you’re human: <input name="piege" /></label>
             </div>
           </form>
         </Box>
