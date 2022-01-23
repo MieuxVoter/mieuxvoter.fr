@@ -8,21 +8,65 @@ import Accordion from 'react-bootstrap/Accordion';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import matter from 'gray-matter'
+import {join} from 'path'
+import {readFileSync} from 'fs'
+
+const faqDir = join(process.cwd(), 'faq')
+const faqFiles = [
+  join(faqDir, '1.md'),
+  join(faqDir, '2.md'),
+  join(faqDir, '3.md'),
+  join(faqDir, '4.md'),
+  join(faqDir, '5.md'),
+  join(faqDir, '6.md'),
+  join(faqDir, '7.md'),
+  join(faqDir, '8.md'),
+  join(faqDir, '9.md'),
+  join(faqDir, '10.md'),
+  join(faqDir, '11.md'),
+  join(faqDir, '12.md'),
+  join(faqDir, '13.md'),
+  join(faqDir, '14.md'),
+]
+
+const loadFaqItem = (fullPath) => {
+  const fileContents = readFileSync(fullPath, 'utf8')
+  const {data, content} = matter(fileContents)
+
+  return {question: data.title, answer: content}
+}
 
 export const getStaticProps = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale, ["faq", "common"])),
+    items: faqFiles.map(loadFaqItem)
   },
 });
 
-export default function Faq() {
+const FaqItem = ({question, answer, index = 0}) => {
+  return (<Accordion.Item eventKey={index}>
+    <Accordion.Header>
+      {question}
+    </Accordion.Header>
+    <Accordion.Body>
+      {answer.split('\n').map(row => <p>{row}</p>)}
+    </Accordion.Body>
+  </Accordion.Item>)
+}
+
+
+
+export default function Faq(props) {
   const {t} = useTranslation('faq');
+  const {items} = props;
+  console.log(items[0])
 
   return (
 
     <section sx={styles.faq}>
 
-       <Box sx={styles.containerFaq}>
+      <Box sx={styles.containerFaq}>
         <Text sx={styles.titleFaq} as="h2">
           {t("titre")}
         </Text>
@@ -31,208 +75,15 @@ export default function Faq() {
       <Box sx={styles.accordion}>
 
         <Accordion>
+          {
+            items.map(({question, answer}, index) => <FaqItem question={question} answer={answer} index={index} />)
+          }
 
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>
-              {t("question 1")}
-            </Accordion.Header>
-            <Accordion.Body>
-              {t("reponse 1")}
-            </Accordion.Body>
-          </Accordion.Item>
 
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              {t("question 2")}
-            </Accordion.Header>
-            <Accordion.Body>
-              {t("reponse 2.1")}
-              <br />
-              {t("reponse 2.2")}
-              <br />
-              {t("reponse 2.3")}
-              <ul>
-                <li>
-                  {t("reponse 2.3.1")}
-                  <ul>
-                    <li>{t("reponse 2.3.1.1")} </li>
-                    <li>{t("reponse 2.3.1.2")} </li>
-                  </ul>
-                </li>
-                <li>{t("reponse 2.3.2")}</li>
-                <li>{t("reponse 2.3.3")}</li>
-                <li>{t("reponse 2.3.4")}</li>
-                <li>{t("reponse 2.3.5")}</li>
-              </ul>
-              <br />
-              {t("reponse 2.4")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>
-              {t("question 3")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 3.1")}
-              <br />
-              {t("reponse 3.2")}
-              <ul>
-                <li>{t("reponse 3.2.1")}</li>
-                <li>{t("reponse 3.2.2")}</li>
-                <li>{t("reponse 3.2.3")}</li>
-                <li>{t("reponse 3.2.4")}</li>
-                <li>{t("reponse 3.2.5")}</li>
-              </ul>
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>
-              {t("question 4")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 4.1")}
-              <br />
-              {t("reponse 4.2")}
-              <br />
-              {t("reponse 4.3")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>
-              {t("question 5")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 5")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="5">
-            <Accordion.Header>
-              {t("question 6")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 6.1")}
-              <br />
-              {t("reponse 6.2")}
-              <br />
-              {t("reponse 6.3")}
-              <br />
-              {t("reponse 6.4")}
-              <br />
-              {t("reponse 6.5")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="6">
-            <Accordion.Header>
-              {t("question 7")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 7.1")}
-              <br />
-              {t("reponse 7.2")}
-              <br />
-              {t("reponse 7.3")}
-              <br />
-              {t("reponse 7.4")}
-              <br />
-              {t("reponse 7.4")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="7">
-            <Accordion.Header>
-              {t("question 8")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 8.1")}
-              <br />
-              {t("reponse 8.2")}
-              <br />
-              {t("reponse 8.3")}
-              <br />
-              {t("reponse 8.4")}
-              <br />
-              <ul>
-                <li>{t("reponse 8.4.1")} </li>
-                <li>{t("reponse 8.4.2")} </li>
-              </ul>
-              {t("reponse 8.5")}
-              <br />
-              {t("reponse 8.6")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="8">
-            <Accordion.Header>
-              {t("question 9")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 9.1")}
-              <br />
-              {t("reponse 9.2")}
-              <br />
-              {t("reponse 9.3")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="9">
-            <Accordion.Header>
-              {t("question 10")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 10.1")}
-              <br />
-              {t("reponse 10.2")}
-              <br />
-              {t("reponse 10.3")}
-              <br />
-              {t("reponse 10.4")}
-              <br />
-              {t("reponse 10.5")}
-              <br />
-              {t("reponse 10.6")}
-              <br />
-              {t("reponse 10.7")}
-              <br />
-              {t("reponse 10.8")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="10">
-            <Accordion.Header>
-              {t("question 11")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 11")}
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="11">
-            <Accordion.Header>
-              {t("question 12")}
-            </Accordion.Header>
-
-            <Accordion.Body>
-              {t("reponse 12")}
-            </Accordion.Body>
-          </Accordion.Item>
         </Accordion>
       </Box>
 
-      <Adherez /> 
+      <Adherez />
 
       <div id="accordion-faq"></div>
     </section>
