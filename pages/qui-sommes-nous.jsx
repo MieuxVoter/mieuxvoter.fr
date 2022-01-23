@@ -1,13 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
-import React from 'react';
-import { Box, Text, Flex, Image } from 'theme-ui';
+import {jsx} from 'theme-ui';
+import {Box, Text, Flex, Image} from 'theme-ui';
 import Adherez from '../components/adherez'
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale, ["qui-sommes-nous", "common"])),
   },
@@ -29,7 +28,7 @@ const displayMember = (member) => {
 }
 
 export default function QuiSommesNous() {
-  const { t } = useTranslation('qui-sommes-nous');
+  const {t} = useTranslation('qui-sommes-nous');
 
   const members = [
     {
@@ -90,7 +89,7 @@ export default function QuiSommesNous() {
         </Text> */}
 
         <Box sx={styles.boxImg1QuiSommesNous}>
-          <img src="/img/mikhail-nilov-vote.jpg" alt="vote" />
+          <Image src="/img/mikhail-nilov-vote.jpg" alt="vote" />
         </Box>
 
         <Box sx={styles.box1QuiSommesNous}>
@@ -109,7 +108,7 @@ export default function QuiSommesNous() {
         </Box>
 
         <Box sx={styles.boxImg2QuiSommesNous}>
-          <img src="/img/mikhail-nilov-vote.jpg" alt="vote" />
+          <Image src="/img/mikhail-nilov-vote.jpg" alt="vote" />
         </Box>
       </Flex>
 

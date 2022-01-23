@@ -7,7 +7,7 @@ import ArrowBlue from '../arrowBlue';
 import Link from "next/link";
 import socialItems from "../header/social.data";
 import Credits from "./credits";
-import { useTranslation } from "next-i18next";
+import {useTranslation} from "next-i18next";
 import Accordion from "react-bootstrap/Accordion";
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
       <Flex sx={styles.topFooter}>
         <Box sx={styles.leftTopFooter}>
           <Link href="/" passHref>
-            <Image src="img/logo.svg" alt="" />
+            <Image src="/img/logo.svg" alt="" />
           </Link>
           <Text as="p">{t("footer logo subtitle")}</Text>
         </Box>
@@ -52,28 +52,28 @@ export default function Footer() {
 
       <Flex sx={styles.middleFooter}>
         <Flex as="nav" sx={styles.menuNav}>
-        <Accordion  className="footer-accordion">
-                  <Accordion.Item
-                    eventKey="0"
-                    className="footer-accordion-item"
-                  >
-                    <Accordion.Header className="footer-accordion-header">
-                      {t("menu lien 1")}
-                    </Accordion.Header>
-                    <Accordion.Body className="footer-accordion-body">
-                      <Link href="/le-jugement-majoritaire">
-                        <a className="">
-                          {t("menu sous lien 1")}
-                        </a>
-                      </Link>
-                      <Link href="/faq">
-                        <a className="">
-                          {t("menu sous lien 2")}
-                        </a>
-                      </Link>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
+          <Accordion className="footer-accordion">
+            <Accordion.Item
+              eventKey="0"
+              className="footer-accordion-item"
+            >
+              <Accordion.Header className="footer-accordion-header">
+                {t("menu lien 1")}
+              </Accordion.Header>
+              <Accordion.Body className="footer-accordion-body">
+                <Link href="/le-jugement-majoritaire">
+                  <a className="">
+                    {t("menu sous lien 1")}
+                  </a>
+                </Link>
+                <Link href="/faq">
+                  <a className="">
+                    {t("menu sous lien 2")}
+                  </a>
+                </Link>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
 
           <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
