@@ -45,7 +45,7 @@ export const getStaticProps = async ({locale}) => ({
 });
 
 const FaqItem = ({question, answer, key = 0}) => {
-  return (<Accordion.Item eventKey={index}>
+  return (<Accordion.Item eventKey={key}>
     <Accordion.Header>
       {question}
     </Accordion.Header>
