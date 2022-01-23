@@ -155,7 +155,7 @@ const styles = {
       backgroundColor: 'white',
       color: '#0A004C',
       border: 'solid 2px #0A004C',
-      boxShadow: '0px 3px 0px 0px #A198DD',
+      boxShadow: '0px 3px 0px 0px  #6C6694',
       mr: 0,
     },
   },
