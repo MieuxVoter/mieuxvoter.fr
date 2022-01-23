@@ -1,12 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx} from 'theme-ui';
-import Image from 'next/image'
 
 export default function ArrowDarkBlue() {
   return (
 
-    <Image src="/img/arrow-dark-blue.svg" sx={styles.arrow} alt='arrow dark blue' />
+    <img src="/img/arrow-dark-blue.svg" sx={styles.arrow} alt='arrow dark blue' />
 
   )
 }
