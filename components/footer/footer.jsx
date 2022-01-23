@@ -41,6 +41,7 @@ export default function Footer() {
                 </Button>
               </Box>
             </Flex>
+            <input type="hidden" name="form-name" value="newsletter" />
             <div className="hidden">
               <label>Don’t fill this out if you’re human: <input name="piege" /></label>
             </div>
