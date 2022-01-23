@@ -120,7 +120,7 @@ const MobHeader = () => {
             <NavItem className="navbar-credits-container">
               <LanguageSelector style={{ width: "80px" }} />
 
-               <div className="d-flex">
+               <div className="d-flex mt-5">
                 <Link href="/">
                   <a onClick={toggle} className="navbar-credits-link nav-link">
                    {t("credits mentions")}
