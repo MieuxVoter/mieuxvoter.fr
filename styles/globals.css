@@ -299,6 +299,8 @@ color: white!important;
     }
 .accordion-header-mobile button {
   font-weight: 700!important;
+  font-size: 24px!important;
+
 }
 .react-multiple-carousel__arrow {
   display: inline;
