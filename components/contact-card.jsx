@@ -31,9 +31,10 @@ export default function ContactCard() {
 
       <Box sx={styles.containerRight}>
 
-        <Box as="form" onSubmit={(e) => e.preventDefault()} name='contact' action='/contact-success/' method='post' data-netlify="true" netlify-honeypot="age">
+        <Box as="form" name='contact' action='/contact-success/' method='POST' data-netlify="true" netlify-honeypot="age">
 
           <Flex sx={styles.nameForm}>
+            <input type="hidden" name="form-name" value="contact" />
 
 
             <Label htmlFor="prenom" />
@@ -55,7 +56,7 @@ export default function ContactCard() {
           <Textarea name="message" id="message" rows={6} mb={3} placeholder={t("placeholder message formulaire de contact")} />
 
           <Box sx={styles.boxButton2}>
-            <Button type="submit">{t("bouton formulaire de contact")}<ArrowDarkBlue /></Button>
+            <Button>{t("bouton formulaire de contact")}<ArrowDarkBlue /></Button>
           </Box>
         </Box>
       </Box>
