@@ -261,6 +261,9 @@ color: white!important;
       text-align: left!important;
       margin-left: 0!important;
     }
+    .navbar-credits {
+      padding: 0.5rem 1rem;
+    }
     .navbar-jimmy-link {
       color: white!important;
       font-size: 18px;
