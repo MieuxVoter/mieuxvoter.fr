@@ -43,7 +43,7 @@ export default function SectionFive() {
 
 const styles = {
     sectionFive: {
-        backgroundImage: ['url("img/chevron-blue-down.svg")', 'url("img/chevron-blue-down.svg")', 'url("img/chevron-blue-down.svg")', 'url("img/background-chevron-big-blue-up-left.svg"), url("img/background-chevron-big-blue-up-right.svg")'],
+        backgroundImage: ['url("/img/chevron-blue-down.svg")', 'url("/img/chevron-blue-down.svg")', 'url("/img/chevron-blue-down.svg")', 'url("/img/background-chevron-big-blue-up-left.svg"), url("/img/background-chevron-big-blue-up-right.svg")'],
         backgroundRepeat: 'no-repeat',
         backgroundPosition: ['bottom', 'bottom', 'bottom', 'left, right'],
         backgroundSize: 'contain',

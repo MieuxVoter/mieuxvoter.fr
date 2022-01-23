@@ -206,7 +206,7 @@ const styles = {
     mt: 7,
   },
   box2QuiSommesNous: {
-    backgroundImage: ['url("img/background-qui-sommes-nous-left.svg")', 'url("img/background-qui-sommes-nous-left.svg")', 'none'],
+    backgroundImage: ['url("/img/background-qui-sommes-nous-left.svg")', 'url("/img/background-qui-sommes-nous-left.svg")', 'none'],
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
     py: 7,

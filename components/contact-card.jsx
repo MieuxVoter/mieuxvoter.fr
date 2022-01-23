@@ -11,61 +11,61 @@ export default function ContactCard() {
 
   return (
 
-      <Flex sx={styles.containerContact}>
+    <Flex sx={styles.containerContact}>
 
-        <Flex sx={styles.containerLeft}>
+      <Flex sx={styles.containerLeft}>
 
-          <Text sx={styles.titleContact} as="h2">
-            {t("titre formulaire de contact")}
-          </Text>
+        <Text sx={styles.titleContact} as="h2">
+          {t("titre formulaire de contact")}
+        </Text>
 
-          <Text sx={styles.box1Contact} as="p">
-            {t("texte1 formulaire de contact")}
-          </Text>
+        <Text sx={styles.box1Contact} as="p">
+          {t("texte1 formulaire de contact")}
+        </Text>
 
-          <Text sx={styles.box1Contact} as="p">
-            {t("texte2 formulaire de contact")}
-          </Text>
+        <Text sx={styles.box1Contact} as="p">
+          {t("texte2 formulaire de contact")}
+        </Text>
 
-        </Flex>
+      </Flex>
 
-        <Box sx={styles.containerRight}>
+      <Box sx={styles.containerRight}>
 
-          <Box as="form" onSubmit={(e) => e.preventDefault()} name='contact' action='/contact-success/' method='post' data-netlify="true" netlify-honeypot="age">
+        <Box as="form" onSubmit={(e) => e.preventDefault()} name='contact' action='/contact-success/' method='post' data-netlify="true" netlify-honeypot="age">
 
-            <Flex sx={styles.nameForm}>
+          <Flex sx={styles.nameForm}>
 
 
-              <Label htmlFor="prenom" />
-              <Input name="prenom" id="prenom" mb={3} placeholder={t("placeholder prénom formulaire de contact")} />
+            <Label htmlFor="prenom" />
+            <Input name="prenom" id="prenom" mb={3} placeholder={t("placeholder prénom formulaire de contact")} />
 
-              <Label htmlFor="nom" />
-              <Input name="nom" id="nom" mb={3} placeholder={t("placeholder nom formulaire de contact")} />
+            <Label htmlFor="nom" />
+            <Input name="nom" id="nom" mb={3} placeholder={t("placeholder nom formulaire de contact")} />
 
-            </Flex>
+          </Flex>
 
-            <div className="hidden">
-              <label>Don’t fill this out if you’re human: <input name="age" /></label>
-            </div>
+          <div className="hidden">
+            <label>Don’t fill this out if you’re human: <input name="age" /></label>
+          </div>
 
-            <Label htmlFor="email" />
-            <Input type="email" name="email" id="email" mb={3} placeholder={t("placeholder email formulaire de contact")} />
+          <Label htmlFor="email" />
+          <Input type="email" name="email" id="email" mb={3} placeholder={t("placeholder email formulaire de contact")} />
 
-            <Label htmlFor="message" />
-            <Textarea name="message" id="message" rows={6} mb={3} placeholder={t("placeholder message formulaire de contact")} />
+          <Label htmlFor="message" />
+          <Textarea name="message" id="message" rows={6} mb={3} placeholder={t("placeholder message formulaire de contact")} />
 
-            <Box sx={styles.boxButton2}>
-              <Button type="submit">{t("bouton formulaire de contact")}<ArrowDarkBlue /></Button>
-            </Box>
+          <Box sx={styles.boxButton2}>
+            <Button type="submit">{t("bouton formulaire de contact")}<ArrowDarkBlue /></Button>
           </Box>
         </Box>
-      </Flex>
+      </Box>
+    </Flex>
   );
 }
 
 const styles = {
   contact: {
-    backgroundImage: [null, null, 'url("img/red-stripe-down-right.svg")'],
+    backgroundImage: [null, null, 'url("/img/red-stripe-down-right.svg")'],
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'right top',
     backgroundSize: '14%',

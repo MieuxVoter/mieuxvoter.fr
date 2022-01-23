@@ -1,23 +1,23 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import {jsx} from "theme-ui";
 import React from "react";
-import { Box, Text, Flex, Image, Button, Input } from "theme-ui";
+import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
 import Link from "next/link";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
-import { useTranslation } from "next-i18next";
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import {useTranslation} from "next-i18next";
+import {DropdownButton, Dropdown} from "react-bootstrap";
 
 export default function DeskHeader() {
-  const { t } = useTranslation("common");
+  const {t} = useTranslation("common");
 
   return (
     <header>
       <Flex sx={styles.header}>
         <Box sx={styles.leftHeader}>
           <Link href="/" passHref>
-            <Image src="img/logo.svg" alt="" />
+            <Image src="/img/logo.svg" alt="" />
           </Link>
         </Box>
 
@@ -31,7 +31,7 @@ export default function DeskHeader() {
               <Text as="a" target="blank" href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
               </Text>
-            
+
               {socialItems.map((socialItem, i) => (
                 <Text as="a" href={socialItem.path} target="blank" key={i}>
                   {socialItem.icon}
@@ -153,7 +153,7 @@ const styles = {
     },
     svg: {
       color: '#2400FD',
-      
+
     },
   },
   menuNav: {
@@ -204,7 +204,7 @@ const styles = {
     },
   },
   flexDivider: {
-    flexDirection: 'column', 
+    flexDirection: 'column',
     justifyContent: 'flex-end',
   },
   divider: {

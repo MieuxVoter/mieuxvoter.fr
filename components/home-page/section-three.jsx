@@ -60,7 +60,7 @@ export default function SectionThree() {
 
 const styles = {
   sectionThree: {
-    backgroundImage: 'url("img/background-chevron-white.svg")',
+    backgroundImage: 'url("/img/background-chevron-white.svg")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: ['center 40em', 'center 35em', 'right'],
     backgroundSize: ['100%', '100%', '50%', '35%'],

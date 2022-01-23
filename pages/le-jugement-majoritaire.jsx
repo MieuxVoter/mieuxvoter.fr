@@ -48,7 +48,7 @@ export default function LeJugementMajoritaire() {
           </Box>
 
           <Box sx={styles.rightContainerOne}>
-            <Image sx={styles.screenshot} src="img/jugement-screen.png" alt="screenshot" />
+            <Image sx={styles.screenshot} src="/img/jugement-screen.png" alt="screenshot" />
           </Box>
         </Flex>
       </Box>
@@ -78,17 +78,17 @@ export default function LeJugementMajoritaire() {
               </Text>
             </Box>
 
-            
+
 
             <Box sx={styles.sectionParagraph} >
-            {/* <Image sx={styles.bookThumb} src="img/cover-majority-judgment.png" alt="" /> */}
-              
-            <Text as="h3">
+              {/* <Image sx={styles.bookThumb} src="img/cover-majority-judgment.png" alt="" /> */}
+
+              <Text as="h3">
                 Majority Judgment
               </Text>
               <Text sx={styles.subtitle}>Measuring, Ranking and Electing<br /></Text>
               <Text sx={styles.author}>Michel Balinski and Rida Lariki</Text>
-              
+
               <Text as="p">
                 {t("texte4 jugement majoritaire")}
               </Text>
@@ -148,7 +148,7 @@ const styles = {
     ml: '30px',
   },
   sectionTwo: {
-    backgroundImage: 'url("img/background-chevron-big-blue-contour.svg")',
+    backgroundImage: 'url("/img/background-chevron-big-blue-contour.svg")',
     backgroundSize: ['1000px', '1000px', '1000px', '140%', '130%', '160%', '145%'],
     backgroundPosition: ['-300px 100px', '50% 700%', '-100px -390px', '-12em -550px', '-15em -48em', '-23em -67em', '62% 124%'],
     backgroundRepeat: 'repeat',
@@ -162,7 +162,7 @@ const styles = {
     pl: ['5%', '5%', '5%', '5%', '10%'],
   },
   containerThree: {
-    
+
     mx: 'auto',
   },
   sectionThree: {
@@ -235,12 +235,12 @@ const styles = {
     color: 'black',
     fontStyle: 'italic',
     mb: 5,
-},
-subtitle: {
-  textAlign: 'left',
-  color: '#8F88BA',
-  fontSize: 1,
-  lineHeight: '16px',
-  
-},
+  },
+  subtitle: {
+    textAlign: 'left',
+    color: '#8F88BA',
+    fontSize: 1,
+    lineHeight: '16px',
+
+  },
 }

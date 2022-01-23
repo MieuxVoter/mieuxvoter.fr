@@ -1,44 +1,44 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text, Button, Flex, Image } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
-import { useTranslation } from "next-i18next";
+import {Box, Text, Button, Flex, Image} from 'theme-ui';
+import {BsArrowRight} from "react-icons/bs";
+import {useTranslation} from "next-i18next";
 import ArrowBlue from '../arrowBlue';
 import {
   useViewportScroll,
   motion,
-  useTransform 
+  useTransform
 } from 'framer-motion';
 
 export default function SectionTwo() {
-  const { t } = useTranslation('homepage');
-  const { scrollY } = useViewportScroll();
+  const {t} = useTranslation('homepage');
+  const {scrollY} = useViewportScroll();
   const y = useTransform(scrollY, [0, 1500], [-300, 200]);
   const y2 = useTransform(scrollY, [1500, 2500], [200, -200]);
   return (
 
     <section sx={styles.sectionTwo}>
-<motion.div
-          
-            style={{ y }}
-          >
-      <Flex sx={styles.containerSectionTwo}>
+      <motion.div
 
-        <Text sx={styles.titleSectionTwo} as="h2">
-          {t("titre deuxième section")}
-        </Text>
+        style={{y}}
+      >
+        <Flex sx={styles.containerSectionTwo}>
 
-        <Text sx={styles.box1SectionTwo} as="p">
-          {t("texte1 deuxième section")}
-        </Text>
+          <Text sx={styles.titleSectionTwo} as="h2">
+            {t("titre deuxième section")}
+          </Text>
 
-        <Text sx={styles.box2SectionTwo} as="p">
-          {t("texte2 deuxième section")}
-        </Text>
+          <Text sx={styles.box1SectionTwo} as="p">
+            {t("texte1 deuxième section")}
+          </Text>
 
-          <Image sx={styles.box3SectionTwo} src="img/bulletin-vote.png" alt="" />
+          <Text sx={styles.box2SectionTwo} as="p">
+            {t("texte2 deuxième section")}
+          </Text>
+
+          <Image sx={styles.box3SectionTwo} src="/img/bulletin-vote.png" alt="" />
 
           <Text sx={styles.box6SectionTwo} as="p">
             {t("texte mobile deuxième section")}
@@ -48,12 +48,12 @@ export default function SectionTwo() {
             {t("texte3 deuxième section")}
           </Text>
 
-          <Image sx={styles.box5SectionTwo} src="img/profil-merite.png" alt="" />
+          <Image sx={styles.box5SectionTwo} src="/img/profil-merite.png" alt="" />
 
-        <Box sx={styles.boxButton2}>
-          <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>
-        </Box>
-      </Flex>
+          <Box sx={styles.boxButton2}>
+            <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>
+          </Box>
+        </Flex>
       </motion.div>
     </section>
   );
@@ -61,7 +61,7 @@ export default function SectionTwo() {
 
 const styles = {
   sectionTwo: {
-    backgroundImage: 'url("img/chevron-stripe-blue.svg")',
+    backgroundImage: 'url("/img/chevron-stripe-blue.svg")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: ['bottom', 'bottom'],
     backgroundSize: ['170%', '170%', '190%', '190%', 'cover'],
@@ -70,7 +70,7 @@ const styles = {
     h2: {
       fontSize: ['52px', '72px'],
       lineHeight: ['52px', '72px'],
-      textAlign:  'left',
+      textAlign: 'left',
     },
     p: {
       my: ['30px'],
@@ -78,7 +78,7 @@ const styles = {
     },
     button: {
       backgroundColor: 'transparent',
-     color: '#2400FD',
+      color: '#2400FD',
       border: 'solid 2px #2400FD',
       boxShadow: '0px 3px 0px 0px #2400FD',
       mr: 0,
@@ -134,5 +134,5 @@ const styles = {
     verticalAlign: 'middle',
     fontSize: '2em',
     ml: 5,
-},
+  },
 }

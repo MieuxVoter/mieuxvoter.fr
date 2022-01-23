@@ -33,7 +33,7 @@ const styles = {
   boxAdherez: {
     flexDirection: ['column', 'column', 'row'],
     width: ['100%', '100%', '80%', '80%'],
-    backgroundImage: ['url("img/background-adherez-banner-mobile-up.svg"), url("img/background-adherez-banner-mobile-down.svg")', 'url("img/background-adherez-banner-mobile-up.svg"), url("img/background-adherez-banner-mobile-down.svg")', 'url("img/background-adherez-banner.svg")'],
+    backgroundImage: ['url("/img/background-adherez-banner-mobile-up.svg"), url("/img/background-adherez-banner-mobile-down.svg")', 'url("/img/background-adherez-banner-mobile-up.svg"), url("/img/background-adherez-banner-mobile-down.svg")', 'url("/img/background-adherez-banner.svg")'],
     backgroundPosition: ['top, bottom'],
     backgroundRepeat: 'no-repeat',
     backgroundSize: ['90%, cover', '100%', '100% 100%', '100% 100%', 'cover'],

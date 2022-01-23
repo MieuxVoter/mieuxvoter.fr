@@ -30,14 +30,14 @@ const MobHeader = () => {
             <a className="navbar-brand">
               <div className="d-flex flex-row">
                 <div className="align-self-center">
-                  <Image src="img/logo.svg" alt="" height="50" />
+                  <Image src="/img/logo.svg" alt="" height="50" />
                 </div>
               </div>
             </a>
           </Link>
 
           <Button onClick={toggle} className="navbar-toggle">
-            <Image src="img/menu-icon.svg" alt="" height="50" />
+            <Image src="/img/menu-icon.svg" alt="" height="50" />
           </Button>
         </div>
 
@@ -46,12 +46,12 @@ const MobHeader = () => {
             <div className="d-flex flex-row justify-content-between">
               <Link href="/">
                 <a className="navbar-brand navbar-brand-mobile">
-                  <Image src="img/logo-mobile.svg" alt="logo" height="80" />
+                  <Image src="/img/logo-mobile.svg" alt="logo" height="80" />
                 </a>
               </Link>
 
               <Button onClick={toggle} className="navbar-toggle">
-                <Image height="20" src="img/close-button.svg" alt="logo" />
+                <Image height="20" src="/img/close-button.svg" alt="logo" />
               </Button>
             </div>
             <div>

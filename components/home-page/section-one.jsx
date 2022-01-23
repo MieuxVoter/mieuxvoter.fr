@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text, Button } from 'theme-ui';
-import { BsArrowRight } from "react-icons/bs";
-import { useTranslation } from "next-i18next";
+import {Box, Text, Button} from 'theme-ui';
+import {BsArrowRight} from "react-icons/bs";
+import {useTranslation} from "next-i18next";
 import Arrow from '../arrow';
 export default function SectionOne() {
-  const { t } = useTranslation('homepage');
+  const {t} = useTranslation('homepage');
 
   return (
 
@@ -33,13 +33,13 @@ export default function SectionOne() {
 
 const styles = {
   sectionOne: {
-    backgroundImage: 'url("img/chevron.svg")',
+    backgroundImage: 'url("/img/chevron.svg")',
     backgroundSize: ['343%', '343%', '250%', '250%', '250%', '250%', '169%', '259%'],
     backgroundPosition: ['50% bottom', '50% bottom', 'center bottom', '49% bottom', '51% bottom', '47% bottom  ', '61% bottom', '47% bottom'],
     backgroundRepeat: 'no-repeat',
-    
+
     pb: ['88%', '73%', '73%', '60%', '48%', '43%', '46%', '62%'],
-    pt: [ '50px', '100px'],
+    pt: ['50px', '100px'],
     h2: {
       fontSize: ['52px', '72px'],
       lineHeight: ['52px', '72px'],
