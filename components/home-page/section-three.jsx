@@ -1,14 +1,15 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { Box, Text, Button, Input, Image, Flex } from 'theme-ui';
 import Arrow from '../arrow';
 import { useTranslation } from "next-i18next";
 
 export default function SectionThree() {
     const { t } = useTranslation('homepage');
-
+    const [title, setTitle] = useState(null);
     return (
 
         <section sx={styles.sectionThree}>
@@ -30,15 +31,25 @@ export default function SectionThree() {
                     <Flex sx={styles.formWebApp}>
 
                         <Flex sx={styles.inputFormWebapp}>
-
                             <Arrow />
-
-                            <Input sx={styles.input} placeholder={t("placeholder troisième section")} />
-
+                            <Input
+                                sx={styles.input}
+                                placeholder={t("placeholder troisième section")}
+                                autoFocus
+                                required
+                                name="title"
+                                value={title ? title : ""}
+                                onChange={(e) => setTitle(e.target.value)}
+                                maxLength="250"
+                            />
                         </Flex>
 
                         <Box sx={styles.boxButton2}>
-                            <Button>{t("bouton troisième section")}<Arrow /></Button>
+                            <Link href={{ pathname: "https://app.mieuxvoter.fr/create-election/?title=", query: { title: title } }}>
+                                <Button type="submit">
+                                    {t("bouton troisième section")}<Arrow />
+                                </Button>
+                            </Link>
                         </Box>
                     </Flex>
                 </Flex>
@@ -106,6 +117,7 @@ const styles = {
         boxShadow: '0px 2px 0px 0px white',
         input: {
             border: 'none',
+            color: '#FFFFFF',
             ml: ['31.5px', 0],
             '::placeholder': {
                 color: '#FFFFFF',
@@ -117,13 +129,13 @@ const styles = {
                 color: 'white',
                 fontStyle: 'italic',
             }
-    
+
         },
         'img': {
             display: ['none', 'flex'],
             alignSelf: 'center',
         },
-       
+
     },
     input: {
         '&:focus': {

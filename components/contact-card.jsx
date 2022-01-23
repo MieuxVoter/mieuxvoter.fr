@@ -151,10 +151,10 @@ const styles = {
   boxButton2: {
     textAlign: ['center', 'center', 'center', 'right'],
     button: {
-      backgroundColor: 'transparent',
+      backgroundColor: 'white',
       color: '#0A004C',
       border: 'solid 2px #0A004C',
-      boxShadow: '0px 3px 0px 0px #0A004C',
+      boxShadow: '0px 3px 0px 0px #A198DD',
       mr: 0,
     },
   },

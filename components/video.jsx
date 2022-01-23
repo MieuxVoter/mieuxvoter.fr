@@ -16,8 +16,8 @@ const Video = ({ id }) => {
       }}
       partialVisibility
     >
-      <Embed hd={false} autoplay={false} id={id} active={visible} source="youtube" />
-
+      <Embed hd={false} autoplay={false} id={id}  placeholder='/img/background-youtube.png' source="youtube" />
+      
     </VisibilitySensor>
   );
 };

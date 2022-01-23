@@ -61,7 +61,7 @@ const MobHeader = () => {
                     eventKey="0"
                     className="navbar-accordion-item"
                   >
-                    <Accordion.Header className="navbar-accordion">
+                    <Accordion.Header className="navbar-accordion accordion-header-mobile">
                       {t("menu lien 1")}
                     </Accordion.Header>
                     <Accordion.Body className="navbar-accordion-body">

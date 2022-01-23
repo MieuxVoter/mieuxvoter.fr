@@ -22,7 +22,7 @@ export default function Faq() {
 
     <section sx={styles.faq}>
 
-      <Box sx={styles.containerFaq}>
+      {/* <Box sx={styles.containerFaq}>
         <Text sx={styles.titleFaq} as="h2">
           {t("titre")}
         </Text>
@@ -232,7 +232,9 @@ export default function Faq() {
         </Accordion>
       </Box>
 
-      <Adherez />
+      <Adherez /> */}
+
+      <div id="accordion-faq"></div>
     </section>
   );
 }

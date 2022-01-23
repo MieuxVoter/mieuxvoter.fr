@@ -20,19 +20,19 @@ form .hidden {
 }
 input::placeholder {
   font-family: "DM Sans", sans-serif!important;
-  font-size: 16px;
+  font-size: 16px!important;
 }
 input {
   font-family: "DM Sans", sans-serif!important;
-  font-size: 16px;
+  font-size: 16px!important;
 }
 textarea::placeholder {
   font-family: "DM Sans", sans-serif!important;
-  font-size: 16px;
+  font-size: 16px!important;
 }
 textarea {
   font-family: "DM Sans", sans-serif!important;
-  font-size: 16px;
+  font-size: 16px!important;
 }
 a {
   color: inherit;
@@ -58,7 +58,7 @@ button {
 .react-multi-carousel-list {
   overflow: overlay;
 }
-
+                   
 .navbar-accordion-item, .navbar-accordion-body  {
   background-color: transparent!important;
   border: none!important;
@@ -234,9 +234,14 @@ color: white!important;
       font-size: 24px!important;
       line-height: 31,25px;
       text-align: left!important;
+      font-weight: 700;
     }
     .lien-menu-jugement a {
       margin: 0px!important;
+      font-weight: normal!important;
+    }
+    .lien-menu-jugement button {
+      font-weight: normal!important;
     }
     .social-nav {
       display: flex;
@@ -292,8 +297,12 @@ color: white!important;
     .mobile-header {
       width: 100%;
     }
-
-
+.accordion-header-mobile button {
+  font-weight: 700!important;
+}
+.react-multiple-carousel__arrow {
+  display: inline;
+}
     
 @media (max-width: 640px) {
   .react-multi-carousel-track, .react-multi-carousel-list {

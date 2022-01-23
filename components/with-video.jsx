@@ -26,7 +26,7 @@ const videos = ["YC1xDJsi_Hk", "ZoGH7d51bvc"];
 class WithVideo extends React.Component {
   render() {
     return (
-      <Carousel swipeable={true} draggable={false} responsive={responsive}>
+      <Carousel arrows={true} swipeable={true} draggable={true} responsive={responsive}>
         {videos.map(id => {
           return <Video id={id} key={id} />;
         })}

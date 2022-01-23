@@ -78,10 +78,17 @@ export default function LeJugementMajoritaire() {
               </Text>
             </Box>
 
-            <Image sx={styles.bookThumb} src="img/cover-majority-judgment.png" alt="" />
+            
 
             <Box sx={styles.sectionParagraph} >
-
+            {/* <Image sx={styles.bookThumb} src="img/cover-majority-judgment.png" alt="" /> */}
+              
+            <Text as="h3">
+                Majority Judgment
+              </Text>
+              <Text sx={styles.subtitle}>Measuring, Ranking and Electing<br /></Text>
+              <Text sx={styles.author}>Michel Balinski and Rida Lariki</Text>
+              
               <Text as="p">
                 {t("texte4 jugement majoritaire")}
               </Text>
@@ -126,16 +133,17 @@ const styles = {
     flexDirection: ['column', 'column', 'row'],
   },
   leftContainerOne: {
-    width: ['100%', '100%', '60%', '80%', '45%'],
+    width: ['100%', '100%', '100%', '80%', '65%'],
     mx: [null, null, 5],
   },
   rightContainerOne: {
     width: ['100%', '100%', '40%', '75%'],
-    display: ['none', 'none', 'inline-block'],
+    display: ['none', 'none', 'none', 'inline-block'],
     alignSelf: 'center',
+    textAlign: ['right', 'right', 'right', 'right', 'right', 'center', 'center', 'center'],
   },
   screenshot: {
-    width: '400px',
+    width: ['20%', '20%', '20%', '70%', '60%', '50%', '40%', '20%'],
     // mt: [null, null, '200px', '10rem', '700px' ],
     ml: '30px',
   },
@@ -197,26 +205,42 @@ const styles = {
     },
   },
   bookThumb: {
-    mr: [0, null, null, 5],
-    mx: ['auto', 'auto', null, 0],
+    mx: 'auto',
     my: [5, null],
     width: ['80%', '50%', '50%', '20%'],
     objectFit: 'contain',
+    textAlign: 'center',
   },
   sectionParagraph: {
     width: [null, null, null, '80%', '40%'],
     mx: '30px',
+
     p: {
       color: '#0A004C',
       fontSize: '17px',
-      mb: 5,
+      my: 5,
       lineHeight: '28.9px',
+      textAlign: 'left',
     },
     a: {
       fontSize: 1,
       color: '#2400FD',
       mt: 5,
       fontWeight: 'bold',
+      textAlign: 'left',
     },
   },
+  author: {
+    fontSize: '16px',
+    color: 'black',
+    fontStyle: 'italic',
+    mb: 5,
+},
+subtitle: {
+  textAlign: 'left',
+  color: '#8F88BA',
+  fontSize: 1,
+  lineHeight: '16px',
+  
+},
 }

@@ -132,7 +132,7 @@ const styles = {
     width: ["100%", "100%", "100%", "65%", "70%"],
   },
   rightTopHeader: {
-    justifyContent: ["space-around", null],
+    justifyContent: ["space-around", "flex-end"],
     flexDirection: ["column", "column", "column", "column", "row"],
     a: {
       color: "#2400FD",

@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {jsx} from 'theme-ui';
+import { jsx } from 'theme-ui';
 import React from 'react';
-import {Box, Text, Flex, Image} from 'theme-ui';
+import { Box, Text, Flex, Image } from 'theme-ui';
 import Adherez from '../components/adherez'
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import {useTranslation} from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
 
-export const getStaticProps = async ({locale}) => ({
+export const getStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["qui-sommes-nous", "common"])),
   },
@@ -28,8 +28,8 @@ const displayMember = (member) => {
   )
 }
 
-export default function QuiSommeNous() {
-  const {t} = useTranslation('qui-sommes-nous');
+export default function QuiSommesNous() {
+  const { t } = useTranslation('qui-sommes-nous');
 
   const members = [
     {
@@ -81,15 +81,19 @@ export default function QuiSommeNous() {
 
   return (
 
-    <section sx={styles.QuiSommeNous}>
+    <section sx={styles.QuiSommesNous}>
 
-      <Flex sx={styles.containerQuiSommeNous}>
-
-        <Text sx={styles.titleQuiSommeNous} as="h2">
+      <Flex sx={styles.containerQuiSommesNous}>
+        {/* 
+        <Text sx={styles.titleQuiSommesNous} as="h2">
           {}
-        </Text>
+        </Text> */}
 
-        <Box sx={styles.box1QuiSommeNous}>
+        <Box sx={styles.boxImg1QuiSommesNous}>
+          <img src="/img/mikhail-nilov-vote.jpg" alt="vote" />
+        </Box>
+
+        <Box sx={styles.box1QuiSommesNous}>
           <Text as="a" target="blank" href="https://drive.google.com/file/d/16sTkssx3QnYNA4eyQOFmHoy3EgqUg8-n/view?usp=sharing">
             {t("texte1 qui sommes nous")}
           </Text>
@@ -103,12 +107,16 @@ export default function QuiSommeNous() {
           </Text>
 
         </Box>
+
+        <Box sx={styles.boxImg2QuiSommesNous}>
+          <img src="/img/mikhail-nilov-vote.jpg" alt="vote" />
+        </Box>
       </Flex>
 
       <Text sx={styles.subtitle} as="h4">
         {t("bureau qui sommes nous")}
       </Text>
-      <Box sx={styles.box2QuiSommeNous}>
+      <Box sx={styles.box2QuiSommesNous}>
         <Flex sx={styles.teamCard}>
           {displayMember(members[0])}
           {displayMember(members[1])}
@@ -143,7 +151,7 @@ export default function QuiSommeNous() {
 }
 
 const styles = {
-  QuiSommeNous: {
+  QuiSommesNous: {
     pb: 10,
     h2: {
       fontSize: ['52px', '72px'],
@@ -162,23 +170,35 @@ const styles = {
       fontSize: '32px',
     },
   },
-  containerQuiSommeNous: {
-    flexDirection: 'column',
-    backgroundImage: 'url("img/background-woman-left.svg")',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left bottom',
-    backgroundSize: 'contain',
+  containerQuiSommesNous: {
     margin: '30px',
     mb: 0,
     width: [null, null, null, '80%'],
     mx: [null, null, null, 'auto'],
+    flexDirection: ['column', 'column', 'column', 'row'],
   },
-  titleQuiSommeNous: {
+  titleQuiSommesNous: {
     width: ['100%', '100%', '50%', '45%', '63%'],
   },
-  box1QuiSommeNous: {
+  boxImg1QuiSommesNous: {
+    width: ['100%', '100%', '50%', '40%'],
+    display: ['none', 'none', 'none', 'flex'],
+    img: {
+      width: '90%',
+      objectFit: 'contain',
+    }
+  },
+  boxImg2QuiSommesNous: {
+    width: '100%',
+    display: ['flex', 'flex', 'flex', 'none'],
+    img: {
+      width: '100%',
+      objectFit: 'contain',
+    }
+  },
+  box1QuiSommesNous: {
     width: ['100%', '100%', '50%', '60%'],
-    mt: 6,
+    margin: 'auto',
     alignSelf: 'end',
   },
   subtitle: {
@@ -186,7 +206,7 @@ const styles = {
     mx: 'auto',
     mt: 7,
   },
-  box2QuiSommeNous: {
+  box2QuiSommesNous: {
     backgroundImage: ['url("img/background-qui-sommes-nous-left.svg")', 'url("img/background-qui-sommes-nous-left.svg")', 'none'],
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100%',
