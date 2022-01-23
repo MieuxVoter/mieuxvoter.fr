@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Display:ital@0;1&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'DM Serif Display', serif!important;
+}
+h1, h2, h4 {
+  font-family: "DM Serif Display", serif!important;
+}
+h2 {
+  line-height: 72px;
+  font-weight: 400,;
+}
+p, button, span, a, h3 {
+  font-family: "DM Sans", sans-serif!important;
+}
+form .hidden {
+  display: none;
+}
+input::placeholder {
+  font-family: "DM Sans", sans-serif!important;
+  font-size: 16px!important;
+}
+input {
+  font-family: "DM Sans", sans-serif!important;
+  font-size: 16px!important;
+}
+textarea::placeholder {
+  font-family: "DM Sans", sans-serif!important;
+  font-size: 16px!important;
+}
+textarea {
+  font-family: "DM Sans", sans-serif!important;
+  font-size: 16px!important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a, p {
+  font-weight: normal;
+}
+button {
+  font-weight: bold!important;
+}
+::placeholder {
+  font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+
+.react-multi-carousel-item {
+  margin: 20px;
+  width: 800px!important; 
+}
+.react-multi-carousel-list {
+  overflow: overlay;
+}
+                   
+.navbar-accordion-item, .navbar-accordion-body  {
+  background-color: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+  font-family: "DM Sans", sans-serif!important;
+}
+.navbar-accordion button {
+  background-color: transparent!important;
+  color: white!important;
+  margin-left: 15px!important;
+  font-size: 24px!important;
+  line-height: 31,25px;
+  text-align: left!important;
+  padding: 0px!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+.navbar-accordion button:after {
+  display: inline-block;
+  width: 0.25rem;
+    height: 0.25rem;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+.footer-accordion {
+  margin: 12px 10px;
+}
+.footer-accordion a {
+  font-weight: bold;
+}
+.footer-accordion-item, .footer-accordion-body  {
+  background-color: transparent!important;
+  border: none!important;
+  box-shadow: none!important;
+  display: flex;
+flex-direction: column;
+text-align: left;
+}
+.footer-accordion-header button {
+  background-color: transparent!important;
+  color: #0A004C!important;
+  font-size: 16px!important;
+  line-height: 20.83px!important;
+  text-align: center!important;
+  padding: 0px!important;
+  border: none!important;
+  box-shadow: none!important;
+  font-weight: bold!important;
+}
+.footer-accordion-header button:after {
+  display: inline-block;
+  width: 0.25rem;
+    height: 0.25rem;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid #0A004C;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none!important;
+  font-size: 18px;
+}
+.accordion-button {
+  font-size: 18px!important;
+}
+.accordion-button, .accordion-body {
+  padding: 40px 2% 40px 10%!important;
+  font-family: "DM Sans", sans-serif!important;
+  line-height: 25.5px!important;
+}
+.accordion-body {
+  background-color: #e7f1ff;
+  font-size: 15px!important;
+  padding: 2% 10%!important;
+}
+
+    /*  .ReactFlagsSelect-module_selectFlag__2q5gC {
+        display: none!important;
+      }   */
+      .ReactFlagsSelect-module_label__27pw9 {
+        font-size: 1em!important;
+        color: #2400FD;
+        padding: 5px 10px;     
+      }     
+      #rfs-btn {
+        height: 50px!important;
+        border: none!important;
+      }
+      .ReactFlagsSelect-module_selectBtn__19wW7::after {
+        border-top: 5px solid #2400FD!important;  
+          
+    }
+    .ReactFlagsSelect-module_selectBtn__19wW7[aria-expanded="true"]:after {
+      border-bottom: 5px solid #2400FD!important;  
+      border-top: 5px solid transparent!important;          
+  }
+  .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+    padding-bottom: 0px!important;
+}
+
+        .ReactFlagsSelect-module_selectOptionValue__vS99- > .ReactFlagsSelect-module_label__27pw9 {
+        font-size: 0.7em!important;
+       }
+       .footer-flags-mobile {
+         
+         margin: auto;
+       }
+      .footer-flags-mobile  .ReactFlagsSelect-module_label__27pw9 {
+        color: #8F88BA;
+      }
+      .footer-flags {
+       margin-top: 10px;
+      }
+      .footer-flags  .ReactFlagsSelect-module_label__27pw9 {
+        color: #8F88BA;
+      }
+    
+       .container-fluid {
+         padding: 0!important;
+       }
+       .navbar-header {
+        width: 100%;
+        display: flex;
+        padding: 25px 20px 15px 32px;
+        justify-content: space-between;
+        border-bottom: 1px solid #2400FD16;
+    }
+    .btn-secondary {
+      color: #fff;
+      padding: 0px!important;
+      background-color: transparent!important;
+      border-color: transparent!important;
+  }
+
+    .navbar-collapse {
+      background: #2400FD;
+      padding: 10px 20px;
+      height: 100%;
+      position: fixed;
+top: 0;
+width: 100%;
+z-index: 9999;
+    }
+    .navbar-brand-mobile {
+      margin-bottom: 50px;
+    }
+    .navbar-brand-mobile img {
+    width: 200px;
+    }
+    .navbar-brand img {
+      width: 112px;
+      }
+    .navbar-toggle {
+      height: 40px;
+      margin-top: 15px;
+    }
+    .navbar-toggle-close {
+      align-self: first baseline;
+margin-top: 25px;
+color: white!important;
+    }
+    .navbar-my-link {
+      color: white!important;
+      margin-left: 15px!important;
+      font-size: 24px!important;
+      line-height: 31,25px;
+      text-align: left!important;
+      font-weight: 700;
+    }
+    .lien-menu-jugement a {
+      margin: 0px!important;
+      font-weight: normal!important;
+    }
+    .lien-menu-jugement button {
+      font-weight: normal!important;
+    }
+    .social-nav {
+      display: flex;
+      margin-top: 30px!important;
+    }
+.navbar-social-icon {
+  margin: 0 10px;
+}
+    .navbar-credits-container {
+      margin-top: 50%;
+      text-align: left;
+    }
+    .navbar-credits-link, .navbar-credits {
+      color: white!important;
+      font-size: 18px;
+      line-height: 31,25px;
+      text-align: left!important;
+      margin-left: 0!important;
+    }
+    .navbar-jimmy-link {
+      color: white!important;
+      font-size: 18px;
+      line-height: 25px;
+      margin-left: 5px;
+      text-decoration: none;
+      opacity: 0.5;
+    }
+    .navbar-nav-scroll {
+      max-height: 100vh!important;
+  }
+  .nav-mobile {
+    width: 100%;
+  }
+  #dropdown-basic-button {
+  margin: 20px;
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    color: #0A004C;
+    background-color: transparent;
+    font-family: 'DM Serif Display', serif;
+    }
+    #dropdown-basic-button:active:focus {
+      box-shadow: none;
+    }
+    .dropdown-item {
+      margin: 0px!important;
+    }
+    .dropdownTab button {
+      margin: 0px 15px!important;
+      font-size: 16px!important;
+    }
+    .mobile-header {
+      width: 100%;
+    }
+.accordion-header-mobile button {
+  font-weight: 700!important;
+}
+.react-multiple-carousel__arrow {
+  display: inline;
+}
+    
+@media (max-width: 640px) {
+  .react-multi-carousel-track, .react-multi-carousel-list {
+    flex-direction: column!important;
+  }
+  .react-multi-carousel-item {
+    margin: 20px;
+    width: 100vw!important; 
+  }
+  .react-multiple-carousel__arrow {
+    display: none;
+  }
+  .footer-accordion {
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  header nav {
+    width: 100%!important;
+  }
+  .ReactFlagsSelect-module_selectOptions__3LNBJ {
+    background: #2400FD!important;
+     
+  }
+  .ReactFlagsSelect-module_label__27pw9 {
+    font-size: 1em!important;
+    color: white;  
+    padding: 5px 10px!important;
+  }
+  #rfs-btn {
+    padding: 0;
+    height: 30px!important;
+  }
+  .ReactFlagsSelect-module_selectValue__152eS {
+    padding: 0!important;
+    margin: 0!important;
+  }
+  .ReactFlagsSelect-module_label__27pw9 {
+    padding: 0;
+  }
+  .ReactFlagsSelect-module_selectBtn__19wW7::after {
+    border-top: 5px solid white!important;        
+}
+#dropdown-basic-button-menu {
+  margin-left: 15px;
+    border: none;
+    padding: 0;
+    font-size: 24px!important;
+    color: white;
+    background-color: transparent;
+    font-family: 'DM Serif Display', serif;
+    }
+    .dropdown {
+      text-align: left;
+    }
+    .nav-item {
+      margin-top: 32px;
+    }
+ }

@@ -1,117 +1,265 @@
-import React from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import DesktopFAQ from "@components/FAQ";
-import config from "../next-i18next.config.js";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import {jsx} from 'theme-ui';
+import React from 'react';
+import {Box, Text} from 'theme-ui';
+import Adherez from '../components/adherez';
+import Accordion from 'react-bootstrap/Accordion';
+import "bootstrap/dist/css/bootstrap.min.css";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({ locale, req }) => ({
+export const getStaticProps = async ({locale}) => ({
   props: {
-    ...(await serverSideTranslations(locale, [], config)),
+    ...(await serverSideTranslations(locale, ["faq", "common"])),
   },
 });
 
-function FAQ({ isMobile }) {
-  return <DesktopFAQ {...FAQData} />;
+export default function Faq() {
+  const {t} = useTranslation('faq');
+
+  return (
+
+    <section sx={styles.faq}>
+
+       <Box sx={styles.containerFaq}>
+        <Text sx={styles.titleFaq} as="h2">
+          {t("titre")}
+        </Text>
+      </Box>
+
+      <Box sx={styles.accordion}>
+
+        <Accordion>
+
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              {t("question 1")}
+            </Accordion.Header>
+            <Accordion.Body>
+              {t("reponse 1")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>
+              {t("question 2")}
+            </Accordion.Header>
+            <Accordion.Body>
+              {t("reponse 2.1")}
+              <br />
+              {t("reponse 2.2")}
+              <br />
+              {t("reponse 2.3")}
+              <ul>
+                <li>
+                  {t("reponse 2.3.1")}
+                  <ul>
+                    <li>{t("reponse 2.3.1.1")} </li>
+                    <li>{t("reponse 2.3.1.2")} </li>
+                  </ul>
+                </li>
+                <li>{t("reponse 2.3.2")}</li>
+                <li>{t("reponse 2.3.3")}</li>
+                <li>{t("reponse 2.3.4")}</li>
+                <li>{t("reponse 2.3.5")}</li>
+              </ul>
+              <br />
+              {t("reponse 2.4")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>
+              {t("question 3")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 3.1")}
+              <br />
+              {t("reponse 3.2")}
+              <ul>
+                <li>{t("reponse 3.2.1")}</li>
+                <li>{t("reponse 3.2.2")}</li>
+                <li>{t("reponse 3.2.3")}</li>
+                <li>{t("reponse 3.2.4")}</li>
+                <li>{t("reponse 3.2.5")}</li>
+              </ul>
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>
+              {t("question 4")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 4.1")}
+              <br />
+              {t("reponse 4.2")}
+              <br />
+              {t("reponse 4.3")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="4">
+            <Accordion.Header>
+              {t("question 5")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 5")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="5">
+            <Accordion.Header>
+              {t("question 6")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 6.1")}
+              <br />
+              {t("reponse 6.2")}
+              <br />
+              {t("reponse 6.3")}
+              <br />
+              {t("reponse 6.4")}
+              <br />
+              {t("reponse 6.5")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="6">
+            <Accordion.Header>
+              {t("question 7")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 7.1")}
+              <br />
+              {t("reponse 7.2")}
+              <br />
+              {t("reponse 7.3")}
+              <br />
+              {t("reponse 7.4")}
+              <br />
+              {t("reponse 7.4")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="7">
+            <Accordion.Header>
+              {t("question 8")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 8.1")}
+              <br />
+              {t("reponse 8.2")}
+              <br />
+              {t("reponse 8.3")}
+              <br />
+              {t("reponse 8.4")}
+              <br />
+              <ul>
+                <li>{t("reponse 8.4.1")} </li>
+                <li>{t("reponse 8.4.2")} </li>
+              </ul>
+              {t("reponse 8.5")}
+              <br />
+              {t("reponse 8.6")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="8">
+            <Accordion.Header>
+              {t("question 9")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 9.1")}
+              <br />
+              {t("reponse 9.2")}
+              <br />
+              {t("reponse 9.3")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="9">
+            <Accordion.Header>
+              {t("question 10")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 10.1")}
+              <br />
+              {t("reponse 10.2")}
+              <br />
+              {t("reponse 10.3")}
+              <br />
+              {t("reponse 10.4")}
+              <br />
+              {t("reponse 10.5")}
+              <br />
+              {t("reponse 10.6")}
+              <br />
+              {t("reponse 10.7")}
+              <br />
+              {t("reponse 10.8")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="10">
+            <Accordion.Header>
+              {t("question 11")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 11")}
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item eventKey="11">
+            <Accordion.Header>
+              {t("question 12")}
+            </Accordion.Header>
+
+            <Accordion.Body>
+              {t("reponse 12")}
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </Box>
+
+      <Adherez /> 
+
+      <div id="accordion-faq"></div>
+    </section>
+  );
 }
 
-export default FAQ;
+const styles = {
+  faq: {
+    pb: [0, 0, 10],
+    h2: {
+      fontSize: ['52px', '72px'],
+      lineHeight: '1',
+      textAlign: 'left',
 
-const sizeLgColorMain8Data = {
-  cestQuoiLeJugeme: "Adhérez",
-  className: "bouton-5",
-};
+    },
+  },
+  containerFaq: {
+    flexDirection: 'column',
+    margin: '30px',
+    mb: 0,
+    pl: ['5%', '5%', '5%', '7%'],
+  },
+  titleFaq: {
 
-const sizebigColorbleu9Data = {
-  className: "logo-8",
-};
-
-const sizeLgColorPrimary7Data = {
-  className: "bouton-15",
-};
-
-const quest0212Data = {
-  text82: "Qu’est-ce qu’une élection ?",
-  className: "quest-4",
-};
-
-const quest0213Data = {
-  text82: "Quels sont les atouts du jugement majoritaire ?",
-};
-
-const quest02Data = {
-  text82: "Pourquoi peut-on mieux voter ?",
-};
-
-const quest022Data = {
-  text82: "Quels sont les atouts du jugement majoritaire?",
-};
-
-const quest023Data = {
-  text82: "Le jugement majoritaire, ce n’est pas trop compliqué ?",
-};
-
-const quest024Data = {
-  text82: "Le jugement majoritaire a t-il déjà été expérimenté?",
-};
-
-const quest025Data = {
-  text82: "Pourquoi des mentions plutôt que des notes ?",
-};
-
-const quest026Data = {
-  text82: "Pourquoi pas le vote par classement ?",
-};
-
-const quest027Data = {
-  text82: "Le jugement majoritaire ne va-t-il pas favoriser le centre ?",
-};
-
-const quest028Data = {
-  text82: "Avec le jugement majoritaire, est-ce qu’on peut voter blanc ?",
-};
-
-const quest029Data = {
-  text82:
-    "Les électeurs ne seraient-ils pas tentés de tricher avec le jugement majoritaire ?",
-};
-
-const quest0210Data = {
-  text82: "Comment organiser un vote papier avec le jugement  majoritaire ?",
-};
-
-const quest0211Data = {
-  text82:
-    "Comment organiser un vote électronique avec le Jugement majoritaire ?",
-};
-const FAQData = {
-  text100: "Questions fréquentes",
-  text96: "Pourquoi peut-on mieux voter ?",
-  text97: (
-    <>
-      Qu’il s’agisse du scrutin majoritaire ou proportionnel, uninominal ou
-      plurinominal… nos modes de scrutin sont archaïques et ne permettent pas de
-      mesurer et traduire l’opinion de l’électorat. Ils reposent tous sur la
-      même pratique: donner à l’électeur un bulletin, lui demander de
-      l’attribuer à une seule candidature, puis calculer la somme des voix
-      obtenues pour chaque candidature.
-      <br />
-      <br />
-      Ces modes de scrutin souffrent de nombreux paradoxes démontrés par la
-      science depuis plus de deux siècles (notamment : le paradoxe de Condorcet,
-      le paradoxe d’Arrow). <br />
-      <br />
-      Ils comportent aussi d’importants biais anti-démocratiques et sont source
-      de frustration pour les électeurs :
-    </>
-  ),
-  quest02Props: quest02Data,
-  quest022Props: quest022Data,
-  quest023Props: quest023Data,
-  quest024Props: quest024Data,
-  quest025Props: quest025Data,
-  quest026Props: quest026Data,
-  quest027Props: quest027Data,
-  quest028Props: quest028Data,
-  quest029Props: quest029Data,
-  quest0210Props: quest0210Data,
-  quest0211Props: quest0211Data,
-};
+  },
+  accordion: {
+    pb: 9,
+    pt: [5, 5, 9],
+  },
+}

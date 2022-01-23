@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1233"
+   height="392"
+   viewBox="0 0 1233 392"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="$-chevron-blue-down.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.11465937"
+     inkscape:cx="2184.7321"
+     inkscape:cy="-588.70026"
+     inkscape:window-width="1280"
+     inkscape:window-height="657"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 1588.114,-360.01215 v 466.435 L 536.92705,1174.8898 -34.885941,580.63585 v -468.61 l 571.812991,594.254 z"
+     fill="#2400fd"
+     id="path2" />
+</svg>

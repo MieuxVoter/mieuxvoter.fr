@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="396"
+   height="1448"
+   viewBox="0 0 396 1448"
+   fill="none"
+   version="1.1"
+   id="svg847"
+   sodipodi:docname="background-chevron-white.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs851" />
+  <sodipodi:namedview
+     id="namedview849"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     inkscape:zoom="0.27163248"
+     inkscape:cx="-178.55007"
+     inkscape:cy="149.09852"
+     inkscape:window-width="1280"
+     inkscape:window-height="657"
+     inkscape:window-x="1358"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg847" />
+  <path
+     opacity="0.7"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,280.29713 v 70.02048 L 139.518,606.79981 3.25041e-6,467.28081 0,397.26081 l 139.518,139.518 z"
+     fill="#ffffff"
+     id="path845" />
+  <path
+     opacity="0.6"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,420.33913 v 70.02048 L 139.518,746.84181 3e-6,607.32281 0,537.30281 l 139.518,139.518 z"
+     fill="#ffffff"
+     id="path845-77" />
+  <path
+     opacity="0.5"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,560.38113 v 70.02048 L 139.518,886.88381 6e-6,747.36481 3e-6,677.34481 139.518,816.86281 Z"
+     fill="#ffffff"
+     id="path845-9" />
+  <path
+     opacity="0.8"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,140.25513 v 70.02048 L 139.518,466.75781 3.7e-6,327.23881 4.0000001e-7,257.21881 139.518,396.73681 Z"
+     fill="#ffffff"
+     id="path845-96" />
+  <path
+     opacity="0.9"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M 396,0.21313664 V 70.233607 L 139.518,326.71581 4e-6,187.19681 9.9999999e-7,117.17681 139.518,256.69481 Z"
+     fill="#ffffff"
+     id="path845-4" />
+  <path
+     opacity="0.4"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,700.42313 v 70.02048 L 139.518,1026.9258 -1e-6,887.40681 l -3e-6,-70.02 139.518004,139.518 z"
+     fill="#ffffff"
+     id="path845-93" />
+  <path
+     opacity="0.3"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,840.46513 v 70.02048 L 139.518,1166.9678 4e-6,1027.4488 9.9999999e-7,957.42881 139.518,1096.9468 Z"
+     fill="#ffffff"
+     id="path845-0" />
+  <path
+     opacity="0.2"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,980.50708 v 70.02052 L 139.518,1307.0098 6e-6,1167.4908 3e-6,1097.4708 139.518,1236.9888 Z"
+     fill="#ffffff"
+     id="path845-7" />
+  <path
+     opacity="0.1"
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="m 396,1120.5492 v 70.0204 L 139.518,1447.0518 0,1307.5328 l -3e-6,-70.02 139.518003,139.518 z"
+     fill="#ffffff"
+     id="path845-5" />
+</svg>
