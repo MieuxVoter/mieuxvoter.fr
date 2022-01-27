@@ -4,21 +4,21 @@ import {jsx} from 'theme-ui';
 import React from 'react';
 import {Box, Text} from 'theme-ui';
 import Adherez from '../components/adherez';
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import {useTranslation} from "next-i18next";
+// import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+// import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({locale}) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["newsletter", "common"])),
-  },
-});
+// export const getStaticProps = async ({locale}) => ({
+//   props: {
+//     ...(await serverSideTranslations(locale, ["newsletter", "common"])),
+//   },
+// });
 
 
 export default function Newsletter() {
-  const {t} = useTranslation('newsletter');
+  // const {t} = useTranslation('newsletter');
+  // {t("titre success newsletter")}
 
   return (
-
     <section sx={styles.newsletter}>
 
       <Box sx={styles.sectionThree}>
@@ -27,7 +27,7 @@ export default function Newsletter() {
 
           <Box sx={styles.sectionTitle} >
             <Text as="h2">
-              {t("titre success newsletter")}
+              Félicitations, vous êtes inscrit·e à notre newsletter !
             </Text>
           </Box>
 
@@ -35,7 +35,6 @@ export default function Newsletter() {
         </Box>
       </Box>
 
-      <Adherez />
     </section>
   );
 }
