@@ -108,7 +108,7 @@ const styles = {
   sectionOne: {
     backgroundImage: 'url("img/background-chevron-big-blue.svg")',
     backgroundSize: ['0px', '1000px', '1000px', '140%', '130%', '160%', '150%'],
-    backgroundPosition: [null, '-250px 150px', '-100px 150px', '-12em 0em', '-15em -3em', '-23em -20em', '60% 30%'],
+    backgroundPosition: [null, '-250px 456px', '-100px 404px', '-12em 41em', '-15em 28em', '-23em 5em', '72% 24%'],
     backgroundRepeat: 'no-repeat',
     px: ['30px', '30px', 'auto'],
     p: 9,
