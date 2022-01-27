@@ -41,6 +41,7 @@ export default function DeskHeader() {
           </Flex>
 
           <Flex sx={styles.flexDivider}>
+
             <hr sx={styles.divider} />
 
             <Flex as="nav" sx={styles.menuNav}>
@@ -205,10 +206,11 @@ const styles = {
   },
   flexDivider: {
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
   },
   divider: {
     my: 4,
+    marginLeft: "auto",
     alignSelf: 'end',
     width: ['100%', '100%', '100%', '90%', '80%', '80%', '70%'],
   },
