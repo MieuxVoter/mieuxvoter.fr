@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx} from "theme-ui";
-import React, {useState} from "react";
+import React from "react";
 import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
 import ArrowBlue from '../arrowBlue';
 import Link from "next/link";
@@ -10,37 +10,8 @@ import Credits from "./credits";
 import {useTranslation} from "next-i18next";
 import Accordion from "react-bootstrap/Accordion";
 
-function encode(data) {
-  return Object.keys(data)
-    .map(
-      (key) =>
-        encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-    )
-    .join("&");
-}
-
-
 export default function Footer() {
   const {t} = useTranslation("common");
-  const [email, setEmail] = useState("");
-  const [honeypot, setHoneypot] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const payload = encode({
-      "form-name": event.target.getAttribute("name"),
-      "piege": honeypot,
-      "email": email,
-    })
-    console.log(payload)
-    fetch("/newsletter/", {
-      method: "POST",
-      headers: {"Content-Type": "application/x-www-form-urlencoded"},
-      body: payload,
-    })
-      .then(() => console.log("/thank-you/"))
-      .catch((error) => alert(error));
-  };
 
   return (
     <footer sx={styles.footer}>
@@ -53,13 +24,7 @@ export default function Footer() {
         </Box>
 
         <Box sx={styles.rightTopFooter}>
-          <form
-            method='POST'
-            name='newsletter'
-            data-netlify="true"
-            netlify-honeypot="piege"
-            action="/newsletter"
-          >
+          <form method='POST' action='/newsletter' name='newsletter' data-netlify="true" netlify-honeypot="piege">
             <Text as="h3">{t("footer newsletter")}</Text>
             <Flex id="newsletter" sx={styles.newsletterForm}>
               <Input
@@ -67,7 +32,6 @@ export default function Footer() {
                 name="email"
                 id="email"
                 mb={3}
-                onChange={e => setEmail(e.target.value)}
                 placeholder={t("footer placeholder newsletter")}
               />
               <Box sx={styles.boxButton}>
@@ -77,16 +41,9 @@ export default function Footer() {
                 </Button>
               </Box>
             </Flex>
-            <input
-              type="hidden" name="form-name" value="newsletter" />
+            <input type="hidden" name="form-name" value="newsletter" />
             <div className="hidden">
-              <label for='piege'>
-                Don’t fill this out if you’re human:
-              </label>
-              <input
-                name="piege"
-                onChange={e => setHoneypot(e.target.value)}
-              />
+              <label>Don’t fill this out if you’re human: <input name="piege" /></label>
             </div>
           </form>
         </Box>
