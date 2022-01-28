@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-
 import Video from "./video";
+
 
 const responsive = {
   desktop: {
@@ -20,35 +20,14 @@ const responsive = {
     paritialVisibilityGutter: 30
   }
 };
-// i search on youtube "scene" and these are what showed up.
-const videos = [
-  {
-    "id": "aOFlwlCX3oA",
-    "source": "youtube",
-    "placeholder": "/img/bd-jugement-majoritaire.png",
-  },
-  //  {
-  //    "id": "YC1xDJsi_Hk",
-  //    "source": "youtube",
-  //    "placeholder": "/img/background-youtube.png",
-  //  },
-  //  {
-  //    "id": "ZoGH7d51bvc",
-  //    "source": "youtube",
-  //    "placeholder": "/img/background-youtube.png",
-  //  },
-];
+//
 
-class WithVideo extends React.Component {
-  render() {
-    return (
-      <Carousel arrows={true} swipeable={true} draggable={true} responsive={responsive}>
-        {videos.map(({id, source, placeholder}, index) => {
-          return <Video id={id} key={index} placeholder={placeholder} source={source} />;
-        })}
-      </Carousel>
-    );
-  }
-}
+const WithVideo = ({videos}) => (
+  <Carousel arrows={true} swipeable={true} draggable={true} responsive={responsive}>
+    {videos.map(({id, source, placeholder}, index) => {
+      return <Video id={id} key={index} placeholder={placeholder} source={source} />;
+    })}
+  </Carousel>
+)
 
 export default WithVideo;

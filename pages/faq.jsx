@@ -12,7 +12,7 @@ import matter from 'gray-matter'
 import {join} from 'path'
 import {readFileSync} from 'fs'
 
-const faqDir = join(process.cwd(), 'faq')
+const faqDir = join(process.cwd(), 'content/faq')
 const faqFiles = [
   join(faqDir, '1.md'),
   join(faqDir, '2.md'),
@@ -60,7 +60,6 @@ const FaqItem = ({question, answer, key = 0}) => {
 export default function Faq(props) {
   const {t} = useTranslation('faq');
   const {items} = props;
-  console.log(items[0])
 
   return (
 

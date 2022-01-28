@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui';
 import React from 'react';
 import {Box, Text, Image, Flex, Link} from 'theme-ui';
 import {BsArrowRight} from "react-icons/bs";
@@ -9,12 +6,22 @@ import Blog from '../components/blog';
 import SectionFive from "../components/home-page/section-three";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import matter from 'gray-matter';
+import {join} from 'path'
+import {readFileSync} from 'fs'
 
 export const getStaticProps = async ({locale}) => ({
   props: {
     ...(await serverSideTranslations(locale, ["le-jugement-majoritaire", "homepage", "common"])),
   },
 });
+
+// i search on youtube "scene" and these are what showed up.
+const videoFile = join(process.cwd(), 'content/carousel-videos.yaml')
+const fileContents = readFileSync(videoFile, 'utf8')
+let {data: videos, isEmpty} = matter(fileContents);
+if (isEmpty) {videos = []}
+
 
 export default function LeJugementMajoritaire() {
   const {t} = useTranslation('le-jugement-majoritaire');
@@ -55,7 +62,7 @@ export default function LeJugementMajoritaire() {
 
       <Box sx={styles.sectionTwo}>
         <Box sx={styles.containerTwo}>
-          <VideoCarousel sx={styles.videoCarousel} />
+          <VideoCarousel videos={videos} sx={styles.videoCarousel} />
         </Box>
       </Box>
 
