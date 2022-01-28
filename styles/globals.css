@@ -308,7 +308,15 @@ color: white!important;
 .react-multiple-carousel__arrow {
   display: inline;
 }
-    
+ .react-multiple-carousel__arrow--right::before {
+  content:url(/img/next-slide.svg)!important;
+}
+.react-multiple-carousel__arrow--left::before {
+  content:url(/img/previous-slide.svg)!important;
+}
+.react-multiple-carousel__arrow {
+background: transparent!important;
+}   
 @media (max-width: 640px) {
   .react-multi-carousel-track, .react-multi-carousel-list {
     flex-direction: column!important;
