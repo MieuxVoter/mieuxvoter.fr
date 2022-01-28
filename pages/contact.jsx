@@ -26,7 +26,7 @@ const styles = {
   Contact: {
     backgroundImage: 'url("/img/background-chevron-big-blue.svg")',
     backgroundSize: ['0px', '1000px', '1000px', '140%', '130%', '160%', '150%'],
-    backgroundPosition: [null, '-250px 556px', '-100px 273px', '-12em 22em', '-15em -23em', '-23em -1em', '41% 6%'],
+    backgroundPosition: [null, '-250px 556px', '-100px 273px', '-12em 22em', '-15em 18em', '-23em -1em', '46% 7%'],
     backgroundRepeat: 'no-repeat',
     px: '30px',
     h2: {
