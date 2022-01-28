@@ -4,6 +4,7 @@ import {jsx} from 'theme-ui';
 import React from 'react';
 import {Box, Text, Button} from 'theme-ui';
 import {BsArrowRight} from "react-icons/bs";
+import Link from "next/link";
 import {useTranslation} from "next-i18next";
 import Arrow from '../arrow';
 export default function SectionOne() {
@@ -24,10 +25,12 @@ export default function SectionOne() {
         </Text>
 
         <Box sx={styles.boxButton}>
-          <Button>{t("bouton première section")}<Arrow /></Button>
+          <Link href='/le-jugement-majoritaire'>
+            <Button>{t("bouton première section")}<Arrow /></Button>
+          </Link>
         </Box>
       </Box>
-    </section>
+    </section >
   );
 }
 

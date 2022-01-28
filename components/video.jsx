@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import VisibilitySensor from "react-visibility-sensor";
-import { Embed } from "semantic-ui-react";
+import {Embed} from "semantic-ui-react";
 
-const Video = ({ id }) => {
+const Video = ({id, source = "youtube", placeholder = '/img/background-youtube.png'}) => {
   const [visible, setVisibile] = useState(false);
   return (
     <VisibilitySensor
@@ -16,8 +16,8 @@ const Video = ({ id }) => {
       }}
       partialVisibility
     >
-      <Embed hd={false} autoplay={false} id={id}  placeholder='/img/background-youtube.png' source="youtube" />
-      
+      <Embed hd={false} autoplay={false} id={id} placeholder={placeholder} source={source} />
+
     </VisibilitySensor>
   );
 };
