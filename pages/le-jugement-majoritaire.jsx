@@ -93,7 +93,7 @@ export default function LeJugementMajoritaire() {
                 {t("texte4 jugement majoritaire")}
               </Text>
 
-              <Link href="" sx={styles.lien} ><Text>{t("lien livre jugement majoritaire")}</Text><BsArrowRight /></Link>
+              <Link href="https://mitpress.mit.edu/books/majority-judgment" sx={styles.lien} ><Text>{t("lien livre jugement majoritaire")}</Text><BsArrowRight /></Link>
             </Box>
           </Flex>
         </Box>
