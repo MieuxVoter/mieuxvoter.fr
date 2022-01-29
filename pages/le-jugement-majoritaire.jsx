@@ -8,7 +8,7 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
 import matter from 'gray-matter';
 import {join} from 'path'
-import {readFileSync} from 'fs'
+// import {readFileSync} from 'fs'
 
 export const getStaticProps = async ({locale}) => ({
   props: {
@@ -17,11 +17,28 @@ export const getStaticProps = async ({locale}) => ({
 });
 
 // i search on youtube "scene" and these are what showed up.
-const videoFile = join(process.cwd(), 'content/carousel-videos.yaml')
-const fileContents = readFileSync(videoFile, 'utf8')
-let {data: videos, isEmpty} = matter(fileContents);
-if (isEmpty) {videos = []}
-
+// const videoFile = join(process.cwd(), 'content/carousel-videos.yaml')
+// const fileContents = readFileSync(videoFile, 'utf8')
+// let {data: videos, isEmpty} = matter(fileContents);
+// if (isEmpty) {videos = []}
+//
+const videos = [
+  {
+    id: "aOFlwlCX3oA",
+    source: "youtube",
+    placeholder: "/img/bd-jugement-majoritaire.png"
+  },
+  {
+    id: "YC1xDJsi_Hk",
+    source: "youtube",
+    placeholder: "/img/bd-jugement-majoritaire.png"
+  },
+  {
+    id: "ZoGH7d51bvc",
+    source: "youtube",
+    placeholder: "/img/bd-jugement-majoritaire.png"
+  },
+]
 
 export default function LeJugementMajoritaire() {
   const {t} = useTranslation('le-jugement-majoritaire');

@@ -2,11 +2,11 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 
-import Video from "./Video";
+import Video from "./video";
 
 const responsive = {
   doesntmatter: {
-    breakpoint: { max: 3000, min: 0 },
+    breakpoint: {max: 3000, min: 0},
     items: 1
   }
 };

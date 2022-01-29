@@ -9,6 +9,21 @@ import LanguageSelector from "./language-selector";
 import {useTranslation} from "next-i18next";
 import {DropdownButton, Dropdown} from "react-bootstrap";
 
+
+const CustomToggle = React.forwardRef(({children, onClick}, ref) => (
+  <Link
+    href="/le-jugement-majoritaire"
+    ref={ref}
+    onClick={(e) => {
+      e.preventDefault();
+      onClick(e);
+    }}
+  >
+    {children}
+    &#x25bc;
+  </Link>
+));
+
 export default function DeskHeader() {
   const {t} = useTranslation("common");
 
@@ -46,6 +61,7 @@ export default function DeskHeader() {
 
             <Flex as="nav" sx={styles.menuNav}>
               <DropdownButton
+                a={CustomToggle}
                 id="dropdown-basic-button"
                 title={t("menu lien 1")}
               >
