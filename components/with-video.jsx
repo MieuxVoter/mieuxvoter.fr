@@ -11,18 +11,12 @@ const responsive = {
   }
 };
 
-const videos = ["YC1xDJsi_Hk", "ZoGH7d51bvc"];
-
-class WithVideo extends React.Component {
-  render() {
-    return (
-      <Carousel swipeable={true} draggable={true} responsive={responsive}>
-        {videos.map(id => {
-          return <Video id={id} key={id} />;
-        })}
-      </Carousel>
-    );
-  }
-}
+const WithVideo = ({videos}) => (
+  <Carousel arrows={true} swipeable={true} draggable={true} responsive={responsive}>
+    {videos.map(({id, source, placeholder}, index) => {
+      return <Video id={id} key={index} placeholder={placeholder} source={source} />;
+    })}
+  </Carousel>
+)
 
 export default WithVideo;
