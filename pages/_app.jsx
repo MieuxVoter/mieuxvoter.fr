@@ -13,10 +13,6 @@ import Newsletter from './newsletter';
 
 
 function MyApp({Component, pageProps}) {
-  // Hack to serve a static page for netlify forms
-  if (Component === Newsletter)
-    return <Newsletter />
-
   // Hack to scroll to top for /le-jugement-majoritaire page
   const resetWindowScrollPosition = useCallback(() => window.scrollTo(0, 0), []);
 
@@ -28,6 +24,10 @@ function MyApp({Component, pageProps}) {
     };
   }, []);
 
+
+  // Hack to serve a static page for netlify forms
+  if (Component === Newsletter)
+    return <Newsletter />
 
   return (
     <SSRProvider>
