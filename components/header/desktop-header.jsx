@@ -1,13 +1,14 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx} from "theme-ui";
-import React from "react";
+import React, {useState} from "react";
 import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
 import Link from "next/link";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
 import {useTranslation} from "next-i18next";
 import {DropdownButton, Dropdown} from "react-bootstrap";
+import {FaAngleDown, FaAngleUp} from "react-icons/fa";
 
 
 const CustomToggle = React.forwardRef(({children, onClick}, ref) => (
@@ -26,6 +27,8 @@ const CustomToggle = React.forwardRef(({children, onClick}, ref) => (
 
 export default function DeskHeader() {
   const {t} = useTranslation("common");
+  const [isDropdowned, setDropdown] = useState(false);
+
 
   return (
     <header>
@@ -60,21 +63,37 @@ export default function DeskHeader() {
             <hr sx={styles.divider} />
 
             <Flex as="nav" sx={styles.menuNav}>
-              <DropdownButton
-                a={CustomToggle}
-                id="dropdown-basic-button"
-                title={t("menu lien 1")}
-              >
-                <Dropdown.Item className="lien-menu-jugement">
-                  <Link href="/le-jugement-majoritaire">
-                    {t("menu sous lien 1")}
-                  </Link>
-                </Dropdown.Item>
+              <div className="dropdown-wrapper">
+                <div
+                  className="dropdown-header"
+                  onClick={() => setDropdown(!isDropdowned)}
+                >
+                  <span>{t("menu lien 1")}</span>
+                  {isDropdowned
+                    ? <FaAngleUp size="1.3em" />
+                    : <FaAngleDown size="1.3em" />
+                  }
+                </div>
+                {isDropdowned && (
+                  <div
+                    role="list"
+                    className="dropdown-list"
+                  >
+                    <div
+                      className="dropdown-list-item lien-menu-jugement"
+                    >
+                      <Link href="/le-jugement-majoritaire">
+                        {t("menu sous lien 1")}
+                      </Link>
+                    </div>
 
-                <Dropdown.Item className="lien-menu-jugement">
-                  <Link href="/faq">{t("menu sous lien 2")}</Link>
-                </Dropdown.Item>
-              </DropdownButton>
+                    <div
+                      className="dropdown-list-item lien-menu-jugement">
+                      <Link href="/faq">{t("menu sous lien 2")}</Link>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
@@ -86,6 +105,8 @@ export default function DeskHeader() {
         </Box>
       </Flex>
 
+      { // For tablet display 
+    }
       <Flex as="nav" sx={styles.menuNavTab}>
         <DropdownButton
           className="dropdownTab"
@@ -107,6 +128,7 @@ export default function DeskHeader() {
 
         <Link href="/contact">{t("menu lien 5")}</Link>
       </Flex>
+     
     </header>
   );
 }

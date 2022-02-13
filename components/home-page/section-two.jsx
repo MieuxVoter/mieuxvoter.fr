@@ -38,7 +38,7 @@ export default function SectionTwo() {
             {t("texte2 deuxième section")}
           </Text>
 
-          <Image sx={styles.box3SectionTwo} src="/img/bulletin-vote.png" alt="" />
+          <Image sx={styles.box3SectionTwo} src="/img/vote.svg" alt="" />
 
           <Text sx={styles.box6SectionTwo} as="p">
             {t("texte mobile deuxième section")}
@@ -48,7 +48,7 @@ export default function SectionTwo() {
             {t("texte3 deuxième section")}
           </Text>
 
-          <Image sx={styles.box5SectionTwo} src="/img/profil-merite.png" alt="" />
+          <Image sx={styles.box5SectionTwo} src="/img/list_cand.svg" alt="" />
 
           <Box sx={styles.boxButton2}>
             <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>

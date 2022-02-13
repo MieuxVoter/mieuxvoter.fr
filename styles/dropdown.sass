@@ -1,0 +1,66 @@
+.dropdown-wrapper
+  position: relative
+
+  .dropdown-header
+    display: flex
+    margin: 12px
+    font-size: 16px
+    color: #0A004C
+    -webkit-text-decoration: none
+    text-decoration: none
+    font-weight: 700
+    align-items: center
+    justify-content: space-between
+    position: relative
+    cursor: default
+    cursor: pointer
+
+    span
+      margin-right: 5px
+
+  .dropdown-list
+    position: absolute
+    z-index: 10
+    width: 100%
+    max-height: 215px
+    border: 1px solid rgb(223, 223, 223)
+    border-top: none
+    padding: 5px
+    border-bottom-left-radius: 3px
+    border-bottom-right-radius: 3px
+    box-shadow: 0 2px 5px -1px rgb(232, 232, 232)
+    font-weight: 700
+    text-align: left
+    -webkit-overflow-scrolling: touch
+
+    .dropdown-scroll-list
+      overflow-y: scroll
+      max-height: 215px
+      padropdowning: 15px 0
+
+      .dropdown-list-item
+        display: inline-block
+        overflow: hidropdownen
+        width: 100%
+        padropdowning: 8px 10px
+        font-size: 1.5rem
+        line-height: 1.6rem
+        white-space: nowrap
+        text-overflow: ellipsis
+        cursor: default
+        cursor: pointer
+
+        &.no-result
+          font-weight: normal
+          cursor: default
+
+          &:hover
+            background-color: transparent
+            color: black
+
+        &:hover
+          background-color: #FFCC01
+          color: white
+
+          & > span > svg > path
+            fill: white
