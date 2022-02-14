@@ -3,7 +3,6 @@
 import { jsx } from "theme-ui";
 import React from "react";
 import { Box, Text, Flex, Image, Button, Input } from "theme-ui";
-import TranslatedLink from "../translatedLink";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
 import { useTranslation } from "next-i18next";
@@ -16,9 +15,9 @@ export default function DeskHeader() {
     <header>
       <Flex sx={styles.header}>
         <Box sx={styles.leftHeader}>
-          <TranslatedLink href="/" passHref>
+          <Link href="/" passHref>
             <Image src="img/logo.svg" alt="" />
-          </TranslatedLink>
+          </Link>
         </Box>
 
         <Box sx={styles.rightHeader}>
@@ -26,7 +25,7 @@ export default function DeskHeader() {
             <Flex sx={styles.rightTopHeaderMenu}>
               <LanguageSelector />
 
-              <TranslatedLink href="#email">{t("header inscription newsletter")}</TranslatedLink>
+              <Link href="#email">{t("header inscription newsletter")}</Link>
 
               <Text as="a" target="blank" href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
@@ -49,21 +48,21 @@ export default function DeskHeader() {
                 title={t("menu lien 1")}
               >
                 <Dropdown.Item className="lien-menu-jugement">
-                  <TranslatedLink href="/le-jugement-majoritaire">
+                  <Link href="/le-jugement-majoritaire">
                     {t("menu sous lien 1")}
-                  </TranslatedLink>
+                  </Link>
                 </Dropdown.Item>
 
                 <Dropdown.Item className="lien-menu-jugement">
-                  <TranslatedLink href="/faq">{t("menu sous lien 2")}</TranslatedLink>
+                  <Link href="/faq">{t("menu sous lien 2")}</Link>
                 </Dropdown.Item>
               </DropdownButton>
 
-              <TranslatedLink href="/qui-sommes-nous">{t("menu lien 2")}</TranslatedLink>
+              <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
-              <TranslatedLink href="/presse">{t("menu lien 4")}</TranslatedLink>
+              <Link href="/presse">{t("menu lien 4")}</Link>
 
-              <TranslatedLink href="/contact">{t("menu lien 5")}</TranslatedLink>
+              <Link href="/contact">{t("menu lien 5")}</Link>
             </Flex>
           </Flex>
         </Box>
