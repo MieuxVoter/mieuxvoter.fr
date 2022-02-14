@@ -1,42 +1,24 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {jsx} from "theme-ui";
-import React, {useState} from "react";
-import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
-import Link from "next/link";
+import { jsx } from "theme-ui";
+import React from "react";
+import { Box, Text, Flex, Image, Button, Input } from "theme-ui";
+import TranslatedLink from "../translatedLink";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
-import {useTranslation} from "next-i18next";
-import {DropdownButton, Dropdown} from "react-bootstrap";
-import {FaAngleDown, FaAngleUp} from "react-icons/fa";
-
-
-const CustomToggle = React.forwardRef(({children, onClick}, ref) => (
-  <Link
-    href="/le-jugement-majoritaire"
-    ref={ref}
-    onClick={(e) => {
-      e.preventDefault();
-      onClick(e);
-    }}
-  >
-    {children}
-    &#x25bc;
-  </Link>
-));
+import { useTranslation } from "next-i18next";
+import { DropdownButton, Dropdown } from "react-bootstrap";
 
 export default function DeskHeader() {
-  const {t} = useTranslation("common");
-  const [isDropdowned, setDropdown] = useState(false);
-
+  const { t } = useTranslation("common");
 
   return (
     <header>
       <Flex sx={styles.header}>
         <Box sx={styles.leftHeader}>
-          <Link href="/" passHref>
-            <Image src="/img/logo.svg" alt="" />
-          </Link>
+          <TranslatedLink href="/" passHref>
+            <Image src="img/logo.svg" alt="" />
+          </TranslatedLink>
         </Box>
 
         <Box sx={styles.rightHeader}>
@@ -44,12 +26,12 @@ export default function DeskHeader() {
             <Flex sx={styles.rightTopHeaderMenu}>
               <LanguageSelector />
 
-              <Link href="#email">{t("header inscription newsletter")}</Link>
+              <TranslatedLink href="#email">{t("header inscription newsletter")}</TranslatedLink>
 
               <Text as="a" target="blank" href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
               </Text>
-
+            
               {socialItems.map((socialItem, i) => (
                 <Text as="a" href={socialItem.path} target="blank" key={i}>
                   {socialItem.icon}
@@ -59,75 +41,34 @@ export default function DeskHeader() {
           </Flex>
 
           <Flex sx={styles.flexDivider}>
-
             <hr sx={styles.divider} />
 
             <Flex as="nav" sx={styles.menuNav}>
-              <div className="dropdown-wrapper">
-                <div
-                  className="dropdown-header"
-                  onClick={() => setDropdown(!isDropdowned)}
-                >
-                  <span>{t("menu lien 1")}</span>
-                  {isDropdowned
-                    ? <FaAngleUp size="1.3em" />
-                    : <FaAngleDown size="1.3em" />
-                  }
-                </div>
-                {isDropdowned && (
-                  <div
-                    role="list"
-                    className="dropdown-list"
-                  >
-                    <div
-                      className="dropdown-list-item lien-menu-jugement"
-                    >
-                      <Link href="/le-jugement-majoritaire">
-                        {t("menu sous lien 1")}
-                      </Link>
-                    </div>
+              <DropdownButton
+                id="dropdown-basic-button"
+                title={t("menu lien 1")}
+              >
+                <Dropdown.Item className="lien-menu-jugement">
+                  <TranslatedLink href="/le-jugement-majoritaire">
+                    {t("menu sous lien 1")}
+                  </TranslatedLink>
+                </Dropdown.Item>
 
-                    <div
-                      className="dropdown-list-item lien-menu-jugement">
-                      <Link href="/faq">{t("menu sous lien 2")}</Link>
-                    </div>
-                  </div>
-                )}
-              </div>
+                <Dropdown.Item className="lien-menu-jugement">
+                  <TranslatedLink href="/faq">{t("menu sous lien 2")}</TranslatedLink>
+                </Dropdown.Item>
+              </DropdownButton>
 
-              <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
+              <TranslatedLink href="/qui-sommes-nous">{t("menu lien 2")}</TranslatedLink>
 
-              <Link href="/presse">{t("menu lien 4")}</Link>
+              <TranslatedLink href="/presse">{t("menu lien 4")}</TranslatedLink>
 
-              <Link href="/contact">{t("menu lien 5")}</Link>
+              <TranslatedLink href="/contact">{t("menu lien 5")}</TranslatedLink>
             </Flex>
           </Flex>
         </Box>
       </Flex>
 
-      { // For tablet display 
-    }
-      <Flex as="nav" sx={styles.menuNavTab}>
-        <DropdownButton
-          className="dropdownTab"
-          id="dropdown-basic-button"
-          title={t("menu lien 1")}
-        >
-          <Dropdown.Item className="lien-menu-jugement">
-            <Link href="/le-jugement-majoritaire">{t("menu sous lien 1")}</Link>
-          </Dropdown.Item>
-
-          <Dropdown.Item className="lien-menu-jugement">
-            <Link href="/faq">{t("menu sous lien 2")}</Link>
-          </Dropdown.Item>
-        </DropdownButton>
-
-        <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
-
-        <Link href="/presse">{t("menu lien 4")}</Link>
-
-        <Link href="/contact">{t("menu lien 5")}</Link>
-      </Flex>
      
     </header>
   );
@@ -140,6 +81,7 @@ const styles = {
   header: {
     pt: "2%",
     backgroundImage: [
+      "none",
       "none",
       "none",
       "none",
@@ -192,19 +134,19 @@ const styles = {
     },
     svg: {
       color: '#2400FD',
-
+      
     },
   },
   menuNav: {
-    display: ["none", "none", "none", "none", "flex"],
+    display: ["none", "flex"],
     color: "#0A004C",
-    flexDirection: ["column", "column", "row"],
+    flexDirection: ["row"],
     textAlign: "center",
-    justifyContent: "end",
+    justifyContent: ["space-evenly", "space-evenly", "space-evenly", "end"],
     fontWeight: "bold",
     a: {
       m: 4,
-      fontSize: "16px",
+      fontSize: ["16px", "9px", "9px", "9px", "16px"],
       color: "#0A004C",
       textDecoration: "none",
       fontWeight: 'bold',
@@ -213,42 +155,13 @@ const styles = {
       },
     },
   },
-  menuNavTab: {
-    display: ["flex", "flex", "flex", "flex", "none"],
-    width: "90%",
-    color: "#0A004C",
-    flexDirection: ["column", "column", "row"],
-    textAlign: "center",
-    justifyContent: "end",
-    fontWeight: "bold",
-    mx: "auto",
-    a: {
-      mx: "15px",
-      fontSize: "16px",
-      color: "#0A004C",
-      textDecoration: "none",
-    },
-  },
-  socialNav: {
-    flexDirection: "row",
-    justifyContent: ["center", "center", "center", "end"],
-    mt: [5, 5, 0],
-    svg: {
-      ml: [null, 3, 3],
-      fill: "#2400FD",
-      cursor: "pointer",
-      width: ["1.5em", "1.5em", "1em"],
-      height: ["1.5em", "1.5em", "1em"],
-      alignSelf: "center",
-    },
-  },
+  
   flexDivider: {
-    flexDirection: 'column',
-    alignItems: 'flex-end',
+    flexDirection: 'column', 
+    justifyContent: 'flex-end',
   },
   divider: {
     my: 4,
-    marginLeft: "auto",
     alignSelf: 'end',
     width: ['100%', '100%', '100%', '90%', '80%', '80%', '70%'],
   },
