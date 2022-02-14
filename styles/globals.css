@@ -332,7 +332,11 @@ background: transparent!important;
     margin: 20px auto;
   }
 }
-
+@media (min-width: 500px) and (max-width: 1024px) {
+  #dropdown-basic-button {
+      font-size: 9px!important;
+      }
+}
 @media screen and (max-width: 500px) { 
   header nav {
     width: 100%!important;
