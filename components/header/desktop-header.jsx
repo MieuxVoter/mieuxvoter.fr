@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import React from "react";
-import { Box, Text, Flex, Image, Button, Input } from "theme-ui";
+import { Box, Text, Flex, Image, Button, Input, Link } from "theme-ui";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
 import { useTranslation } from "next-i18next";
