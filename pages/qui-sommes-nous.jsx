@@ -95,6 +95,7 @@ export default function QuiSommesNous() {
         <Box sx={styles.box1QuiSommesNous}>
           <Text as="p">
             {t("texte1 qui sommes nous")}
+            {' '}
             <a target="blank" rel="noopener" href="https://drive.google.com/file/d/16sTkssx3QnYNA4eyQOFmHoy3EgqUg8-n/view?usp=sharing">
               {t("telecharger statut")}
             </a>
