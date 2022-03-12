@@ -13,18 +13,6 @@ import Newsletter from './newsletter';
 
 
 function MyApp({Component, pageProps}) {
-  // Hack to scroll to top for /le-jugement-majoritaire page
-  const resetWindowScrollPosition = useCallback(() => window.scrollTo(0, 0), []);
-
-  useEffect(() => {
-    Router.events.on("routeChangeComplete", resetWindowScrollPosition);
-
-    return () => {
-      Router.events.off("routeChangeComplete", resetWindowScrollPosition);
-    };
-  }, []);
-
-
   // Hack to serve a static page for netlify forms
   if (Component === Newsletter)
     return <Newsletter />

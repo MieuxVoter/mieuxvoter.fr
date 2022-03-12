@@ -35,7 +35,6 @@ export default function SectionThree() {
               <Input
                 sx={styles.input}
                 placeholder={t("placeholder troisième section")}
-                autoFocus
                 required
                 name="title"
                 value={title ? title : ""}
@@ -136,13 +135,6 @@ const styles = {
       alignSelf: 'center',
     },
 
-  },
-  input: {
-    '&:focus': {
-      color: '#FFFFFF',
-      border: 'none',
-      boxShadow: 'none',
-    },
   },
   boxButton2: {
     width: ['100%', '100%', '40%', '42%'],
