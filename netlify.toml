@@ -11,6 +11,6 @@ package = "@netlify/plugin-nextjs"
 
 [[redirects]]
 from = "/*"
-to = "https://old.mieuxvoter.fr/:splat"
+to = "https://archive.mieuxvoter.fr/:splat"
 status = 200
 force = false
