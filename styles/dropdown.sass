@@ -33,34 +33,32 @@
     text-align: left
     -webkit-overflow-scrolling: touch
 
-    .dropdown-scroll-list
-      overflow-y: scroll
-      max-height: 215px
-      padropdowning: 15px 0
+    a
+      margin: 0px
 
-      .dropdown-list-item
-        display: inline-block
-        overflow: hidropdownen
-        width: 100%
-        padropdowning: 8px 10px
-        font-size: 1.5rem
-        line-height: 1.6rem
-        white-space: nowrap
-        text-overflow: ellipsis
+
+    .dropdown-list-item
+      display: inline-block
+      overflow: hidropdownen
+      width: 100%
+      padropdowning: 8px 10px
+      padding: 5px
+      white-space: nowrap
+      text-overflow: ellipsis
+      cursor: default
+      cursor: pointer
+
+      &.no-result
+        font-weight: normal
         cursor: default
-        cursor: pointer
-
-        &.no-result
-          font-weight: normal
-          cursor: default
-
-          &:hover
-            background-color: transparent
-            color: black
 
         &:hover
-          background-color: #FFCC01
-          color: white
+          background-color: transparent
+          color: black
 
-          & > span > svg > path
-            fill: white
+      &:hover
+        background-color: #0d6efd
+        color: white
+
+        & > span > svg > path
+          fill: white

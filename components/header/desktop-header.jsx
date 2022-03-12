@@ -1,15 +1,17 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
-import React from "react";
-import { Box, Text, Flex, Image, Button, Input, Link } from "theme-ui";
+import {jsx} from "theme-ui";
+import React, {useState} from "react";
+import {Box, Text, Flex, Image, Button, Input, Link} from "theme-ui";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
-import { useTranslation } from "next-i18next";
-import { DropdownButton, Dropdown } from "react-bootstrap";
+import {useTranslation} from "next-i18next";
+import {FaAngleDown, FaAngleUp} from "react-icons/fa";
+
 
 export default function DeskHeader() {
-  const { t } = useTranslation("common");
+  const {t} = useTranslation("common");
+  const [isDropdowned, setDropdown] = useState(false);
 
   return (
     <header>
@@ -30,7 +32,7 @@ export default function DeskHeader() {
               <Text as="a" target="blank" href="https://www.paypal.com/donate/?hosted_button_id=QD6U4D323WV4S">
                 {t("header soutien")}
               </Text>
-            
+
               {socialItems.map((socialItem, i) => (
                 <Text as="a" href={socialItem.path} target="blank" key={i}>
                   {socialItem.icon}
@@ -40,23 +42,43 @@ export default function DeskHeader() {
           </Flex>
 
           <Flex sx={styles.flexDivider}>
+
             <hr sx={styles.divider} />
 
             <Flex as="nav" sx={styles.menuNav}>
-              <DropdownButton
-                id="dropdown-basic-button"
-                title={t("menu lien 1")}
-              >
-                <Dropdown.Item className="lien-menu-jugement">
-                  <Link href="/le-jugement-majoritaire">
-                    {t("menu sous lien 1")}
-                  </Link>
-                </Dropdown.Item>
+              <div className="dropdown-wrapper">
+                <div
+                  className="dropdown-header"
+                  onClick={() => setDropdown(!isDropdowned)}
+                >
+                  <span>{t("menu lien 1")}</span>
+                  {isDropdowned
+                    ? <FaAngleUp size="1.3em" />
+                    : <FaAngleDown size="1.3em" />
+                  }
+                </div>
+                {isDropdowned && (
+                  <div
+                    role="list"
+                    className="dropdown-list"
+                  >
+                    <Link href="/le-jugement-majoritaire">
+                      <div
+                        className="dropdown-list-item lien-menu-jugement"
+                      >
+                        {t("menu sous lien 1")}
+                      </div>
+                    </Link>
 
-                <Dropdown.Item className="lien-menu-jugement">
-                  <Link href="/faq">{t("menu sous lien 2")}</Link>
-                </Dropdown.Item>
-              </DropdownButton>
+                    <Link href="/faq">
+                      <div
+                        className="dropdown-list-item lien-menu-jugement">
+                        {t("menu sous lien 2")}
+                      </div>
+                    </Link>
+                  </div>
+                )}
+              </div>
 
               <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
@@ -68,7 +90,7 @@ export default function DeskHeader() {
         </Box>
       </Flex>
 
-     
+
     </header>
   );
 }
@@ -133,7 +155,7 @@ const styles = {
     },
     svg: {
       color: '#2400FD',
-      
+
     },
   },
   menuNav: {
@@ -154,9 +176,9 @@ const styles = {
       },
     },
   },
-  
+
   flexDivider: {
-    flexDirection: 'column', 
+    flexDirection: 'column',
     justifyContent: 'flex-end',
   },
   divider: {
