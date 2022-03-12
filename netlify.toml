@@ -8,3 +8,9 @@ package = "@netlify/plugin-nextjs"
 
 [dev]
   command = "npm run dev"
+
+[[redirects]]
+from = "/*"
+to = "https://old.mieuxvoter.fr/:splat"
+status = 200
+force = false
