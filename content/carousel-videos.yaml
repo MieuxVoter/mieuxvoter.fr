@@ -1,10 +1,10 @@
 ---
  - id: aOFlwlCX3oA
    source: youtube
-   placeholder: /img/bd-jugement-majoritaire.png
-    # - id: YC1xDJsi_Hk
-    #   source: youtube
-    #   placeholder: /img/background-youtube.png
-    # - id: ZoGH7d51bvc
-    #   source: youtube
-    #   placeholder: /img/background-youtube.png
+   placeholder: /img/placeholder-bd-video.png
+ - id: YC1xDJsi_Hk
+   source: youtube
+   placeholder: /img/placeholder-spicee.png
+ - id: ZoGH7d51bvc
+   source: youtube
+   placeholder: /img/placeholder-louapre.png
