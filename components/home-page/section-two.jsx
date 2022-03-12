@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui';
 import React from 'react';
+import Link from 'next/link';
 import {Box, Text, Button, Flex, Image} from 'theme-ui';
 import {BsArrowRight} from "react-icons/bs";
 import {useTranslation} from "next-i18next";
@@ -51,7 +52,9 @@ export default function SectionTwo() {
           <Image sx={styles.box5SectionTwo} src="/img/list_cand.svg" alt="" />
 
           <Box sx={styles.boxButton2}>
-            <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>
+            <Link href="/le-jugement-majoritaire">
+              <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>
+            </Link>
           </Box>
         </Flex>
       </motion.div>
@@ -74,6 +77,7 @@ const styles = {
     },
     p: {
       my: ['30px'],
+      mx: ['200px'],
       fontSize: ['16px'],
     },
     button: {
@@ -92,15 +96,15 @@ const styles = {
     ml: [null, null, null, '10%', '12%'],
   },
   titleSectionTwo: {
-    width: ['100%', '100%', '60%', '65%', '45%'],
+    width: ['70%'],
   },
   box1SectionTwo: {
-    width: ['100%', '100%', '50%', '45%'],
-    alignSelf: 'end',
+    width: ['50%', '45%'],
     lineHeight: '28.9px',
+    fontWeight: 700,
   },
   box2SectionTwo: {
-    width: ['100%', '100%', '50%', '45%'],
+    width: ['100%', '100%', '70%', '70%'],
     ml: [null, null, '5%'],
     lineHeight: ['28.9px', '27.2px'],
   },

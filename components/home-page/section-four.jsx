@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui';
 import React from 'react';
+import Link from 'next/link'
 import {Box, Text, Button, Input, Image, Flex} from 'theme-ui';
 import Arrow from '../arrow';
 import {useTranslation} from "next-i18next";
@@ -26,7 +27,9 @@ export default function SectionFour() {
           </Text>
 
           <Box sx={styles.boxButton2}>
+            <Link href='/qui-sommes-nous'>
             <Button>{t("bouton quatrième section")}<Arrow /></Button>
+    </Link>
           </Box>
         </Flex>
 
