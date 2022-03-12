@@ -28,7 +28,7 @@ const dataFr = [
     title: 'Réponse à des Critiques du Jugement Majoritaire',
     author: 'Michel Balinski,',
     support: 'Rapport du CREST - 2018',
-    lien: 'https://mieuxvoter.fr/wp-content/uploads/2019/03/Balinski_2018-10.pdf',
+    lien: 'https://www.cairn.info/revue-economique-2019-4-page-589.htm',
   },
 ];
 const dataEn = [
