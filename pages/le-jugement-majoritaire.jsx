@@ -6,11 +6,12 @@ import Blog from '../components/blog';
 import SectionFive from "../components/home-page/section-three";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
-import matter from 'gray-matter';
-import {join} from 'path'
-import {readFileSync} from 'fs'
+
 
 export const getStaticProps = async ({locale}) => {
+  const matter = require('gray-matter')
+  const {join} = require('path')
+  const {readFileSync} = require('fs')
   const videoFile = join(process.cwd(), 'content/carousel-videos.yaml')
   const fileContents = readFileSync(videoFile, 'utf8')
   let {data: videos, isEmpty} = matter(fileContents);
@@ -20,7 +21,7 @@ export const getStaticProps = async ({locale}) => {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["le-jugement-majoritaire", "homepage", "common"])),
-      videos,
+      videos: [],
     },
   };
 };

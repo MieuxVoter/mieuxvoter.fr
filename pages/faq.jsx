@@ -8,41 +8,44 @@ import Accordion from 'react-bootstrap/Accordion';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
-import matter from 'gray-matter'
-import {join} from 'path'
-import {readFileSync} from 'fs'
 
-const faqDir = join(process.cwd(), 'content/faq')
-const faqFiles = [
-  join(faqDir, '1.md'),
-  join(faqDir, '2.md'),
-  join(faqDir, '3.md'),
-  join(faqDir, '4.md'),
-  join(faqDir, '5.md'),
-  join(faqDir, '6.md'),
-  join(faqDir, '7.md'),
-  join(faqDir, '8.md'),
-  join(faqDir, '9.md'),
-  join(faqDir, '10.md'),
-  join(faqDir, '11.md'),
-  join(faqDir, '12.md'),
-  join(faqDir, '13.md'),
-  join(faqDir, '14.md'),
-]
 
 const loadFaqItem = (fullPath) => {
+  const matter = require('gray-matter')
+  const {readFileSync} = require('fs')
+
   const fileContents = readFileSync(fullPath, 'utf8')
   const {data, content} = matter(fileContents)
 
   return {question: data.title, answer: content}
 }
 
-export const getStaticProps = async ({locale}) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["faq", "common"])),
-    items: faqFiles.map(loadFaqItem)
-  },
-});
+export const getStaticProps = async ({locale}) => {
+  const {join} = require('path')
+  const faqDir = join(process.cwd(), 'content/faq')
+  const faqFiles = [
+    join(faqDir, '1.md'),
+    join(faqDir, '2.md'),
+    join(faqDir, '3.md'),
+    join(faqDir, '4.md'),
+    join(faqDir, '5.md'),
+    join(faqDir, '6.md'),
+    join(faqDir, '7.md'),
+    join(faqDir, '8.md'),
+    join(faqDir, '9.md'),
+    join(faqDir, '10.md'),
+    join(faqDir, '11.md'),
+    join(faqDir, '12.md'),
+    join(faqDir, '13.md'),
+    join(faqDir, '14.md'),
+  ]
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["faq", "common"])),
+      items: faqFiles.map(loadFaqItem)
+    },
+  }
+};
 
 const FaqItem = ({question, answer, key = 0}) => {
   return (<Accordion.Item eventKey={key}>
