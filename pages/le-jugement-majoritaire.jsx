@@ -21,7 +21,7 @@ export const getStaticProps = async ({locale}) => {
   return {
     props: {
       ...(await serverSideTranslations(locale, ["le-jugement-majoritaire", "homepage", "common"])),
-      videos: [],
+      videos,
     },
   };
 };
