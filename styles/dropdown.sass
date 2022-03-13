@@ -20,6 +20,8 @@
 
   .dropdown-list
     position: absolute
+    top: 50px
+    background-color: white
     z-index: 10
     width: 100%
     max-height: 215px
@@ -48,17 +50,10 @@
       cursor: default
       cursor: pointer
 
-      &.no-result
-        font-weight: normal
-        cursor: default
-
-        &:hover
-          background-color: transparent
-          color: black
-
       &:hover
         background-color: #0d6efd
         color: white
+        border-radius: 2px
 
         & > span > svg > path
           fill: white
