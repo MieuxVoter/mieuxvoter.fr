@@ -47,8 +47,8 @@ export const getStaticProps = async ({locale}) => {
   }
 };
 
-const FaqItem = ({question, answer, key = 0}) => {
-  return (<Accordion.Item eventKey={key}>
+const FaqItem = ({question, answer, eventKey}) => {
+  return (<Accordion.Item eventKey={eventKey}>
     <Accordion.Header>
       {question}
     </Accordion.Header>
@@ -78,7 +78,7 @@ export default function Faq(props) {
 
         <Accordion>
           {
-            items.map(({question, answer}, index) => <FaqItem key={index} question={question} answer={answer} />)
+            items.map(({question, answer}, index) => <FaqItem key={index} eventKey={index} question={question} answer={answer} />)
           }
 
 
