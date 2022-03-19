@@ -1,16 +1,16 @@
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 import ReactFlagsSelect from 'react-flags-select';
 
 const LanguageSelector = () => {
 
   const router = useRouter();
-  let localeShort = router.locale.substring(0, 2).toUpperCase();
+  let localeShort = router.locale ? router.locale.substring(0, 2).toUpperCase() : 'FR';
   if (localeShort === "EN") localeShort = "GB";
 
   const selectHandler = e => {
     let locale = e.toLowerCase();
     if (locale === "gb") locale = "en";
-    router.push("", "", { locale })
+    router.push("", "", {locale})
   };
   return (
 
@@ -26,7 +26,7 @@ const LanguageSelector = () => {
       optionsSize={22}
       showSelectedLabel={true}
       showSecondaryOptionLabel={false}
-      customLabels={{ "GB": "EN", "FR": "FR" }}
+      customLabels={{"GB": "EN", "FR": "FR"}}
       fullWidth={false}
     />
   );
