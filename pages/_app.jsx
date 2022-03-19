@@ -1,5 +1,3 @@
-import {useCallback, useEffect} from 'react';
-import Router from 'next/router'
 import '../styles/globals.css'
 import '../styles/dropdown.sass'
 import {ThemeProvider} from 'theme-ui';
@@ -26,7 +24,7 @@ function MyApp({Component, pageProps}) {
           <meta property="og:type" content="website" key="og:type" />
           <meta
             property="og:image"
-            content="https://mieuxvoter.fr/og-mieux-voter.png"
+            content={`https://${process.env.NEXT_PUBLIC_WEBSITE_ADDRESS}/og-mieux-voter.png`}
             key="og:image"
           />
         </Head>
