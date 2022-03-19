@@ -18,7 +18,7 @@ export default function DeskHeader() {
       <Flex sx={styles.header}>
         <Box sx={styles.leftHeader}>
           <Link href="/" passHref>
-            <Image src="img/logo.svg" alt="" />
+            <Image src="/img/logo.svg" alt="" />
           </Link>
         </Box>
 
@@ -106,7 +106,7 @@ const styles = {
       "none",
       "none",
       "none",
-      'url("img/triangle-blue-up.svg")',
+      'url("/img/triangle-blue-up.svg")',
     ],
     backgroundRepeat: "no-repeat",
     backgroundPosition: [

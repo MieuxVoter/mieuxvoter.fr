@@ -1,24 +1,26 @@
+import dynamic from 'next/dynamic'
 import {MDXRemote} from 'next-mdx-remote'
-import {getAllPosts, getPostBySlug, mdxToComponent} from '../../lib/blog'
+import {Box, Text} from 'theme-ui';
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {getAllPosts, getPostBySlug} from '../../lib/blog'
 
-export async function getStaticProps({params}) {
-  const post = await getPostBySlug(params.slug, ['author', 'title', 'content'])
-  const content = await mdxToComponent(post.content || '')
+const Plot = dynamic(import('react-plotly.js'), {
+  ssr: false
+})
 
+export async function getStaticProps({params, locale}) {
   return {
     props: {
-      ...post,
-      content
+      ...await getPostBySlug(params.slug, ['author', 'title', 'content']),
+      ...(await serverSideTranslations(locale, ["faq", "common"])),
     }
   }
 }
 
 export async function getStaticPaths() {
-  const posts = await getAllPosts()
-  console.log(posts)
-  return {
+  const posts = await getAllPosts(['author', 'title', 'date', 'slug'])
+  const paths = {
     paths: posts.map(post => {
-      console.log(post)
       return {
         params: {
           slug: post.slug
@@ -27,13 +29,34 @@ export async function getStaticPaths() {
     }),
     fallback: false
   }
+  return paths
 }
 
 
 export default function Post({content, author, title}) {
   return (
-    <div className="wrapper">
-      <MDXRemote {...content} />
-    </div>
+    <section sx={styles.blog}>
+      <Box sx={styles.containerBlog}>
+        <MDXRemote {...content} components={{Plot}} />
+      </Box>
+    </section>
   )
+}
+
+const styles = {
+  blog: {
+    pb: [0, 0, 10],
+    h2: {
+      fontSize: ['52px', '72px'],
+      lineHeight: '1',
+      textAlign: 'left',
+
+    },
+  },
+  containerBlog: {
+    flexDirection: 'column',
+    margin: '30px',
+    mb: 0,
+    pl: ['5%', '5%', '5%', '7%'],
+  },
 }
