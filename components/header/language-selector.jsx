@@ -4,8 +4,7 @@ import ReactFlagsSelect from 'react-flags-select';
 const LanguageSelector = () => {
 
   const router = useRouter();
-  console.log(router, router.locale);
-  let localeShort = router.locale? router.locale.substring(0, 2).toUpperCase(): 'FR';
+  let localeShort = router.locale ? router.locale.substring(0, 2).toUpperCase() : 'FR';
   if (localeShort === "EN") localeShort = "GB";
 
   const selectHandler = e => {

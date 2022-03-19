@@ -1,18 +1,18 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import {jsx} from "theme-ui";
 import React from "react";
-import { Text, Flex } from "theme-ui";
+import {Text, Flex} from "theme-ui";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import {useTranslation} from "next-i18next";
 import LanguageSelector from "../header/language-selector-footer";
 
 export default function DeskCredits() {
-  const { t } = useTranslation("common");
+  const {t} = useTranslation("common");
 
   return (
     <Flex sx={styles.credits}>
-      <Flex x sx={styles.leftCredits}>
+      <Flex sx={styles.leftCredits}>
         <Text as="p">{t("credits copyright")}</Text>
 
         <Text sx={styles.middle} as="p">
@@ -55,9 +55,9 @@ const styles = {
   leftCredits: {
     width: [null, null, "85%", "80%", "60%"],
     flexDirection: ["column", "column", "row", "row"],
-    
+
   },
   middle: {
-      mx: 5,
+    mx: 5,
   },
 };
