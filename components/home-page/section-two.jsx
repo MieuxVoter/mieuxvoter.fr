@@ -77,7 +77,7 @@ const styles = {
     },
     p: {
       my: ['30px'],
-      mx: ['200px'],
+      mx: [null, '200px'],
       fontSize: ['16px'],
     },
     button: {
