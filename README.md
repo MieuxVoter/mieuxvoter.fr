@@ -49,6 +49,11 @@ assets:
 4. Yes, you can add JSX components, but that's not completely magical. Basic coponents (such as headers and paragraphs) are imported by the MDX plugin. Other (such as Plot) are directly imported in `pages/blog/[slug].js`.
 
 
+## Write blog article using Wordpress
+
+You can also a Wordpress CMS by modifying `.env`.
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
