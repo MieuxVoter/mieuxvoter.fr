@@ -7,6 +7,15 @@ import {useTranslation} from "next-i18next";
 
 const data = [
   {
+    thumb: 'https://pbs.twimg.com/profile_images/875048093506572289/dDhbdMf9_400x400.jpg',
+    source: 'Mieux Voter et Opinion Way',
+    altText: 'Notre sondage inédit sur les candidats à l’élection présidentielle',
+    title: 'Notre sondage inédit sur les candidats à l’élection présidentielle',
+    author: 'Par Pierre-Louis Guhur et Chloé Ridel',
+    date: '— 5 avril 2022',
+    lien: 'https://mieuxvoter.fr/blog/notre-sondage-inedit-sur-les-candidats-a-lelection-presidentielle',
+  },
+  {
     thumb: 'https://beymedias.brightspotcdn.com/dims4/default/e3d4b71/2147483647/strip/true/crop/6000x3129+0+328/resize/840x438!/format/webp/quality/90/?url=http%3A%2F%2Fl-opinion-brightspot.s3.amazonaws.com%2F5c%2Fb8%2F1d2c4604433a90b18576cd22d531%2Fchloe-ridel-dr.jpg',
     source: 'L\'opinon',
     altText: 'Présidentielle: ce sondage qui place Eric Zemmour dernier et Arnaud Montebourg troisième',
