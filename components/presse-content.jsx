@@ -13,7 +13,7 @@ const data = [
     title: 'Notre sondage inédit sur les candidats à l’élection présidentielle',
     author: 'Par Pierre-Louis Guhur et Chloé Ridel',
     date: '— 5 avril 2022',
-    lien: 'https://mieuxvoter.fr/blog/notre-sondage-inedit-sur-les-candidats-a-lelection-presidentielle',
+    lien: 'https://cms.mieuxvoter.fr/2022/04/05/notre-sondage-inedit-sur-les-candidats-a-lelection-presidentielle/',
   },
   {
     thumb: 'https://beymedias.brightspotcdn.com/dims4/default/e3d4b71/2147483647/strip/true/crop/6000x3129+0+328/resize/840x438!/format/webp/quality/90/?url=http%3A%2F%2Fl-opinion-brightspot.s3.amazonaws.com%2F5c%2Fb8%2F1d2c4604433a90b18576cd22d531%2Fchloe-ridel-dr.jpg',
