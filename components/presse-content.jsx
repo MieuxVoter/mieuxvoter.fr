@@ -9,6 +9,15 @@ const data = [
   {
     thumb: 'https://pbs.twimg.com/profile_images/875048093506572289/dDhbdMf9_400x400.jpg',
     source: 'Mieux Voter et Opinion Way',
+    altText: 'Lancement de MieuxVoter2022.fr',
+    title: 'Lancement de MieuxVoter2022.fr',
+    author: 'Par Pierre-Louis Guhur',
+    date: '— 5 avril 2022',
+    lien: 'https://cms.mieuxvoter.fr/2022/04/06/lancement-de-mieuxvoter2022-fr/',
+  },
+  {
+    thumb: 'https://pbs.twimg.com/profile_images/875048093506572289/dDhbdMf9_400x400.jpg',
+    source: 'Mieux Voter et Opinion Way',
     altText: 'Notre sondage inédit sur les candidats à l’élection présidentielle',
     title: 'Notre sondage inédit sur les candidats à l’élection présidentielle',
     author: 'Par Pierre-Louis Guhur et Chloé Ridel',
