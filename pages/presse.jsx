@@ -28,7 +28,6 @@ export const getStaticProps = async ({locale}) => {
 
 export default function Presse(props) {
   const {t} = useTranslation('presse');
-  console.log("first items", props.items[0])
 
   return (
     <section sx={styles.presse}>
