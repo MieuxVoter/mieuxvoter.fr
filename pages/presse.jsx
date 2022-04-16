@@ -1,25 +1,36 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from 'theme-ui';
+import {jsx} from 'theme-ui';
 import React from 'react';
-import { Box, Text, Link } from 'theme-ui';
+import {Box, Text, Link} from 'theme-ui';
 import Adherez from '../components/adherez';
 import PresseContent from '../components/presse-content';
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["presse", "common"])),
-  },
-});
+export const getStaticProps = async ({locale}) => {
+  const matter = require('gray-matter');
+  const {readFileSync} = require('fs')
+
+  const {join} = require('path')
+  const jsonData = join(process.cwd(), 'content/presse.json')
+
+  const fileContents = readFileSync(jsonData, 'utf8')
+  const {data, content} = matter(fileContents)
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["presse", "common"])),
+      items: JSON.parse(content)
+    },
+  }
+};
 
 
-export default function Presse() {
-  const { t } = useTranslation('presse');
+export default function Presse(props) {
+  const {t} = useTranslation('presse');
+  console.log("first items", props.items[0])
 
   return (
-
     <section sx={styles.presse}>
 
       <Box sx={styles.sectionThree}>
@@ -32,13 +43,13 @@ export default function Presse() {
             </Text>
           </Box>
 
-          <PresseContent />
-          
+          <PresseContent items={props.items} />
+
         </Box>
-        
+
       </Box>
       <Box sx={styles.containerThree}>
-      <p>Vous êtes journaliste ? Nous vous répondons par mail : <Link href="mailto:contact@mieuxvoter.fr">contact@mieuxvoter.fr</Link></p>
+        <p>Vous êtes journaliste ? Nous vous répondons par mail : <Link href="mailto:contact@mieuxvoter.fr">contact@mieuxvoter.fr</Link></p>
       </Box>
       <Adherez />
     </section>
