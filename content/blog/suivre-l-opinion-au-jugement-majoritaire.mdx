@@ -1,0 +1,174 @@
+---
+title: 'Suivre l''opinion au jugement majoritaire'
+author: 'Pierre Puchaud, Pierre-Louis Guhur, Samuel Balle'
+assets:
+  profil_ow:
+    type: json
+    path: '20211208_1209_ow.json'
+  profil_ow_2:
+    type: json
+    path: '20220209_0210_ow.json'
+  profil_ow_3:
+    type: json
+    path: '20220330_0331_ow.json'
+  rank_ow:
+    type: json
+    path: 'ranking_plot_ow.json'
+  rank_ELABE:
+    type: json
+    path: 'ranking_plot_ELABE.json'
+  time_profil_ow:
+    type: json
+    path: 'ranked_time_merit_profile_Opinion Way.json'
+  intentions_EM_ow:
+    type: json
+    path: 'intention_Opinion Way_Emmanuel Macron.json'
+  intentions_VP_ow:
+    type: json
+    path: 'intention_Opinion Way_Valérie Pécresse.json'
+  intentions_FB_ow:
+    type: json
+    path: 'intention_Opinion Way_Fabien Roussel.json'
+  intentions_MLP_ow:
+    type: json
+    path: 'intention_Opinion Way_Marine Le Pen.json'
+  intentions_JLM_ow:
+    type: json
+    path: 'intention_Opinion Way_Jean-Luc Mélenchon.json'
+  intentions_EZ_ow:
+    type: json
+    path: 'intention_Opinion Way_Eric Zemmour.json'
+---
+
+### Contexte
+Au cours des campagnes  présidentielles, de nombreux sondages sont commandités pour anticiper les résultats de l'élection présidentielle,
+et pour mesurer l'opinion des français. De plus, des outils sont mis à disposition pour agréger les résultats des différentes études (nsppolls.fr)
+et pour rendre une estimation plus fiable sur des intentions de votes des français au scrutin majoritaire (electracker.fr).
+Cependant, mieux voter défend la mise en place du jugement majoritaire, un mode de scrutin qui mesure mieux l'opinion
+des électeurs. Pour la première fois, des sondages au jugement majoritaire ont été commandés pendant cette dernière campagne présidentielle.
+Ils auront permis de mesurer l'évolution de l'opinion des Français grâce au jugement majoritaire.
+
+Nous présentons dans cet article les outils qui ont été mis en place pour mesurer, visualiser et agréger des sondages au jugement majoritaire.
+Ces outils nous permettront d'avoir un regard critique sur le scrutin majoritaire classique.
+
+### Le profil de merite
+
+Il est une photographie de l’opinion à l’instant du sondage.
+Il permet de classer les candidats avec la meilleure mention majoritaire à la moins bonne mention majoritaire.
+On présente ci-dessous les profils de mérites des 3 sondages inédits au jugement majoritaire
+qui ont consulté des panels représentatifs de Français sur l’élection présidentielle 2022.
+
+<Plot {...profil_ow} />
+1
+<Plot {...profil_ow_2} />
+2
+<Plot {...profil_ow_3} />
+3
+
+### L'évolution du classement
+
+D'un profil de mérite à l'autre, le classement des candidats change. Pour mettre en lumière cette évolution,
+nous avons utilisé un graphique qui permet de visualiser l'évolution du classement des candidats au cours des trois sondages.
+Les mentions majoritaires des candidats sont représentées par des aires de couleur.
+
+<Plot {...rank_ow} />
+
+Grâce à ce graphique, nous sommes en mesure de constater les ascensions de Marine Le Pen et de Jean-Luc Mélenchon dans le classement.
+On constate aussi que Valérie Pécresse a perdu trois places deux places depuis le premier sondage.
+
+### Le profil de merite temporel
+
+Lorsque le classement change, les proportions des mentions attribuées aux candidats varient d'un sondage à l'autre.
+Ce graphique permet de visualiser cette l'évolution du profil de mérite au cours du temps pour chaque candidat.
+
+<Plot {...time_profil_ow} />
+
+### Evolution des intentions de votes au jugement majoritaire et scrutin majoritaire
+
+#### Emmanuel Macron
+Le candidat président dispose à la fois d'intentions de votes importants au scrutin majoritaire, le classant 1er, et d'une base solide,
+d'adhésion au jugement majoritaire, le classant 1er aussi depuis notre second sondage.
+Les sondages au jugement majoritaire nous permettent de constater
+qu'il n'a que peu convaincu durant cette première partie de campagne.
+
+<Plot {...intentions_EM_ow} />
+
+#### Marine Le Pen & Jean-Luc Mélenchon
+
+Le point commun des deux candidats est qu'ils ont effectués une progression forte dans le classement au jugement majoritaire majoritaire.
+Ces progression témoignent de campagnes qui ont réussi à convaincre.
+Marine Le Pen s'est classé 7e, 3e puis 2e. Son classement final au jugement majoritaire est pour la première fois
+le même qu'au scrutin majoritaire, cela confirme qu'elle a réussi à convaincre.
+
+
+<Plot {...intentions_MLP_ow} />
+
+Jean-Luc Mélenchon s'est classé 10e, 8e puis 4e. Son classement final au jugement majoritaire est 4e, et 3e au scrutin majoritaire.
+Cette tendance dans les deux modes de scrutin confirme qu'il a réussi à convraincre pendant la campagne.
+
+<Plot {...intentions_JLM_ow} />
+
+#### Fabien Roussel
+
+Les intentions de votes de Fabien Roussel n'ont jamais dépassé les 5 % au scrutin majoritaire. Pourtant au jugement majoritaire,
+il s'est classé 4e, 5e et 5e. D'après les profils de mérite temporels, il a réussi à convaincre, en augmentant son pourcentage
+de mentions positives et en diminuant la part de mention négatives. Le jugement majoritaire mesurer le fait que
+Fabien Roussel est un candidat qui a réussi à séduire les électeurs chose qui n'est pas mesurable avec le scrutin uninominal.
+
+<Plot {...intentions_FB_ow} />
+
+#### Valérie Précresse
+
+Valérie Pécresse est la seule candidate qui a vu ses évaluations fortement baisser. Elle est par
+conséquent passée de la 1ère, à la 2nde puis à la 3e position avec le jugement majoritaire.
+Le jugement majoritaire nous permet de comprendre les raisons de cette baisse au scrutin majoritaire.
+Valérie Pécresse a été dévaluée par les électeurs.
+
+<Plot {...intentions_VP_ow} />
+
+#### Eric Zemmour
+Enfin, il est indéniable que le mode scrutin actuel (majoritaire) accorde trop d’attention au candidat Zemmour
+qui le sur-valorise (4e). Il est toujours rejeté par plus de 50% des électeurs au jugement majoritaire,
+il se classe donc 12e et dernier à chaque sondage.
+
+<Plot {...intentions_EZ_ow} />
+
+### D'autres sondages compatibles avec le jugement majoritaire
+
+D'autres sondages non-spécifiques de l'élection présidentielle 2022 sont disponibles et compatibles avec le jugement majoritaire.
+En effet, trois sondages ne permettent pas de capturer les évolutions du profil de mérite des candidats dans le détails.
+Pour aller plus loin, il nous faut plus de données. Pour cela on traitera au jugement majoritaire les données issues
+du baromètre politique ELABE et du tableau de bord des personnalités IFOP.
+
+Dans ces enquêtes, la possibilité de ne pas s'exprimer est offertes aux personnes sondées.
+On a retiré les personnes sans opinion de chacune des enquêtes, en faisant l’hypothèse que la
+distribution des « sans opinion » sera la même que les personnes déterminées.
+Nous avons néanmoins décidé de conserver cette information pour l'exposer dans les graphiques qui suivent.
+
+#### ELABE - Baromètre politique
+
+Cette enquête attribue 4 mentions par candidats : positive, plutôt positive, plutôt négative, négative.
+Voyons le classement des candidats au jugement majoritaire, depuis le mois de juin 2021.
+Tous les candidats ne sont pas inclus dans cette étude.
+
+<Plot {...rank_ELABE} />
+
+#### IFOP - Tableau de bord des personnalités
+
+Interpretation: Ce sondage mesure moins bien l'opinion au jugement majoritaire que les autres à cause de ses mentions
+très tranchées : très mauvaise, mauvaise, bonne, excellente. Le fait qu'il n'y ait pas un entre deux entre mauvaise et bonne opinion
+comme "passable ou "assez bien", change le classement au JM fortement par rapport à OW ou ELABE.
+
+### Vers l'agrégation des sondages au jugement majoritaire
+
+#### Standardisation des mentions
+
+#### Moyenne glissante
+
+#### conclusion
+
+#### Conclusion Génerale
+
+
+
+
