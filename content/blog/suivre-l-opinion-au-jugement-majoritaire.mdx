@@ -17,9 +17,18 @@ assets:
   rank_ELABE:
     type: json
     path: 'ranking_plot_ELABE.json'
+  rank_IFOP:
+    type: json
+    path: 'ranking_plot_IFOP.json'
   time_profil_ow:
     type: json
     path: 'ranked_time_merit_profile_Opinion Way.json'
+  time_profil_ELABE:
+    type: json
+    path: 'ranked_time_merit_profile_ELABE.json'
+  time_profil_IFOP:
+    type: json
+    path: 'ranked_time_merit_profile_IFOP.json'
   intentions_EM_ow:
     type: json
     path: 'intention_Opinion Way_Emmanuel Macron.json'
@@ -153,11 +162,45 @@ Tous les candidats ne sont pas inclus dans cette étude.
 
 <Plot {...rank_ELABE} />
 
+On retrouve un groupe de tête similaire dans ce classement avec Emmanuel Macron, Valérie Pécresse,
+Yannick Jadot et Fabien Roussel. Il capture aussi l'ascension de Marine Le Pen mais pas celle de Jean-Luc Mélenchon.
+Sur les profils de mérite temporels, on a représenté l'aire des sondés indécis autour de la médiane pour exprimer une incertitude sur la mention majoritaire.
+
+<Plot {...time_profil_ELABE} />
+
+Ce sondage confirme l'augmentation de l'adhésion aux idées de la candidate Marine Le Pen. Elle était en progrès depuis Novembre.
+Fabien Roussel a constament réduit le pourcentage de personnes indécises à son égard et il a renforcé sa base d'ashésion.
+Il confirme qu'il a convaincu au cours de la campagne.
+Jean-Luc Mélencshon n'a pas assez progressé avec son sondage pour arriver dans le haut du classement.
+Plus de 50% des sondés attribuent une mention négative à Eric Zemmour, le classant dernier à chaque sondage.
+La plupart des candidats ont convaincu au cours de la campagne, ou n'ont pas renforcé leur rejet.
+Grâce à ces sondages, on mesure que Anne Hidalgo et surtout Valérie Pécresse sont les seules candidates à avoir été dévaluées.
+
+
+
 #### IFOP - Tableau de bord des personnalités
 
-Interpretation: Ce sondage mesure moins bien l'opinion au jugement majoritaire que les autres à cause de ses mentions
+Cette enquête attribue 4 mentions par candidats : excellente opinion, bonne opinion, mauvaise opinion et très mauvaise opinion.
+Voyons le classement des candidats au jugement majoritaire, depuis le mois de décembre 2021.
+
+<Plot {...rank_IFOP} />
+
+On retrouve un groupe de tête similaire dans ce classement avec Emmanuel Macron, Valérie Pécresse,
+Yannick Jadot et Fabien Roussel jusqu'en Février. Il capture ici l'ascension de Jean-Luc Mélenchon mais pas celle de Marine Le Pen.
+
+<Plot {...time_profil_IFOP} />
+
+De la me manière qe dans le sondage ELABE, Fabien Roussel a constament réduit le pourcentage de personnes indécises à son égard et il a renforcé sa base d'ashésion.
+Il confirme qu'il a convaincu au cours de la campagne. Plus de 75% des sondés attribuent une mention négative ou très négative à Eric Zemmour, le classant dernier à chaque sondage.
+Jean-Luc Mélencshon a progressé avec son sondage pour arriver dans le haut du classement (3e).
+On mesure aussi que Anne Hidalgo et Valérie Pécresse sont les seules candidates à avoir été dévaluées.
+En revanche, ce sondage ne mesure pas autant la progression de Marine Le Pen que dans le sondage ELABE et Opinion Way.
+
+
+Ce sondage mesure moins bien l'opinion au jugement majoritaire que les autres à cause de ses mentions
 très tranchées : très mauvaise, mauvaise, bonne, excellente. Le fait qu'il n'y ait pas un entre deux entre mauvaise et bonne opinion
-comme "passable ou "assez bien", change le classement au JM fortement par rapport à OW ou ELABE.
+comme "passable ou "assez bien" dans les sondages Opinion Way, ou "plutot positive" ou plutot négative dans les sondages
+ELABE change le classement au JM par rapport ces deux autres sondages.
 
 ### Vers l'agrégation des sondages au jugement majoritaire
 
