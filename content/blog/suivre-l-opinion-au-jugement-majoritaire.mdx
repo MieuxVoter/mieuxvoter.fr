@@ -20,6 +20,9 @@ assets:
   rank_IFOP:
     type: json
     path: 'ranking_plot_IFOP.json'
+  rank_all:
+    type: json
+    path: 'ranked_time_merit_profile_FOUR_MENTIONS_IFOP_roll.json'
   time_profil_ow:
     type: json
     path: 'ranked_time_merit_profile_Opinion Way.json'
@@ -47,6 +50,13 @@ assets:
   intentions_EZ_ow:
     type: json
     path: 'intention_Opinion Way_Eric Zemmour.json'
+  time_merite_profil_all:
+    type: json
+    path: 'time_merit_profile_FOUR_MENTIONS_Yannick Jadot_ALL.json'
+  time_merite_profil_all_roll:
+    type: json
+    path: 'time_merit_profile_FOUR_MENTIONS_Yannick Jadot_ALL_roll.json'
+
 ---
 
 ### Contexte
@@ -177,7 +187,6 @@ La plupart des candidats ont convaincu au cours de la campagne, ou n'ont pas ren
 Grâce à ces sondages, on mesure que Anne Hidalgo et surtout Valérie Pécresse sont les seules candidates à avoir été dévaluées.
 
 
-
 #### IFOP - Tableau de bord des personnalités
 
 Cette enquête attribue 4 mentions par candidats : excellente opinion, bonne opinion, mauvaise opinion et très mauvaise opinion.
@@ -193,7 +202,8 @@ Yannick Jadot et Fabien Roussel jusqu'en Février. Il capture ici l'ascension de
 De la me manière qe dans le sondage ELABE, Fabien Roussel a constament réduit le pourcentage de personnes indécises à son égard et il a renforcé sa base d'ashésion.
 Il confirme qu'il a convaincu au cours de la campagne. Plus de 75% des sondés attribuent une mention négative ou très négative à Eric Zemmour, le classant dernier à chaque sondage.
 Jean-Luc Mélencshon a progressé avec son sondage pour arriver dans le haut du classement (3e).
-On mesure aussi que Anne Hidalgo et Valérie Pécresse sont les seules candidates à avoir été dévaluées.
+On mesure aussi que Anne Hidalgo et Valérie Pécresse sont les seules candidates à avoir été dévaluées. Cela confirme que le recul des intentions de votes au scrutin majoritaire uninominal
+est du à une dévaluation de la part des electeurs et ne vient pas du report des voix.
 En revanche, ce sondage ne mesure pas autant la progression de Marine Le Pen que dans le sondage ELABE et Opinion Way.
 
 
@@ -204,30 +214,54 @@ ELABE change le classement au JM par rapport ces deux autres sondages.
 
 ### Vers l'agrégation des sondages au jugement majoritaire
 
-Dans l'idée de toujours mieux capturer l'évolution de l'opinion, nous avons tenté d'agréger les différents sondages présentés dans ces articles.
+Pour toujours mieux capturer l'évolution de l'opinion, nous avons tenté d'agréger les différents sondages
+présentés dans ces articles. Il conviendra de standardiser les mentions de chaque sondages en mentions communes
+et de profiter du nombre de point plus importants pour lisser les courbes des intentions de mentions
 
 #### Standardisation des mentions
 
-Le premier obstacle consistait à standardiser les mentions de chaque sondage en des mentions communes.
+Ci-dessous, on présente les mentions communes et leur correspondance dans chaque sondage.
 
-<!-- | Mentions communes| Opinion-Way | ELABE | IFOP | -->
-<!-- | -------- | -------- | -------- | -------- | -->
-<!-- | Positive     |  Excellent, Très bien, Bien |  Positive | excellente opinion  | -->
-<!-- | Plutôt positive  |  Assez bien, Passable |  Plutôt positive  | bonne opinion  | -->
-<!-- | Plutôt négative    |  Insuffisant  |  Plutôt négative   | mauvaise opinion | -->
-<!-- | Négative    |  A rejeter |  Négative | très mauvaise opinion  | -->
-<!-- | Sans opinion | N.A. | Sans opinion | Ne se prononce pas, Ne la connaît pas suffisamment | -->
+| Mentions communes| Opinion-Way | ELABE | IFOP |
+| -------- | -------- | -------- | -------- |
+| Positive     |  Excellent, Très bien, Bien |  Positive | excellente opinion  |
+| Plutôt positive  |  Assez bien, Passable |  Plutôt positive  | bonne opinion  |
+| Plutôt négative    |  Insuffisant  |  Plutôt négative   | mauvaise opinion |
+| Négative    |  A rejeter |  Négative | très mauvaise opinion  |
+| Sans opinion | N.A. | Sans opinion | Ne se prononce pas, Ne la connaît pas suffisamment |
+
+Ces choix sont sont discutables, il sont néanmoins une première approche pour l'agrégation des sondages au jugement majoritaire
+qui mérite d'être explorée. On présente si desous un profil de mérite temporel pour Yannick Jadot en aggrégant les mentions et les sondages.
+On notera les oscillations pour chaque mentions, qui méritent d'être lissées et qui sont présenter dans la section suivante.
+
+<Plot {...time_merite_profil_all} />
 
 #### Moyenne glissante
 
 La moyenne glissante est une méthode de calcul qui permet de lisser les données sur une fenêtre de temps,
 elle permet de réduire le bruit des données et les éventuels biais de chacun des sondages.
-Elle a été utilisées sur chaque mentions des sondages agrégés.
-Cependant, en raison du faible nombre de sondages, une moyenne sur 14 jours a été appliquée avec les points disponibles sur cette fenêtre glissante.
+Elle a été utilisées sur chaque mentions des sondages agrégés de la même manière qu'elle est classiquement utilisée pour
+les intentions de votes pour les sondages au scrutin majoritaire uninominal.
+Cependant, en raison du faible nombre de sondages, une moyenne sur 14 jours a été appliquée avec les points disponibles
+sur cette fenêtre glissante.
 
-#### conclusion
+<Plot {...time_merite_profil_all_roll} />
 
-#### Conclusion Génerale
+On observe que les mentions sont lissés au cours du temps et permettent de mesurer l'évolution de l'opinion
+grâce à l'ensemble des sondages compatibles avec le jugement majoritaire. Ci-dessous, on présente les profils de mérite temporels
+pour les candidats avec assez de données au jugement majoritaire.
+
+<Plot {...rank_all} />
+
+### Conclusion Génerale
+
+Pour la première fois, les sondages et leur aggrégation ont permis de suivre l'évolution de l'opinion sur les candidats à l'élection
+présidentielle de 2022. Mieux voter milite pour que les electeurs puisse mieux s'exprimer lors d'une election; nous montrons aussi
+qu'il est plus aisé de suivre l'évolution de l'opinion grâce au jugement majoritaire.
+Nous espérons que plus de sondage soient commandités au jugement majoritaire ou deviennent compatibles avec le jugement majoritaire.
+
+
+
 
 
 
