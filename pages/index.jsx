@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box } from 'theme-ui';
-import React from 'react';
+import { jsx, Box } from "theme-ui";
+import React from "react";
 import SectionOne from "../components/home-page/section-one";
 import SectionTwo from "../components/home-page/section-two";
 import SectionThree from "../components/home-page/section-three";
@@ -9,7 +9,6 @@ import SectionFour from "../components/home-page/section-four";
 import SectionFive from "../components/home-page/section-five";
 import SectionSix from "../components/home-page/section-six";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { GetStaticProps } from "next";
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
@@ -18,7 +17,6 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 export default function Home() {
-
   return (
     <main>
       <SectionOne />
@@ -30,3 +28,4 @@ export default function Home() {
     </main>
   );
 }
+
