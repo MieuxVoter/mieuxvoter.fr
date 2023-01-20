@@ -1,24 +1,24 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import {jsx} from 'theme-ui';
-import React, {useState} from 'react';
-import Link from 'next/link';
-import {Box, Text, Button, Input, Image, Flex} from 'theme-ui';
-import Arrow from '../arrow';
-import {useTranslation} from "next-i18next";
+import { jsx } from "theme-ui";
+import React, { useState } from "react";
+import Link from "next/link";
+import { Box, Text, Button, Input, Image, Flex } from "theme-ui";
+import Arrow from "../arrow";
+import { useTranslation } from "next-i18next";
 
 export default function SectionThree() {
-  const {t} = useTranslation('homepage');
+  const { t } = useTranslation("homepage");
   const [title, setTitle] = useState(null);
   return (
-
     <section sx={styles.sectionThree}>
-
       <Flex>
-
         <Flex sx={styles.containerSectionThree}>
-
-          <Image sx={styles.logoSectionThree} src="img/webapp-logo.svg" alt="" />
+          <Image
+            sx={styles.logoSectionThree}
+            src="img/webapp-logo.svg"
+            alt=""
+          />
 
           <Text sx={styles.titleSectionThree} as="h2">
             {t("titre troisième section")}
@@ -29,7 +29,6 @@ export default function SectionThree() {
           </Text>
 
           <Flex sx={styles.formWebApp}>
-
             <Flex sx={styles.inputFormWebapp}>
               <Arrow />
               <Input
@@ -44,9 +43,16 @@ export default function SectionThree() {
             </Flex>
 
             <Box sx={styles.boxButton2}>
-              <Link passHref href={{pathname: "https://app.mieuxvoter.fr/create-election/?title=", query: {title: title}}}>
+              <Link
+                passHref
+                href={{
+                  pathname: "https://app.mieuxvoter.fr/admin/new?title=",
+                  query: { title: title },
+                }}
+              >
                 <Button type="submit">
-                  {t("bouton troisième section")}<Arrow />
+                  {t("bouton troisième section")}
+                  <Arrow />
                 </Button>
               </Link>
             </Box>
@@ -60,90 +66,94 @@ export default function SectionThree() {
 const styles = {
   sectionThree: {
     backgroundImage: 'url("/img/background-chevron-white.svg")',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: ['center 40em', 'center 35em', 'right'],
-    backgroundSize: ['100%', '100%', '50%', '35%'],
-    backgroundColor: '#2400FD',
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: ["center 40em", "center 35em", "right"],
+    backgroundSize: ["100%", "100%", "50%", "35%"],
+    backgroundColor: "#2400FD",
     h2: {
-      color: '#FFFFFF',
-      fontSize: ['44px', '56px'],
-      lineHeight: ['44px', '56px'],
-      textAlign: ['center', 'center', 'center', 'left'],
+      color: "#FFFFFF",
+      fontSize: ["44px", "56px"],
+      lineHeight: ["44px", "56px"],
+      textAlign: ["center", "center", "center", "left"],
     },
     p: {
-      color: '#FFFFFF',
-      my: ['30px'],
-      fontSize: ['17px'],
-      lineHeight: '28.9px',
-      textAlign: ['center', 'center', 'center', 'left'],
+      color: "#FFFFFF",
+      my: ["30px"],
+      fontSize: ["17px"],
+      lineHeight: "28.9px",
+      textAlign: ["center", "center", "center", "left"],
     },
     button: {
-      backgroundColor: 'transparent',
-      color: '#FFFFFF',
-      border: 'solid 2px white',
-      boxShadow: '0px 3px 0px 0px white',
+      backgroundColor: "transparent",
+      color: "#FFFFFF",
+      border: "solid 2px white",
+      boxShadow: "0px 3px 0px 0px white",
       mr: 0,
-      width: ['100%', 'auto'],
+      width: ["100%", "auto"],
     },
   },
   containerSectionThree: {
-    flexDirection: 'column',
-    margin: '24px',
-    width: [null, null, null, '80%', '76%'],
-    ml: [null, null, null, '10%', '12%'],
+    flexDirection: "column",
+    margin: "24px",
+    width: [null, null, null, "80%", "76%"],
+    ml: [null, null, null, "10%", "12%"],
     my: [10, 8, 8, 11],
   },
   titleSectionThree: {
-    width: ['100%', '100%', '50%'],
+    width: ["100%", "100%", "50%"],
   },
   box1SectionThree: {
-    width: ['100%', '100%', '50%'],
+    width: ["100%", "100%", "50%"],
   },
   logoSectionThree: {
-    width: '150px',
-    textAlign: 'center',
-    display: ['none', 'inline-block'],
-    alignSelf: [null, 'center', 'start'],
+    width: "150px",
+    textAlign: "center",
+    display: ["none", "inline-block"],
+    alignSelf: [null, "center", "start"],
   },
   formWebApp: {
-    width: ['100%', '100%', '100%', '100%', '70%'],
-    flexDirection: ['column', null, 'row'],
+    width: ["100%", "100%", "100%", "100%", "70%"],
+    flexDirection: ["column", null, "row"],
   },
   inputFormWebapp: {
-    width: ['100%', '100%', '60%', '58%'],
-    mr: '2%',
+    width: ["100%", "100%", "60%", "58%"],
+    mr: "2%",
     mb: 5,
-    boxShadow: '0px 2px 0px 0px white',
+    boxShadow: "0px 2px 0px 0px white",
     input: {
-      border: 'none',
-      color: '#FFFFFF',
-      ml: ['31.5px', 0],
-      '::placeholder': {
-        color: '#FFFFFF',
-        opacity: '1',
+      border: "none",
+      color: "#FFFFFF",
+      ml: ["31.5px", 0],
+      "::placeholder": {
+        color: "#FFFFFF",
+        opacity: "1",
       },
-      '::placeholder': {
-        fontSize: '16px',
-        lineHeight: '24px',
-        color: 'white',
-        fontStyle: 'italic',
-      }
-
+      "::placeholder": {
+        fontSize: "16px",
+        lineHeight: "24px",
+        color: "white",
+        fontStyle: "italic",
+      },
     },
-    'img': {
-      display: ['none', 'flex'],
-      alignSelf: 'center',
+    img: {
+      display: ["none", "flex"],
+      alignSelf: "center",
     },
-
+  },
+  input: {
+    "&:focus": {
+      color: "#FFFFFF",
+      border: "none",
+      boxShadow: "none",
+    },
   },
   boxButton2: {
-    width: ['100%', '100%', '40%', '42%'],
-
+    width: ["100%", "100%", "40%", "42%"],
   },
   arrowInput: {
-    verticalAlign: 'middle',
-    fontSize: '2em',
-    height: '60px',
-    color: '#FFFFFF',
-  }
-}
+    verticalAlign: "middle",
+    fontSize: "2em",
+    height: "60px",
+    color: "#FFFFFF",
+  },
+};
