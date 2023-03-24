@@ -6,8 +6,7 @@
     "footer newsletter": "Tenez-vous informés des dernières actualités de Mieux Voter",
     "footer placeholder newsletter": "Votre email",
     "footer bouton newsletter": "Envoyer",
-    "credits copyright": "2021 © Mieux Voter",
-    "credits développé par": "Développé par ",
+    "credits copyright": "2023 © Mieux Voter",
     "credits mentions": "Mentions légales",
     "menu lien 1": "Le jugement majoritaire",
     "menu sous lien 1": "Présentation",
@@ -24,5 +23,6 @@
     "placeholder nom formulaire de contact": "Votre nom",
     "placeholder email formulaire de contact": "Votre email",
     "placeholder message formulaire de contact": "Votre message",
-    "bouton formulaire de contact": "Envoyer"
+    "bouton formulaire de contact": "Envoyer",
+    "common.membership": "Adhésion"
 }

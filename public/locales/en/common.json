@@ -6,8 +6,7 @@
     "footer newsletter": "Keep up with our latest news",
     "footer placeholder newsletter": "Your mail",
     "footer bouton newsletter": "Submit",
-    "credits copyright": "2021 © Better Vote",
-    "credits développé par": "Developed by ",
+    "credits copyright": "2023 © Better Vote",
     "credits mentions": "Legal notices",
     "menu lien 1": "The majority judgement",
     "menu sous lien 1": "Presentation",
@@ -24,5 +23,6 @@
     "placeholder nom formulaire de contact": "Your last name",
     "placeholder email formulaire de contact": "Your mail",
     "placeholder message formulaire de contact": "Your message",
-    "bouton formulaire de contact": "Send"
+    "bouton formulaire de contact": "Send",
+    "common.membership": "Membership"
 }

@@ -15,13 +15,6 @@ export default function DeskCredits() {
       <Flex sx={styles.leftCredits}>
         <Text as="p">{t("credits copyright")}</Text>
 
-        <Text sx={styles.middle} as="p">
-          {t("credits développé par")}
-          <Link sx={styles.jimmy} href="https://jimmys-box.com/">
-            JIMMY
-          </Link>
-        </Text>
-
         <Link href="/">{t("credits mentions")}</Link>
       </Flex>
 
