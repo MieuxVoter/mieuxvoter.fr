@@ -31,7 +31,7 @@ export default function ContactCard() {
 
       <Box sx={styles.containerRight}>
 
-        <Box as="form" name='contact' action='/contact-success/' method='POST' data-netlify="true" netlify-honeypot="age">
+        <Box as="form" name='contact' action='/contact-success' method='POST' data-netlify="true" netlify-honeypot="age">
 
           <Flex sx={styles.nameForm}>
             <input type="hidden" name="form-name" value="contact" />

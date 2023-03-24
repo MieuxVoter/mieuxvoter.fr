@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import {jsx} from 'theme-ui';
-import React from 'react';
 import {Box, Text} from 'theme-ui';
 import Adherez from '../components/adherez';
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
