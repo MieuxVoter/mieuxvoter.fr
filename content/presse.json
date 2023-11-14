@@ -54,7 +54,7 @@
     "lien": "https://usbeketrica.com/fr/article/le-jugement-majoritaire-permettrait-aux-electeurs-de-s-exprimer-dans-la-nuance"
   },
   {
-    "thumb": "img/thumb-le-monde.jfif",
+    "thumb": "img/voting.png",
     "source": "Le monde",
     "altText": "Paris teste le vote au jugement majoritaire",
     "title": "Paris teste le vote au jugement majoritaire",
@@ -63,7 +63,7 @@
     "lien": "https://www.lemonde.fr/politique/article/2021/09/06/paris-teste-le-vote-au-jugement-majoritaire_6093619_823448.html"
   },
   {
-    "thumb": "img/thumb-le-monde-2.jfif",
+    "thumb": "img/ballot-results.png",
     "source": "Le monde",
     "altText": "Election présidentielle 2022 : choisir son président en donnant un avis à chaque candidat, une expérience démocratique",
     "title": "Election présidentielle 2022 : choisir son président en donnant un avis à chaque candidat, une expérience démocratique",
@@ -135,7 +135,7 @@
     "lien": "https://aoc.media/opinion/2019/04/15/reinventer-le-referendum/"
   },
   {
-    "thumb": "https://img.lemde.fr/2019/02/01/0/37/4488/2244/1024/512/75/0/db4e8d9_dSGh1sOd3MZ969Se8Xmzplw1.jpg",
+    "thumb": "img/ballot2.png",
     "source": "Le monde",
     "altText": "Mon idée pour la France : « Un “préférendum” plutôt qu’un référendum »",
     "title": "Mon idée pour la France : « Un “préférendum” plutôt qu’un référendum »",
@@ -144,7 +144,7 @@
     "lien": "https://www.lemonde.fr/idees/article/2019/02/04/mon-idee-pour-la-france-un-preferendum-plutot-qu-un-referendum_5418771_3232.html"
   },
   {
-    "thumb": "https://www.liberation.fr/resizer/DYNep1hEeQf8pOP8DYq6dmJkQ1s=/800x0/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/liberation/RYGNXSFGBXHCI7QI5TRELJSAYM.jpg",
+    "thumb": "img/ballot2.png",
     "source": "Libération",
     "altText": "Parcoursup : la solution n’est pas le retour au classement des vœux",
     "title": "Parcoursup : la solution n’est pas le retour au classement des vœux",
@@ -162,7 +162,7 @@
     "lien": "https://aoc.media/opinion/2018/07/19/nouveau-mode-de-scrutin-jugement-majoritaire/"
   },
   {
-    "thumb": "https://www.liberation.fr/resizer/Ifj0tuxewDA1yEdGlQMw6ljjPBU=/800x0/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/liberation/EGMXMM2SVHLSNJWOHJHGU7IGYE.jpg",
+    "thumb": "img/ballot2.png",
     "source": "Libération",
     "altText": "L’urgence de mieux voter",
     "title": "L’urgence de mieux voter",
