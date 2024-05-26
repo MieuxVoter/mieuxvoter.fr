@@ -14,7 +14,7 @@ export const getStaticProps = async ({locale}) => ({
 
 const displayMember = (member) => {
   return (
-    <Box sx={styles.teamCardTemplate}>
+    <Box sx={styles.teamCardTemplate} itemID={member.name}>
 
       <Box sx={styles.imgOverlayWrap}>
         <Image sx={styles.imgOverlayWrapImg} src={`/img/${member.image}`} alt="" />
@@ -29,53 +29,58 @@ const displayMember = (member) => {
 
 export default function QuiSommesNous() {
   const {t} = useTranslation('qui-sommes-nous');
-
-  const members = [
+  const bureauMembers = [
     {
-      name: "Chloé Ridel",
-      desc: t("member1 qui sommes nous"),
-      image: "chloe-ridel.jpeg",
+      name: "Coline Serra",
+      image: "coline-serra.jpg",
+    },
+    {
+      name: "Murielle Reinhardt",
+      image: "murielle-reinhardt.jpeg",
+    },
+    {
+      name: "Théo Sabattié",
+      image: "theo-sabattie.jpeg",
+    },
+    {
+      name: "Victoria Mure-Ravaud",
+      image: "victoria-mure-ravaud.jpeg",
+    },
+    {
+      name: "Clémence Arnautou-Pagès",
+      image: "clemence-arnautou-pages.jpeg",
+    }
+  ];
+
+  const otherCAMembers = [
+    {
+      name: "Anne-Lise Bance",
+      image: "anne-lise-bance.jpeg",
     },
     {
       name: "David Chavalarias",
-      desc: t("member4 qui sommes nous"),
       image: "david-chavalarias.jpeg",
     },
     {
       name: "Rida Laraki",
-      desc: t("member2 qui sommes nous"),
-      image: "rida-laraki.jpeg",
+      image: "rida-laraki.jpg",
     },
     {
-      name: "Paloma Moritz",
-      desc: t("member5 qui sommes nous"),
-      image: "paloma-moritz.jpeg",
+      name: "Solenn Briodin",
+      image: "solenn-briodin.jpeg",
     },
     {
-      name: "Pierre-Louis Guhur",
-      desc: t("member3 qui sommes nous"),
-      image: "pierrelouis-guhur.jpeg",
+      name: "Jessy Micout",
+      image: "jessy-micout.jpg",
     },
     {
-      name: "Marta Balinska",
-      desc: t("member6 qui sommes nous"),
-      image: "maria-balinska.jpeg",
+      name: "Maxime Ollivier",
+      image: "maxime-ollivier.jpg",
     },
     {
-      name: "Eric Brousseau",
-      desc: t("member6 qui sommes nous"),
-      image: "eric-brousseau.jpeg",
-    },
-    {
-      name: "Thibauld Favre",
-      desc: t("member6 qui sommes nous"),
-      image: "thibauld-favre.jpeg",
-    },
-    {
-      name: "Loic Blondiaux",
-      desc: t("member6 qui sommes nous"),
-      image: "loic-blondiaux.jpeg",
-    },
+      name: "Caroline Span",
+      image: "caroline-span.jpeg",
+    }
   ]
 
   return (
@@ -83,11 +88,6 @@ export default function QuiSommesNous() {
     <section sx={styles.QuiSommesNous}>
 
       <Flex sx={styles.containerQuiSommesNous}>
-        {/* 
-        <Text sx={styles.titleQuiSommesNous} as="h2">
-          {}
-        </Text> */}
-
         <Box sx={styles.boxImg1QuiSommesNous}>
           <Image src="/img/mikhail-nilov-vote.jpg" alt="vote" />
         </Box>
@@ -121,11 +121,7 @@ export default function QuiSommesNous() {
       </Text>
       <Box sx={styles.box2QuiSommesNous}>
         <Flex sx={styles.teamCard}>
-          {displayMember(members[0])}
-          {displayMember(members[1])}
-          {displayMember(members[2])}
-          {displayMember(members[3])}
-          {displayMember(members[4])}
+          {bureauMembers.map(member => displayMember(member))}
         </Flex>
 
         <Text sx={styles.subtitle} as="h4">
@@ -134,15 +130,7 @@ export default function QuiSommesNous() {
 
 
         <Flex sx={styles.teamCard}>
-          {displayMember(members[5])}
-          {displayMember(members[1])}
-          {displayMember(members[2])}
-          {displayMember(members[6])}
-          {displayMember(members[7])}
-          {displayMember(members[8])}
-          {displayMember(members[0])}
-          {displayMember(members[3])}
-          {displayMember(members[4])}
+          {otherCAMembers.map(member => displayMember(member))}
         </Flex>
       </Box>
 
