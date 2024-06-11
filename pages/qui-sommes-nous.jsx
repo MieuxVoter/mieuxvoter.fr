@@ -18,7 +18,6 @@ const displayMember = (member) => {
 
       <Box sx={styles.imgOverlayWrap}>
         <Image sx={styles.imgOverlayWrapImg} src={`/img/${member.image}`} alt="" />
-        <Image sx={styles.imgOverlayWrapSvg} src="/img/overlay-shapes-picture.svg" alt="" />
       </Box>
 
       <Text as="h3">{member.name}</Text>
@@ -36,7 +35,7 @@ export default function QuiSommesNous() {
     },
     {
       name: "Murielle Reinhardt",
-      image: "murielle-reinhardt.jpeg",
+      image: "murielle-reinhardt.png",
     },
     {
       name: "Théo Sabattié",
@@ -55,7 +54,7 @@ export default function QuiSommesNous() {
   const otherCAMembers = [
     {
       name: "Anne-Lise Bance",
-      image: "anne-lise-bance.jpeg",
+      image: "anne-lise-bance.png",
     },
     {
       name: "David Chavalarias",
