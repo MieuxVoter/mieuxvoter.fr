@@ -82,7 +82,7 @@ export default function Footer() {
 
           <Link href="/contact">{t("menu lien 5")}</Link>
 
-          <a href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter-2/"
+          <a href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter-adhesions-2024"
             target="_blank" rel="noopener noreferrer" >{t("common.membership")}</a>
         </Flex>
 
