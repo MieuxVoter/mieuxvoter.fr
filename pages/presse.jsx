@@ -14,13 +14,37 @@ export const getStaticProps = async ({locale}) => {
 
   const {join} = require('path')
   const jsonData = join(process.cwd(), 'content/presse.json')
+  const mdFolder = join(process.cwd(), 'content/presse')
+
+  const files = require('fs').readdirSync(mdFolder);
+  const items = files.map((filename) => {
+    const filePath = join(mdFolder, filename);
+    const fileContents = readFileSync(filePath, 'utf8');
+    const { data, content } = matter(fileContents);
+    return { data, content, filename };
+  });
 
   const fileContents = readFileSync(jsonData, 'utf8')
   const {data, content} = matter(fileContents)
+
+  const articles = JSON.parse(content).concat(items.map(item => {
+    const data = item.data;
+    
+    return {
+      thumb:data.thumb, 
+      source: "Mieux Voter", 
+      altText: data.title,
+      title: data.title,
+      author: data.author,
+      date: data.date,
+      lien: `presse/${item.filename.replace(/\.mdx$/, '')}`
+    }
+  }));
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ["presse", "common"])),
-      items: JSON.parse(content)
+      items: articles,
     },
   }
 };
@@ -28,6 +52,8 @@ export const getStaticProps = async ({locale}) => {
 
 export default function Presse(props) {
   const {t} = useTranslation('presse');
+
+  console.log(props.items);
 
   return (
     <section sx={styles.presse}>
