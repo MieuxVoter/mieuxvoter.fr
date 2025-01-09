@@ -3,7 +3,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import dynamic from 'next/dynamic';
 
-const Plot = dynamic(() => import('react-plotly.js'));
+const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
 
 export async function getStaticPaths() {
     const {join} = require('path')
