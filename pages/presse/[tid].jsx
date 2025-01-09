@@ -1,4 +1,4 @@
-import {jsx} from 'theme-ui';
+import {jsx, Text} from 'theme-ui';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import dynamic from 'next/dynamic';
@@ -41,6 +41,7 @@ export default function PresseArticle({article}) {
   return (
     <section sx={styles.presse}>
       <h1>{article.title}</h1>
+      <Text sx={styles.dateAndAuthor}>{article.date}, par {article.author}</Text>
       <MDXRemote {...article.mdxSource} components={{ Plot }}/>
     </section>
   );
@@ -63,4 +64,10 @@ const styles = {
     sectionTitle: {
       width: ['100%', '100%', '100%', '20%'],
     },
+    dateAndAuthor: {
+      fontSize: 2,
+      color: 'grey',
+      fontStyle: 'italic',
+      fontSize: '13px',
+   },
   }
