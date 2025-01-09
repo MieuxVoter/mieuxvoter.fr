@@ -41,6 +41,10 @@ export const getStaticProps = async ({locale}) => {
     }
   }));
 
+  articles.sort((a, b) => {
+    return new Date(b.date)-new Date(a.date); 
+  })
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ["presse", "common"])),
