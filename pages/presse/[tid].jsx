@@ -2,6 +2,8 @@ import {jsx} from 'theme-ui';
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize';
 import dynamic from 'next/dynamic';
+import { useTranslation } from 'next-i18next';
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 const Plot = dynamic(() => import('react-plotly.js'), { ssr: false });
 
@@ -18,7 +20,7 @@ export async function getStaticPaths() {
     return { paths, fallback: false };
   }
   
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ locale, params }) {
     const matter = require('gray-matter');
     const {join} = require('path')
     const {readFileSync, cp} = require('fs')
@@ -28,10 +30,14 @@ export async function getStaticProps({ params }) {
     const { data, content } = matter(fileContent);
     const mdxSource = await serialize(content);
 
-    return { props: { article: { ...data, mdxSource } } };
+    return { props: { 
+      ...(await serverSideTranslations(locale, ["presse", "common"])),
+      article: { ...data, mdxSource } } 
+    };
 }
 
 export default function PresseArticle({article}) {
+  useTranslation('presse');
   return (
     <section sx={styles.presse}>
       <h1>{article.title}</h1>
