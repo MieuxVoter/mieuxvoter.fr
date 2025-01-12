@@ -65,7 +65,7 @@ export default function PresseArticle({article}) {
         <h1>{article.mdxSource.frontmatter.title}</h1>
         <Text sx={styles.dateAndAuthor}>{article.mdxSource.frontmatter.date}, par {article.mdxSource.frontmatter.author}</Text>
         <Box sx={styles.post}>
-          <MDXRemote {...article.mdxSource} components={{ Plot }}/>
+          <MDXRemote {...article.mdxSource} components={{ Plot, img: (props) => <img {...props} style={{ maxWidth: '100%' }} /> }}/>
         </Box>
       </Box>
     </section>
