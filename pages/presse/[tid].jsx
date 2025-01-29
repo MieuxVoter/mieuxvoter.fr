@@ -82,13 +82,16 @@ const styles = {
 
     },
     flexDirection: 'column',
-    margin: [0, '100px'],
+    margin: ['auto'],
     mb: 0,
     pl: ['5%', '5%', '5%', '7%'],
     pb: ['100px'],
+    "max-width": '960px',
   },
   post: {
-    mt: '50px'
+    mt: '50px',
+    display: 'grid',
+    "place-items": 'center'
   },
     containerThree: {
       width: [null, null, null, '90%', '80%'],
