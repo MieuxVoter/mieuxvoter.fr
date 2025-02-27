@@ -19,7 +19,7 @@ export default function Adherez() {
         </Text>
 
         <Button>
-          <Link href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter" target="blank" >
+          <Link href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter-adhesion-2025" target="blank" >
             {t("titre adherez")}
             <Arrow />
           </Link>
