@@ -5,9 +5,7 @@ import {
   BsYoutube,
   BsTwitterX,
 } from 'react-icons/bs';
-import Image from 'next/image';
-import BlueskyLogo from '/components/header/bluesky-solid-sharp.svg';
-import { SiBluesky } from 'react-icons/si';
+import BlueskyLogo from './bluesky-solid-sharp.svg';
 
 const socialRefs = [
   {
@@ -18,7 +16,7 @@ const socialRefs = [
   {
     path: 'https://bsky.app/profile/mieuxvoter.bsky.social',
     name: 'bsky',
-    icon: <Image src={BlueskyLogo} alt="Bluesky" width={20} height={20} fill="#2400fd"/>,
+    icon: <BlueskyLogo/>,
   },
   {
     path: 'https://www.linkedin.com/company/mieux-voter/',
