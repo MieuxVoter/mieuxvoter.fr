@@ -44,10 +44,6 @@ export default function QuiSommesNous() {
     {
       name: "Victoria Mure-Ravaud",
       image: "victoria-mure-ravaud.jpeg",
-    },
-    {
-      name: "Clémence Arnautou-Pagès",
-      image: "clemence-arnautou-pages.jpeg",
     }
   ];
 
@@ -57,16 +53,20 @@ export default function QuiSommesNous() {
       image: "anne-lise-bance.png",
     },
     {
-      name: "David Chavalarias",
-      image: "david-chavalarias.jpeg",
+      name: "Alice Bodineau",
+      image: "alice-bodineau.jpeg",
+    },
+    {
+      name: "Clément Pairot",
+      image: "clement-pairot.jpg"
     },
     {
       name: "Rida Laraki",
       image: "rida-laraki.jpg",
     },
     {
-      name: "Solenn Briodin",
-      image: "solenn-briodin.jpeg",
+      name: "Pierre Puchaud",
+      image: "pierre-puchaud.jpeg",
     },
     {
       name: "Jessy Micout",
@@ -80,7 +80,14 @@ export default function QuiSommesNous() {
       name: "Caroline Span",
       image: "caroline-span.jpeg",
     }
-  ]
+  ];
+
+  const honorMembers = [
+    {
+      name: "David Chavalarias",
+      image: "david-chavalarias.jpeg",
+    }
+  ];
 
   return (
 
@@ -130,6 +137,15 @@ export default function QuiSommesNous() {
 
         <Flex sx={styles.teamCard}>
           {otherCAMembers.map(member => displayMember(member))}
+        </Flex>
+
+        <Text sx={styles.subtitle} as="h4">
+          {t("membres d’honneur qui sommes nous")}
+        </Text>
+
+
+        <Flex sx={styles.teamCard}>
+          {honorMembers.map(member => displayMember(member))}
         </Flex>
       </Box>
 
