@@ -51,6 +51,10 @@ export default function SectionTwo() {
 
           <Image sx={styles.box5SectionTwo} src="/img/list_cand.svg" alt="" />
 
+          <Text sx={styles.box4SectionTwo} as="p">
+            {t("texte4 deuxième section")}
+          </Text>
+
           <Box sx={styles.boxButton2}>
             <Link href="/le-jugement-majoritaire">
               <Button>{t("bouton deuxième section")}<ArrowBlue /></Button>
