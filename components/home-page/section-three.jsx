@@ -46,7 +46,7 @@ export default function SectionThree() {
               <Link
                 passHref
                 href={{
-                  pathname: "https://app.mieuxvoter.fr/admin/new?name=",
+                  pathname: "https://app.mieuxvoter.fr/admin/new",
                   query: { name: title },
                 }}
               >
