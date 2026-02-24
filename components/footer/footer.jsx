@@ -9,6 +9,7 @@ import socialItems from "../header/social.data";
 import Credits from "./credits";
 import {useTranslation} from "next-i18next";
 import Accordion from "react-bootstrap/Accordion";
+import {ADHESION_URL} from "../../services/constants";
 
 export default function Footer() {
   const {t} = useTranslation("common");
@@ -82,7 +83,7 @@ export default function Footer() {
 
           <Link href="/contact">{t("menu lien 5")}</Link>
 
-          <a href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter-adhesion-2025"
+          <a href={ADHESION_URL}
             target="_blank" rel="noopener noreferrer" >{t("common.membership")}</a>
         </Flex>
 

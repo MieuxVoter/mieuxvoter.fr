@@ -1,0 +1,1 @@
+export const ADHESION_URL = "https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter-adhesion-2026";

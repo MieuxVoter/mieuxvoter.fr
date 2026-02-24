@@ -5,6 +5,7 @@ import React from 'react';
 import {Box, Text, Button, Flex, Link} from 'theme-ui';
 import Arrow from './arrow'
 import {useTranslation} from "next-i18next";
+import {ADHESION_URL} from "../services/constants";
 
 export default function Adherez() {
   const {t} = useTranslation('common');
@@ -19,7 +20,7 @@ export default function Adherez() {
         </Text>
 
         <Button>
-          <Link href="https://www.helloasso.com/associations/mieux-voter/adhesions/adherer-a-mieux-voter-adhesion-2025" target="blank" >
+          <Link href={ADHESION_URL} target="blank" >
             {t("titre adherez")}
             <Arrow />
           </Link>
