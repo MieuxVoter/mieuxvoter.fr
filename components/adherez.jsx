@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui';
 import React from 'react';
-import {Box, Text, Button, Flex, Link} from 'theme-ui';
+import {Box, Text, Flex, Link} from 'theme-ui';
 import Arrow from './arrow'
 import {useTranslation} from "next-i18next";
 import {ADHESION_URL} from "../services/constants";
@@ -19,12 +19,10 @@ export default function Adherez() {
           {t("titre adherez mieux voter")}
         </Text>
 
-        <Button>
-          <Link href={ADHESION_URL} target="blank" >
-            {t("titre adherez")}
-            <Arrow />
-          </Link>
-        </Button>
+        <Link href={ADHESION_URL} target="_blank" sx={styles.adherezLink}>
+          {t("titre adherez")}
+          <Arrow />
+        </Link>
       </Flex>
     </Box>
   );
@@ -51,21 +49,26 @@ const styles = {
       lineHeight: '1',
       fontFamily: '"DM Serif Display", serif!important',
     },
-    button: {
-      width: ['50%', '50%', '30%', '25%'],
-      mx: ['auto'],
-      my: 'auto',
-      mt: [7, 7, 'auto'],
-      backgroundColor: '#0A004C',
-      color: 'white',
-      border: 'solid 2px white',
-      boxShadow: '0px 3px 0px 0px white',
-      mr: ['auto', 'auto',],
-    },
-    a: {
-      textDecoration: 'none',
-      color: 'white',
-    },
+  },
+  adherezLink: {
+    display: 'inline-block',
+    width: ['50%', '50%', '30%', '25%'],
+    mx: ['auto'],
+    my: 'auto',
+    mt: [7, 7, 'auto'],
+    backgroundColor: '#0A004C',
+    color: 'white',
+    border: 'solid 2px white',
+    boxShadow: '0px 3px 0px 0px white',
+    mr: ['auto', 'auto'],
+    textDecoration: 'none',
+    textAlign: 'center',
+    borderRadius: '0',
+    padding: '15px 30px',
+    cursor: 'pointer',
+    ':hover': { color: 'white' },
+    ':active': { color: 'white' },
+    ':visited': { color: 'white' },
   },
   arrow: {
     verticalAlign: 'middle',
