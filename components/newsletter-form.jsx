@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
+import ArrowBlue from './arrowBlue';
+import {useTranslation} from "next-i18next";
 
 export const NewsletterForm = ({onSubmitResult}) => {
+  const {t} = useTranslation("common");
 
   const [email, setEmail] = useState('');
   const [piege, setPiege] = useState('');
@@ -52,4 +56,21 @@ export const NewsletterForm = ({onSubmitResult}) => {
       </div>
     </form>
   );
+};
+
+const styles = {
+  newsletterForm: {
+    justifyContent: "space-between",
+    flexDirection: ["column", "column", "column", "row"],
+  },
+  boxButton: {
+    width: ["100%", "100%", "100%", "40%"],
+    textAlign: ["center"],
+    button: {
+      backgroundColor: "#FFFFFF",
+      color: "#2400FD",
+      border: "solid 2px #2400FD",
+      boxShadow: "0px 3px 0px 0px #2400FD",
+    },
+  },
 };
