@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/10e21963-4d3d-493c-afc9-c168986f55f0/deploy-status)](https://app.netlify.com/sites/mieuxvoter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/71d5f188-142c-403d-9261-9741a72631e3/deploy-status)](https://app.netlify.com/projects/mieux-voter/deploys)
 
 This is the website of Mieux Voter (aka Better Vote). It is available online at [mieuxvoter.fr](https://mieuxvoter.fr).
 
