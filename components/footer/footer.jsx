@@ -4,6 +4,7 @@ import {jsx} from "theme-ui";
 import React from "react";
 import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
 import ArrowBlue from '../arrowBlue';
+import {NewsletterForm} from "../newsletter-form";
 import Link from "next/link";
 import socialItems from "../header/social.data";
 import Credits from "./credits";
@@ -25,28 +26,7 @@ export default function Footer() {
         </Box>
 
         <Box sx={styles.rightTopFooter}>
-          <form method='POST' action='/newsletter' name='newsletter' data-netlify="true" netlify-honeypot="piege">
-            <Text as="h3">{t("footer newsletter")}</Text>
-            <Flex id="newsletter" sx={styles.newsletterForm}>
-              <Input
-                type="email"
-                name="email"
-                id="email"
-                mb={3}
-                placeholder={t("footer placeholder newsletter")}
-              />
-              <Box sx={styles.boxButton}>
-                <Button>
-                  {t("footer bouton newsletter")}
-                  <ArrowBlue />
-                </Button>
-              </Box>
-            </Flex>
-            <input type="hidden" name="form-name" value="newsletter" />
-            <div className="hidden">
-              <label>Don’t fill this out if you’re human: <input name="piege" /></label>
-            </div>
-          </form>
+          <NewsletterForm />
         </Box>
       </Flex>
 
@@ -150,20 +130,6 @@ const styles = {
         fontStyle: "italic",
       },
     },
-  },
-  boxButton: {
-    width: ["100%", "100%", "100%", "40%"],
-    textAlign: ["center"],
-    button: {
-      backgroundColor: "#FFFFFF",
-      color: "#2400FD",
-      border: "solid 2px #2400FD",
-      boxShadow: "0px 3px 0px 0px #2400FD",
-    },
-  },
-  newsletterForm: {
-    justifyContent: "space-between",
-    flexDirection: ["column", "column", "column", "row"],
   },
   arrow: {
     verticalAlign: "middle",
