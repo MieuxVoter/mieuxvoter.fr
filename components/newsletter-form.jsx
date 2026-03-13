@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
+import {Box, Text, Flex, Image, Button, Input} from 'theme-ui';
 import ArrowBlue from './arrowBlue';
-import {useTranslation} from "next-i18next";
+import {useTranslation} from 'next-i18next';
 
 const Status = {
   IDLE: 0,
@@ -11,7 +11,7 @@ const Status = {
 }
 
 export const NewsletterForm = ({onSubmitResult}) => {
-  const {t} = useTranslation("common");
+  const {t} = useTranslation('common');
 
   const [email, setEmail] = useState('');
   const [piege, setPiege] = useState('');
@@ -33,7 +33,7 @@ export const NewsletterForm = ({onSubmitResult}) => {
       });
 
       if (response.ok) {
-        console.log("OK");
+        console.log('OK');
         setStatus(Status.SUCCESS);
         setEmail('');
       } else {
@@ -47,41 +47,41 @@ export const NewsletterForm = ({onSubmitResult}) => {
   };
 
   return (
-    <form method="POST" name="newsletter" onSubmit={handleSubmit}>
-      <Text as="h3">{t("footer newsletter")}</Text>
+    <form method='POST' name='newsletter' onSubmit={handleSubmit}>
+      <Text as='h3'>{t('footer newsletter')}</Text>
 
       {status === Status.LOADING && (
         <Box sx={styles.feedbackMessage}>
-          <Text sx={{color: "#2400FD"}}>⏳ Inscription en cours...</Text>
+          <Text sx={{color: '#2400FD'}}>{t('footer newsletter registering')}</Text>
         </Box>
       )}
 
       {status === Status.SUCCESS && (
         <Box sx={styles.successMessage}>
-          <Text sx={{color: "#4CAF50", fontWeight: "bold"}}>✓ Merci ! Vous êtes inscrit à notre newsletter</Text>
+          <Text sx={{color: '#4CAF50', fontWeight: 'bold'}}>{t('footer newsletter registered')}</Text>
         </Box>
       )}
 
       {status === Status.ERROR && (
         <Box sx={styles.errorMessage}>
-          <Text sx={{color: "#f44336", fontWeight: "bold"}}>✕ Erreur lors de l"inscription. Veuillez réessayer.</Text>
+          <Text sx={{color: '#f44336', fontWeight: 'bold'}}>{t('footer newsletter error')}</Text>
         </Box>
       )}
 
       {status === Status.IDLE && (
-        <Flex id="newsletter" sx={styles.newsletterForm}>
+        <Flex id='newsletter' sx={styles.newsletterForm}>
           <Input
-            type="email"
-            name="email"
-            id="email"
+            type='email'
+            name='email'
+            id='email'
             mb={3}
-            placeholder={t("footer placeholder newsletter")}
+            placeholder={t('footer placeholder newsletter')}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <Box sx={styles.boxButton}>
             <Button>
-              {t("footer bouton newsletter")}
+              {t('footer bouton newsletter')}
               <ArrowBlue />
             </Button>
           </Box>
@@ -89,19 +89,19 @@ export const NewsletterForm = ({onSubmitResult}) => {
       )}
 
       {status === Status.SUCCESS && (
-        <Flex id="newsletter" sx={styles.newsletterForm}>
+        <Flex id='newsletter' sx={styles.newsletterForm}>
           <Input
-            type="email"
-            name="email"
-            id="email"
+            type='email'
+            name='email'
+            id='email'
             mb={3}
-            placeholder={t("footer placeholder newsletter")}
+            placeholder={t('footer placeholder newsletter')}
             onChange={(e) => setEmail(e.target.value)}
             disabled
           />
           <Box sx={styles.boxButton}>
             <Button disabled>
-              {t("footer bouton newsletter")}
+              {t('footer bouton newsletter')}
               <ArrowBlue />
             </Button>
           </Box>
@@ -109,20 +109,20 @@ export const NewsletterForm = ({onSubmitResult}) => {
       )}
 
       {status === Status.ERROR && (
-        <Flex id="newsletter" sx={styles.newsletterForm}>
+        <Flex id='newsletter' sx={styles.newsletterForm}>
           <Input
-            type="email"
-            name="email"
-            id="email"
+            type='email'
+            name='email'
+            id='email'
             mb={3}
-            placeholder={t("footer placeholder newsletter")}
+            placeholder={t('footer placeholder newsletter')}
             onChange={(e) => setEmail(e.target.value)}
             required
             value={email}
           />
           <Box sx={styles.boxButton}>
             <Button>
-              {t("footer bouton newsletter")}
+              {t('footer bouton newsletter')}
               <ArrowBlue />
             </Button>
           </Box>
@@ -130,13 +130,13 @@ export const NewsletterForm = ({onSubmitResult}) => {
       )}
 
       {status === Status.LOADING && (
-        <Flex id="newsletter" sx={styles.newsletterForm}>
+        <Flex id='newsletter' sx={styles.newsletterForm}>
           <Input
-            type="email"
-            name="email"
-            id="email"
+            type='email'
+            name='email'
+            id='email'
             mb={3}
-            placeholder={t("footer placeholder newsletter")}
+            placeholder={t('footer placeholder newsletter')}
             onChange={(e) => setEmail(e.target.value)}
             disabled
             value={email}
@@ -150,9 +150,9 @@ export const NewsletterForm = ({onSubmitResult}) => {
         </Flex>
       )}
 
-      <input type="hidden" name="form-name" value="newsletter" />
-      <div className="hidden">
-        <label>Don"t fill this out if you"re human: <input name="piege" onChange={(e) => setPiege(e.target.value)}/></label>
+      <input type='hidden' name='form-name' value='newsletter' />
+      <div className='hidden'>
+        <label>Don&apos;t fill this out if you&apos;re human: <input name='piege' onChange={(e) => setPiege(e.target.value)}/></label>
       </div>
     </form>
   );
@@ -160,17 +160,17 @@ export const NewsletterForm = ({onSubmitResult}) => {
 
 const styles = {
   newsletterForm: {
-    justifyContent: "space-between",
-    flexDirection: ["column", "column", "column", "row"],
+    justifyContent: 'space-between',
+    flexDirection: ['column', 'column', 'column', 'row'],
   },
   boxButton: {
-    width: ["100%", "100%", "100%", "40%"],
-    textAlign: ["center"],
+    width: ['100%', '100%', '100%', '40%'],
+    textAlign: ['center'],
     button: {
-      backgroundColor: "#FFFFFF",
-      color: "#2400FD",
-      border: "solid 2px #2400FD",
-      boxShadow: "0px 3px 0px 0px #2400FD",
+      backgroundColor: '#FFFFFF',
+      color: '#2400FD',
+      border: 'solid 2px #2400FD',
+      boxShadow: '0px 3px 0px 0px #2400FD',
       '&:disabled': {
         opacity: 0.6,
         cursor: 'not-allowed',
