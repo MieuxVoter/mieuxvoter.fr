@@ -8,3 +8,5 @@ package = "@netlify/plugin-nextjs"
 
 [dev]
   command = "npm run dev"
+  functions = "functions"
+  publish = ".next"

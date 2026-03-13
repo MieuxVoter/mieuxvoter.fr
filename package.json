@@ -2,6 +2,7 @@
   "name": "mieux-voter",
   "private": true,
   "scripts": {
+    "dev-netlify": "netlify dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

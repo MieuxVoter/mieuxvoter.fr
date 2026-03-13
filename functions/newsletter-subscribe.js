@@ -2,7 +2,11 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
   // Netlify envoie les données du formulaire en POST
-  const data = JSON.parse(event.body).payload.data;
+  const data = JSON.parse(event.body);
+
+  if (data.piege){
+    return { statusCode: 400, body: "Spam detected" };
+  }
 
   if (!data.email) {
     return { statusCode: 400, body: "Missing: email" };

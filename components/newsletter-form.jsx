@@ -3,30 +3,46 @@ import {Box, Text, Flex, Image, Button, Input} from "theme-ui";
 import ArrowBlue from './arrowBlue';
 import {useTranslation} from "next-i18next";
 
+const Status = {
+  IDLE: 0,
+  LOADING: 1,
+  SUCCESS: 2,
+  ERROR: 3,
+}
+
 export const NewsletterForm = ({onSubmitResult}) => {
   const {t} = useTranslation("common");
 
   const [email, setEmail] = useState('');
   const [piege, setPiege] = useState('');
+  const [status, setStatus] = useState(Status.IDLE);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('Chargement...');
+
+    if (status != Status.IDLE) {
+      return;
+    }
+
+    setStatus(Status.LOADING);
 
     try {
       const response = await fetch('/.netlify/functions/newsletter-subscribe', {
         method: 'POST',
-        body: JSON.stringify({ email }), // On envoie juste l'email
+        body: JSON.stringify({ email, piege }), // On envoie l'email et le piège
       });
 
       if (response.ok) {
-        setStatus('Merci ! Vous êtes inscrit.');
+        console.log("OK");
+        setStatus(Status.SUCCESS);
         setEmail('');
       } else {
-        setStatus('Erreur lors de l\'inscription.');
+        console.log(response);
+        setStatus(Status.ERROR);
       }
     } catch (err) {
-      setStatus('Une erreur est survenue.');
+      setStatus(Status.ERROR);
+      console.log(err);
     }
   };
 
