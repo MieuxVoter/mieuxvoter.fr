@@ -1,3 +1,4 @@
+const { cp } = require('fs');
 const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
@@ -12,6 +13,7 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: "Missing: email" };
   }
 
+  const attributes = data.attributes || {};
   const BREVO_API_KEY = process.env.BREVO_API_KEY;
 
   try {
@@ -24,9 +26,7 @@ exports.handler = async (event) => {
       },
       body: JSON.stringify({
         email: data.email,
-        attributes: {
-          ACQUISITION_SOURCE: "mieuxvoter.fr - Newsletter", 
-        },
+        attributes: attributes,
         listIds: [3], 
         updateEnabled: true
       })

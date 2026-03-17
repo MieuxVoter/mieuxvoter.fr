@@ -26,10 +26,14 @@ export const NewsletterForm = ({onSubmitResult}) => {
 
     setStatus(Status.LOADING);
 
+    const attributes = {
+      ACQUISITION_SOURCE: "mieuxvoter.fr - Newsletter", 
+    };
+
     try {
-      const response = await fetch('/.netlify/functions/newsletter-subscribe', {
+      const response = await fetch('/.netlify/functions/register-user', {
         method: 'POST',
-        body: JSON.stringify({ email, piege }), // On envoie l'email et le piège
+        body: JSON.stringify({ email, piege, attributes }), // On envoie l'email et le piège
       });
 
       if (response.ok) {
