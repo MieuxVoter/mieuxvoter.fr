@@ -198,7 +198,25 @@ La logique du “tout ou rien” a certes structuré notre vie politique mais el
         <Text as="p">
           Votre adresse ne sera utilisée que pour vous transmettre nos informations et invitations.
         </Text>
-        <Box sx={{ mt: 6, textAlign: "center" }}>
+        <Box sx={{
+          mt: 6,
+          backgroundImage: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+          height: "150px",
+          pointerEvents: "none",
+          position: "sticky",
+          bottom: "72px",
+          marginTop: "0",
+          zIndex: 99
+        }} />
+        <Box sx={{
+          textAlign: "center",
+          position: "sticky",
+          bottom: 0,
+          backgroundColor: "white",
+          py: 3,
+          zIndex: 100,
+          mt: -4
+        }}>
           <Button
             onClick={() => setIsModalOpen(true)}
             sx={styles.ctaButton}
