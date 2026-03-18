@@ -14,6 +14,7 @@ exports.handler = async (event) => {
   }
 
   const attributes = data.attributes || {};
+  const lists = data.lists || [3];
   const BREVO_API_KEY = process.env.BREVO_API_KEY;
 
   try {
@@ -27,7 +28,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         email: data.email,
         attributes: attributes,
-        listIds: [3], 
+        listIds: lists, 
         updateEnabled: true
       })
     });

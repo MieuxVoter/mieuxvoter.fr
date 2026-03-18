@@ -33,7 +33,7 @@ export const NewsletterForm = ({onSubmitResult}) => {
     try {
       const response = await fetch('/.netlify/functions/register-user', {
         method: 'POST',
-        body: JSON.stringify({ email, piege, attributes }), // On envoie l'email et le piège
+        body: JSON.stringify({ email, piege, attributes, lists:[3] }), // On envoie l'email et le piège
       });
 
       if (response.ok) {

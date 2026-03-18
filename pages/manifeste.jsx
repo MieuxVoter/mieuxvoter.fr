@@ -1,9 +1,28 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Text, Flex } from "theme-ui";
-import React from "react";
-import Adherez from "../components/adherez";
+import { jsx, Box, Text, Flex, Button, Input, Select } from "theme-ui";
+import React, { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+const Status = {
+  IDLE: 0,
+  LOADING: 1,
+  SUCCESS: 2,
+  ERROR: 3,
+};
+
+const COUNTRY_PREFIXES = [
+  { label: "🇫🇷 (+33)", prefix: "+33" },
+  { label: "🇧🇪 (+32)", prefix: "+32" },
+  { label: "🇨🇭 (+41)", prefix: "+41" },
+  { label: "🇱🇺 (+352)", prefix: "+352" },
+  { label: "🇬🇧 (+44)", prefix: "+44" },
+  { label: "🇩🇪 (+49)", prefix: "+49" },
+  { label: "🇮🇹 (+39)", prefix: "+39" },
+  { label: "🇪🇸 (+34)", prefix: "+34" },
+  { label: "🇨🇦 (+1)", prefix: "+1" },
+  { label: "🇺🇸 (+1)", prefix: "+1" },
+];
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
@@ -12,7 +31,99 @@ export const getStaticProps = async ({ locale }) => ({
 });
 
 export default function Manifeste() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [status, setStatus] = useState(Status.IDLE);
+  const [phoneError, setPhoneError] = useState("");
+  const [piege, setPiege] = useState("");
+  const [formData, setFormData] = useState({
+    prenom: "",
+    mail: "",
+    phonePrefix: "+33",
+    phoneNumber: "",
+    codePostal: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "phoneNumber") {
+      setPhoneError("");
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (status === Status.LOADING || status === Status.SUCCESS) {
+      return;
+    }
+
+    // Valider le numéro de téléphone
+    if (formData.phoneNumber) {
+      const cleanNumber = formData.phoneNumber.replace(/\s/g, "");
+      // Vérifier que le numéro ne commence pas par 0
+      if (cleanNumber.startsWith("0")) {
+        setPhoneError("Le numéro ne doit pas commencer par 0. Exemple: 612345678");
+        return;
+      }
+      // Vérifier que c'est un nombre valide
+      if (!/^\d{9,}$/.test(cleanNumber)) {
+        setPhoneError("Le numéro doit contenir au moins 9 chiffres");
+        return;
+      }
+    }
+
+    setStatus(Status.LOADING);
+
+    try {
+
+      const attributes = {
+        PRENOM: formData.prenom,
+        CODE_POSTAL: formData.codePostal,
+        ACQUISITION_SOURCE: "mieuxvoter.fr - Manifeste",
+        MANIFEST_SIGNED_VERSION: "2026-03 V1",
+      }
+
+      // Formater le numéro de téléphone avec le préfixe
+      let fullPhone = "";
+      if (formData.phoneNumber) {
+        const cleanNumber = formData.phoneNumber.replace(/\s/g, "");
+
+        if (cleanNumber) {
+          fullPhone = `${formData.phonePrefix}${cleanNumber}`;
+          attributes.SMS = fullPhone;
+        }
+      }
+
+      const response = await fetch("/.netlify/functions/register-user", {
+        method: "POST",
+        body: JSON.stringify({
+          email: formData.mail,
+          piege,
+          attributes,
+          lists:[18]
+        }),
+      });
+
+      if (response.ok) {
+        setStatus(Status.SUCCESS);
+        setFormData({ prenom: "", mail: "", phonePrefix: "+33", phoneNumber: "", codePostal: "" });
+        setPiege("");
+        setTimeout(() => {
+          setIsModalOpen(false);
+          setStatus(Status.IDLE);
+        }, 2000);
+      } else {
+        setStatus(Status.ERROR);
+      }
+    } catch (err) {
+      setStatus(Status.ERROR);
+      console.log(err);
+    }
+  };
+
   return (
+    <>
     <section sx={styles.manifeste}>
       {/* Header */}
       <Box sx={styles.header}>
@@ -21,7 +132,7 @@ export default function Manifeste() {
         </Text>
         <Text sx={styles.date}>Mars 2026</Text>
         <Text as="h2" sx={styles.subtitle}>
-          Manifeste – Pour une révolution électorale
+          Pour une révolution électorale
         </Text>
         <Text sx={styles.tagline}>
           Parce que voter ne devrait plus être un choix binaire
@@ -90,11 +201,171 @@ La logique du “tout ou rien” a certes structuré notre vie politique mais el
         <Text as="p">
           Votre adresse ne sera utilisée que pour vous transmettre nos informations et invitations.
         </Text>
+        <Box sx={{ mt: 6, textAlign: "center" }}>
+          <Button
+            onClick={() => setIsModalOpen(true)}
+            sx={styles.ctaButton}
+          >
+            Je signe pour mieux voter
+          </Button>
+        </Box>
       </Box>
-
-      {/* Newsletter */}
-      <Adherez />
     </section>
+
+    {/* Modal */}
+    {isModalOpen && (
+      <Box sx={styles.modalOverlay} onClick={() => setIsModalOpen(false)}>
+        <Box
+          sx={styles.modalContent}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Text as="h2" sx={styles.modalTitle}>
+            Je signe pour mieux voter
+          </Text>
+
+          {status === Status.LOADING && (
+            <Box sx={styles.feedbackMessage}>
+              <Text sx={{ color: "#2400FD" }}>Inscription en cours...</Text>
+            </Box>
+          )}
+
+          {status === Status.SUCCESS && (
+            <Box sx={styles.successMessage}>
+              <Text sx={{ color: "#4CAF50", fontWeight: "bold" }}>
+                Merci pour votre signature ! 🎉
+              </Text>
+            </Box>
+          )}
+
+          {status === Status.ERROR && (
+            <Box sx={styles.errorMessage}>
+              <Text sx={{ color: "#f44336", fontWeight: "bold" }}>
+                Une erreur s'est produite. Veuillez réessayer.
+              </Text>
+            </Box>
+          )}
+
+          {status !== Status.SUCCESS && (
+            <form onSubmit={handleSubmit}>
+              <Box sx={{ mb: 3 }}>
+                <label sx={styles.label}>
+                  Prénom
+                  <Input
+                    type="text"
+                    name="prenom"
+                    value={formData.prenom}
+                    onChange={handleInputChange}
+                    placeholder="Votre prénom"
+                    required
+                    disabled={status === Status.LOADING}
+                    sx={styles.input}
+                  />
+                </label>
+              </Box>
+              <Box sx={{ mb: 3 }}>
+                <label sx={styles.label}>
+                  Mail
+                  <Input
+                    type="email"
+                    name="mail"
+                    value={formData.mail}
+                    onChange={handleInputChange}
+                    placeholder="Votre email"
+                    required
+                    disabled={status === Status.LOADING}
+                    sx={styles.input}
+                  />
+                </label>
+              </Box>
+              <Box sx={{ mb: 3 }}>
+                <label sx={styles.label}>Téléphone (optionnel)</label>
+                <Flex sx={{ gap: 2, alignItems: "center" }}>
+                  <Box sx={{ flex: "0 0 100px" }}>
+                    <Select
+                      name="phonePrefix"
+                      value={formData.phonePrefix}
+                      onChange={handleInputChange}
+                      disabled={status === Status.LOADING}
+                      sx={styles.select}
+                    >
+                      {COUNTRY_PREFIXES.map((country) => (
+                        <option key={country.prefix} value={country.prefix}>
+                          {country.label}
+                        </option>
+                      ))}
+                    </Select>
+                  </Box>
+                  <Box sx={{ flex: 1 }}>
+                    <Input
+                      type="tel"
+                      name="phoneNumber"
+                      value={formData.phoneNumber}
+                      onChange={handleInputChange}
+                      placeholder="612345678"
+                      disabled={status === Status.LOADING}
+                      sx={styles.input}
+                    />
+                    {phoneError && (
+                      <Text sx={{ color: "#f44336", fontSize: "12px", mt: 1 }}>
+                        {phoneError}
+                      </Text>
+                    )}
+                  </Box>
+                </Flex>
+              </Box>
+              <Box sx={{ mb: 3 }}>
+                <label sx={styles.label}>
+                  Code postal
+                  <Input
+                    type="text"
+                    name="codePostal"
+                    value={formData.codePostal}
+                    onChange={handleInputChange}
+                    placeholder="Votre code postal"
+                    disabled={status === Status.LOADING}
+                    sx={styles.input}
+                  />
+                </label>
+              </Box>
+
+              {/* Honeypot field */}
+              <input type="hidden" name="form-name" value="signature" />
+              <div className="hidden">
+                <label>
+                  Don't fill this out if you're human:{" "}
+                  <input
+                    name="piege"
+                    onChange={(e) => setPiege(e.target.value)}
+                  />
+                </label>
+              </div>
+
+              <Flex sx={{ gap: 2, justifyContent: "flex-end" }}>
+                <Button
+                  type="button"
+                  onClick={() => {
+                    setIsModalOpen(false);
+                    setStatus(Status.IDLE);
+                  }}
+                  disabled={status === Status.LOADING}
+                  sx={styles.buttonSecondary}
+                >
+                  Annuler
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={status === Status.LOADING}
+                  sx={styles.buttonPrimary}
+                >
+                  {status === Status.LOADING ? "⏳ Envoi..." : "Signer"}
+                </Button>
+              </Flex>
+            </form>
+          )}
+        </Box>
+      </Box>
+    )}
+    </>
   );
 }
 
@@ -192,5 +463,139 @@ const styles = {
     p: {
       mb: 3,
     },
+  },
+  ctaButton: {
+    backgroundColor: "#0A004C",
+    color: "white",
+    padding: "12px 24px",
+    fontSize: "16px",
+    fontWeight: 600,
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#1a0066",
+    },
+  },
+  modalOverlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 1000,
+  },
+  modalContent: {
+    backgroundColor: "white",
+    borderRadius: "8px",
+    padding: "40px",
+    maxWidth: "500px",
+    width: "90%",
+    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  },
+  modalTitle: {
+    fontSize: "28px",
+    fontWeight: 600,
+    mb: 4,
+    color: "#0A004C",
+  },
+  label: {
+    display: "block",
+    fontWeight: 500,
+    mb: 2,
+    fontFamily: '"DM Sans", sans-serif',
+    color: "#0A004C",
+    fontSize: "14px",
+  },
+  input: {
+    width: "100%",
+    padding: "10px 12px",
+    border: "1px solid #ddd",
+    borderRadius: "4px",
+    fontSize: "14px",
+    marginTop: "6px",
+    fontFamily: '"DM Sans", sans-serif',
+    "&:focus": {
+      outline: "none",
+      borderColor: "#0A004C",
+      boxShadow: "0 0 0 2px rgba(10, 0, 76, 0.1)",
+    },
+  },
+  select: {
+    width: "100%",
+    padding: "10px 12px",
+    border: "1px solid #ddd",
+    borderRadius: "4px",
+    fontSize: "14px",
+    marginTop: "6px",
+    fontFamily: '"DM Sans", sans-serif',
+    backgroundColor: "white",
+    color: "#0A004C",
+    cursor: "pointer",
+    "&:focus": {
+      outline: "none",
+      borderColor: "#0A004C",
+      boxShadow: "0 0 0 2px rgba(10, 0, 76, 0.1)",
+    },
+  },
+  buttonPrimary: {
+    backgroundColor: "#0A004C",
+    color: "white",
+    padding: "10px 20px",
+    fontSize: "14px",
+    fontWeight: 600,
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#1a0066",
+    },
+  },
+  buttonSecondary: {
+    backgroundColor: "#f0f0f0",
+    color: "#0A004C",
+    padding: "10px 20px",
+    fontSize: "14px",
+    fontWeight: 600,
+    border: "1px solid #ddd",
+    borderRadius: "4px",
+    cursor: "pointer",
+    "&:hover:not(:disabled)": {
+      backgroundColor: "#e0e0e0",
+    },
+    "&:disabled": {
+      opacity: 0.6,
+      cursor: "not-allowed",
+    },
+  },
+  feedbackMessage: {
+    mb: 3,
+    p: 2,
+    textAlign: "center",
+    borderRadius: "4px",
+    backgroundColor: "#f0f5ff",
+    fontSize: "16px",
+  },
+  successMessage: {
+    mb: 3,
+    p: 2,
+    textAlign: "center",
+    borderRadius: "4px",
+    backgroundColor: "#f0f9f0",
+    borderLeft: "4px solid #4CAF50",
+    fontSize: "16px",
+  },
+  errorMessage: {
+    mb: 3,
+    p: 2,
+    textAlign: "center",
+    borderRadius: "4px",
+    backgroundColor: "#fff3f3",
+    borderLeft: "4px solid #f44336",
+    fontSize: "16px",
   },
 };

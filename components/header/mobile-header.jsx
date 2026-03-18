@@ -11,12 +11,14 @@ import {
 import Link from "next/link";
 import { Image } from "theme-ui";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
 import Accordion from "react-bootstrap/Accordion";
 
 const MobHeader = () => {
   const [isOpen, setOpen] = useState(false);
+  const router = useRouter();
 
   const toggle = () => setOpen(!isOpen);
 
@@ -80,6 +82,16 @@ const MobHeader = () => {
                 </Accordion>
               </NavItem>
 
+              {router.locale === "fr" && (
+                <NavItem>
+                  <Link href="/manifeste">
+                    <a onClick={toggle} className="navbar-my-link nav-link">
+                      Manifeste
+                    </a>
+                  </Link>
+                </NavItem>
+              )}
+              
               <NavItem>
                 <Link href="/qui-sommes-nous">
                   <a onClick={toggle} className="navbar-my-link nav-link">
@@ -95,6 +107,8 @@ const MobHeader = () => {
                   </a>
                 </Link>
               </NavItem>
+
+              
 
               <NavItem>
                 <Link href="/contact">
