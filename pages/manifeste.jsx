@@ -21,126 +21,75 @@ export default function Manifeste() {
         </Text>
         <Text sx={styles.date}>Mars 2026</Text>
         <Text as="h2" sx={styles.subtitle}>
-          Manifeste – Pour une démocratie plus juste et plus expressive
+          Manifeste – Pour une révolution électorale
         </Text>
         <Text sx={styles.tagline}>
-          Pour un mode de scrutin plus représentatif de l'opinion des votant•es
+          Parce que voter ne devrait plus être un choix binaire
         </Text>
       </Box>
 
       {/* Introduction */}
       <Box sx={styles.section}>
         <Text as="p">
-          Parce que voter doit être plus qu'un choix binaire : nous ne voulons
-          plus avoir à voter utile, blanc ou par défaut. Nous voulons mieux
-          voter avec le jugement majoritaire.
+          Notre système de vote a 200 ans et nos élections sont devenues archaïques. Nos modes de scrutin permettent peu d’expression et mesurent mal l’opinion. Nous ne voulons plus avoir à voter utile, blanc ou par défaut.
         </Text>
         <Text as="p">
-          Nos élections sont archaïques. Notre démocratie repose encore largement
-          sur des méthodes de vote conçues il y a plusieurs siècles. Vote à choix
-          unique, majorité simple, logique du "tout ou rien"... Ces systèmes ont
-          structuré notre vie politique, mais ils ne permettent pas toujours
-          d'exprimer la richesse et la nuance de nos opinions.
+          <b>Au XXIe siècle, il est temps que nos élections évoluent.</b> 
+La logique du “tout ou rien” a certes structuré notre vie politique mais elle ne permet pas d’exprimer la richesse et la nuance de nos opinions.
         </Text>
         <Text as="p">
-          Avec l'aide des sciences sociales et des mathématiques, des chercheurs
-          ont développé des méthodes plus nuancées, plus précises, plus justes et
-          plus représentatives pour donner son opinion sur les enjeux collectifs.
+          Avec l’aide des sciences sociales et des mathématiques, des chercheurs ont développé des méthodes plus nuancées, plus justes et plus représentatives pour donner son opinion.
         </Text>
         <Text as="h3" sx={styles.sectionTitle}>
-          Chez Mieux Voter, nous pensons que :
+          <b>Chez Mieux Voter, nous pensons que :</b>
         </Text>
         <ul sx={styles.bulletList}>
           <li>
-            Chaque citoyen doit pouvoir exprimer son opinion jugement de manière
-            nuancée.
+            le vote ne doit pas contraindre à choisir “le moins pire”, mais permettre d’évaluer réellement toutes les options
           </li>
           <li>
-            Un scrutin doit mesurer l'opinion collective avec fidélité, au plus
-            proche de l'opinion des votant•es, et non simplement additionner des
-            voix.
+            chaque citoyen doit pouvoir exprimer son opinion de manière nuancée
           </li>
           <li>
-            Le vote ne doit pas contraindre à choisir "le moins pire", mais
-            permettre d'évaluer réellement les options.
+            un scrutin doit mesurer l’opinion collective avec fidélité, au plus proche de l’opinion des votant•es
           </li>
         </ul>
         <Text as="p">
-          Il est temps pour la démocratie de se perfectionner. La démocratie peut
-          évoluer, s'améliorer, se perfectionner. Des outils nous le permettent
-          aujourd'hui.
+          Il est temps pour notre démocratie de sortir de la binarité et de se mettre à jour. Des outils nous le permettent aujourd’hui.
         </Text>
         <Text as="p">
-          C'est pourquoi, chez Mieux Voter, nous portons le développement et la
-          diffusion du Jugement Majoritaire : une méthode de vote qui permet à
-          chaque électeur d'évaluer chaque option à l'aide d'une mention. Le
-          résultat reflète ainsi la majorité des jugements, et non la seule
-          répartition des préférences.
-        </Text>
-        <ul sx={styles.bulletList}>
-          <li>
-            Nous croyons qu'améliorer la manière de voter, c'est renforcer la
-            confiance démocratique.
-          </li>
-          <li>
-            Nous croyons qu'un meilleur outil peut transformer la qualité du
-            débat public.
-          </li>
-          <li>
-            Nous croyons qu'une démocratie plus expressive est une démocratie plus
-            solide.
-          </li>
-        </ul>
-        <Text as="h3" sx={styles.sectionTitle}>
-          Rendre les élections aux électeurs
+          Chez Mieux Voter, nous portons le développement et la diffusion du Jugement Majoritaire : une méthode de vote qui permet à chaque électeur d’évaluer chaque option à l’aide d’une mention. Le résultat reflète ainsi la majorité des jugements, et non la seule répartition des préférences. Nous soutenons également la diffusion de tous les autres modes de scrutins plurinominaux, permettant de s’exprimer sur l’ensemble des candidat·es et non un·e seul·e.
         </Text>
         <Text as="p">
-          Nos élections sont archaïques et nos modes de scrutin mesurent mal
-          l'opinion. Nous ne voulons plus avoir à voter utile, blanc ou par
-          défaut. Cela contribue à un désintérêt massif des électeurs et
-          électrices. Leur confiance en notre démocratie s'érode chaque jour un
-          peu plus. Pourquoi vote-on comme il y a 200 ans ? En deux siècles, la
-          science a pourtant fait des progrès considérables : des modes de
-          scrutin plus démocratiques ont été élaborés pour mieux prendre en
-          compte l'opinion des votant•es.
-        </Text>
-
-        <Text as="p">
-          Chez Mieux Voter, nous souhaitons que nos opinions soient pleinement
-          prises en compte, avec leurs nuances. Nous voulons révolutionner les
-          élections grâce au jugement majoritaire.
-        </Text>
-
-        <Text as="p">
-          Imaginé par deux directeurs de recherche du CNRS, Rida Laraki et Michel
-          Balinski, le vote au jugement majoritaire est à ce jour la méthode de
-          vote la plus fiable pour mesurer l'opinion, en mettant fin à ce qui
-          empêche l'électeur•ice de s'exprimer avec nuance : le vote utile, le
-          vote par défaut ou le vote blanc.
-        </Text>
-
-        <Text as="p">
-          Par des actions de plaidoyer et des campagnes de mobilisation, Mieux
-          Voter agit pour faire connaître le jugement majoritaire au plus grand
-          nombre et accompagne les collectivités publiques, les entreprises, les
-          associations, les collectifs et les particuliers dans son utilisation.
-          Notre objectif est simple : mieux voter grâce au jugement majoritaire.
-        </Text>
-        <Text as="h3" sx={styles.sectionTitle}>
-          Rejoindre le mouvement
+          Nous croyons qu’améliorer la manière de voter, c’est renforcer la confiance démocratique.
         </Text>
         <Text as="p">
-          S'engager chez Mieux Voter c'est agir concrètement pour la démocratie.
+          Nous croyons qu’un meilleur système de vote peut transformer la qualité du débat public.
         </Text>
-        <Text as="p" sx={styles.listIntro}>
+        <Text as="p">
+          Nous croyons qu’une démocratie plus expressive est une démocratie plus solide.
+        </Text>
+        <Text as="p">
+          Nous croyons que c’est un changement urgent en période de grande fatigue démocratique.
+        </Text>
+        <Text as="p">
+          Rejoignez notre mouvement pour une révolution électorale.
+        </Text>
+        <Text as="p">
           En rejoignant notre communauté, vous pourrez :
         </Text>
         <ul sx={styles.bulletList}>
-          <li>Comprendre en détail le jugement majoritaire</li>
-          <li>Participer à des formations en ligne</li>
+          <li>Découvrir les principes et le fonctionnement du Jugement Majoritaire</li>
           <li>Contribuer à des expérimentations et projets citoyens</li>
-          <li>Soutenir la diffusion de pratiques démocratiques plus justes</li>
+          <li>Soutenir des campagnes pour la mise en oeuvre locale et/ou nationale de modes de scrutins plus expressifs
+</li>
         </ul>
+        <Text as="p">
+          Laissez votre adresse e-mail pour rester informé·e et participer aux prochaines actions.
+        </Text>
+        <Text as="p">
+          Votre adresse ne sera utilisée que pour vous transmettre nos informations et invitations.
+        </Text>
       </Box>
 
       {/* Newsletter */}
