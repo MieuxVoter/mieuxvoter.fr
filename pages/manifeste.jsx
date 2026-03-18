@@ -41,6 +41,7 @@ export default function Manifeste() {
     phonePrefix: "+33",
     phoneNumber: "",
     codePostal: "",
+    subscribeNewsletter: true,
   });
 
   const handleInputChange = (e) => {
@@ -101,13 +102,13 @@ export default function Manifeste() {
           email: formData.mail,
           piege,
           attributes,
-          lists:[18]
+          lists:subscribeNewsletter ? [3, 18] : [18]
         }),
       });
 
       if (response.ok) {
         setStatus(Status.SUCCESS);
-        setFormData({ prenom: "", mail: "", phonePrefix: "+33", phoneNumber: "", codePostal: "" });
+        setFormData({ prenom: "", mail: "", phonePrefix: "+33", phoneNumber: "", codePostal: "", subscribeNewsletter: true });
         setPiege("");
         setTimeout(() => {
           setIsModalOpen(false);
@@ -325,6 +326,40 @@ La logique du “tout ou rien” a certes structuré notre vie politique mais el
                     disabled={status === Status.LOADING}
                     sx={styles.input}
                   />
+                </label>
+              </Box>
+
+              <Box sx={{ mb: 4, display: "flex", alignItems: "center" }}>
+                <input
+                  type="checkbox"
+                  id="subscribeNewsletter"
+                  name="subscribeNewsletter"
+                  checked={formData.subscribeNewsletter}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      subscribeNewsletter: e.target.checked,
+                    }))
+                  }
+                  disabled={status === Status.LOADING}
+                  style={{
+                    width: "18px",
+                    height: "18px",
+                    cursor: "pointer",
+                    marginRight: "10px",
+                    accentColor: "#0A004C",
+                  }}
+                />
+                <label
+                  htmlFor="subscribeNewsletter"
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "14px",
+                    color: "#0A004C",
+                    fontFamily: '"DM Sans", sans-serif',
+                  }}
+                >
+                  S'abonner à la newsletter
                 </label>
               </Box>
 
