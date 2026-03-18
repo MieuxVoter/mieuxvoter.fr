@@ -241,7 +241,7 @@ La logique du “tout ou rien” a certes structuré notre vie politique mais el
           {status === Status.ERROR && (
             <Box sx={styles.errorMessage}>
               <Text sx={{ color: "#f44336", fontWeight: "bold" }}>
-                Une erreur s'est produite. Veuillez réessayer.
+                Une erreur s&apos;est produite. Veuillez réessayer.
               </Text>
             </Box>
           )}
@@ -359,7 +359,7 @@ La logique du “tout ou rien” a certes structuré notre vie politique mais el
                     fontFamily: '"DM Sans", sans-serif',
                   }}
                 >
-                  S'abonner à la newsletter
+                  S&apos;abonner à la newsletter
                 </label>
               </Box>
 
@@ -367,7 +367,7 @@ La logique du “tout ou rien” a certes structuré notre vie politique mais el
               <input type="hidden" name="form-name" value="signature" />
               <div className="hidden">
                 <label>
-                  Don't fill this out if you're human:{" "}
+                  Don&apos;t fill this out if you&apos;re human:{" "}
                   <input
                     name="piege"
                     onChange={(e) => setPiege(e.target.value)}
