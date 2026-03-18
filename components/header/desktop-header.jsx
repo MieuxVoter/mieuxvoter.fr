@@ -6,11 +6,13 @@ import {Box, Text, Flex, Image, Button, Input, Link} from "theme-ui";
 import socialItems from "./social.data";
 import LanguageSelector from "./language-selector";
 import {useTranslation} from "next-i18next";
+import {useRouter} from "next/router";
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";
 
 
 export default function DeskHeader() {
   const {t} = useTranslation("common");
+  const router = useRouter();
   const [isDropdowned, setDropdown] = useState(false);
 
   return (
@@ -79,11 +81,12 @@ export default function DeskHeader() {
                   </div>
                 )}
               </div>
-
+              {router.locale === "fr" && (
+                <Link href="/manifeste">Manifeste</Link>
+              )}
               <Link href="/qui-sommes-nous">{t("menu lien 2")}</Link>
 
               <Link href="/presse">{t("menu lien 4")}</Link>
-
               <Link href="/contact">{t("menu lien 5")}</Link>
             </Flex>
           </Flex>
