@@ -129,11 +129,7 @@ export default function Manifeste() {
       {/* Header */}
       <Box sx={styles.header}>
         <Text as="h1" sx={styles.title}>
-          Manifeste Mieux Voter
-        </Text>
-        <Text sx={styles.date}>Mars 2026</Text>
-        <Text as="h2" sx={styles.subtitle}>
-          Pour une révolution électorale
+          Manifeste pour une révolution électorale
         </Text>
         <Text sx={styles.tagline}>
           Parce que voter ne devrait plus être un choix binaire
