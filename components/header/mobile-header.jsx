@@ -72,6 +72,12 @@ const MobHeader = () => {
                           {t("menu sous lien 1")}
                         </a>
                       </Link>
+                      <Link href="https://app.mieuxvoter.fr">
+                        <a onClick={toggle} className="navbar-my-link nav-link">
+                          Le tester
+                          {t("menu jm tester")}
+                        </a>
+                      </Link>
                       <Link href="/faq">
                         <a onClick={toggle} className="navbar-my-link nav-link">
                           {t("menu sous lien 2")}

@@ -72,6 +72,14 @@ export default function DeskHeader() {
                       </div>
                     </Link>
 
+                    <Link href="https://app.mieuxvoter.fr">
+                      <div
+                        className="dropdown-list-item lien-menu-jugement"
+                      >
+                        {t("menu jm tester")}
+                      </div>
+                    </Link>
+
                     <Link href="/faq">
                       <div
                         className="dropdown-list-item lien-menu-jugement">
