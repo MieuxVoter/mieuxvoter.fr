@@ -1,13 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box } from "theme-ui";
-import React from "react";
-import SectionOne from "../components/home-page/section-one";
-import SectionTwo from "../components/home-page/section-two";
-import SectionThree from "../components/home-page/section-three";
-import SectionFour from "../components/home-page/section-four";
-import SectionFive from "../components/home-page/section-five";
-import SectionSix from "../components/home-page/section-six";
+import { useRouter } from "next/router";
+import Manifeste from "./manifeste";
+import Home from "./home";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticProps = async ({ locale }) => ({
@@ -16,16 +12,14 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default function Home() {
-  return (
-    <main>
-      <SectionOne />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
-      <SectionFive />
-      <SectionSix />
-    </main>
-  );
+export default function Index() {
+  const router = useRouter();
+  const isFrench = router.locale === "fr";
+
+  if (isFrench) {
+    return <Manifeste />;
+  } else {
+    return <Home/>
+  }
 }
 
