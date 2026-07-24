@@ -1,29 +1,18 @@
 export default {
-  // example colors with dark mode
+  useColorSchemeMediaQuery: false,
   colors: {
-    text: '#0A004C', // body color and primary color
-    text_secondary: '#FFFFFF', // secondary body color
-    heading: '#0F2137', // primary heading color
-    heading_secondary: '#0F2137', // heading color
-    background: '#FFFFFF', // body background color
-    background_secondary: '#0A004C', // secondary background color
-    border_color: '#E5ECF4', // border color
-    yellow: '#FFA740', // border color
-    primary: '#2400FD', // primary button and link color
-    secondary: '#FF3E37', // secondary color - can be used for hover states
-    muted: '#E4E4E4', // muted color
-    accent: '#609', // a contrast color for emphasizing UI
-
-    // highlight	a background color for highlighting text
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
-        muted: '#111',
-      },
-    },
+    text: '#0A004C',
+    text_secondary: '#FFFFFF',
+    heading: '#0F2137',
+    heading_secondary: '#0F2137',
+    background: '#FFFFFF',
+    background_secondary: '#0A004C',
+    border_color: '#E5ECF4',
+    yellow: '#FFA740',
+    primary: '#2400FD',
+    secondary: '#FF3E37',
+    muted: '#E4E4E4',
+    accent: '#609',
   },
   breakpoints: [
     '480px',
