@@ -6,14 +6,17 @@ import {Box, Text} from 'theme-ui';
 import Link from 'next/link';
 import Head from 'next/head';
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 export const getStaticProps = async ({locale}) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
+    ...(await serverSideTranslations(locale, ["incident-2026-06", "common"])),
   },
 });
 
 export default function Incident() {
+  const {t} = useTranslation('incident-2026-06');
+
   return (
     <>
       <Head>
@@ -25,148 +28,137 @@ export default function Incident() {
         <Box sx={styles.container}>
 
           <Text as="h2">
-            Attaque malveillante — ce qu’il s’est passé et comment nous avons réagi pour renforcer la sécurité de nos outils
+            {t("titre")}
           </Text>
 
           <Text as="p" sx={styles.date}>
-            Publié le 15/07/2026
+            {t("date")}
           </Text>
 
           <Text as="h3" sx={styles.date}>
-            En résumé
+            {t("resume_titre")}
           </Text>
 
           <Text as="p">
-            Entre le 23 juin et le 7 juillet 2026, notre site et notre application de vote ont subi une attaque malveillante.
+            {t("resume_p1")}
           </Text>
 
           <Text as="p">
-            Notre équipe a réagi rapidement pour préserver la confidentialité des données et remettre en ligne nos outils, renforcer leur sécurité et protéger notre infrastructure.
+            {t("resume_p2")}
           </Text>
 
           <Text as="p">
-          Si vous n’avez eu aucun échange avec l’association ni organisé un vote sur l’application, aucune de vos données personnelles n’est concernée.
+            {t("resume_p3")}
           </Text>
 
           <Text as="h5" sx={styles.h5}>
-            Seules les données suivantes sont concernées :
+            {t("resume_donnees_titre")}
           </Text>
 
           <ul sx={styles.ul}>
             <li>
-              Des informations concernant quelques membres du conseil d’administration de l’association
+              {t("resume_donnees_1")}
             </li>
             <li>
-              le contenu de nos boîtes mail associatives
+              {t("resume_donnees_2")}
             </li>
             <li>
-              les données des élections créées sur l’application (hors adresses emails car la version actuelle de l’application ne les stocke pas)
+              {t("resume_donnees_3")}
             </li>
           </ul>
 
           <Text as="p">
-            Notre équipe reste à votre entière disposition pour répondre à d’éventuelles questions. {' '}
-            <Link href="/contact">Nous contacter.</Link>
+            {t("contact_p")} {' '}
+            <Link href="/contact">{t("contact_link")}</Link>
           </Text>
 
           <Text as="p">
-            Chaleureusement,
+            {t("chaleureusement")}
           </Text>
 
           <Text as="p">
-            L’équipe Mieux Voter
+            {t("equipe")}
           </Text>
 
           <Text as="h3">
-            En détails
+            {t("detail_titre")}
           </Text>
 
           <Text as="p">
-            Un tiers non autorisé a obtenu l’accès au compte d’hébergement de l’association, ce qui lui a permis de mettre temporairement hors ligne notre application et d’accéder à nos boîtes email associatives.
+            {t("detail_p1")}
           </Text>
 
           <Text as="h5" sx={styles.h5}>
-            Les données concernées sont les suivantes :
+            {t("detail_donnees_titre")}
           </Text>
 
           <ul sx={styles.ul}>
             <li>
-              Des informations relatives à quelques membres du conseil
-              d’administration de l’association
+              {t("detail_donnees_1")}
             </li>
             <li>
-              le contenu de nos boîtes mail associatives
+              {t("detail_donnees_2")}
             </li>
             <li>
-              Les données des élections créées sur l’application (hors mail, la
-              version actuelle de l’application ne les stocke pas)
+              {t("detail_donnees_3")}
             </li>
           </ul>
 
           <Text as="h5" sx={styles.h5}>
-            Nous avons pu vérifier les points suivants :
+            {t("verif_titre")}
           </Text>
 
           <ul sx={styles.ul}>
             <li>
-              L’outil d’envoi d’emails de l’application n’a enregistré aucune
-              connexion pendant la période de l’attaque
+              {t("verif_1")}
             </li>
             <li>
-              Le CRM enregistrant les informations des formulaires du site
-              mieuxvoter.fr n’a enregistré aucune connexion pendant cette période
+              {t("verif_2")}
             </li>
           </ul>
 
           <Text as="h5" sx={styles.h5}>
-            Suite à la découverte de l’incident, nous avons :
+            {t("suite_titre")}
           </Text>
 
           <ul sx={styles.ul}>
             <li>
-              Repris le contrôle de nos accès et sécurisé l’ensemble de notre
-              infrastructure
+              {t("suite_1")}
             </li>
             <li>
-              Déposé une plainte auprès des autorités
+              {t("suite_2")}
             </li>
             <li>
-              Notifié la CNIL conformément au RGPD
+              {t("suite_3")}
             </li>
             <li>
-              Renforcé nos mesures de sécurité pour éviter qu’une telle situation
-              se reproduise
+              {t("suite_4")}
             </li>
           </ul>
 
           <Text as="p">
-            L’application fonctionne de nouveau normalement.
+            {t("app_ok")}
           </Text>
 
           <Text as="h3">
-            Ce que vous devez savoir
+            {t("savoir_titre")}
           </Text>
 
           <Text as="p">
-            L’application Mieux Voter, dans sa version actuelle, ne collecte pas de
-            données personnelles identifiantes sur ses utilisateurs — pas de
-            compte, pas de mot de passe, pas d’adresse IP enregistrée. Les votes
-            sont anonymes, aucune donnée personnelle liée à l’organisation d’un vote ne peut donc avoir été volée hormis l’intitulé et les options proposées au vote.
+            {t("savoir_p1")}
           </Text>
 
           <Text as="p">
-            Si vous faites partie des contacts de l’association et que vous avez
-            des questions, vous pouvez nous écrire via{' '}
-            <Link href="/contact">le formulaire</Link>.
+            {t("savoir_p2")}{' '}
+            <Link href="/contact">{t("savoir_link")}</Link>.
           </Text>
 
           <Text as="p">
-            Nous nous excusons pour cette situation et restons disponibles pour
-            toute question.
+            {t("excuses_p")}
           </Text>
 
           <Text as="p">
-            L’équipe Mieux Voter
+            {t("equipe")}
           </Text>
 
         </Box>
