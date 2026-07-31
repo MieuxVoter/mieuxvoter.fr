@@ -57,7 +57,7 @@ export default function Incident() {
               Des informations concernant quelques membres du conseil d’administration de l’association
             </li>
             <li>
-              le contenu de nos boîtes mail associatives & drive
+              le contenu de nos boîtes mail associatives
             </li>
             <li>
               les données des élections créées sur l’application (hors adresses emails car la version actuelle de l’application ne les stocke pas)
@@ -95,7 +95,7 @@ export default function Incident() {
               d’administration de l’association
             </li>
             <li>
-              le contenu de nos boîtes mail associatives & drive
+              le contenu de nos boîtes mail associatives
             </li>
             <li>
               Les données des élections créées sur l’application (hors mail, la
