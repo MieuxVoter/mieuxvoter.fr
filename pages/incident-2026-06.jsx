@@ -74,7 +74,7 @@ export default function Incident() {
           </Text>
 
           <Text as="p">
-            L'équipe Mieux Voter
+            L’équipe Mieux Voter
           </Text>
 
           <Text as="h3">
