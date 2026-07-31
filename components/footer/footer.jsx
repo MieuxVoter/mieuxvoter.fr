@@ -65,9 +65,7 @@ export default function Footer() {
 
           <Link href="/contact">{t("menu lien 5")}</Link>
 
-          {router.locale === "fr" && (
-            <Link href={INCIDENT_PAGE_PATH} rel="noopener noreferrer">{t("menu lien incident")}</Link>
-          )}
+          <Link href={INCIDENT_PAGE_PATH} rel="noopener noreferrer">{t("menu lien incident")}</Link>
 
           <a href={ADHESION_URL}
             target="_blank" rel="noopener noreferrer" >{t("common.membership")}</a>
