@@ -10,10 +10,12 @@ import socialItems from "../header/social.data";
 import Credits from "./credits";
 import {useTranslation} from "next-i18next";
 import Accordion from "react-bootstrap/Accordion";
-import {ADHESION_URL} from "../../services/constants";
+import {ADHESION_URL, INCIDENT_PAGE_PATH} from "../../services/constants";
+import {useRouter} from "next/router";
 
 export default function Footer() {
   const {t} = useTranslation("common");
+  const router = useRouter();
 
   return (
     <footer sx={styles.footer}>
@@ -62,6 +64,10 @@ export default function Footer() {
           <Link href="/presse">{t("menu lien 4")}</Link>
 
           <Link href="/contact">{t("menu lien 5")}</Link>
+
+          {router.locale === "fr" && (
+            <Link href={INCIDENT_PAGE_PATH}>{t("menu lien incident")}</Link>
+          )}
 
           <a href={ADHESION_URL}
             target="_blank" rel="noopener noreferrer" >{t("common.membership")}</a>
