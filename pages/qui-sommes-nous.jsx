@@ -28,30 +28,8 @@ const displayMember = (member) => {
 
 export default function QuiSommesNous() {
   const {t} = useTranslation('qui-sommes-nous');
-  const bureauMembers = [
-    {
-      name: "Coline Serra",
-      image: "coline-serra.jpg",
-    },
-    {
-      name: "Murielle Reinhardt",
-      image: "murielle-reinhardt.png",
-    },
-    {
-      name: "Théo Sabattié",
-      image: "theo-sabattie.jpeg",
-    },
-    {
-      name: "Victoria Mure-Ravaud",
-      image: "victoria-mure-ravaud.jpeg",
-    }
-  ];
 
   const otherCAMembers = [
-    {
-      name: "Anne-Lise Bance",
-      image: "anne-lise-bance.png",
-    },
     {
       name: "Alice Bodineau",
       image: "alice-bodineau.jpeg",
@@ -61,24 +39,36 @@ export default function QuiSommesNous() {
       image: "clement-pairot.jpg"
     },
     {
+      name: "Thomas Boyer-Kassem",
+      image: "thomas-boyer-kassem.JPG",
+    },
+    {
+      name: "Coline Serra",
+      image: "coline-serra.jpg",
+    },
+    {
+      name: "Yukio Koriyama",
+      image: "yukio-koriyama.jpg",
+    },
+    {
+      name: "Christian Couder",
+      image: "christian-couder.jpg",
+    },
+    {
+      name: "Murielle Reinhardt",
+      image: "murielle-reinhardt.png",
+    },
+    {
+      name: "Ali Razane",
+      image: "ali-razane.jpg"
+    },
+    {
       name: "Rida Laraki",
       image: "rida-laraki.jpg",
     },
     {
-      name: "Pierre Puchaud",
-      image: "pierre-puchaud.jpeg",
-    },
-    {
-      name: "Jessy Micout",
-      image: "jessy-micout.jpg",
-    },
-    {
-      name: "Maxime Ollivier",
-      image: "maxime-ollivier.jpg",
-    },
-    {
-      name: "Caroline Span",
-      image: "caroline-span.jpeg",
+      name: "Victoria Mure-Ravaud",
+      image: "victoria-mure-ravaud.jpeg",
     }
   ];
 
@@ -122,14 +112,7 @@ export default function QuiSommesNous() {
         </Box>
       </Flex>
 
-      <Text sx={styles.subtitle} as="h4">
-        {t("bureau qui sommes nous")}
-      </Text>
       <Box sx={styles.box2QuiSommesNous}>
-        <Flex sx={styles.teamCard}>
-          {bureauMembers.map(member => displayMember(member))}
-        </Flex>
-
         <Text sx={styles.subtitle} as="h4">
           {t("conseil qui sommes nous")}
         </Text>
