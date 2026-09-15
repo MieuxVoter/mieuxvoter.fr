@@ -1,5 +1,41 @@
 [
     {
+    "thumb": "https://img.youtube.com/vi/wW-Tltp7Qs0/hqdefault.jpg",
+    "source": "Radio Nova – La Dernière",
+    "altText": "Passage à La Dernière sur Radio Nova – Le Jugement Majoritaire",
+    "title": "Passage à La Dernière sur Radio Nova",
+    "author": "",
+    "date": "2026-04-01",
+    "lien": "https://www.youtube.com/watch?v=wW-Tltp7Qs0"
+  },
+  {
+    "thumb": "https://img.youtube.com/vi/wW-Tltp7Qs0/hqdefault.jpg",
+    "source": "Radio Nova – La Dernière (podcast)",
+    "altText": "Podcast La Dernière – Radio Nova – Le Jugement Majoritaire",
+    "title": "Podcast La Dernière – Radio Nova",
+    "author": "",
+    "date": "2026-04-01",
+    "lien": "https://podcasts.nova.fr/radio-nova-la-derniere"
+  },
+  {
+    "thumb": "https://img.youtube.com/vi/-7BuanY5vhw/hqdefault.jpg",
+    "source": "YouTube",
+    "altText": "Le Jugement Majoritaire – vidéo YouTube",
+    "title": "Le Jugement Majoritaire – vidéo YouTube",
+    "author": "",
+    "date": "2026-04-01",
+    "lien": "https://www.youtube.com/watch?v=-7BuanY5vhw"
+  },
+  {
+    "thumb": "img/ballot2.png",
+    "source": "L'Opinion",
+    "altText": "En Marche teste les élections au jugement majoritaire, un mode de scrutin très « nouveau monde »",
+    "title": "En Marche teste les élections au jugement majoritaire, un mode de scrutin très « nouveau monde »",
+    "author": "",
+    "date": "2019-01-01",
+    "lien": "https://www.lopinion.fr/politique/en-marche-teste-les-elections-au-jugement-majoritaire-un-mode-de-scrutin-tres-nouveau-monde"
+  },
+  {
     "thumb": "https://www.liberation.fr/resizer/v2/DRIWCI5M3JCLNHU2FRU6LWRMS4.jpg?auth=3d241eb9e3b0e72a7593b05fef23ccc36c1832d58af4363ca6fbb36861e4b6df&quality=70&width=1024&focal=2781%2C2915",
     "source": "Libération",
     "altText": "Clémentine Autain : «Il faut un référendum sur de nouvelles recettes fondées sur la justice fiscale»",
